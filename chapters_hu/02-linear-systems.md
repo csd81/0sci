@@ -1055,53 +1055,48 @@ Egyes feladattípusoknál az iterációs módszereknek jelentős előnyei vannak
 
 Szinte minden tudományos számítási szoftverkönyvtár tartalmaz különféle típusú lineáris rendszerek megoldására szolgáló rutinokat. A 2.1. táblázat valós, általános, sűrű lineáris rendszerek megoldására, valamint a kondíciószám becslésére szolgáló megfelelő rutinok listáját tartalmazza néhány széles körben elérhető szoftvergyűjteményből. Egyes csomagok a rutinnevekben különböző elő- vagy utótagokat használnak az adattípus jelölésére, tipikusan az `s` az egyszeres pontosságú valós, `d` a dupla pontosságú valós, `c` az egyszeres pontosságú komplex és `z` a dupla pontosságú komplex változatra utal; itt csak az egyszeres pontosságú valós változatokat soroljuk fel. A legtöbb ilyen szubrutinkönyvtárban speciálisabb rutinok is rendelkezésre állnak a lineáris rendszerek bizonyos típusaira, mint a szimmetrikus, pozitív definit, sávos rendszerek vagy ezek kombinációi. Ezek közül a rutinok közül néhányat a 2.2. táblázat sorol fel; más rutinok is rendelkezésre állhatnak, amelyek tárhelytakarékosabbak, vagy egyéb speciális feladatokra készültek.
 
-Az $A\boldsymbol{x} = \boldsymbol{b}$ lineáris rendszerek megoldására szolgáló hagyományos szoftver olykor egyetlen rutinként van megvalósítva, de felosztható két rutinra is: az egyik a felbontás kiszámítására, a másik a keletkező háromszögű rendszer megoldására. Mindkét esetben a felbontás megismétlésére nincs szükség, ha ugyanazzal a mátrixszal, de más jobb oldalakkal szeretnénk további megoldásokat. A tipikusan megkövetelt bemenet a következőket tartalmazza: egy kétdimenziós tömb az $\boldsymbol{A}$ mátrixszal, egy egydimenziós tömb a $\boldsymbol{b}$ jobb oldali vektorral (vagy egy kétdimenziós tömb több jobb oldali vektorra), a rendszer egész $n$ rendje, az $\boldsymbol{A}$-t tartalmazó tömb vezető dimenziója (hogy a szubrutin helyesen tudja értelmezni a tömbindexeket), valamint esetenként némi munkaterület és egy zászló az elvégzendő konkrét feladat jelzésére. Visszatéréskor az $\boldsymbol{x}$ megoldás rendszerint felülírja a $\boldsymbol{b}$ tárhelyét, a felbontás pedig az $\boldsymbol{A}$ tárhelyét. További kimenetként szerepelhet egy állapotjelző zászló a hibák vagy figyelmeztetések jelzésére, valamint a mátrix kondíciószámának egy becslése (vagy olykor a kondíciószám reciproka). A kondíciószám becslésének többletköltsége miatt ez a szolgáltatás általában opcionális.
+Az $\boldsymbol{A}\boldsymbol{x} = \boldsymbol{b}$ lineáris rendszerek megoldására szolgáló hagyományos szoftver olykor egyetlen rutinként van megvalósítva, de felosztható két rutinra is: az egyik a felbontás kiszámítására, a másik a keletkező háromszögű rendszer megoldására. Mindkét esetben a felbontás megismétlésére nincs szükség, ha ugyanazzal a mátrixszal, de más jobb oldalakkal szeretnénk további megoldásokat. A tipikusan megkövetelt bemenet a következőket tartalmazza: egy kétdimenziós tömb az $\boldsymbol{A}$ mátrixszal, egy egydimenziós tömb a $\boldsymbol{b}$ jobb oldali vektorral (vagy egy kétdimenziós tömb több jobb oldali vektorra), a rendszer egész $n$ rendje, az $\boldsymbol{A}$-t tartalmazó tömb vezető dimenziója (hogy a szubrutin helyesen tudja értelmezni a tömbindexeket), valamint esetenként némi munkaterület és egy zászló az elvégzendő konkrét feladat jelzésére. Visszatéréskor az $\boldsymbol{x}$ megoldás rendszerint felülírja a $\boldsymbol{b}$ tárhelyét, a felbontás pedig az $\boldsymbol{A}$ tárhelyét. További kimenetként szerepelhet egy állapotjelző zászló a hibák vagy figyelmeztetések jelzésére, valamint a mátrix kondíciószámának egy becslése (vagy olykor a kondíciószám reciproka). A kondíciószám becslésének többletköltsége miatt ez a szolgáltatás általában opcionális.
 
-| Forrás           | Felbontás      | Megoldás       | Kondíció­becslés |
-|------------------|----------------|----------------|--------------------|
-| [152]<br>FMM     | decomp         | solve          |                    |
-| GSL              | gsl<br>linalg  | gsl<br>linalg  |                    |
-|                  | LU<br>decomp   | LU<br>solve    |                    |
-| HSL              | ma21           | ma21           |                    |
-| IMSL             | lftrg          | lfsrg          | lfcrg              |
-| [262]<br>KMN     | sgefs          | sgefs          | sgefs              |
-| [9]<br>LAPACK    | sgetrf         | sgetrs         | sgecon             |
-| [116]<br>LINPACK | sgefa          | sgesl          | sgeco              |
-| MATLAB           | lu             | \              | rcond/condest      |
-| NAG              | f07adf         | f07aef         | f07agf             |
-| [220]<br>NAPACK  | fact           | solve          | con                |
-| [377]<br>NR      | ludcmp         | lubksb         |                    |
-| [297]<br>NUMAL   | dec            | sol            |                    |
-| SciPy            | linalg.        | linalg.        | numpy.linalg.      |
-|                  | lu<br>factor   | lu<br>solve    | cond               |
-| SLATEC           | sgefa          | sgesl          | sgeco              |
+| Forrás         | Felbontás             | Megoldás            | Kondícióbecslés      |
+| -------------- | --------------------- | ------------------- | -------------------- |
+| FMM [152]      | `decomp`              | `solve`             |                      |
+| GSL            | `gsl_linalg_LU_decomp`| `gsl_linalg_LU_solve`|                     |
+| HSL            | `ma21`                | `ma21`              |                      |
+| IMSL           | `lftrg`               | `lfsrg`             | `lfcrg`              |
+| KMN [262]      | `sgefs`               | `sgefs`             | `sgefs`              |
+| LAPACK [9]     | `sgetrf`              | `sgetrs`            | `sgecon`             |
+| LINPACK [116]  | `sgefa`               | `sgesl`             | `sgeco`              |
+| MATLAB         | `lu`                  | `\`                 | `rcond` / `condest`  |
+| NAG            | `f07adf`              | `f07aef`            | `f07agf`             |
+| NAPACK [220]   | `fact`                | `solve`             | `con`                |
+| NR [377]       | `ludcmp`              | `lubksb`            |                      |
+| NUMAL [297]    | `dec`                 | `sol`               |                      |
+| SciPy          | `linalg.lu_factor`    | `linalg.lu_solve`   | `numpy.linalg.cond`  |
+| SLATEC         | `sgefa`               | `sgesl`             | `sgeco`              |
 
-2.1. táblázat: Szoftverek általános lineáris rendszerek megoldására
+2.1. táblázat: Szoftverek általános lineáris rendszerek megoldására.
 
-Lineáris rendszerek megoldása interaktív környezetben, például MATLAB-ban egyszerűbb, mint hagyományos szoftverrel, mert a csomag belsőleg nyilvántartja az olyan részleteket, mint a vektorok és mátrixok méretei, és sok mátrixművelet be van építve a nyelv szintaxisába és szemantikájába. Például az $A\boldsymbol{x} = \boldsymbol{b}$ lineáris rendszer megoldását MATLAB-ban a „bal oldali osztás” operátor adja, amelyet fordított törtvonal jelöl, tehát `x = A \ b`. A megoldást belsőleg LU-felbontással, majd előre- és visszahelyettesítéssel számítja a rendszer, de a felhasználónak erről nem kell tudnia. Az LU-felbontás kifejezetten is kiszámítható, ha szükséges, a MATLAB `lu` függvényével: `[L, U] = lu(A)`, illetve ha a mátrix szimmetrikus és pozitív definit, akkor a Cholesky-felbontását az `L = chol(A)` adja.
+Lineáris rendszerek megoldása interaktív környezetben, például MATLAB-ban egyszerűbb, mint hagyományos szoftverrel, mert a csomag belsőleg nyilvántartja az olyan részleteket, mint a vektorok és mátrixok méretei, és sok mátrixművelet be van építve a nyelv szintaxisába és szemantikájába. Például az $\boldsymbol{A}\boldsymbol{x} = \boldsymbol{b}$ lineáris rendszer megoldását MATLAB-ban a „bal oldali osztás” operátor adja, amelyet fordított törtvonal jelöl, tehát `x = A \ b`. A megoldást belsőleg LU-felbontással, majd előre- és visszahelyettesítéssel számítja a rendszer, de a felhasználónak erről nem kell tudnia. Az LU-felbontás kifejezetten is kiszámítható, ha szükséges, a MATLAB `lu` függvényével: `[L, U] = lu(A)`, illetve ha a mátrix szimmetrikus és pozitív definit, akkor a Cholesky-felbontását az `L = chol(A)` adja.
 
 ### 2.7.1 LINPACK és LAPACK
 
 A LINPACK átfogó szoftvercsomag sokféle lineáris egyenletrendszer megoldására, az általános sűrű rendszereken kívül olyanokat is beleértve, amelyeknek különféle speciális tulajdonságaik vannak, például szimmetrikusak vagy sávosak. A lineáris rendszerek megoldása annyira alapvető fontosságú a tudományos számításokban, hogy a LINPACK a számítógépek teljesítményének összehasonlítására szolgáló szabványos benchmarkká vált. A LINPACK kézikönyv [116] hasznos forrás gyakorlati tanácsokhoz a lineáris egyenletrendszerek megoldásához.
 
-|                  | Szimmetrikus       | Szimmetrikus        | Általános       |
-|------------------|--------------------|---------------------|-----------------|
-| Forrás           | pozitív definit    | indefinit           | sávos           |
-| GSL              | gsl<br>linalg      | gsl<br>linalg       |                 |
-|                  | cholesky<br>decomp | mcholesky<br>decomp |                 |
-| HSL              | ma22               | ma29                | ma35            |
-| IMSL             | lftds/lfsds        | lftsf/lfssf         | lftrb/lfsrb     |
-| [9]<br>LAPACK    | spotrf/spotrs      | ssytrf/ssytrs       | sgbtrf/sgbtrs   |
-| [116]<br>LINPACK | spofa/sposl        | ssifa/ssisl         | sgbfa/sgbsl     |
-| NAG              | f07fdf/f07fef      | f07mdf/f07mef       | f07bdf/f07bef   |
-| [220]<br>NAPACK  | sfact/ssolve       | ifact/isolve        | bfact/bsolve    |
-| [377]<br>NR      | choldc/cholsl      |                     | bandec/banbks   |
-| [297]<br>NUMAL   | chldec2/chlsol2    | decsym2/solsym2     | decbnd/solbnd   |
-| SciPy            | linalg.            | linalg.             | linalg.         |
-|                  | cholesky           | ldl                 | solve<br>banded |
-| SLATEC           | spofa/sposl        | ssifa/ssisl         | sgbfa/sgbsl     |
+| Forrás         | Szimmetrikus pozitív definit | Szimmetrikus indefinit | Általános sávos     |
+| -------------- | ---------------------------- | ---------------------- | ------------------- |
+| GSL            | `gsl_linalg_cholesky_decomp` | `gsl_linalg_mcholesky_decomp` |              |
+| HSL            | `ma22`                       | `ma29`                 | `ma35`              |
+| IMSL           | `lftds` / `lfsds`            | `lftsf` / `lfssf`      | `lftrb` / `lfsrb`   |
+| LAPACK [9]     | `spotrf` / `spotrs`          | `ssytrf` / `ssytrs`    | `sgbtrf` / `sgbtrs` |
+| LINPACK [116]  | `spofa` / `sposl`            | `ssifa` / `ssisl`      | `sgbfa` / `sgbsl`   |
+| NAG            | `f07fdf` / `f07fef`          | `f07mdf` / `f07mef`    | `f07bdf` / `f07bef` |
+| NAPACK [220]   | `sfact` / `ssolve`           | `ifact` / `isolve`     | `bfact` / `bsolve`  |
+| NR [377]       | `choldc` / `cholsl`          |                        | `bandec` / `banbks` |
+| NUMAL [297]    | `chldec2` / `chlsol2`        | `decsym2` / `solsym2`  | `decbnd` / `solbnd` |
+| SciPy          | `linalg.cholesky`            | `linalg.ldl`           | `linalg.solve_banded` |
+| SLATEC         | `spofa` / `sposl`            | `ssifa` / `ssisl`      | `sgbfa` / `sgbsl`   |
 
-2.2. táblázat: Szoftverek speciális lineáris rendszerek megoldására
+2.2. táblázat: Szoftverek speciális lineáris rendszerek megoldására.
 
 A LAPACK nevű utódcsomag a teljes LINPACK-gyűjteményt frissíti, nagyobb teljesítményt nyújtva a modern számítógép-architektúrákon, egyes párhuzamos számítógépeket is beleértve. A LAPACK újabb algoritmusai sok esetben nagyobb pontosságot, robusztusságot és funkcionalitást is elérnek, mint a LINPACK-beli elődeik. A LAPACK a lineáris algebra összes jelentős számítási feladatához egyaránt tartalmaz egyszerű és szakértői meghajtókat, valamint a különféle felbontásokhoz, a háromszögű rendszerek megoldásához, a normabecsléshez, a skálázáshoz és az iteratív finomításhoz szükséges sokféle számítási és kiegészítő rutint. Mind a LINPACK, mind a LAPACK elérhető a Netlibről, és számos egyéb könyvtár és csomag lineáris rendszermegoldóit közvetlenül ezekre építik.
 
@@ -1111,19 +1106,19 @@ A LINPACK és a LAPACK magas szintű rutinjai az alacsonyabb szintű Basic Linea
 
 A jó teljesítmény kulcsa az adat-újrafelhasználás, azaz az, hogy egy adott adaton minél több aritmetikai műveletet végezzünk, miközben az a memóriahierarchia leggyorsabban elérhető részében van tárolva. A 3. szintű BLAS-nak nagyobb lehetősége van az adat-újrafelhasználásra, mert $\mathcal{O}(n^3)$ műveletet végez $\mathcal{O}(n^2)$ adaton, míg az alacsonyabb szintű BLAS esetén a műveletek száma az adatok számával arányos. A BLAS általános változatai elérhetők a Netlibről, és számos számítógépgyártó kínál egyedi változatokat, amelyek a saját rendszerükön a legjobb teljesítményre vannak optimalizálva.
 
-| Szint | TOMS<br># | Munka         | Példák | Funkció                          |  |
-|-------|-----------|---------------|----------|---------------------------------|--|
-| 1     | 539       | O(n)          | saxpy    | Skalár · vektor plusz vektor    |  |
-|       |           |               | sdot     | Két vektor belső szorzata       |  |
-|       |           |               | snrm2    | Vektor euklideszi normája       |  |
-| 2     | 656       | 2<br>O(n<br>) | sgemv    | Mátrix-vektor szorzás           |  |
-|       |           |               | strsv    | Háromszögű megoldás             |  |
-|       |           |               | sger     | Elsőrendű frissítés             |  |
-| 3     | 679       | 3<br>O(n<br>) | sgemm    | Mátrix-mátrix szorzás           |  |
-|       |           |               | strsm    | Többszörös háromszögű megoldás  |  |
-|       |           |               | ssyrk    | $k$-adrendű frissítés           |  |
+| Szint | TOMS # | Munka            | Példák              | Funkció                        |
+| ----- | ------ | ---------------- | ------------------- | ------------------------------ |
+| 1     | 539    | $\mathcal{O}(n)$ | `saxpy`             | Skalár · vektor plusz vektor   |
+|       |        |                  | `sdot`              | Két vektor belső szorzata      |
+|       |        |                  | `snrm2`             | Vektor euklideszi normája      |
+| 2     | 656    | $\mathcal{O}(n^2)$ | `sgemv`           | Mátrix-vektor szorzás          |
+|       |        |                  | `strsv`             | Háromszögű megoldás            |
+|       |        |                  | `sger`              | Elsőrendű frissítés            |
+| 3     | 679    | $\mathcal{O}(n^3)$ | `sgemm`           | Mátrix-mátrix szorzás          |
+|       |        |                  | `strsm`             | Többszörös háromszögű megoldás |
+|       |        |                  | `ssyrk`             | $k$-adrendű frissítés          |
 
-2.3. táblázat: Példák az alapvető lineáris algebrai szubrutinokra (BLAS)
+2.3. táblázat: Példák az alapvető lineáris algebrai szubrutinokra (BLAS).
 
 ## 2.8 Történeti jegyzetek és további olvasnivaló
 
@@ -1194,7 +1189,7 @@ $$\begin{bmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & m_1 & 1 & 0 \\ 0 & m_2 &
 
 - **2.43.** (a) Felírható-e minden $n \times n$-es nemszinguláris $\boldsymbol{A}$ mátrix $\boldsymbol{A} = \boldsymbol{L}\boldsymbol{U}$ szorzat alakban, ahol $\boldsymbol{L}$ alsó háromszögmátrix és $\boldsymbol{U}$ felső háromszögmátrix? (b) Ha igen, milyen algoritmus valósítja ezt meg? Ha nem, adj ellenpéldát a szemléltetésre.
 - **2.44.** Adott egy $n \times n$-es nemszinguláris $\boldsymbol{A}$ mátrix és egy további $n \times n$-es $\boldsymbol{B}$ mátrix. Mi a legjobb módja az $n \times n$-es $\boldsymbol{A}^{-1}\boldsymbol{B}$ mátrix kiszámításának?
-- **2.45.** Ha $\boldsymbol{A}$ és $B$ $n \times n$-es mátrixok, $\boldsymbol{A}$ nemszinguláris, és $c$ egy $n$-dimenziós vektor, hogyan számítanád ki hatékonyan az $A^{-1}Bc$ szorzatot?
+- **2.45.** Ha $\boldsymbol{A}$ és $\boldsymbol{B}$ $n \times n$-es mátrixok, $\boldsymbol{A}$ nemszinguláris, és $c$ egy $n$-dimenziós vektor, hogyan számítanád ki hatékonyan az $A^{-1}Bc$ szorzatot?
 - **2.46.** Ha $\boldsymbol{A}$ egy $n \times n$-es mátrix és $\boldsymbol{x}$ egy $n$-dimenziós vektor, az alábbi számítások közül melyik igényel kevesebb munkát? Magyarázd meg. (a) $\boldsymbol{y} = (\boldsymbol{x}\,\boldsymbol{x}^T)\,\boldsymbol{A}$; (b) $\boldsymbol{y} = \boldsymbol{x}\,(\boldsymbol{x}^T\,\boldsymbol{A})$.
 - **2.47.** Hogyan viszonyul egy $n \times n$-es háromszögű lineáris egyenletrendszer megoldásához szükséges számítási munka egy általános $n \times n$-es rendszer megoldásához szükségesével?
 - **2.48.** Tegyük fel, hogy egy nemszinguláris $\boldsymbol{A}$ mátrix $A = LU$ LU-felbontását már kiszámítottad. Hogyan használnád fel az $A^T x = b$ lineáris rendszer megoldásához?
@@ -1212,7 +1207,7 @@ $$\begin{bmatrix} 4 & 0 & 0 \\ 0 & -6 & 0 \\ 0 & 0 & 2 \end{bmatrix}$$
 
 (b) Eltér-e a válaszod, ha a $\infty$-normát használjuk?
 
-- **2.58.** Tegyük fel, hogy az $n \times n$-es $\boldsymbol{A}$ mátrix tökéletesen jól kondicionált, azaz $\operatorname{cond}(A) = 1$. Az alábbi mátrixok közül melyek szükségképpen szintén ezzel a tulajdonsággal rendelkeznek? (a) $c\boldsymbol{A}$, ahol $c$ tetszőleges nem nulla skalár; (b) $\boldsymbol{D}\boldsymbol{A}$, ahol $\boldsymbol{D}$ egy nemszinguláris diagonális mátrix; (c) $PA$, ahol $\boldsymbol{P}$ tetszőleges permutációs mátrix; (d) $\boldsymbol{B}\boldsymbol{A}$, ahol $\boldsymbol{B}$ tetszőleges nemszinguláris mátrix; (e) $A^{-1}$, azaz $\boldsymbol{A}$ inverze; (f) $\boldsymbol{A}^T$, azaz $\boldsymbol{A}$ transzponáltja.
+- **2.58.** Tegyük fel, hogy az $n \times n$-es $\boldsymbol{A}$ mátrix tökéletesen jól kondicionált, azaz $\operatorname{cond}(A) = 1$. Az alábbi mátrixok közül melyek szükségképpen szintén ezzel a tulajdonsággal rendelkeznek? (a) $c\boldsymbol{A}$, ahol $c$ tetszőleges nem nulla skalár; (b) $\boldsymbol{D}\boldsymbol{A}$, ahol $\boldsymbol{D}$ egy nemszinguláris diagonális mátrix; (c) $PA$, ahol $\boldsymbol{P}$ tetszőleges permutációs mátrix; (d) $\boldsymbol{B}\boldsymbol{A}$, ahol $\boldsymbol{B}$ tetszőleges nemszinguláris mátrix; (e) $\boldsymbol{A}^{-1}$, azaz $\boldsymbol{A}$ inverze; (f) $\boldsymbol{A}^T$, azaz $\boldsymbol{A}$ transzponáltja.
 - **2.59.** Legyen $\boldsymbol{A} = \operatorname{diag}(1/2)$ egy $n \times n$-es diagonális mátrix, amelynek minden diagonális eleme $1/2$. (a) Mi $\det(\boldsymbol{A})$ értéke? (b) Mi $\operatorname{cond}(A)$ értéke? (c) Milyen következtetést lehet levonni ezekből az eredményekből?
 - **2.60.** Tegyük fel, hogy az $n \times n$-es $\boldsymbol{A}$ mátrix egzaktul szinguláris, de a lebegőpontos ábrázolása, $fl(\boldsymbol{A})$, nemszinguláris. Ebben az esetben mit várnál a $\operatorname{cond}(fl(\boldsymbol{A}))$ kondíciószám nagyságrendjének?
 - **2.61.** Sorold be az alábbi mátrixok mindegyikét, hogy jól vagy rosszul kondicionált-e:
