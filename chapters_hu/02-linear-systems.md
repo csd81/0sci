@@ -43,20 +43,20 @@ $$\begin{bmatrix} R_1 + R_2 + R_3 & -R_2 & -R_3 \\ -R_2 & R_2 + R_5 & -R_5 \\ -R
 
 ## 2.2 Létezés és egyértelműség
 
-Egy $n \times n$-es $\boldsymbol{A}$ mátrixot *nemszingulárisnak* nevezünk, ha teljesül rá az alábbi – egymással ekvivalens – feltételek bármelyike:
+Egy $n \times n$-es $\boldsymbol{A}$ mátrixot *nemszingulárisnak* nevezünk, ha az alábbi – egymással ekvivalens – feltételek bármelyike teljesül rá:
 
-1. $\boldsymbol{A}$-nak van inverze (azaz létezik olyan $n \times n$-es mátrix, amelyet $\boldsymbol{A}^{-1}$-gyel jelölünk, amelyre $\boldsymbol{A}\boldsymbol{A}^{-1} = \boldsymbol{A}^{-1}\boldsymbol{A} = \boldsymbol{I}$, az egységmátrix).
+1. $\boldsymbol{A}$-nak van inverze (azaz létezik egy olyan, $\boldsymbol{A}^{-1}$-gyel jelölt $n \times n$-es mátrix, amelyre $\boldsymbol{A}\boldsymbol{A}^{-1} = \boldsymbol{A}^{-1}\boldsymbol{A} = \boldsymbol{I}$, az egységmátrix).
 2. $\det(\boldsymbol{A}) \neq 0$ (azaz $\boldsymbol{A}$ determinánsa nem nulla).
-3. $\operatorname{rank}(\boldsymbol{A}) = n$ (egy mátrix rangja a benne található lineárisan független sorok vagy oszlopok legnagyobb száma).
+3. $\operatorname{rank}(\boldsymbol{A}) = n$ (egy mátrix rangja a benne található lineárisan független sorok vagy oszlopok maximális száma).
 4. Bármely $\boldsymbol{z} \neq \boldsymbol{0}$ vektorra $\boldsymbol{A}\boldsymbol{z} \neq \boldsymbol{0}$ (azaz $\boldsymbol{A}$ egyetlen nemtriviális vektort sem annullál).
 
-Egyébként a mátrix *szinguláris*. Az $A\boldsymbol{x} = \boldsymbol{b}$ lineáris egyenletrendszer megoldásának létezése és egyértelműsége attól függ, hogy az $\boldsymbol{A}$ mátrix szinguláris vagy nemszinguláris. Ha $\boldsymbol{A}$ nemszinguláris, akkor létezik az $\boldsymbol{A}^{-1}$ inverze, és az $A\boldsymbol{x} = \boldsymbol{b}$ rendszernek mindig létezik egyetlen $\boldsymbol{x} = \boldsymbol{A}^{-1}\boldsymbol{b}$ megoldása, $\boldsymbol{b}$ értékétől függetlenül. Ha viszont $\boldsymbol{A}$ szinguláris, akkor a megoldások száma a $\boldsymbol{b}$ jobb oldali vektortól függ: adott $\boldsymbol{b}$ mellett lehet, hogy nincs megoldás, de ha létezik olyan $\boldsymbol{x}$ megoldás, amelyre $A\boldsymbol{x} = \boldsymbol{b}$, akkor $A(\boldsymbol{x} + \gamma \boldsymbol{z}) = \boldsymbol{b}$ is teljesül bármely $\gamma$ skalárra, ahol $\boldsymbol{z} \neq \boldsymbol{0}$ olyan vektor, amelyre $A\boldsymbol{z} = \boldsymbol{0}$ (ilyen $\boldsymbol{z}$-nek léteznie kell, hiszen ellenkező esetben a definíció 4. feltétele szerint a mátrix nemszinguláris volna). Ezért egy négyzetes, konzisztens, szinguláris lineáris rendszer megoldása nem lehet egyértelmű. Adott négyzetes $\boldsymbol{A}$ mátrixra és $\boldsymbol{b}$ jobb oldali vektorra a lehetőségeket az alábbiak foglalják össze:
+Minden más esetben a mátrix *szinguláris*. Az $\boldsymbol{A}\boldsymbol{x} = \boldsymbol{b}$ lineáris egyenletrendszer megoldásának létezése és egyértelműsége attól függ, hogy az $\boldsymbol{A}$ mátrix szinguláris vagy nemszinguláris. Ha $\boldsymbol{A}$ nemszinguláris, akkor létezik az inverze ($\boldsymbol{A}^{-1}$), és az $\boldsymbol{A}\boldsymbol{x} = \boldsymbol{b}$ rendszernek mindig pontosan egy $\boldsymbol{x} = \boldsymbol{A}^{-1}\boldsymbol{b}$ megoldása van, a $\boldsymbol{b}$ értékétől függetlenül. Ha viszont $\boldsymbol{A}$ szinguláris, akkor a megoldások száma a $\boldsymbol{b}$ jobb oldali vektortól függ: adott $\boldsymbol{b}$ mellett előfordulhat, hogy nincs megoldás, de ha létezik olyan $\boldsymbol{x}$ megoldás, amelyre $\boldsymbol{A}\boldsymbol{x} = \boldsymbol{b}$, akkor az $\boldsymbol{A}(\boldsymbol{x} + \gamma \boldsymbol{z}) = \boldsymbol{b}$ is teljesül bármely $\gamma$ skalárra, ahol $\boldsymbol{z} \neq \boldsymbol{0}$ olyan vektor, amelyre $\boldsymbol{A}\boldsymbol{z} = \boldsymbol{0}$ (ilyen $\boldsymbol{z}$-nek léteznie kell, hiszen ellenkező esetben a definíció 4. feltétele szerint a mátrix nemszinguláris volna). Ezért egy négyzetes, konzisztens és szinguláris lineáris rendszer megoldása sosem lehet egyértelmű. Adott négyzetes $\boldsymbol{A}$ mátrixra és $\boldsymbol{b}$ jobb oldali vektorra a lehetőségeket az alábbiak foglalják össze:
 
 - **Egyértelmű megoldás:** $\boldsymbol{A}$ nemszinguláris, $\boldsymbol{b}$ tetszőleges.
 - **Végtelen sok megoldás:** $\boldsymbol{A}$ szinguláris, $\boldsymbol{b} \in \operatorname{span}(\boldsymbol{A})$ (konzisztens).
 - **Nincs megoldás:** $\boldsymbol{A}$ szinguláris, $\boldsymbol{b} \notin \operatorname{span}(\boldsymbol{A})$ (inkonzisztens).
 
-Két dimenzióban a rendszer minden lineáris egyenlete egy egyenest határoz meg a síkban. A rendszer megoldása a két egyenes metszéspontja. Ha a két egyenes nem párhuzamos, akkor van egyetlen metszéspontjuk (a nemszinguláris eset). Ha a két egyenes párhuzamos, akkor vagy egyáltalán nem metszik egymást (nincs megoldás), vagy a két egyenes egybeesik (az egyenes bármely pontja megoldás). Magasabb dimenziókban minden egyenlet egy hipersíkot határoz meg. A nemszinguláris esetben az egyértelmű megoldás az összes hipersík metszéspontja.
+Két dimenzióban a rendszer minden lineáris egyenlete egy egyenest határoz meg a síkban. A rendszer megoldása a két egyenes metszéspontja. Ha a két egyenes nem párhuzamos, akkor pontosan egy metszéspontjuk van (a nemszinguláris eset). Ha a két egyenes párhuzamos, akkor vagy egyáltalán nem metszik egymást (nincs megoldás), vagy a két egyenes egybeesik (az egyenes bármely pontja megoldás). Magasabb dimenziókban minden egyenlet egy hipersíkot határoz meg. A nemszinguláris esetben az egyértelmű megoldás az összes hipersík metszéspontja.
 
 **2.2. Példa. Szingularitás és nemszingularitás.** A $2 \times 2$-es
 
@@ -65,17 +65,17 @@ $$\begin{aligned}
 5x_1 + 4x_2 &= b_2,
 \end{aligned}$$
 
-rendszer, vagy mátrix-vektor jelöléssel
+rendszer – vagy mátrix-vektor jelöléssel:
 
 $$\boldsymbol{A}\boldsymbol{x} = \begin{bmatrix} 2 & 3 \\ 5 & 4 \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \end{bmatrix} = \begin{bmatrix} b_1 \\ b_2 \end{bmatrix} = \boldsymbol{b},$$
 
-$\boldsymbol{b}$ értékétől függetlenül egyértelmű megoldással rendelkezik, mert $\boldsymbol{A}$ nemszinguláris. Például ha $\boldsymbol{b} = \begin{bmatrix} 8 & 13 \end{bmatrix}^T$, akkor az egyértelmű megoldás $\boldsymbol{x} = \begin{bmatrix} 1 & 2 \end{bmatrix}^T$.
+– a $\boldsymbol{b}$ értékétől függetlenül egyértelmű megoldással rendelkezik, mert az $\boldsymbol{A}$ nemszinguláris. Például ha $\boldsymbol{b} = \begin{bmatrix} 8 & 13 \end{bmatrix}^T$, akkor az egyértelmű megoldás $\boldsymbol{x} = \begin{bmatrix} 1 & 2 \end{bmatrix}^T$.
 
 Viszont a $2 \times 2$-es
 
 $$\boldsymbol{A}\boldsymbol{x} = \begin{bmatrix} 2 & 3 \\ 4 & 6 \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \end{bmatrix} = \begin{bmatrix} b_1 \\ b_2 \end{bmatrix} = \boldsymbol{b}$$
 
-rendszerben az $\boldsymbol{A}$ mátrix szinguláris, ezért $\boldsymbol{b}$ konkrét értékétől függően lehet, hogy van megoldás, és lehet, hogy nincs, és egyértelmű megoldása semmiképpen nem lehet. Például ha $\boldsymbol{b} = \begin{bmatrix} 4 & 7 \end{bmatrix}^T$, akkor nincs megoldás, ha viszont $\boldsymbol{b} = \begin{bmatrix} 4 & 8 \end{bmatrix}^T$, akkor
+rendszerben az $\boldsymbol{A}$ mátrix szinguláris, ezért a $\boldsymbol{b}$ konkrét értékétől függően előfordulhat, hogy van megoldás, de az is, hogy nincs, egyértelmű megoldása viszont semmiképpen sem lehet. Például ha $\boldsymbol{b} = \begin{bmatrix} 4 & 7 \end{bmatrix}^T$, akkor nincs megoldás, ha viszont $\boldsymbol{b} = \begin{bmatrix} 4 & 8 \end{bmatrix}^T$, akkor az
 
 $$\boldsymbol{x} = \begin{bmatrix} \gamma \\ (4 - 2\gamma)/3 \end{bmatrix}$$
 
