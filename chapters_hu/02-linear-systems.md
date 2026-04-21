@@ -43,7 +43,7 @@ $$\begin{bmatrix} R_1 + R_2 + R_3 & -R_2 & -R_3 \\ -R_2 & R_2 + R_5 & -R_5 \\ -R
 
 ## 2.2 Létezés és egyértelműség
 
-Egy $n \times n$-es $\boldsymbol{A}$ mátrixot *regulárisnak* nevezünk, ha az alábbi – egymással ekvivalens – feltételek bármelyike teljesül rá:
+Egy $n \times n$-es $\boldsymbol{A}$ mátrixot *regulárisnak* (*nemszingulárisnak*) nevezünk, ha az alábbi – egymással ekvivalens – feltételek bármelyike teljesül rá:
 
 1. $\boldsymbol{A}$-nak van inverze (azaz létezik egy olyan, $\boldsymbol{A}^{-1}$-gyel jelölt $n \times n$-es mátrix, amelyre $\boldsymbol{A}\boldsymbol{A}^{-1} = \boldsymbol{A}^{-1}\boldsymbol{A} = \boldsymbol{I}$, az egységmátrix).
 2. $\det(\boldsymbol{A}) \neq 0$ (azaz $\boldsymbol{A}$ determinánsa nem nulla).
@@ -58,7 +58,7 @@ Minden más esetben a mátrix *szinguláris*. Az $\boldsymbol{A}\boldsymbol{x} =
 
 Két dimenzióban a rendszer minden lineáris egyenlete egy egyenest határoz meg a síkban. A rendszer megoldása a két egyenes metszéspontja. Ha a két egyenes nem párhuzamos, akkor pontosan egy metszéspontjuk van (a reguláris eset). Ha a két egyenes párhuzamos, akkor vagy egyáltalán nem metszik egymást (nincs megoldás), vagy a két egyenes egybeesik (az egyenes bármely pontja megoldás). Magasabb dimenziókban minden egyenlet egy hipersíkot határoz meg. A reguláris esetben az egyértelmű megoldás az összes hipersík metszéspontja.
 
-**2.2. Példa. Szingularitás és nemszingularitás.** A $2 \times 2$-es
+**2.2. Példa. Szingularitás és regularitás.** A $2 \times 2$-es
 
 $$\begin{aligned}
 2x_1 + 3x_2 &= b_1, \\
@@ -352,9 +352,9 @@ A pontosság kondíciószámok alapján történő megítéléséhez érdemes fi
 
 - A mátrix kondíciószámát befolyásolja a skálázás (lásd a 2.10. példát). Nagy kondíciószám adódhat pusztán rossz skálázásból is (lásd a 2.20. példát), nem csak a szingularitás közelségéből. A mátrix átskálázása az előbbi problémán segíthet, az utóbbin nem (lásd a 2.4.10. szakaszt).
 
-### 2.3.5 Maradék
+### 2.3.5 Reziduum
 
-Egy egyenlet megoldásának egyik legegyszerűbb ellenőrzési módja, hogy az értéket visszahelyettesítjük az egyenletbe, és megnézzük, mennyire egyezik meg a bal és a jobb oldal. Az $\boldsymbol{A}\boldsymbol{x} = \boldsymbol{b}$ lineáris egyenletrendszer közelítő $\hat{\boldsymbol{x}}$ megoldásának **reziduuma** (reziduuma) az alábbi különbség:
+Egy egyenlet megoldásának egyik legegyszerűbb ellenőrzési módja, hogy az értéket visszahelyettesítjük az egyenletbe, és megnézzük, mennyire egyezik meg a bal és a jobb oldal. Az $\boldsymbol{A}\boldsymbol{x} = \boldsymbol{b}$ lineáris egyenletrendszer közelítő $\hat{\boldsymbol{x}}$ megoldásának **reziduuma** az alábbi különbség:
 
 $$\boldsymbol{r} = \boldsymbol{b} - \boldsymbol{A}\hat{\boldsymbol{x}}.$$
 
@@ -408,7 +408,7 @@ Ez a meglepő viselkedés azért fordulhat elő, mert az $\boldsymbol{A}$ mátri
 
 ### 2.4.1 Feladatátalakítások
 
-Az $\boldsymbol{A}\boldsymbol{x} = \boldsymbol{b}$ lineáris egyenletrendszer megoldásához az 1.1.2. szakaszban felvázolt általános stratégia azt sugallja, hogy a rendszert olyan rendszerré kell átalakítanunk, amelynek megoldása megegyezik az eredetiével, de könnyebben kiszámítható. Milyen típusú átalakítás hagyja változatlanul egy lineáris rendszer megoldását? Az $\boldsymbol{A}\boldsymbol{x} = \boldsymbol{b}$ lineáris rendszer mindkét oldalát balról bármely reguláris (reguláris) $\boldsymbol{M}$ mátrixszal megszorozhatjuk anélkül, hogy a megoldást befolyásolnánk. Ennek belátásához vegyük észre, hogy az $\boldsymbol{M}\boldsymbol{A}\boldsymbol{z} = \boldsymbol{M}\boldsymbol{b}$ lineáris rendszer megoldása:
+Az $\boldsymbol{A}\boldsymbol{x} = \boldsymbol{b}$ lineáris egyenletrendszer megoldásához az 1.1.2. szakaszban felvázolt általános stratégia azt sugallja, hogy a rendszert olyan rendszerré kell átalakítanunk, amelynek megoldása megegyezik az eredetiével, de könnyebben kiszámítható. Milyen típusú átalakítás hagyja változatlanul egy lineáris rendszer megoldását? Az $\boldsymbol{A}\boldsymbol{x} = \boldsymbol{b}$ lineáris rendszer mindkét oldalát balról bármely reguláris $\boldsymbol{M}$ mátrixszal megszorozhatjuk anélkül, hogy a megoldást befolyásolnánk. Ennek belátásához vegyük észre, hogy az $\boldsymbol{M}\boldsymbol{A}\boldsymbol{z} = \boldsymbol{M}\boldsymbol{b}$ lineáris rendszer megoldása:
 
 $$\boldsymbol{z} = (\boldsymbol{M}\boldsymbol{A})^{-1}\boldsymbol{M}\boldsymbol{b} = \boldsymbol{A}^{-1}\boldsymbol{M}^{-1}\boldsymbol{M}\boldsymbol{b} = \boldsymbol{A}^{-1}\boldsymbol{b} = \boldsymbol{x}.$$
 
@@ -1047,7 +1047,7 @@ end
 
 ## 2.6 Iterációs módszerek lineáris egyenletrendszerekhez
 
-A Gauss-elimináció a **direkt módszerek** közé tartozik, amelyek (pontos aritmetikát feltételezve) véges számú lépésben állítják elő a pontos megoldást. Ezzel szemben az **iterációs módszerek** egy kezdeti becslésből indulnak ki, és azt lépésenként javítják, amíg a megoldás el nem éri a kívánt pontosságot. Elméletileg a konvergenciához végtelen sok lépésre lehet szükség, de a gyakorlatban az eljárást leállítjuk, ha a reziduum (reziduum), $\| \boldsymbol{b} - \boldsymbol{A}\boldsymbol{x} \|$ — vagy más hibamérőszám — megfelelően kicsi lesz.
+A Gauss-elimináció a **direkt módszerek** közé tartozik, amelyek (pontos aritmetikát feltételezve) véges számú lépésben állítják elő a pontos megoldást. Ezzel szemben az **iterációs módszerek** egy kezdeti becslésből indulnak ki, és azt lépésenként javítják, amíg a megoldás el nem éri a kívánt pontosságot. Elméletileg a konvergenciához végtelen sok lépésre lehet szükség, de a gyakorlatban az eljárást leállítjuk, ha a reziduum, $\| \boldsymbol{b} - \boldsymbol{A}\boldsymbol{x} \|$ – vagy más hibamérőszám – megfelelően kicsi lesz.
 
 Egyes feladattípusoknál az iterációs módszereknek jelentős előnyei vannak a direkt módszerekkel szemben. E módszerek részletes tárgyalását a 11. fejezetben végezzük el, ahol a parciális differenciálegyenletek numerikus megoldásakor fellépő nagyméretű, ritka rendszerekkel foglalkozunk.
 
