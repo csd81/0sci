@@ -183,40 +183,39 @@ Az így definiált mátrixnormák a következő fontos tulajdonságokkal rendelk
 
 ### 2.3.3 Mátrix kondíciószáma
 
-Egy nemszinguláris $A$ négyzetes mátrix adott mátrixnormára vonatkozó kondíciószámát a következőképpen definiáljuk:
+Egy nemszinguláris $\boldsymbol{A}$ négyzetes mátrix adott mátrixnormára vonatkozó kondíciószámát a következőképpen definiáljuk:
 
 $$\operatorname{cond}(\boldsymbol{A}) = \|\boldsymbol{A}\| \cdot \|\boldsymbol{A}^{-1}\|.$$
 
-Megállapodás szerint $\operatorname{cond}(A) = \infty$, ha $A$ szinguláris. A 2.3.4. szakaszban látni fogjuk, hogy ez a fogalom összhangban van a kondíciószám 1.2.6. szakaszban bevezetett általános fogalmával annyiban, hogy a mátrix kondíciószáma felső korlátot ad a lineáris egyenletrendszer megoldásának relatív változásának és a bemeneti adatok adott relatív változásának arányára.
+Megállapodás szerint $\operatorname{cond}(\boldsymbol{A}) = \infty$, ha $\boldsymbol{A}$ szinguláris. A 2.3.4. szakaszban látni fogjuk, hogy ez a fogalom összhangban van a kondíciószám 1.2.6. szakaszban bevezetett általános fogalmával, amennyiben a mátrix kondíciószáma felső korlátot ad a megoldás relatív változásának és a bemeneti adatok relatív változásának arányára.
 
-**2.5. Példa. Mátrix kondíciószáma.** Mátrixszorzással könnyen ellenőrizhető, hogy a 2.4. példa mátrixának inverze
+**2.5. Példa. Mátrix kondíciószáma.** Mátrixszorzással könnyen ellenőrizhető, hogy a 2.4. példában szereplő mátrix inverze:
 
-$$\mathbf{A}^{-1} = \begin{bmatrix} 0{,}5 & 1{,}5 & -0{,}5 \\ -0{,}5 & 2{,}5 & -0{,}5 \\ -0{,}5 & -0{,}5 & 0{,}5 \end{bmatrix},$$
+$$\boldsymbol{A}^{-1} = \begin{bmatrix} 0{,}5 & 1{,}5 & -0{,}5 \\ -0{,}5 & 2{,}5 & -0{,}5 \\ -0{,}5 & -0{,}5 & 0{,}5 \end{bmatrix},$$
 
-így
+amelyből
 
-$$\|\mathbf{A}^{-1}\|_1 = 4{,}5$$
-és $\|\mathbf{A}^{-1}\|_{\infty} = 3{,}5$.
+$$\|\boldsymbol{A}^{-1}\|_1 = 4{,}5 \quad \text{és} \quad \|\boldsymbol{A}^{-1}\|_{\infty} = 3{,}5.$$
 
-Ebből tehát
+Ezek alapján
 
-$$\operatorname{cond}_1(\mathbf{A}) = \|\mathbf{A}\|_1 \cdot \|\mathbf{A}^{-1}\|_1 = 6 \cdot 4{,}5 = 27$$
+$$\operatorname{cond}_1(\boldsymbol{A}) = \|\boldsymbol{A}\|_1 \cdot \|\boldsymbol{A}^{-1}\|_1 = 6 \cdot 4{,}5 = 27$$
 
 és
 
-$$\operatorname{cond}_{\infty}(\mathbf{A}) = \|\mathbf{A}\|_{\infty} \cdot \|\mathbf{A}^{-1}\|_{\infty} = 8 \cdot 3{,}5 = 28.$$
+$$\operatorname{cond}_{\infty}(\boldsymbol{A}) = \|\boldsymbol{A}\|_{\infty} \cdot \|\boldsymbol{A}^{-1}\|_{\infty} = 8 \cdot 3{,}5 = 28.$$
 
-E mátrix 2-normára vonatkozó kondíciószámát lásd a 3.17. példában.
+E mátrix 2-normára vonatkozó kondíciószámát a 3.17. példa tárgyalja.
 
-A 2.5. példából látható, hogy egy $n \times n$ méretű mátrix kondíciószámának számértéke függ az alkalmazott normától (amit a megfelelő alsó index jelez), de az alapul szolgáló vektornormák ekvivalenciája miatt ezek az értékek legfeljebb egy rögzített konstansban térhetnek el (amely $n$-től függ), így a kondicionáltság kvantitatív mértékeként egyaránt hasznosak.
+A 2.5. példából látható, hogy egy $n \times n$-es mátrix kondíciószámának értéke függ az alkalmazott normától (amit az alsó index jelez), de az alapul szolgáló vektornormák ekvivalenciája miatt ezek az értékek legfeljebb egy rögzített (csak $n$-től függő) konstans szorzó erejéig térnek el egymástól, így a kondicionáltság kvantitatív mértékeként egyaránt hasznosak.
 
 Mivel
 
 $$\|\boldsymbol{A}\| \cdot \|\boldsymbol{A}^{-1}\| = \left(\max_{\boldsymbol{x} \neq \boldsymbol{0}} \frac{\|\boldsymbol{A}\boldsymbol{x}\|}{\|\boldsymbol{x}\|}\right) \cdot \left(\min_{\boldsymbol{x} \neq \boldsymbol{0}} \frac{\|\boldsymbol{A}\boldsymbol{x}\|}{\|\boldsymbol{x}\|}\right)^{-1},$$
 
-egy mátrix kondíciószáma a maximális relatív nyújtás és a maximális relatív zsugorítás arányát méri, amelyet a mátrix bármely nem nulla vektoron végrehajt. Ezt úgy is megfogalmazhatjuk, hogy a mátrix kondíciószáma az egységgömb torzulásának mértékét méri (a megfelelő vektornormában) a mátrix által való transzformáció során. Minél nagyobb a kondíciószám, annál torzabb (relatíve nyúlt és vékony) lesz az egységgömb a mátrix általi transzformáció után. Két dimenzióban például a 2-normabeli egységkörből egyre inkább szivar alakú ellipszis lesz, az 1-normában vagy az $\infty$-normában pedig az egységgömb négyzetből egyre ferdébb paralelogrammává torzul, ahogy a kondíciószám nő.
+a mátrix kondíciószáma a maximális relatív nyújtás és a maximális relatív zsugorítás arányát méri, amelyet a mátrix bármely nem nulla vektoron végrehajthat. Úgy is fogalmazhatunk, hogy a mátrix kondíciószáma az egységgömb torzulásának mértékét jellemzi (a megfelelő vektornormában) a mátrixszal való transzformáció során. Minél nagyobb a kondíciószám, annál elnyújtottabb és torzabb lesz az egységgömb képe. Két dimenzióban például a 2-normabeli egységkörből egyre inkább szivar alakú ellipszis lesz, az 1-normában vagy az $\infty$-normában pedig az egységgömb (amely euklideszi értelemben négyzet) egyre ferdébb paralelogrammává torzul a kondíciószám növekedésével.
 
-**2.6. Példa. Mátrix kondíciószáma.** A 2.3. ábra négy különböző mátrix hatását szemlélteti az $\mathbb{R}^2$-beli egységkörön a 2-normát használva. $A_1$ az egységkört 30 fokkal az óramutató járásával megegyező irányba forgatja el, de egyik vektor euklideszi hosszát sem változtatja meg, így $\operatorname{cond}_2(A_1) = 1$. $A_2$ az $e_1$ bázisvektort 2-szeresére nyújtja, az $e_2$ bázisvektort pedig 0,5-szeresére zsugorítja, és mindkettő maximális, tehát $\operatorname{cond}_2(A_2) = 2/0{,}5 = 4$. $A_3$ egyszerre forgat és torzít az egységkörön, de a maximális arány itt is ugyanaz, mint $A_2$ esetén, így $\operatorname{cond}_2(A_3) = 4$. Végül $A_4$ egy általánosabb transzformáció, amely esetén a maximális arány már nem a bázisvektoroknál jelentkezik, de a maximum értéke továbbra is ugyanaz, tehát $\operatorname{cond}_2(A_4) = 4$.
+**2.6. Példa. Mátrix kondíciószáma.** A 2.3. ábra négy különböző mátrix hatását szemlélteti az $\mathbb{R}^2$-beli egységkörön, a 2-normát használva. $\boldsymbol{A}_1$ az egységkört 30 fokkal az óramutató járásával megegyező irányba forgatja el, de egyik vektor euklideszi hosszát sem változtatja meg, így $\operatorname{cond}_2(\boldsymbol{A}_1) = 1$. $\boldsymbol{A}_2$ az $\boldsymbol{e}_1$ bázisvektort 2-szeresére nyújtja, az $\boldsymbol{e}_2$ bázisvektort pedig 0,5-szeresére zsugorítja; mivel mindkét változtatás maximális mértékű, $\operatorname{cond}_2(\boldsymbol{A}_2) = 2/0{,}5 = 4$. $\boldsymbol{A}_3$ egyszerre forgatja és torzítja az egységkört, de a maximális arány itt is megegyezik $\boldsymbol{A}_2$ értékével, így $\operatorname{cond}_2(\boldsymbol{A}_3) = 4$. Végül $\boldsymbol{A}_4$ egy általánosabb transzformáció, amelynél a maximális nyújtási arány már nem a bázisvektoroknál jelentkezik, de a maximum értéke továbbra is ugyanaz, tehát $\operatorname{cond}_2(\boldsymbol{A}_4) = 4$.
 
 ![](_page_8_Figure_3.jpeg)
 
@@ -224,44 +223,44 @@ egy mátrix kondíciószáma a maximális relatív nyújtás és a maximális re
 
 A kondíciószám következő fontos tulajdonságai a definícióból könnyen levezethetők, és tetszőleges normára érvényesek:
 
-- 1. Tetszőleges $A$ mátrix esetén $\operatorname{cond}(A) \ge 1$.
-- 2. Az egységmátrixra $\operatorname{cond}(I) = 1$.
-- 3. Tetszőleges $A$ mátrix és nem nulla $\gamma$ skalár esetén $\operatorname{cond}(\gamma A) = \operatorname{cond}(A)$.
-- 4. Tetszőleges $D = \operatorname{diag}(d_i)$ diagonális mátrix esetén $\operatorname{cond}(D) = (\max |d_i|)/(\min |d_i|)$.
+1. Tetszőleges $\boldsymbol{A}$ mátrix esetén $\operatorname{cond}(\boldsymbol{A}) \ge 1$.
+2. Az egységmátrixra $\operatorname{cond}(\boldsymbol{I}) = 1$.
+3. Tetszőleges $\boldsymbol{A}$ mátrix és nem nulla $\gamma$ skalár esetén $\operatorname{cond}(\gamma \boldsymbol{A}) = \operatorname{cond}(\boldsymbol{A})$.
+4. Tetszőleges $\boldsymbol{D} = \operatorname{diag}(d_i)$ diagonális mátrix esetén $\operatorname{cond}(\boldsymbol{D}) = (\max |d_i|)/(\min |d_i|)$.
 
-A kondíciószám azt méri, hogy a mátrix mennyire van közel a szingularitáshoz: egy nagy kondíciószámú mátrix (amit a 2.3.4. szakaszban fogunk kvantifikálni) közel szinguláris, míg az 1-hez közeli kondíciószámú mátrix messze van a szingularitástól. A definícióból nyilvánvaló, hogy egy nemszinguláris mátrix és inverze kondíciószáma megegyezik. Ez érthető, hiszen ha egy mátrix közel szinguláris, akkor az inverze is ugyanolyan közel van a szingularitáshoz.
+A kondíciószám azt méri, hogy a mátrix mennyire van közel a szingularitáshoz: egy nagy kondíciószámú mátrix (ezt a 2.3.4. szakaszban számszerűsítjük) közel szinguláris, míg az 1-hez közeli kondíciószámú mátrix távol van a szingularitástól. A definícióból adódik, hogy egy nemszinguláris mátrix és az inverze kondíciószáma megegyezik. Ez szemléletesen is érthető: ha egy mátrix közel szinguláris, akkor az inverze is ugyanolyan mértékben „közel" van a szingularitáshoz.
 
-Megjegyzendő, hogy a mátrix determinánsa nem jó indikátora a szingularitáshoz való közelségnek: bár egy $A$ mátrix szinguláris, ha $\det(A) = 0$, a nem nulla determináns nagysága – akár nagy, akár kicsi – semmilyen információt nem ad arról, hogy a mátrix mennyire közelít a szingularitáshoz. Például $\det(\alpha I_n) = \alpha^n$, ami $|\alpha| < 1$ esetén tetszőlegesen kicsi lehet, ennek ellenére a mátrix tetszőleges nem nulla $\alpha$ esetén tökéletesen jól kondicionált, kondíciószáma bármely mátrixnormában 1.
+Megjegyzendő, hogy a mátrix determinánsa nem megbízható mutatója a szingularitáshoz való közelségnek: bár az $\boldsymbol{A}$ mátrix szinguláris, ha $\det(\boldsymbol{A}) = 0$, a nem nulla determináns nagysága önmagában semmilyen információt nem ad a kondicionáltságról. Például $\det(\alpha \boldsymbol{I}_n) = \alpha^n$, ami $|\alpha| < 1$ esetén tetszőlegesen kicsi lehet, ennek ellenére a mátrix bármely $\alpha \neq 0$ esetén tökéletesen jól kondicionált, kondíciószáma minden mátrixnormában pontosan 1.
 
-Ahogy nemsokára látni fogjuk, a kondíciószám hasznossága a lineáris egyenletrendszerek megoldásának pontosságának megítélésében rejlik. A kondíciószám definíciója a mátrix inverzét tartalmazza, így értékének kiszámítása nyilvánvalóan nem triviális feladat. Valójában a kondíciószámot közvetlenül a definícióból kiszámítani lényegesen nagyobb munkát igényelne, mint annak a megoldásnak a kiszámítása, amelynek pontosságát a kondíciószám segítségével kívánjuk megítélni. A gyakorlatban ezért a kondíciószámot csupán becsüljük, legfeljebb egy nagyságrend pontossággal, a megoldási folyamat viszonylag olcsó melléktermékeként.
+A kondíciószám hasznossága a lineáris egyenletrendszerek megoldásának becsült pontosságában rejlik. Mivel a kondíciószám definíciója tartalmazza a mátrix inverzét, a kiszámítása nem triviális. Valójában a kondíciószám közvetlen kiszámítása lényegesen nagyobb munkát igényelne, mint magának az egyenletrendszernek a megoldása. A gyakorlatban ezért a kondíciószámot csupán becsüljük (rendszerint egy nagyságrendnyi pontossággal), a megoldási folyamat viszonylag olcsó „melléktermékeként".
 
-Az $\|A\|$ mátrixnormát könnyen kiszámíthatjuk maximális abszolút oszlopösszegként (vagy sorösszegként, a használt normától függően). Az $\|A^{-1}\|$ alacsony költségű becslése jelenti a kihívást. A normák tulajdonságaiból tudjuk, hogy ha $z$ az $Az = y$ rendszer megoldása, akkor
+Az $\|\boldsymbol{A}\|$ mátrixnormát könnyen kiszámíthatjuk a maximális oszlop- vagy sorösszegként. A kihívást az $\|\boldsymbol{A}^{-1}\|$ költséghatékony becslése jelenti. A normák tulajdonságaiból tudjuk, hogy ha $\boldsymbol{z}$ az $\boldsymbol{A}\boldsymbol{z} = \boldsymbol{y}$ rendszer megoldása, akkor:
 
-$$\|z\| = \|A^{-1}y\| \le \|A^{-1}\| \cdot \|y\|,$$
+$$\|\boldsymbol{z}\| = \|\boldsymbol{A}^{-1}\boldsymbol{y}\| \le \|\boldsymbol{A}^{-1}\| \cdot \|\boldsymbol{y}\|,$$
 
 így
 
 $$\frac{\|\boldsymbol{z}\|}{\|\boldsymbol{y}\|} \le \|\boldsymbol{A}^{-1}\|,$$
 
-és ez a korlát valamely optimálisan választott $y$ vektor esetén elérhető. Ezért ha $y$-t úgy tudjuk megválasztani, hogy az $\|z\|/\|y\|$ hányados a lehető legnagyobb legyen, akkor ésszerű becslést kapunk $\|A^{-1}\|$-re.
+és ez a korlát valamely optimálisan választott $\boldsymbol{y}$ vektor esetén egyenlőségként is teljesülhet. Ezért ha $\boldsymbol{y}$-t úgy választjuk meg, hogy a $\|\boldsymbol{z}\|/\|\boldsymbol{y}\|$ hányados a lehető legnagyobb legyen, ésszerű becslést kapunk $\|\boldsymbol{A}^{-1}\|$-re.
 
-**2.7. Példa. Kondícióbecslés.** Tekintsük az
+**2.7. Példa. Kondícióbecslés.** Tekintsük az alábbi mátrixot:
 
-$$\mathbf{A} = \begin{bmatrix} 0{,}913 & 0{,}659 \\ 0{,}457 & 0{,}330 \end{bmatrix}$$
+$$\boldsymbol{A} = \begin{bmatrix} 0{,}913 & 0{,}659 \\ 0{,}457 & 0{,}330 \end{bmatrix}.$$
 
-mátrixot. Ha $y = [0, 1{,}5]^T$-t választjuk, akkor $z = [-7780, 10780]^T$, tehát
+Ha $\boldsymbol{y} = [0, 1{,}5]^T$-t választjuk, akkor $\boldsymbol{z} = [-7780, 10780]^T$, tehát
 
 $$\|\boldsymbol{A}^{-1}\|_{1} \approx \frac{\|\boldsymbol{z}\|_{1}}{\|\boldsymbol{y}\|_{1}} \approx 1{,}238 \times 10^{4},$$
 
 és így
 
-$$\operatorname{cond}_1(\mathbf{A}) = \|\mathbf{A}\|_1 \cdot \|\mathbf{A}^{-1}\|_1 \approx 1{,}370 \times 1{,}238 \times 10^4 = 1{,}696 \times 10^4,$$
+$$\operatorname{cond}_1(\boldsymbol{A}) = \|\boldsymbol{A}\|_1 \cdot \|\boldsymbol{A}^{-1}\|_1 \approx 1{,}370 \times 1{,}238 \times 10^4 = 1{,}696 \times 10^4,$$
 
-ami – mint kiderül – a megjelenített számjegyek pontosságával egzakt. E viszonylag nagy kondíciószám következményeit a 2.8. és a 2.17. példában vizsgáljuk.
+ami – mint kiderül – a megadott tizedesjegyek erejéig pontos. E viszonylag nagy kondíciószám következményeit a 2.8. és a 2.17. példában vizsgáljuk meg.
 
-A 2.7. példabeli $y$ vektort gondosan úgy választottuk meg, hogy a lehető legnagyobb $\|z\|/\|y\|$ hányadost adja, és így $\|A^{-1}\|$ pontos értékét eredményezze. Egy ilyen optimális $y$ megtalálása általában megengedhetetlenül költséges lenne, de jóval olcsóbban is kaphatunk hasznos közelítést. Az egyik heurisztika az, hogy $y$-t az $A^T y = c$ rendszer megoldásaként választjuk, ahol $c$ egy olyan vektor, amelynek komponensei $\pm 1$ értékűek; az előjeleket egymás után úgy választjuk meg, hogy az adódó $y$ a lehető legnagyobb legyen. Egy másik stratégia egyszerűen az, hogy néhány véletlen $y$-t próbálunk; a közöttük legnagyobb hányados megadása gyakorlati célokra általában elegendően pontos becslést ad $\|A^{-1}\|$-re.
+A 2.7. példabeli $\boldsymbol{y}$ vektort gondosan úgy választottuk meg, hogy a maximális hányadost adja, és így $\|\boldsymbol{A}^{-1}\|$ pontos értékét kapjuk meg. Egy ilyen optimális $\boldsymbol{y}$ megtalálása általában túl sok számítási kapacitást igényelne, de léteznek olcsóbb közelítések is. Az egyik heurisztika szerint $\boldsymbol{y}$-t az $\boldsymbol{A}^T \boldsymbol{y} = \boldsymbol{c}$ rendszer megoldásaként keressük, ahol $\boldsymbol{c}$ komponensei $\pm 1$ értékűek, és az előjeleket úgy választjuk meg, hogy az adódó $\boldsymbol{y}$ a lehető legnagyobb legyen. Egy másik stratégia egyszerűen néhány véletlenszerű $\boldsymbol{y}$ vektorral próbálkozik; a kapott legnagyobb hányados általában elegendő becslést ad $\|\boldsymbol{A}^{-1}\|$-re.
 
-A kondícióbecslés alternatív megközelítése, hogy konvex optimalizálási feladatként kezeljük, amely heurisztikus algoritmussal a gyakorlatban nagyon hatékonyan megoldható. További lehetőség – a 2-norma használatakor – a kondíciószámot a szingulárisérték-felbontásból származtatni (lásd 3.6.1. szakasz), ez azonban megengedhetetlenül költséges, hacsak az SVD-t egyéb okból amúgy sem számítjuk ki. Szerencsére a felhasználóknak nem kell aggódniuk e részletek miatt, mivel a lineáris egyenletrendszerek megoldására szolgáló jó modern szoftvercsomagok többsége hatékony és megbízható kondícióbecslőt biztosít, amely az itt vázolt módszerek valamelyikének kifinomult megvalósításán alapul (lásd 2.1. táblázat).
+A kondícióbecslés egy alternatív megközelítése, hogy a feladatot konvex optimalizálási problémaként kezeljük, ami heurisztikus algoritmusokkal nagyon hatékonyan megoldható. A 2-norma esetén lehetőség van a szingulárisérték-felbontásból (SVD) való származtatásra is (lásd 3.6.1. szakasz), de ez aránytalanul nagy számításigényű, hacsak az SVD-t egyéb okból amúgy sem számítjuk ki. Szerencsére a felhasználóknak ritkán kell ezekkel a részletekkel foglalkozniuk, mivel a modern szoftvercsomagok többsége tartalmaz hatékony és megbízható kondícióbecslőt (lásd a 2.1. táblázatot).
 
 ### 2.3.4 Hibakorlátok
 
