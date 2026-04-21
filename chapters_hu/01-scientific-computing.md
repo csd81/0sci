@@ -893,125 +893,125 @@ $$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
 
 ### Feladatok
 
-- **1.1.** Az átlagos emberi testhőmérsékletet szokás $98{,}6$ Fahrenheit-foknak megadni, amit vélhetnénk egy nagy népesség átlagaként, három értékes jegyre kerekítve. Valójában azonban a $98{,}6$ egyszerűen a $37$ Celsius-fok Fahrenheit-megfelelője, amely csak két értékes jegyre pontos.
-  (a) Mi a maximális relatív hiba az elfogadott értékben, feltéve, hogy az $\pm 0{,}05\,^\circ\text{F}$ pontosságú?
-  (b) Mi a maximális relatív hiba az elfogadott értékben, feltéve, hogy az $\pm 0{,}5\,^\circ\text{C}$ pontosságú?
-- **1.2.** Mi a közelítő abszolút és relatív hiba $\pi$ közelítésére a következő mennyiségek mindegyikével?
+- **1.1.** Az átlagos emberi testhőmérsékletet szokás $98{,}6$ Fahrenheit-fokként megadni, amiről azt gondolhatnánk, hogy egy nagy populáció átlaga, három értékes jegyre kerekítve. Valójában azonban a $98{,}6$ egyszerűen a $37$ Celsius-fokos érték Fahrenheit-megfelelője, amely csak két értékes jegyre pontos.
+  (a) Mennyi a maximális relatív hiba az elfogadott értékben, feltéve, hogy az $\pm 0{,}05\,^\circ\text{F}$ pontosságú?
+  (b) Mennyi a maximális relatív hiba az elfogadott értékben, feltéve, hogy az $\pm 0{,}5\,^\circ\text{C}$ pontosságú?
+- **1.2.** Mennyi az abszolút és a relatív hiba, ha a $\pi$ értékét a következő mennyiségekkel közelítjük?
   (a) $3$; (b) $3{,}14$; (c) $22/7$.
-- **1.3.** Ha $a$ egy $t$ valódi értékű mennyiség közelítő értéke, és $a$ relatív hibája $r$, akkor e fogalmak definícióiból bizonyítsuk be, hogy $a = t(1 + r)$.
-- **1.4.** Tekintsük a $\sin(x)$ függvény kiértékelésének feladatát – különösen a továbbterjedő adathibát, azaz a függvényérték hibáját, amelyet az $x$ argumentum $h$ perturbációja okoz.
-  (a) Becsüld meg a $\sin(x)$ kiértékelésének abszolút hibáját.
-  (b) Becsüld meg a $\sin(x)$ kiértékelésének relatív hibáját.
-  (c) Becsüld meg a feladat kondíciószámát.
+- **1.3.** Ha az $a$ a $t$ pontos (valódi) értékű mennyiség közelítése, és $a$ relatív hibája $r$, akkor a fogalmak definícióiból kiindulva bizonyítsd be, hogy $a = t(1 + r)$.
+- **1.4.** Tekintsük a $\sin(x)$ függvény kiszámításának feladatát – különösen a továbbterjedő adathibát, azaz a függvényérték hibáját, amit az $x$ argumentum $h$ nagyságú perturbációja okoz.
+  (a) Becsüld meg a $\sin(x)$ kiszámításának abszolút hibáját!
+  (b) Becsüld meg a $\sin(x)$ kiszámításának relatív hibáját!
+  (c) Becsüld meg a feladat kondíciószámát!
   (d) Az $x$ argumentum mely értékeire nagyon érzékeny ez a feladat?
-- **1.5.** Tekintsük az $f: \mathbb{R}^2 \to \mathbb{R}$ függvényt, amelyet $f(x, y) = x - y$ definiál. A bemenet $(x, y)$ méretét $|x| + |y|$-nal mérve, és feltételezve, hogy $|x| + |y| \approx 1$ és $x - y \approx \epsilon$, mutasd meg, hogy $\operatorname{cond}(f) \approx 1/\epsilon$. Mit mondhatsz a kivonás érzékenységéről?
+- **1.5.** Tekintsük az $f: \mathbb{R}^2 \to \mathbb{R}$ függvényt, amelyet az $f(x, y) = x - y$ definiál. A bemenet $(x, y)$ nagyságát $|x| + |y|$-nal mérve, és feltételezve, hogy $|x| + |y| \approx 1$ és $x - y \approx \epsilon$, mutasd meg, hogy $\operatorname{cond}(f) \approx 1/\epsilon$. Mit mondhatsz a kivonás érzékenységéről?
 - **1.6.** A szinuszfüggvényt a
 
 $$\sin(x) = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \cdots$$
 
   végtelen sor adja meg.
-  (a) Mi az előreható és a hátraható hiba, ha a szinuszfüggvényt a sor első tagjával közelítjük – azaz $\sin(x) \approx x$ – $x = 0{,}1$, $0{,}5$ és $1{,}0$ esetén?
-  (b) Mi az előreható és a hátraható hiba, ha a szinuszfüggvényt a sor első két tagjával közelítjük – azaz $\sin(x) \approx x - x^3/6$ – $x = 0{,}1$, $0{,}5$ és $1{,}0$ esetén?
-- **1.7.** Egy lebegőpontos számrendszert négy egész szám jellemez: a $\beta$ alap, a $p$ precízió, valamint az exponens-tartomány $L$ és $U$ alsó, illetve felső határai.
-  (a) Ha $\beta = 10$, mik $p$ és $U$ legkisebb, illetve $L$ legnagyobb értékei, hogy a $2365{,}27$ és a $0{,}0000512$ egyaránt pontosan ábrázolható legyen egy normalizált lebegőpontos rendszerben?
-  (b) Hogyan változna a válaszod, ha a rendszer nem normalizált, azaz fokozatos alulcsordulást engedélyezünk?
-- **1.8.** Egy $p = 6$ decimális precíziójú lebegőpontos rendszerben legyen $x = 1{,}23456$ és $y = 1{,}23579$.
-  (a) Hány értékes jegyet tartalmaz a $y - x$ különbség?
-  (b) Ha a lebegőpontos rendszer normalizált, mi a minimális exponens-tartomány, amely esetén $x$, $y$ és $y - x$ mindegyike pontosan ábrázolható?
-  (c) Az exponens-tartománytól függetlenül pontosan ábrázolható-e a $y - x$ különbség, ha fokozatos alulcsordulás megengedett? Miért?
-- **1.9.** (a) Négy számjegyű decimális aritmetikával és az 1.1. példában adott képlettel számítsd ki a Föld felszínét $r = 6370$ km mellett.
-  (b) Ugyanezzel a képlettel és precízióval számítsd ki a felszín különbségét, ha a sugár értékét 1 km-rel növeljük.
-  (c) Mivel $dA/dr = 8\pi r$, a felszín változása $8\pi r h$-val közelíthető, ahol $h$ a sugár változása. Ezzel a képlettel – még mindig négy számjegyű aritmetikával – számítsd ki a felszín különbségét a sugár 1 km-es növekedése miatt. Hogyan viszonyul az e közelítő képlettel kapott érték a (b)-ben az „egzakt" képlettel kapott értékhez?
-  (d) Határozd meg, melyik az előző két válasz közül a közelebb álló a helyeshez úgy, hogy mindkét számítást magasabb precízióval – mondjuk hat számjegyű decimális aritmetikával – megismétled.
-  (e) Magyarázd meg az (a)–(d) pontokban kapott eredményeket.
-  (f) Próbáld ki ezt a feladatot számítógépen. Milyen kicsi $h$ sugárváltoztatás esetén lép fel ugyanez a jelenség? Próbáld ki mind egyszeres, mind dupla pontossággal, ha rendelkezésre áll.
+  (a) Mennyi az előreható és a hátraható hiba, ha a szinuszfüggvényt a sor első tagjával közelítjük – azaz $\sin(x) \approx x$ – $x = 0{,}1$, $0{,}5$ és $1{,}0$ esetén?
+  (b) Mennyi az előreható és a hátraható hiba, ha a szinuszfüggvényt a sor első két tagjával közelítjük – azaz $\sin(x) \approx x - x^3/6$ – $x = 0{,}1$, $0{,}5$ és $1{,}0$ esetén?
+- **1.7.** Egy lebegőpontos számrendszert négy egész szám jellemez: a $\beta$ alap, a $p$ precízió, valamint az exponenstartomány $L$ alsó és $U$ felső korlátja.
+  (a) Ha $\beta = 10$, mik a $p$ és az $U$ legkisebb, illetve $L$ legnagyobb értékei ahhoz, hogy a $2365{,}27$ és a $0{,}0000512$ egyaránt pontosan ábrázolható legyen egy normalizált lebegőpontos rendszerben?
+  (b) Hogyan változna a válaszod, ha a rendszer nem normalizált, azaz fokozatos alulcsordulást is engedélyezünk?
+- **1.8.** Egy tízes alapú, $p = 6$ precíziójú lebegőpontos rendszerben legyen $x = 1{,}23456$ és $y = 1{,}23579$.
+  (a) Hány értékes jegyet tartalmaz az $y - x$ különbség?
+  (b) Ha a lebegőpontos rendszer normalizált, mi a minimális exponenstartomány, amely esetén az $x$, az $y$ és az $y - x$ mindegyike pontosan ábrázolható?
+  (c) Az exponenstartománytól függetlenül pontosan ábrázolható-e az $y - x$ különbség, ha fokozatos alulcsordulás megengedett? Miért?
+- **1.9.** (a) Négy értékes jeggyel számoló decimális aritmetikával és az 1.1. példában adott képlettel számítsd ki a Föld felszínét $r = 6370$ km mellett!
+  (b) Ugyanezzel a képlettel és precízióval számítsd ki a felszín megváltozását, ha a sugár értékét 1 km-rel növeljük!
+  (c) Mivel $dA/dr = 8\pi r$, a felszín változása $8\pi r h$-val közelíthető, ahol $h$ a sugár változása. Ezzel a képlettel – továbbra is négy számjegyű aritmetikával – számítsd ki a felszín megváltozását a sugár 1 km-es növekedése miatt! Hogyan viszonyul ez a közelítő képlettel kapott érték a (b) feladatrészben az „egzakt" képlettel számított értékhez?
+  (d) Döntsd el, hogy az előző két eredmény közül melyik áll közelebb a helyeshez úgy, hogy mindkét számítást magasabb precízióval – mondjuk hat számjegyű decimális aritmetikával – megismétled!
+  (e) Magyarázd meg az (a)–(d) pontokban kapott eredményeket!
+  (f) Próbáld ki ezt a feladatot számítógépen is! Milyen pici $h$ sugárváltoztatás esetén lép fel ugyanez a jelenség? Próbáld ki egyszeres és dupla pontossággal is, ha rendelkezésre áll!
 - **1.10.** Tekintsük az
 
 $$\frac{1}{1-x} - \frac{1}{1+x}$$
 
   kifejezést, feltételezve, hogy $x \neq \pm 1$.
-  (a) Az $x$ értékek mely tartományára nehéz e kifejezést pontosan számítani lebegőpontos aritmetikában?
-  (b) Add meg a tagok olyan átrendezését, amely az (a)-beli $x$-tartományra lebegőpontos aritmetikában pontosabb.
-- **1.11.** Ha $x \approx y$, akkor azt várnánk, hogy a $\log(x) - \log(y)$ számítás kioltást szenved. Másfelől $\log(x) - \log(y) = \log(x/y)$, és az utóbbi nem tartalmaz kioltást. Jelenti-e ez azt, hogy $\log(x/y)$ számítása valószínűleg jobb eredményt ad? (*Útmutatás:* Milyen értékre érzékeny a logaritmusfüggvény?)
+  (a) Az $x$ mely tartományában nehéz ezt a kifejezést pontosan kiszámítani lebegőpontos aritmetikában?
+  (b) Add meg a tagok olyan átrendezését, amely az (a)-beli $x$-tartományban lebegőpontos aritmetikával pontosabb eredményt ad!
+- **1.11.** Ha $x \approx y$, akkor azt várnánk, hogy a $\log(x) - \log(y)$ kiszámítása során számjegykioltás lép fel. Másfelől $\log(x) - \log(y) = \log(x/y)$, és az utóbbiban nem lép fel számjegykioltás. Jelenti-e ez azt, hogy a $\log(x/y)$ kiszámítása valószínűleg jobb eredményt ad? (*Útmutatás:* Milyen értékre érzékeny a logaritmusfüggvény?)
 - **1.12.** (a) A matematikailag ekvivalens
 
 $$x^2 - y^2 \quad \text{és} \quad (x - y)(x + y)$$
 
-  kifejezések közül melyik értékelhető ki pontosabban lebegőpontos aritmetikában? Miért?
-  (b) $x$ és $y$ mely – egymáshoz viszonyított – értékeire van lényeges különbség a két kifejezés pontosságában?
+  kifejezések közül melyik számítható ki pontosabban lebegőpontos aritmetikában? Miért?
+  (b) Az $x$ és $y$ mely – egymáshoz viszonyított – értékeire van lényeges különbség a két kifejezés pontosságában?
 - **1.13.** Egy $n$-dimenziós $\boldsymbol{x}$ vektor euklideszi normáját az
 
 $$\|\boldsymbol{x}\|_2 = \left(\sum_{i=1}^n x_i^2\right)^{1/2}$$
 
   képlet definiálja. Hogyan kerülheted el a túlcsordulást és a káros alulcsordulást ebben a számításban?
-- **1.14.** Egy $[a, b]$ intervallum $m$ középpontjának lebegőpontos aritmetikában történő számításához a következő két képlet közül melyik jobb, és miért? Mikor? (*Útmutatás:* Találj ki példákat, amelyekben a képlet által adott „középpont" az $[a, b]$ intervallumon kívülre esik.)
+- **1.14.** Egy $[a, b]$ intervallum $m$ középpontjának lebegőpontos aritmetikával történő kiszámítására a következő két képlet közül melyik jobb, és miért? Mikor? (*Útmutatás:* Találj ki példákat, amelyekben a képlet által adott „középpont" az $[a, b]$ intervallumon kívülre esik.)
   (a) $m = (a + b)/2{,}0$
   (b) $m = a + (b - a)/2{,}0$
 - **1.15.** Adj konkrét példákat, amelyek megmutatják, hogy a lebegőpontos összeadás nem asszociatív, a következő lebegőpontos rendszerek mindegyikében:
-  (a) az 1.9. példa játék lebegőpontos rendszere;
-  (b) IEEE egyszeres pontosságú lebegőpontos aritmetika.
-- **1.16.** Magyarázd meg, hogyan különbözhetnek a gyakorlatban az $\epsilon_{\text{mach}}$ egységnyi kerekítési hiba 1.3.5. szakaszban adott különféle definíciói. (*Útmutatás:* Tekintsd az 1.9. példa játék lebegőpontos rendszerét.)
-- **1.17.** Legyen $x$ egy adott nem nulla lebegőpontos szám egy normalizált rendszerben, és legyen $y$ egy szomszédos – szintén nem nulla – lebegőpontos szám.
-  (a) Mi a minimális lehetséges távolság $x$ és $y$ között?
-  (b) Mi a maximális lehetséges távolság $x$ és $y$ között?
-- **1.18.** Hány normalizált gépi szám van egy IEEE egyszeres pontosságú lebegőpontos rendszerben? Hány további gépi számot nyerünk, ha megengedjük a szubnormálisakat?
-- **1.19.** Egy IEEE egyszeres pontosságú lebegőpontos rendszerben mi a legnagyobb gépi szám $\text{OFL}$, és a legkisebb pozitív normalizált gépi szám $\text{UFL}$ értéke? Hogyan változnak a válaszaid, ha a szubnormálisak megengedettek?
+  (a) az 1.9. példában szereplő „játék" lebegőpontos rendszer;
+  (b) az IEEE egyszeres pontosságú lebegőpontos aritmetika.
+- **1.16.** Magyarázd meg, hogyan különbözhetnek a gyakorlatban az $\epsilon_{\text{mach}}$ egységnyi kerekítési hiba 1.3.5. szakaszban adott különféle definíciói! (*Útmutatás:* Tekintsd az 1.9. példa „játék" lebegőpontos rendszerét.)
+- **1.17.** Legyen $x$ egy adott nem nulla lebegőpontos szám egy normalizált rendszerben, és $y$ a vele szomszédos – szintén nem nulla – lebegőpontos szám.
+  (a) Mi a minimális lehetséges távolság az $x$ és $y$ között?
+  (b) Mi a maximális lehetséges távolság az $x$ és $y$ között?
+- **1.18.** Hány normalizált gépi szám van egy IEEE egyszeres pontosságú lebegőpontos rendszerben? Hány további gépi számot nyerünk, ha megengedjük a szubnormális számokat?
+- **1.19.** Egy IEEE egyszeres pontosságú lebegőpontos rendszerben mennyi az $\text{OFL}$ legnagyobb gépi szám, és az $\text{UFL}$ legkisebb pozitív normalizált gépi szám értéke? Hogyan változnak a válaszaid, ha a szubnormálisak is megengedettek?
 - **1.20.** Mi a $0{,}1$ decimális tört IEEE egyszeres pontosságú bináris lebegőpontos ábrázolása
   (a) csonkítással?
-  (b) legközelebbihez kerekítéssel?
+  (b) legközelebbihez való kerekítéssel?
 - **1.21.** (a) Egy lebegőpontos rendszerben az $\epsilon_{\text{mach}}$ egységnyi kerekítési hiba szükségképpen gépi szám-e?
-  (b) Létezhet-e olyan lebegőpontos rendszer, amelyben $\epsilon_{\text{mach}} < \text{UFL}$? Ha igen, adj példát.
+  (b) Létezhet-e olyan lebegőpontos rendszer, amelyben $\epsilon_{\text{mach}} < \text{UFL}$? Ha igen, adj rá példát!
 - **1.22.** Tegyük fel, hogy az $ax^2 + bx + c = 0$ másodfokú egyenletet oldjuk meg $a = 1{,}22$, $b = 3{,}34$, $c = 2{,}28$ mellett, egy $\beta = 10$, $p = 3$ normalizált lebegőpontos rendszerben.
-  (a) Mi a diszkrimináns $b^2 - 4ac$ számított értéke?
+  (a) Mi a diszkrimináns, azaz a $b^2 - 4ac$ számított értéke?
   (b) Mi a diszkrimináns helyes értéke valós (egzakt) aritmetikában?
   (c) Mi a diszkrimináns számított értékének relatív hibája?
-- **1.23.** Tegyünk fel egy $\beta = 10$, $p = 3$, $L = -98$ normalizált lebegőpontos rendszert.
-  (a) Mi az $\text{UFL}$ alulcsordulási szint értéke ebben a rendszerben?
-  (b) Ha $x = 6{,}87 \times 10^{-97}$ és $y = 6{,}81 \times 10^{-97}$, mi $x - y$ eredménye?
-  (c) Mi lenne $x - y$ eredménye, ha a rendszer megengedné a fokozatos alulcsordulást?
-- **1.24.** Tekintsük a következő állítást: ha két azonos előjelű lebegőpontos szám, $x$ és $y$ legfeljebb a $\beta$ alap szerinti tényezővel tér el (azaz $1/\beta \le x/y \le \beta$), akkor a különbségük, $x - y$ pontosan ábrázolható a lebegőpontos rendszerben. Mutasd meg, hogy ez az állítás igaz $\beta = 2$ esetén, de adj ellenpéldát $\beta > 2$ esetére.
-- **1.25.** Néhány mikroprocesszor rendelkezik egy `mpyadd(a, b, c)` utasítással (szorzás-összeadás), amely egyszeres hosszúságú bemeneteket vesz, és hozzáadja $c$-t $a$ és $b$ dupla hosszúságú szorzatához, mielőtt normalizálná és egyszeres hosszúságú eredményt adna vissza. Hogyan lehet egy ilyen utasítást felhasználni dupla pontosságú szorzatok kiszámítására úgy, hogy dupla hosszúságú változókat egyáltalán nem használunk (azaz $a$ és $b$ dupla hosszúságú szorzata két egyszeres hosszúságú változóban – például $s$-ben és $t$-ben – tárolódik)?
-- **1.26.** Igazold, hogy az 1.15. példában adott alternatív másodfokú megoldóképlet valóban helyes gyököket ad a másodfokú egyenletre (egzakt aritmetikában).
-- **1.27.** Adj részletes magyarázatot a szórás számításához használt egymenetes képlet numerikus gyengeségére az 1.16. példában adott kétmenetes képlethez képest.
+- **1.23.** Tekintsünk egy $\beta = 10$, $p = 3$, $L = -98$ normalizált lebegőpontos rendszert!
+  (a) Mennyi az $\text{UFL}$ alulcsordulási szint értéke ebben a rendszerben?
+  (b) Ha $x = 6{,}87 \times 10^{-97}$ és $y = 6{,}81 \times 10^{-97}$, mi az $x - y$ eredménye?
+  (c) Mi lenne az $x - y$ eredménye, ha a rendszer megengedné a fokozatos alulcsordulást?
+- **1.24.** Tekintsük a következő állítást: ha két azonos előjelű lebegőpontos szám, $x$ és $y$ aránya legfeljebb a $\beta$ alap (azaz $1/\beta \le x/y \le \beta$), akkor a különbségük, az $x - y$ pontosan ábrázolható a lebegőpontos rendszerben. Mutasd meg, hogy ez az állítás igaz $\beta = 2$ esetén, de adj ellenpéldát $\beta > 2$ esetére!
+- **1.25.** Néhány mikroprocesszor rendelkezik egy `mpyadd(a, b, c)` (szorzás-összeadás) utasítással, amely egyszeres pontosságú bemeneteket vár, és hozzáadja a $c$-t az $a$ és $b$ kétszeres pontosságú szorzatához, mielőtt normalizálná és egyszeres pontosságú eredményt adna vissza. Hogyan lehet egy ilyen utasítást felhasználni dupla pontosságú szorzatok kiszámítására úgy, hogy dupla pontosságú változókat egyáltalán nem használunk (azaz az $a$ és $b$ kétszeres pontosságú szorzata két egyszeres pontosságú változóban – például $s$-ben és $t$-ben – tárolódik)?
+- **1.26.** Igazold, hogy az 1.15. példában adott alternatív megoldóképlet valóban a másodfokú egyenlet helyes gyökeit adja (egzakt aritmetikában)!
+- **1.27.** Adj részletes magyarázatot a szórás számításához használt egylépéses képlet numerikus gyengeségére az 1.16. példában megadott kétlépéses képlethez képest!
 
 ### Számítógépes feladatok
 
-- **1.1.** Írj programot, amely kiszámítja Stirling közelítésének
+- **1.1.** Írj programot, amely kiszámítja a Stirling-formula
 
 $$n! \approx \sqrt{2\pi n}\,\left(n/e\right)^n$$
 
-  abszolút és relatív hibáját $n = 1, \dots, 10$ esetén. Az abszolút hiba nő vagy csökken $n$ növekedtével? És a relatív hiba?
-- **1.2.** Írj programot, amely közelítő értékeket határoz meg az $\epsilon_{\text{mach}}$ egységnyi kerekítési hibára és az $\text{UFL}$ alulcsordulási szintre, és teszteld egy valós számítógépen. (*Opcionális:* Meg tudod határozni a géped $\text{OFL}$ túlcsordulási szintjét is? Ez trükkösebb, mert egy tényleges túlcsordulás végzetes lehet.) Írasd ki a kapott értékeket decimálisan, és próbáld megállapítani a használt lebegőpontos rendszer mantissza- és exponensmezőjének bitszámát.
+  által adott közelítés abszolút és relatív hibáját $n = 1, \dots, 10$ esetén! Az abszolút hiba nő vagy csökken $n$ növekedésével? És a relatív hiba?
+- **1.2.** Írj programot, amely közelítő értékeket határoz meg az $\epsilon_{\text{mach}}$ egységnyi kerekítési hibára és az $\text{UFL}$ alulcsordulási szintre, és teszteld egy valós számítógépen! (*Opcionális:* Meg tudod határozni a géped $\text{OFL}$ túlcsordulási szintjét is? Ez trükkösebb, mert egy tényleges túlcsordulás végzetes programhibát okozhat.) Írasd ki a kapott értékeket decimális formában, és próbáld megállapítani a használt lebegőpontos rendszer mantissza- és exponensmezőjének bitszámát!
 - **1.3.** A legtöbb lebegőpontos rendszerben az egységnyi kerekítési hibára gyors közelítés kapható az
 
 $$\epsilon_{\text{mach}} \approx |3 \cdot (4/3 - 1) - 1|$$
 
-  kifejezés kiértékelésével.
-  (a) Magyarázd meg, miért működik ez a trükk.
-  (b) Próbáld ki különféle számítógépeken (egyszeres és dupla pontossággal egyaránt) és számológépeken, hogy megerősítsd a működését.
+  kifejezés kiszámításával.
+  (a) Magyarázd meg, miért működik ez a trükk!
+  (b) Próbáld ki különféle számítógépeken (egyszeres és dupla pontossággal egyaránt) és számológépeken, hogy megerősítsd a működését!
   (c) Működne-e ez a trükk egy $\beta = 3$ alapú lebegőpontos rendszerben?
-- **1.4.** Írj programot, amely a természetes logaritmus $e$ matematikai alapját a
+- **1.4.** Írj programot, amely a természetes logaritmus $e$ alapszámát az
 
 $$e = \lim_{n \to \infty} (1 + 1/n)^n$$
 
-  definícióból számítja ki. Konkrétan számítsd ki $(1 + 1/n)^n$-t $n = 10^k$-ra, $k = 1, 2, \dots, 20$. Ha a használt programnyelvben nincs hatványozási operátor, használhatod az ekvivalens
+  definícióból számítja ki! Konkrétan számítsd ki az $(1 + 1/n)^n$ értékét az $n = 10^k$, $k = 1, 2, \dots, 20$ helyeken! Ha a használt programnyelvben nincs hatványozási operátor, használhatod a matematikailag ekvivalens
 
 $$(1 + 1/n)^n = \exp\bigl(n\,\log(1 + 1/n)\bigr)$$
 
-  képletet, ahol az `exp` és a `log` beépített függvények. Határozd meg a közelítéseid hibáját az `exp(1)` értékkel való összehasonlítással. A hiba mindig csökken $n$ növekedtével? Magyarázd meg az eredményeidet.
+  képletet, ahol az `exp` és a `log` a beépített függvények. Határozd meg a közelítéseid hibáját az `exp(1)` értékkel való összehasonlítás révén! A hiba mindig csökken $n$ növekedésével? Magyarázd meg az eredményeidet!
 - **1.5.** (a) Tekintsük az
 
 $$f(x) = (e^x - 1)/x$$
 
-  függvényt. L'Hôpital szabályával mutasd meg, hogy $\lim_{x \to 0} f(x) = 1$.
-  (b) Ellenőrizd ezt az eredményt kísérletileg úgy, hogy írsz egy programot, amely $f(x)$-et számítja $x = 10^{-k}$-ra, $k = 1, \dots, 15$. Az eredményeid egyeznek az elméleti várakozásokkal? Magyarázd meg, miért.
+  függvényt. A L'Hôpital-szabály alkalmazásával mutasd meg, hogy $\lim_{x \to 0} f(x) = 1$.
+  (b) Ellenőrizd ezt az eredményt kísérletileg úgy, hogy írsz egy programot, amely kiszámítja az $f(x)$ értékét az $x = 10^{-k}$, $k = 1, \dots, 15$ helyeken! Az eredményeid megegyeznek az elméleti várakozásokkal? Magyarázd meg, miért!
   (c) Végezd el a (b)-beli kísérletet ismét, ezúttal a matematikailag ekvivalens
 
 $$f(x) = (e^x - 1)/\log(e^x)$$
 
-  megfogalmazást használva, a jelzett módon, minden egyszerűsítés nélkül. Ha ez jobban működik, meg tudod magyarázni, miért?
-- **1.6.** Tegyük fel, hogy $n + 1$ egyenletesen elhelyezett pontot kell generálnunk az $[a, b]$ intervallumon, $h = (b - a)/n$ lépésközzel.
-  (a) Lebegőpontos aritmetikában a következő két módszer közül melyik jobb, és miért?
+  megfogalmazást használva pontosan a jelzett formában, minden egyszerűsítés nélkül! Ha ez a változat jobban működik, meg tudod magyarázni a jelenség okát?
+- **1.6.** Tegyük fel, hogy $n + 1$ egyenközű pontot kell generálnunk az $[a, b]$ intervallumon, $h = (b - a)/n$ lépésközzel.
+  (a) Lebegőpontos aritmetikában a következő két módszer közül melyik a jobb, és miért?
 
 $$x_0 = a, \quad x_k = x_{k-1} + h, \quad k = 1, \dots, n$$
 
@@ -1019,12 +1019,12 @@ $$x_0 = a, \quad x_k = x_{k-1} + h, \quad k = 1, \dots, n$$
 
 $$x_k = a + kh, \quad k = 0, \dots, n.$$
 
-  (b) Írj programot, amely mindkét módszert implementálja, és találj egy példát – mondjuk $a = 0$ és $b = 1$ mellett –, amely szemlélteti a különbséget közöttük.
+  (b) Írj programot, amely mindkét módszert megvalósítja, és találj egy példát – mondjuk $a = 0$ és $b = 1$ mellett –, amely jól szemlélteti a különbséget közöttük!
 - **1.7.** (a) Írj programot, amely egy függvény deriváltjának közelítő értékét a
 
 $$f'(x) \approx \frac{f(x+h) - f(x)}{h}$$
 
-  véges differencia képlettel számítja. Teszteld a programot a $\tan(x)$ függvényen $x = 1$-nél. Határozd meg a hibát a beépített $\sec(x)$ függvény négyzetével való összehasonlítással. Ábrázold a hiba nagyságát $h$ függvényében $h = 10^{-k}$-ra, $k = 0, \dots, 16$. Mind $h$-t, mind a hiba nagyságát logaritmikus skálán érdemes használni. Van a hiba nagyságának minimuma? Hogyan viszonyul a hozzá tartozó $h$ érték az 1.3. példában levezetett $h \approx \sqrt{\epsilon_{\text{mach}}}$ hüvelykujj-szabályhoz?
+  végesdifferencia-képlettel számítja. Teszteld a programot a $\tan(x)$ függvényen $x = 1$-nél. Határozd meg a hibát a beépített $\sec(x)$ függvény négyzetével való összehasonlítással. Ábrázold a hiba nagyságát $h$ függvényében $h = 10^{-k}$-ra, $k = 0, \dots, 16$. Mind $h$-t, mind a hiba nagyságát logaritmikus skálán érdemes használni. Van a hiba nagyságának minimuma? Hogyan viszonyul a hozzá tartozó $h$ érték az 1.3. példában levezetett $h \approx \sqrt{\epsilon_{\text{mach}}}$ ökölszabályhoz?
   (b) Ismételd meg a feladatot a
 
 $$f'(x) \approx \frac{f(x+h) - f(x-h)}{2h}$$
@@ -1056,7 +1056,7 @@ $$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
 
 $$x = \frac{2c}{-b \mp \sqrt{b^2 - 4ac}}$$
 
-  alternatív képlettel. A programnak bemenetként $a$, $b$, $c$ együtthatókat kell elfogadnia, kimenetként pedig az egyenlet két gyökét kell előállítania. A programnak észlelnie kell, ha a gyökök nem valósak, de nem szükséges explicit módon komplex aritmetikát használnia (például ebben az esetben visszaadhatja a komplex konjugált gyökpár valós és képzetes részét). Védekezz a felesleges túlcsordulás, alulcsordulás és kioltás ellen. Mikor kell használnod a két képlet közül melyiket? Tedd robusztussá a programot a szokatlan bemeneti értékekre is, például $a = 0$ vagy $c = 0$, amelyek egyébként az egyik képletet megbuktatnák. Bármely gyökhöz, amely a lebegőpontos rendszer tartományán belül van, pontosan számítsa ki az értékét, még akkor is, ha a másik gyök kívül esik. Teszteld a programot a következő együtthatóértékekkel:
+  alternatív képlettel. A programnak bemenetként $a$, $b$, $c$ együtthatókat kell elfogadnia, kimenetként pedig az egyenlet két gyökét kell előállítania. A programnak észlelnie kell, ha a gyökök nem valósak, de nem szükséges explicit módon komplex aritmetikát használnia (például ebben az esetben visszaadhatja a komplex konjugált gyökpár valós és képzetes részét). Védekezz a felesleges túlcsordulás, alulcsordulás és a számjegykioltás ellen. Mikor kell használnod a két képlet közül melyiket? Tedd robusztussá a programot a szokatlan bemeneti értékekre is, például $a = 0$ vagy $c = 0$, amelyek egyébként az egyik képletet megbuktatnák. Bármely gyökhöz, amely a lebegőpontos rendszer tartományán belül van, pontosan számítsa ki az értékét, még akkor is, ha a másik gyök kívül esik. Teszteld a programot a következő együtthatóértékekkel:
 
 | $a$              | $b$               | $c$               |
 | ---------------- | ----------------- | ----------------- |
@@ -1083,7 +1083,7 @@ $$p = \frac{3b - a^2}{3}, \qquad q = \frac{2a^3}{27} - \frac{ab}{3} + c.$$
 
 $$x = -\frac{a}{3} + \sqrt[3]{-\frac{q}{2} + \sqrt{D}} + \sqrt[3]{-\frac{q}{2} - \sqrt{D}}$$
 
-  képlet ad meg. Írj valós aritmetikát használó rutint ezzel a módszerrel (ügyelve arra, hogy az alkalmazott köbgyök valós legyen) egy valós együtthatós harmadfokú egyenlet valós gyökének kiszámítására abban az esetben, amikor csak egy gyök valós. Ha különösen ambiciózus vagy, kiszámíthatod a másik két gyököt is erre az esetre, vagy foglalkozhatsz a három valós gyök esetével, de ehhez komplex aritmetikára (vagy bonyolultabb trigonometrikus megoldásra) lesz szükség. Tedd a rutint a lehető legrobusztusabbá, védekezve a felesleges túlcsordulás, alulcsordulás és kioltás ellen. Mit kell tennie a rutinnak, ha a vezető együttható nulla? Teszteld a rutint különféle együtthatóértékekre, az előző feladathoz hasonlóan. Lásd még az 5.17. számítógépes feladatot.
+  képlet ad meg. Írj valós aritmetikát használó rutint ezzel a módszerrel (ügyelve arra, hogy az alkalmazott köbgyök valós legyen) egy valós együtthatós harmadfokú egyenlet valós gyökének kiszámítására abban az esetben, amikor csak egy gyök valós. Ha különösen ambiciózus vagy, kiszámíthatod a másik két gyököt is erre az esetre, vagy foglalkozhatsz a három valós gyök esetével, de ehhez komplex aritmetikára (vagy bonyolultabb trigonometrikus megoldásra) lesz szükség. Tedd a rutint a lehető legrobusztusabbá, védekezve a felesleges túlcsordulás, alulcsordulás és a számjegykioltás ellen. Mit kell tennie a rutinnak, ha a vezető együttható nulla? Teszteld a rutint különféle együtthatóértékekre, az előző feladathoz hasonlóan. Lásd még az 5.17. számítógépes feladatot.
 - **1.12.** (a) Írj programot, amely egy véges $x_i$ sorozat $\bar{x}$ átlagát és $\sigma$ szórását számítja. A program bemenetként egy $n$ dimenziós $\boldsymbol{x}$ vektort fogadjon el, kimenetként pedig a sorozat átlagát és szórását adja meg. A szórásra próbáld ki mind a kétmenetes
 
 $$\sigma = \left[\frac{1}{n-1} \sum_{i=1}^{n} (x_i - \bar{x})^2\right]^{1/2}$$
@@ -1098,7 +1098,7 @@ $$\sigma = \left[\frac{1}{n-1} \left(\sum_{i=1}^{n} x_i^2 - n\bar{x}^2\right)\ri
 
 $$f = a(1 + r/n)^n.$$
 
-  Ez a kamatos kamat ismerős képlete. Egyszerű kamat esetén $n = 1$. Jellemzően negyedévente ($n = 4$), vagy akár naponta ($n = 365$) tőkésítenek. Nyilvánvaló, hogy minél gyakoribb a tőkésítés, annál nagyobb a végösszeg, hiszen a korábbi kamatra is kamatot kapunk. De mekkora különbséget okoz valójában ez a gyakoriság? Írj programot, amely a kamatos kamat képletet implementálja. Teszteld a programot $a = 100$ kezdeti befektetéssel, $r = 0{,}05$ (5 százalékos) kamatlábbal, és a következő $n$ értékekkel: 1, 4, 12, 365. Kísérletezz azzal is, mi történik, ha $n$ nagyon nagy lesz. Találsz-e olyan értéket, amelyre a végösszeg nem nő a tőkésítés gyakoriságával, ahogy kellene? (Ez könnyű, ha egyszeres pontosságot használsz, de jóval nehezebb, ha duplát.)
+  Ez a kamatos kamat ismerős képlete. Egyszerű kamat esetén $n = 1$. Jellemzően negyedévente ($n = 4$), vagy akár naponta ($n = 365$) tőkésítenek. Nyilvánvaló, hogy minél gyakoribb a tőkésítés, annál nagyobb a végösszeg, hiszen a korábbi kamatra is kamatot kapunk. De mekkora különbséget okoz valójában ez a gyakoriság? Írj programot, amely a kamatos kamat képletet valósítja meg. Teszteld a programot $a = 100$ kezdeti befektetéssel, $r = 0{,}05$ (5 százalékos) kamatlábbal, és a következő $n$ értékekkel: 1, 4, 12, 365. Kísérletezz azzal is, mi történik, ha $n$ nagyon nagy lesz. Találsz-e olyan értéket, amelyre a végösszeg nem nő a tőkésítés gyakoriságával, ahogy kellene? (Ez könnyű, ha egyszeres pontosságot használsz, de jóval nehezebb, ha duplát.)
 
   Implementáld a kamatos kamat képletet két különböző módon:
   (a) Ha a használt programnyelvben nincs hatványozási operátor (pl. C), akkor a képletet egy olyan ciklussal implementálhatod, amely $a$-t ismételten szorozza $(1 + r/n)$-nel, összesen $n$-szer. Még ha a programnyelved rendelkezik is hatványozási operátorral (pl. Fortran), implementáld a képletet egy ilyen ciklussal, és írd ki az eredményeket a bemeneti értékekre.
@@ -1145,7 +1145,7 @@ $$x_1 = \frac{1}{3} \quad \text{és} \quad x_2 = \frac{1}{12}.$$
 
 $$x_k = \frac{4^{1-k}}{3},$$
 
-  amely $k$ növekedtével szigorúan monoton csökken. Igazolja-e az ábrád ezt az elméletileg várt viselkedést? Meg tudod magyarázni az eredményeidet? (*Útmutatás:* Keresd meg a differenciaegyenlet általános megoldását.)
+  amely $k$ növekedésével szigorúan monoton csökken. Igazolja-e az ábrád ezt az elméletileg várt viselkedést? Meg tudod magyarázni az eredményeidet? (*Útmutatás:* Keresd meg a differenciaegyenlet általános megoldását.)
 - **1.18.** Írj programot, amely az
 
 $$x_{k+1} = 111 - (1130 - 3000/x_{k-1})/x_k$$

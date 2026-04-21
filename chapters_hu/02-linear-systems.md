@@ -2,26 +2,26 @@
 
 ## 2.1 Lineáris rendszerek
 
-A természetben sok összefüggés lineáris, vagyis a hatások az okaikkal arányosak. A mechanikában például Newton második törvénye, $F = ma$, azt mondja ki, hogy az erő arányos a gyorsulással, ahol az arányossági tényező a tárgy tömege. Ha ismerjük az erőt és a tömeget, akkor ezt a lineáris egyenletet a gyorsulásra meg tudjuk oldani. Az elektromosságtanban Ohm törvénye, $V = iR$, kimondja, hogy egy vezető két vége közötti feszültség (potenciálkülönbség) arányos a rajta átfolyó árammal, ahol az arányossági tényező az ellenállás. Ismét, ha ismerjük a feszültséget és az ellenállást, meg tudjuk oldani az egyenletet az áramra. A rugalmasságtanban Hooke törvénye szerint a feszültség arányos a deformációval, ahol az arányossági tényező a Young-modulus.
+A természetben sok összefüggés lineáris, vagyis a hatások az okaikkal arányosak. A mechanikában például Newton második törvénye, $F = ma$, azt mondja ki, hogy az erő arányos a gyorsulással, ahol az arányossági tényező a tárgy tömege. Ha ismerjük az erőt és a tömeget, akkor ezt a lineáris egyenletet a gyorsulásra nézve meg tudjuk oldani. Az elektromosságtanban az Ohm-törvény, $V = iR$, kimondja, hogy egy vezető két vége közötti feszültség (potenciálkülönbség) arányos a rajta átfolyó árammal, ahol az arányossági tényező az ellenállás. Ismét, ha ismerjük a feszültséget és az ellenállást, meg tudjuk oldani az egyenletet az áramra nézve. A rugalmasságtanban a Hooke-törvény szerint a mechanikai feszültség arányos a deformációval, ahol az arányossági tényező a Young-modulus.
 
-Magasabb dimenziókban az ilyen lineáris kapcsolatot egy $\mathcal{L}$ lineáris transzformáció fejezi ki, amely egy „okokat" tartalmazó $\boldsymbol{u}$ vektort egy „hatásokat" tartalmazó $\boldsymbol{f}$ vektorhoz rendel:
+Magasabb dimenziókban az ilyen lineáris kapcsolatokat egy $\mathcal{L}$ lineáris transzformáció fejezi ki, amely egy „okokat" tartalmazó $\boldsymbol{u}$ vektort egy „hatásokat" tartalmazó $\boldsymbol{f}$ vektorhoz rendel:
 
 $$\mathcal{L}\boldsymbol{u} = \boldsymbol{f}.$$
 
-Ohm törvénye és Kirchhoff törvényei például lehetővé teszik, hogy levezessünk egy egész egyenletrendszert, amely egy sok vezetőből álló áramkörben a feszültségek és az áramok közötti lineáris kapcsolatot fejezi ki (lásd a 2.1. példát). Ahogy az elemi lineáris algebrából megtanultuk, két véges dimenziós vektortér közötti lineáris transzformációt kényelmesen egy mátrix ábrázol. Mátrix-vektor jelöléssel egy lineáris algebrai egyenletrendszer alakja
+Az Ohm-törvény és a Kirchhoff-törvények például lehetővé teszik, hogy felírjunk egy egész egyenletrendszert, amely egy sok vezetőből álló áramkörben a feszültségek és az áramok közötti lineáris kapcsolatot fejezi ki (lásd a 2.1. példát). Ahogy az elemi lineáris algebrából megtanultuk, két végesdimenziós vektortér közötti lineáris transzformációt kényelmesen egy mátrixszal ábrázolhatunk. Mátrix-vektor jelöléssel egy lineáris algebrai egyenletrendszer alakja
 
 $$A\boldsymbol{x} = \boldsymbol{b},$$
 
-ahol $A$ egy ismert $m \times n$-es mátrix, $\boldsymbol{b}$ egy $m$-dimenziós vektor, $\boldsymbol{x}$ pedig egy $n$-dimenziós vektor. Ha ismerjük $\boldsymbol{x}$-et, akkor egy ilyen lineáris kapcsolat lehetővé teszi, hogy mátrix-vektor szorzással előre jelezzük a $\boldsymbol{b}$ hatást az $\boldsymbol{x}$ okból: $\boldsymbol{b} = A\boldsymbol{x}$. Érdekesebb módon a lineáris rendszer lehetőséget adhat a „visszafejtésre": ha ismerjük a hatások $\boldsymbol{b}$ vektorát, szeretnénk meghatározni a hozzá tartozó okok $\boldsymbol{x}$ vektorát. E fejezet tárgya az ezt lehetővé tevő numerikus módszerek.
+ahol $A$ egy ismert $m \times n$-es mátrix, $\boldsymbol{b}$ egy $m$-dimenziós vektor, $\boldsymbol{x}$ pedig egy $n$-dimenziós vektor. Ha ismerjük $\boldsymbol{x}$-et, akkor egy ilyen lineáris kapcsolat lehetővé teszi, hogy a mátrix-vektor szorzás elvégzésével meghatározzuk a $\boldsymbol{b}$ hatást az $\boldsymbol{x}$ ok alapján: $\boldsymbol{b} = A\boldsymbol{x}$. Gyakrabban azonban a lineáris egyenletrendszerek lehetőséget adnak a „visszafejtésre": ha ismerjük a hatások $\boldsymbol{b}$ vektorát, szeretnénk meghatározni a hozzá tartozó okok $\boldsymbol{x}$ vektorát. E fejezet tárgyát azok a numerikus módszerek képezik, amelyek ezt lehetővé teszik.
 
-Még amikor az összefüggések nemlineárisak, gyakran jól közelíthetők lokálisan (azaz egy adott rögzített érték környezetében) egy lineáris kapcsolattal. Pontosan ezt teszi a kalkulusban a derivált: egy nemlineáris görbéhez helyi lineáris közelítést – az érintőegyenest – ad. Ez a megfigyelés számos nemlineáris algebrai feladat numerikus megoldási módszerének alapja. Még a nem algebrai feladatokat is – például differenciál- vagy integrálegyenleteket – végső soron lineáris algebrai egyenletrendszerekkel közelíthetjük, ahogyan azt a könyv későbbi részeiben látni fogjuk. Ezért a lineáris egyenletrendszerek megoldása számos, sokféle gyakorlati számítási feladat megoldására szolgáló numerikus módszer sarokköve, és ennek megfelelően elengedhetetlen, hogy az ilyen rendszereket pontosan és hatékonyan tudjuk megoldani.
+Még ha az összefüggések nemlineárisak is, gyakran jól közelíthetők lokálisan (azaz egy adott rögzített érték környezetében) egy lineáris modellel. Pontosan ezt teszi az analízisben a derivált: egy nemlineáris görbéhez lokális lineáris közelítést – az érintőegyenest – rendel. Ez a megfigyelés számos nemlineáris algebrai feladat numerikus megoldási módszerének is az alapja. Még a nem algebrai feladatokat is – például a differenciál- vagy integrálegyenleteket – végső soron lineáris algebrai egyenletrendszerekkel közelíthetjük, ahogyan azt a könyv későbbi részeiben látni fogjuk. Ezért a lineáris egyenletrendszerek megoldása számos gyakorlati számítási feladat numerikus algoritmusának sarokköve, és ennek megfelelően elengedhetetlen, hogy az ilyen rendszereket pontosan és hatékonyan tudjuk megoldani.
 
-Az $A\boldsymbol{x} = \boldsymbol{b}$ lineáris egyenletrendszer azt a kérdést teszi fel: „kifejezhető-e a $\boldsymbol{b}$ vektor az $A$ mátrix oszlopainak lineáris kombinációjaként?" (azaz „benne van-e $\boldsymbol{b}$ az $\operatorname{span}(A) = \{A\boldsymbol{x} : \boldsymbol{x} \in \mathbb{R}^n\}$ halmazban?"). Ha igen, akkor a rendszert *konzisztensnek* mondjuk, és ennek a lineáris kombinációnak az együtthatóit az $\boldsymbol{x}$ megoldásvektor komponensei adják. Lehet, hogy létezik megoldás, és lehet, hogy nem; ha van megoldás, az lehet egyértelmű, és lehet, hogy nem. Ebben a fejezetben csak *négyzetes* rendszereket tekintünk, azaz $m = n$ – a mátrix sorainak és oszlopainak száma megegyezik, vagyis az egyenletek száma ($A$ és $\boldsymbol{b}$ sorai) megegyezik az ismeretlenek számával ($\boldsymbol{x}$ komponensei). Az $m \neq n$ esetet a 3. fejezetben tárgyaljuk. Az egyszerűség kedvéért figyelmünket elsősorban valós lineáris rendszerekre fordítjuk; a komplex rendszereket hasonlóan lehet kezelni.
+Az $A\boldsymbol{x} = \boldsymbol{b}$ lineáris egyenletrendszer lényegében azt a kérdést teszi fel: „kifejezhető-e a $\boldsymbol{b}$ vektor az $A$ mátrix oszlopainak lineáris kombinációjaként?" (azaz „benne van-e $\boldsymbol{b}$ a $\operatorname{span}(A) = \{A\boldsymbol{x} : \boldsymbol{x} \in \mathbb{R}^n\}$ oszloptérben?"). Ha igen, akkor a rendszert *megoldhatónak (konzisztensnek)* mondjuk, és a lineáris kombináció együtthatóit az $\boldsymbol{x}$ megoldásvektor komponensei adják. Előfordulhat, hogy van megoldás, és az is, hogy nincs; ha van megoldás, az lehet egyértelmű, de lehetséges végtelen sok megoldás is. Ebben a fejezetben csak *négyzetes* rendszereket tekintünk, azaz $m = n$ – a mátrix sorainak és oszlopainak száma megegyezik, vagyis az egyenletek száma ($A$ és $\boldsymbol{b}$ sorai) megegyezik az ismeretlenek számával ($\boldsymbol{x}$ komponensei). Az $m \neq n$ esetet a 3. fejezetben tárgyaljuk. Az egyszerűség kedvéért figyelmünket elsősorban valós lineáris rendszerekre fordítjuk; a komplex rendszereket nagyon hasonlóan lehet kezelni.
 
 **2.1. Példa. Elektromos áramkör.** Tekintsük a 2.1. ábrán látható elektromos áramkört. Adottak a $V$ feszültségek és az $R$ ellenállások, és azt szeretnénk meghatározni, milyen $i$ áramok folynak az áramkör három hurkában. Ehhez az alábbi fizikai törvényeket alkalmazzuk:
 
-- Ohm törvénye: egy $R$ ellenálláson egy $i$ áram irányában eső feszültségesés $iR$.
-- Kirchhoff-törvény: zárt hurokban a nettó feszültségesés nulla.
+- **Ohm-törvény:** egy $R$ ellenálláson egy $i$ áram irányában eső feszültségesés $iR$.
+- **Kirchhoff huroktörvénye:** egy zárt hurokban a feszültségesések (és forrásfeszültségek) algebrai összege nulla.
 
 Ezeket a törvényeket az áramkör minden hurkára alkalmazva a következő három lineáris egyenletből álló rendszert kapjuk:
 
@@ -31,11 +31,11 @@ i_1 R_1 + (i_1 - i_2) R_2 + (i_1 - i_3) R_3 + V_1 &= 0, \\
 (i_3 - i_1) R_3 + i_3 R_4 + (i_3 - i_2) R_5 &= 0,
 \end{aligned}$$
 
-amely mátrix alakban így írható:
+amely mátrixalakban így írható:
 
 $$\begin{bmatrix} R_1 + R_2 + R_3 & -R_2 & -R_3 \\ -R_2 & R_2 + R_5 & -R_5 \\ -R_3 & -R_5 & R_3 + R_4 + R_5 \end{bmatrix} \begin{bmatrix} i_1 \\ i_2 \\ i_3 \end{bmatrix} = \begin{bmatrix} -V_1 \\ V_2 \\ 0 \end{bmatrix}.$$
 
-Így ez a feladat $A\boldsymbol{x} = \boldsymbol{b}$ alakú, és megoldható az e fejezetben tanulmányozandó módszerekkel.
+Így ez a feladat $A\boldsymbol{x} = \boldsymbol{b}$ alakú, és megoldható az e fejezetben tanulmányozott módszerekkel.
 
 ![](_page_2_Figure_3.jpeg)
 
