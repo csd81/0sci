@@ -264,93 +264,88 @@ A kondícióbecslés egy alternatív megközelítése, hogy a feladatot konvex o
 
 ### 2.3.4 Hibakorlátok
 
-A kondíciószám nemcsak a szingularitáshoz való közelség megbízható indikátora, hanem kvantitatív korlátot is szolgáltat a lineáris egyenletrendszer számított megoldásának hibájára, ahogy azt most megmutatjuk. Legyen $x$ a nemszinguláris $Ax = b$ lineáris egyenletrendszer megoldása, és legyen $\hat{x}$ az $A\hat{x} = b + \Delta b$ perturbált jobb oldalú rendszer megoldása. Ha definiáljuk $\Delta x = \hat{x} - x$-et, akkor
+A kondíciószám nemcsak a szingularitáshoz való közelség megbízható mutatója, hanem kvantitatív korlátot is ad a lineáris egyenletrendszer számított megoldásának hibájára, ahogy azt az alábbiakban megmutatjuk. Legyen $\boldsymbol{x}$ a nemszinguláris $\boldsymbol{A}\boldsymbol{x} = \boldsymbol{b}$ lineáris egyenletrendszer megoldása, és legyen $\hat{\boldsymbol{x}}$ az $\boldsymbol{A}\hat{\boldsymbol{x}} = \boldsymbol{b} + \Delta \boldsymbol{b}$ perturbált jobb oldallal rendelkező rendszer megoldása. Ha definiáljuk a $\Delta \boldsymbol{x} = \hat{\boldsymbol{x}} - \boldsymbol{x}$ hibavektort, akkor:
 
 $$\boldsymbol{A}\hat{\boldsymbol{x}} = \boldsymbol{A}(\boldsymbol{x} + \Delta\boldsymbol{x}) = \boldsymbol{A}\boldsymbol{x} + \boldsymbol{A}\,\Delta\boldsymbol{x} = \boldsymbol{b} + \Delta\boldsymbol{b}.$$
 
-Mivel $Ax = b$, ezért $A\,\Delta x = \Delta b$-nek kell teljesülnie, így $\Delta x = A^{-1}\Delta b$. Normákat véve kapjuk az
+Mivel $\boldsymbol{A}\boldsymbol{x} = \boldsymbol{b}$, ezért $\boldsymbol{A}\,\Delta \boldsymbol{x} = \Delta \boldsymbol{b}$ kell hogy teljesüljön, amiből következik, hogy $\Delta \boldsymbol{x} = \boldsymbol{A}^{-1}\Delta \boldsymbol{b}$. Normát véve kapjuk az:
 
-$$\|b\| = \|Ax\| \le \|A\| \cdot \|x\|, \quad \text{vagyis} \quad \|x\| \ge \|b\|/\|A\|,$$
+$$\|\boldsymbol{b}\| = \|\boldsymbol{A}\boldsymbol{x}\| \le \|\boldsymbol{A}\| \cdot \|\boldsymbol{x}\|, \quad \text{vagyis} \quad \|\boldsymbol{x}\| \ge \|\boldsymbol{b}\|/\|\boldsymbol{A}\|,$$
 
-és
+valamint a
 
-$$\|\Delta x\| = \|A^{-1}\Delta b\| \le \|A^{-1}\| \cdot \|\Delta b\|$$
+$$\|\Delta \boldsymbol{x}\| = \|\boldsymbol{A}^{-1}\Delta \boldsymbol{b}\| \le \|\boldsymbol{A}^{-1}\| \cdot \|\Delta \boldsymbol{b}\|$$
 
-egyenlőtlenségeket. E két egyenlőtlenséget összekapcsolva adódik, hogy
+egyenlőtlenségeket. E két összefüggést kombinálva adódik:
 
 $$\frac{\|\Delta \boldsymbol{x}\|}{\|\boldsymbol{x}\|} \leq \|\boldsymbol{A}^{-1}\| \cdot \|\Delta \boldsymbol{b}\| \frac{\|\boldsymbol{A}\|}{\|\boldsymbol{b}\|}.$$
 
-Definíció szerint $\|A\| \cdot \|A^{-1}\| = \operatorname{cond}(A)$, így a következő korlátot kapjuk:
+A kondíciószám definíciója szerint ($\|\boldsymbol{A}\| \cdot \|\boldsymbol{A}^{-1}\| = \operatorname{cond}(\boldsymbol{A})$) a következő korlátot kapjuk:
 
 $$\frac{\|\Delta \boldsymbol{x}\|}{\|\boldsymbol{x}\|} \leq \operatorname{cond}(\boldsymbol{A}) \frac{\|\Delta \boldsymbol{b}\|}{\|\boldsymbol{b}\|}.$$
 
-Így a mátrix kondíciószáma egy „erősítési tényező", amely a jobb oldali vektor adott relatív változásából fakadó megoldás maximális relatív változását korlátozza (vö. a kondíciószám 1.2.6. szakaszban megadott általános fogalmával).
+A mátrix kondíciószáma tehát egy „erősítési tényező", amely a jobb oldali vektor relatív megváltozásából fakadó megoldásbeli maximális relatív változást korlátozza (vö. a kondíciószám 1.2.6. szakaszban bevezetett általános fogalmával).
 
-Hasonló eredmény érvényes az $A$ mátrix elemeinek relatív változásaira is. Ha $Ax = b$ és $(A + E)\hat{x} = b$, akkor
+Hasonló eredmény érvényes az $\boldsymbol{A}$ mátrix elemeinek relatív változásaira is. Ha $\boldsymbol{A}\boldsymbol{x} = \boldsymbol{b}$ és $(\boldsymbol{A} + \boldsymbol{E})\hat{\boldsymbol{x}} = \boldsymbol{b}$, akkor:
 
-$$\Delta x = \hat{x} - x = A^{-1}(A\hat{x} - b) = -A^{-1}E\hat{x}.$$
+$$\Delta \boldsymbol{x} = \hat{\boldsymbol{x}} - \boldsymbol{x} = \boldsymbol{A}^{-1}(\boldsymbol{A}\hat{\boldsymbol{x}} - \boldsymbol{b}) = -\boldsymbol{A}^{-1}\boldsymbol{E}\hat{\boldsymbol{x}}.$$
 
-Normákat véve az
+Normát véve az
 
 $$\|\Delta \boldsymbol{x}\| \leq \|\boldsymbol{A}^{-1}\| \cdot \|\boldsymbol{E}\| \cdot \|\hat{\boldsymbol{x}}\|$$
 
-egyenlőtlenséget kapjuk, amelyből $\operatorname{cond}(A)$ definíciójával adódik a
+egyenlőtlenséget kapjuk, amelyből $\operatorname{cond}(\boldsymbol{A})$ segítségével adódik a
 
 $$\frac{\|\Delta \boldsymbol{x}\|}{\|\hat{\boldsymbol{x}}\|} \leq \operatorname{cond}(\boldsymbol{A}) \frac{\|\boldsymbol{E}\|}{\|\boldsymbol{A}\|}$$
 
 korlát.
 
-Az imént ismertetett algebrai levezetések alternatívájaként a lineáris egyenletrendszerek érzékenységét a differenciálszámítás segítségével is becsülhetjük. A $t$ valós paraméter bevezetésével definiáljuk az $A(t) = A + tE$ és $b(t) = b + t\Delta b$ mennyiségeket, és tekintjük az $A(t)x(t) = b(t)$ lineáris egyenletrendszer $x(t)$ megoldását. Ezt az egyenletet $t$ szerint differenciálva
+Az iménti algebrai levezetések alternatívájaként a lineáris egyenletrendszerek érzékenységét az analízis eszközeivel (differenciálszámítással) is becsülhetjük. Egy $t$ valós paraméter segítségével definiáljuk az $\boldsymbol{A}(t) = \boldsymbol{A} + t\boldsymbol{E}$ és $\boldsymbol{b}(t) = \boldsymbol{b} + t\Delta \boldsymbol{b}$ kifejezéseket, és vizsgáljuk az $\boldsymbol{A}(t)\boldsymbol{x}(t) = \boldsymbol{b}(t)$ rendszer $\boldsymbol{x}(t)$ megoldását. Ezt az egyenletet $t$ szerint differenciálva:
 
 $$\boldsymbol{A}'(t)\boldsymbol{x}(t) + \boldsymbol{A}(t)\boldsymbol{x}'(t) = \boldsymbol{b}'(t),$$
 
 vagy ekvivalens módon
 
-$$Ex(t) + A(t)x'(t) = \Delta b$$
+$$\boldsymbol{E}\boldsymbol{x}(t) + \boldsymbol{A}(t)\boldsymbol{x}'(t) = \Delta \boldsymbol{b}$$
 
-adódik. Átrendezve kapjuk, hogy
+adódik. Átrendezve kapjuk:
 
 $$\boldsymbol{x}'(t) = \boldsymbol{A}(t)^{-1} (\Delta \boldsymbol{b} - \boldsymbol{E} \boldsymbol{x}(t)),$$
 
-amiből
+amiből a $t=0$ helyen:
 
 $$\boldsymbol{x}'(0) = \boldsymbol{A}^{-1}(\Delta \boldsymbol{b} - \boldsymbol{E}\boldsymbol{x}(0)).$$
 
-A Taylor-tétel szerint $x(t) = x(0) + tx'(0) + \mathcal{O}(t^2)$, tehát
+A Taylor-formula szerint $\boldsymbol{x}(t) = \boldsymbol{x}(0) + t\boldsymbol{x}'(0) + \mathcal{O}(t^2)$, tehát:
 
 $$\boldsymbol{x}(t) - \boldsymbol{x}(0) = t\boldsymbol{x}'(0) + \mathcal{O}(t^2) = t\boldsymbol{A}^{-1}(\Delta\boldsymbol{b} - \boldsymbol{E}\boldsymbol{x}(0)) + \mathcal{O}(t^2).$$
 
-Legyen $x \equiv x(0)$; normákat véve, majd $\|x\|$-szel osztva a
+Legyen $\boldsymbol{x} \equiv \boldsymbol{x}(0)$. Normát véve, majd $\|\boldsymbol{x}\|$-szel osztva a következőt kapjuk:
 
 $$\frac{\|\boldsymbol{x}(t) - \boldsymbol{x}\|}{\|\boldsymbol{x}\|} \leq \|\boldsymbol{A}^{-1}\| \left( \frac{\|\Delta \boldsymbol{b}\|}{\|\boldsymbol{x}\|} + \|\boldsymbol{E}\| \right) |t| + \mathcal{O}(t^{2})$$
 
 $$\leq \operatorname{cond}(\boldsymbol{A}) \left( \frac{\|\Delta \boldsymbol{b}\|}{\|\boldsymbol{A}\| \cdot \|\boldsymbol{x}\|} + \frac{\|\boldsymbol{E}\|}{\|\boldsymbol{A}\|} \right) |t| + \mathcal{O}(t^{2})$$
 
-$$\leq \operatorname{cond}(\boldsymbol{A}) \left( \frac{\|\Delta \boldsymbol{b}\|}{\|\boldsymbol{b}\|} + \frac{\|\boldsymbol{E}\|}{\|\boldsymbol{A}\|} \right) |t| + \mathcal{O}(t^{2})$$
+$$\leq \operatorname{cond}(\boldsymbol{A}) \left( \frac{\|\Delta \boldsymbol{b}\|}{\|\boldsymbol{b}\|} + \frac{\|\boldsymbol{E}\|}{\|\boldsymbol{A}\|} \right) |t| + \mathcal{O}(t^{2}).$$
 
-korlátot kapjuk.
+Látjuk tehát, hogy a megoldás relatív változását a kondíciószám és a bemenő adatok relatív változásának szorzata korlátozza.
 
-Így ismét azt látjuk, hogy a megoldás relatív változását a kondíciószám szorozva a feladat adatainak relatív változásával korlátozza.
-
-Az érzékenységi eredmények geometriai értelmezése két dimenzióban: ha a két egyenlet által meghatározott két egyenes közel párhuzamos, akkor metszéspontjuk nem élesen definiált, amennyiben az egyenesek kerekítési vagy mérési hiba miatt némileg bizonytalanok. Ha viszont az egyenesek távol vannak a párhuzamostól, mondjuk közel merőlegesek, akkor metszéspontjuk viszonylag élesen definiált. E két esetet a 2.4. ábra mutatja be, ahol a szaggatott vonalak jelölik az egyes folytonos vonalakhoz tartozó bizonytalansági tartományt, úgyhogy a metszéspont mindkét esetben a satírozott paralelogramma bármelyik pontja lehet. Így egy nagy kondíciószám a megoldás nagy bizonytalanságával jár.
+Az érzékenységi eredmények geometriai értelmezése két dimenzióban: ha a két egyenlet által meghatározott egyenesek közel párhuzamosak, akkor a metszéspontjuk nem határozható meg élesen, amennyiben az egyenesek helyzete (kerekítési vagy mérési hiba miatt) némileg bizonytalan. Ha viszont az egyenesek távol vannak a párhuzamostól (például közel merőlegesek), akkor a metszéspontjuk viszonylag stabil.
 
 ![](_page_12_Picture_4.jpeg)
 
-2.4. ábra: Jól kondicionált és rosszul kondicionált lineáris egyenletrendszerek.
+2.4. ábra: Jól kondicionált és rosszul kondicionált lineáris egyenletrendszerek geometriai szemléltetése.
 
-Összefoglalva: ha a bemeneti adatok gépi pontosságig pontosak, akkor egy $Ax = b$ lineáris egyenletrendszer közelítő $\hat{x}$ megoldásának relatív hibájára azt várhatjuk, hogy
+Összefoglalva: ha a bemeneti adatok gépi pontosságig helyesek, akkor az $\boldsymbol{A}\boldsymbol{x} = \boldsymbol{b}$ rendszer közelítő $\hat{\boldsymbol{x}}$ megoldásának relatív hibájára a következő becslést várhatjuk:
 
 $$\frac{\|\hat{\boldsymbol{x}}-\boldsymbol{x}\|}{\|\boldsymbol{x}\|}\lessapprox \operatorname{cond}(\boldsymbol{A})\;\epsilon_{\mathrm{mach}}.$$
 
-Ezt az eredményt a hátraható hibaelemzés nyelvén úgy értelmezhetjük, hogy a számított megoldásról azt várhatjuk: a bemenet pontosságához képest körülbelül $\log_{10}(\operatorname{cond}(\mathbf{A}))$ tizedes értékes jegyet veszít pontosságából. A 2.7. példabeli mátrix kondíciószáma például nagyobb $10^4$-nél, ezért e mátrixot tartalmazó lineáris egyenletrendszer megoldásában egyetlen helyes számjegyet sem várhatunk, hacsak a bemeneti adatok négy tizedes értékes jegynél pontosabbak, és a munkapontosság is négy tizedes értékes jegynél többet hordoz (lásd a 2.8. és a 2.17. példát).
+Hátraható hibaelemzési szempontból ez azt jelenti, hogy a számított megoldás a bemenet pontosságához képest körülbelül $\log_{10}(\operatorname{cond}(\boldsymbol{A}))$ tizedes értékes jegyet veszít a pontosságából. A 2.7. példabeli mátrix kondíciószáma például nagyobb $10^4$-nél, ezért az ilyen rendszerek megoldásakor akár négy értékes jegyet is veszíthetünk. Ha a bemeneti adatok csak négy jegyre pontosak, a megoldásban egyetlen helyes számjegyet sem várhatunk.
 
-Az érzékenység kvantitatív mértékeként a mátrix kondíciószáma a lineáris egyenletrendszerek megoldásának feladatában ugyanazt a szerepet tölti be – és ugyanolyan típusú kapcsolatot ad az előreható és a hátraható hiba között –, mint az 1.2.6. szakaszban definiált általános kondíciószám. Fontos különbség azonban, hogy a mátrix kondíciószáma soha nem lehet kisebb 1-nél.
+Fontos megjegyzések a kondíciószám használatához:
 
-Mielőtt lezárnánk a pontosság kondíciószámok alapján történő megítélésének témáját, vegyük figyelembe e két megjegyzést:
-
-- A fenti normákon alapuló elemzés a megoldásvektor *legnagyobb* komponenseinek relatív hibájára ad korlátot. A kisebb komponensek *relatív* hibája ennél jóval nagyobb is lehet, mivel a vektornormát a vektor legnagyobb komponensei dominálják. Komponensenkénti hibakorlátok is nyerhetők, de ezek kiszámítása valamivel összetettebb, és mi ezzel a témával nem foglalkozunk. A komponensenkénti korlátok különösen érdekesek, amikor a rendszer rosszul skálázott (lásd 2.4.10. szakasz).
-
-- A mátrix kondíciószámát befolyásolja a mátrix skálázása (lásd 2.10. példa). Nagy kondíciószám származhat pusztán rossz skálázásból (lásd 2.20. példa), csakúgy, mint a szingularitáshoz való közelségből. A mátrix átskálázása az előbbin segíthet, az utóbbin nem (lásd 2.4.10. szakasz).
+- **Komponensenkénti hiba:** A fenti normaalapú elemzés a megoldásvektor *legnagyobb* komponenseinek relatív hibájára ad korlátot. A kisebb komponensek relatív hibája ennél jóval nagyobb is lehet.
+- **Skálázás:** A mátrix kondíciószámát jelentősen befolyásolja a skálázás. Egy nagy kondíciószám adódhat pusztán rossz skálázásból is, nem csak a szingularitás közelségéből. A megfelelő átskálázás segíthet ezen a problémán (lásd 2.4.10. szakasz).
 
 ### 2.3.5 Maradék
 
