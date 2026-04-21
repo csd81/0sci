@@ -1,0 +1,24 @@
+---
+title: "Tudományos számítások"
+subtitle: "Egy bevezető áttekintés — Átdolgozott második kiadás (magyar fordítás, folyamatban)"
+author: "Michael T. Heath"
+lang: hu-HU
+documentclass: article
+classoption:
+  - 11pt
+geometry:
+  - margin=2.5cm
+mainfont: "DejaVu Serif"
+sansfont: "DejaVu Sans"
+monofont: "DejaVu Sans Mono"
+colorlinks: true
+linkcolor: teal
+toc: true
+toc-depth: 3
+header-includes: |
+  \usepackage{amsmath}
+  \usepackage{amssymb}
+  \usepackage{mathtools}
+  \providecommand{\boldsymbol}[1]{\mathbf{#1}}
+  \setcounter{secnumdepth}{0}
+---

@@ -1,0 +1,1365 @@
+[11:32:57] starting marker batch; device=cpu
+[11:32:57] --- 00a-preface-classics ---
+Downloading manifest.json:   0%|          | 0.00/106 [00:00<?, ?B/s]Downloading manifest.json: 100%|██████████| 106/106 [00:00<00:00, 205kB/s]
+Downloading table_recognition model to /home/rama/.cache/datalab/models/table_recognition/2025_02_18:   0%|          | 0/5 [00:00<?, ?it/s]
+Downloading .gitattributes:   0%|          | 0.00/1.48k [00:00<?, ?B/s][ADownloading .gitattributes: 100%|██████████| 1.48k/1.48k [00:00<00:00, 2.68MB/s]
+
+Downloading config.json:   0%|          | 0.00/6.22k [00:00<?, ?B/s][ADownloading config.json: 100%|██████████| 6.22k/6.22k [00:00<00:00, 965kB/s]
+
+Downloading model.safetensors:   0%|          | 0.00/201M [00:00<?, ?B/s][A
+
+Downloading preprocessor_config.json:   0%|          | 0.00/564 [00:00<?, ?B/s][A[A
+
+
+Downloading README.md:   0%|          | 0.00/33.0 [00:00<?, ?B/s][A[A[ADownloading README.md: 100%|██████████| 33.0/33.0 [00:00<00:00, 79.1kB/s]
+Downloading preprocessor_config.json: 100%|██████████| 564/564 [00:00<00:00, 147kB/s]
+
+Downloading model.safetensors:   0%|          | 1.00M/201M [00:00<01:11, 2.93MB/s][A
+Downloading model.safetensors:   1%|          | 2.00M/201M [00:00<01:03, 3.28MB/s][A
+Downloading model.safetensors:   1%|▏         | 3.00M/201M [00:00<01:01, 3.36MB/s][A
+Downloading model.safetensors:   2%|▏         | 4.00M/201M [00:01<00:56, 3.70MB/s][A
+Downloading model.safetensors:   2%|▏         | 5.00M/201M [00:01<00:49, 4.13MB/s][A
+Downloading model.safetensors:   3%|▎         | 6.00M/201M [00:01<00:45, 4.46MB/s][A
+Downloading model.safetensors:   3%|▎         | 7.00M/201M [00:01<00:42, 4.79MB/s][A
+Downloading model.safetensors:   4%|▍         | 8.00M/201M [00:02<00:42, 4.74MB/s][A
+Downloading model.safetensors:   4%|▍         | 9.00M/201M [00:02<00:39, 5.07MB/s][A
+Downloading model.safetensors:   5%|▍         | 10.0M/201M [00:02<00:36, 5.53MB/s][A
+Downloading model.safetensors:   5%|▌         | 11.0M/201M [00:02<00:34, 5.83MB/s][A
+Downloading model.safetensors:   6%|▌         | 12.0M/201M [00:02<00:31, 6.33MB/s][A
+Downloading model.safetensors:   6%|▋         | 13.0M/201M [00:02<00:34, 5.70MB/s][A
+Downloading model.safetensors:   7%|▋         | 14.0M/201M [00:03<00:49, 3.99MB/s][A
+Downloading model.safetensors:   7%|▋         | 15.0M/201M [00:03<00:42, 4.60MB/s][A
+Downloading model.safetensors:   8%|▊         | 16.0M/201M [00:03<00:36, 5.37MB/s][A
+Downloading model.safetensors:   8%|▊         | 17.0M/201M [00:03<00:32, 6.03MB/s][A
+Downloading model.safetensors:   9%|▉         | 18.0M/201M [00:03<00:30, 6.30MB/s][A
+Downloading model.safetensors:   9%|▉         | 19.0M/201M [00:03<00:29, 6.59MB/s][A
+Downloading model.safetensors:  10%|▉         | 20.0M/201M [00:04<00:26, 7.25MB/s][A
+Downloading model.safetensors:  10%|█         | 21.0M/201M [00:04<00:25, 7.50MB/s][A
+Downloading model.safetensors:  11%|█         | 22.0M/201M [00:04<00:24, 7.66MB/s][A
+Downloading model.safetensors:  11%|█▏        | 23.0M/201M [00:04<00:22, 8.15MB/s][A
+Downloading model.safetensors:  12%|█▏        | 24.0M/201M [00:04<00:23, 7.77MB/s][A
+Downloading model.safetensors:  12%|█▏        | 25.0M/201M [00:04<00:27, 6.76MB/s][A
+Downloading model.safetensors:  13%|█▎        | 26.0M/201M [00:05<00:30, 6.06MB/s][A
+Downloading model.safetensors:  13%|█▎        | 27.0M/201M [00:05<00:29, 6.14MB/s][A
+Downloading model.safetensors:  14%|█▍        | 28.0M/201M [00:05<00:27, 6.59MB/s][A
+Downloading model.safetensors:  14%|█▍        | 29.0M/201M [00:05<00:24, 7.40MB/s][A
+Downloading model.safetensors:  15%|█▍        | 30.0M/201M [00:05<00:26, 6.79MB/s][A
+Downloading model.safetensors:  15%|█▌        | 31.0M/201M [00:05<00:29, 6.12MB/s][A
+Downloading model.safetensors:  16%|█▌        | 32.0M/201M [00:06<00:31, 5.72MB/s][A
+Downloading model.safetensors:  16%|█▋        | 33.0M/201M [00:06<00:29, 5.94MB/s][A
+Downloading model.safetensors:  17%|█▋        | 34.0M/201M [00:06<00:27, 6.46MB/s][A
+Downloading model.safetensors:  17%|█▋        | 35.0M/201M [00:06<00:26, 6.59MB/s][A
+Downloading model.safetensors:  18%|█▊        | 36.0M/201M [00:06<00:27, 6.24MB/s][A
+Downloading model.safetensors:  18%|█▊        | 37.0M/201M [00:06<00:29, 5.76MB/s][A
+Downloading model.safetensors:  19%|█▉        | 38.0M/201M [00:07<00:30, 5.61MB/s][A
+Downloading model.safetensors:  19%|█▉        | 39.0M/201M [00:07<00:27, 6.16MB/s][A
+Downloading model.safetensors:  20%|██        | 41.0M/201M [00:07<00:22, 7.42MB/s][A
+Downloading model.safetensors:  21%|██        | 42.0M/201M [00:07<00:22, 7.42MB/s][A
+Downloading model.safetensors:  21%|██▏       | 43.0M/201M [00:07<00:21, 7.72MB/s][A
+Downloading model.safetensors:  22%|██▏       | 44.0M/201M [00:07<00:22, 7.18MB/s][A
+Downloading model.safetensors:  22%|██▏       | 45.0M/201M [00:08<00:23, 6.93MB/s][A
+Downloading model.safetensors:  23%|██▎       | 46.0M/201M [00:08<00:24, 6.61MB/s][A
+Downloading model.safetensors:  23%|██▎       | 47.0M/201M [00:08<00:24, 6.64MB/s][A
+Downloading model.safetensors:  24%|██▍       | 48.0M/201M [00:08<00:22, 7.25MB/s][A
+Downloading model.safetensors:  24%|██▍       | 49.0M/201M [00:08<00:21, 7.42MB/s][A
+Downloading model.safetensors:  25%|██▍       | 50.0M/201M [00:08<00:21, 7.54MB/s][A
+Downloading model.safetensors:  25%|██▌       | 51.0M/201M [00:08<00:22, 6.91MB/s][A
+Downloading model.safetensors:  26%|██▌       | 52.0M/201M [00:09<00:22, 7.09MB/s][A
+Downloading model.safetensors:  26%|██▋       | 53.0M/201M [00:09<00:21, 7.33MB/s][A
+Downloading model.safetensors:  27%|██▋       | 54.0M/201M [00:09<00:21, 7.10MB/s][A
+Downloading model.safetensors:  27%|██▋       | 55.0M/201M [00:09<00:27, 5.68MB/s][A
+Downloading model.safetensors:  28%|██▊       | 56.0M/201M [00:09<00:26, 5.82MB/s][A
+Downloading model.safetensors:  28%|██▊       | 57.0M/201M [00:09<00:22, 6.63MB/s][A
+Downloading model.safetensors:  29%|██▉       | 58.0M/201M [00:09<00:20, 7.33MB/s][A
+Downloading model.safetensors:  29%|██▉       | 59.0M/201M [00:10<00:19, 7.66MB/s][A
+Downloading model.safetensors:  30%|██▉       | 60.0M/201M [00:10<00:27, 5.43MB/s][A
+Downloading model.safetensors:  30%|███       | 61.0M/201M [00:10<00:24, 5.94MB/s][A
+Downloading model.safetensors:  31%|███       | 62.0M/201M [00:10<00:24, 5.98MB/s][A
+Downloading model.safetensors:  31%|███▏      | 63.0M/201M [00:10<00:22, 6.36MB/s][A
+Downloading model.safetensors:  32%|███▏      | 64.0M/201M [00:11<00:20, 6.98MB/s][A
+Downloading model.safetensors:  32%|███▏      | 65.0M/201M [00:11<00:20, 6.82MB/s][A
+Downloading model.safetensors:  33%|███▎      | 66.0M/201M [00:11<00:19, 7.14MB/s][A
+Downloading model.safetensors:  33%|███▎      | 67.0M/201M [00:11<00:19, 7.16MB/s][A
+Downloading model.safetensors:  34%|███▍      | 68.0M/201M [00:11<00:21, 6.66MB/s][A
+Downloading model.safetensors:  34%|███▍      | 69.0M/201M [00:11<00:22, 6.09MB/s][A
+Downloading model.safetensors:  35%|███▌      | 71.0M/201M [00:12<00:25, 5.28MB/s][A
+Downloading model.safetensors:  36%|███▌      | 72.0M/201M [00:12<00:23, 5.69MB/s][A
+Downloading model.safetensors:  36%|███▌      | 73.0M/201M [00:12<00:22, 6.07MB/s][A
+Downloading model.safetensors:  37%|███▋      | 74.0M/201M [00:12<00:20, 6.53MB/s][A
+Downloading model.safetensors:  37%|███▋      | 75.0M/201M [00:12<00:19, 6.84MB/s][A
+Downloading model.safetensors:  38%|███▊      | 76.0M/201M [00:13<00:20, 6.51MB/s][A
+Downloading model.safetensors:  38%|███▊      | 77.0M/201M [00:13<00:18, 7.18MB/s][A
+Downloading model.safetensors:  39%|███▊      | 78.0M/201M [00:13<00:18, 6.98MB/s][A
+Downloading model.safetensors:  39%|███▉      | 79.0M/201M [00:13<00:18, 6.92MB/s][A
+Downloading model.safetensors:  40%|███▉      | 80.0M/201M [00:13<00:17, 7.46MB/s][A
+Downloading model.safetensors:  41%|████      | 82.0M/201M [00:13<00:15, 8.26MB/s][A
+Downloading model.safetensors:  41%|████      | 83.0M/201M [00:14<00:18, 6.82MB/s][A
+Downloading model.safetensors:  42%|████▏     | 84.0M/201M [00:14<00:21, 5.86MB/s][A
+Downloading model.safetensors:  42%|████▏     | 85.0M/201M [00:14<00:21, 5.69MB/s][A
+Downloading model.safetensors:  43%|████▎     | 86.0M/201M [00:14<00:18, 6.49MB/s][A
+Downloading model.safetensors:  43%|████▎     | 87.0M/201M [00:14<00:17, 6.91MB/s][A
+Downloading model.safetensors:  44%|████▎     | 88.0M/201M [00:14<00:15, 7.63MB/s][A
+Downloading model.safetensors:  45%|████▍     | 90.0M/201M [00:15<00:14, 8.04MB/s][A
+Downloading model.safetensors:  45%|████▌     | 91.0M/201M [00:15<00:14, 8.24MB/s][A
+Downloading model.safetensors:  46%|████▌     | 92.0M/201M [00:15<00:13, 8.65MB/s][A
+Downloading model.safetensors:  46%|████▌     | 93.0M/201M [00:15<00:16, 7.09MB/s][A
+Downloading model.safetensors:  47%|████▋     | 95.0M/201M [00:15<00:14, 7.44MB/s][A
+Downloading model.safetensors:  48%|████▊     | 96.0M/201M [00:15<00:14, 7.65MB/s][A
+Downloading model.safetensors:  48%|████▊     | 97.0M/201M [00:16<00:15, 7.28MB/s][A
+Downloading model.safetensors:  49%|████▊     | 98.0M/201M [00:16<00:14, 7.71MB/s][A
+Downloading model.safetensors:  49%|████▉     | 99.0M/201M [00:16<00:12, 8.31MB/s][A
+Downloading model.safetensors:  50%|████▉     | 100M/201M [00:16<00:12, 8.55MB/s] [A
+Downloading model.safetensors:  50%|█████     | 101M/201M [00:16<00:14, 7.51MB/s][A
+Downloading model.safetensors:  51%|█████     | 103M/201M [00:16<00:12, 8.29MB/s][A
+Downloading model.safetensors:  52%|█████▏    | 104M/201M [00:16<00:12, 8.14MB/s][A
+Downloading model.safetensors:  52%|█████▏    | 105M/201M [00:17<00:12, 7.83MB/s][A
+Downloading model.safetensors:  53%|█████▎    | 106M/201M [00:17<00:15, 6.65MB/s][A
+Downloading model.safetensors:  54%|█████▎    | 108M/201M [00:17<00:14, 6.77MB/s][A
+Downloading model.safetensors:  54%|█████▍    | 109M/201M [00:17<00:16, 5.86MB/s][A
+Downloading model.safetensors:  55%|█████▍    | 110M/201M [00:18<00:16, 5.85MB/s][A
+Downloading model.safetensors:  55%|█████▌    | 111M/201M [00:18<00:16, 5.76MB/s][A
+Downloading model.safetensors:  56%|█████▌    | 112M/201M [00:18<00:25, 3.64MB/s][A
+Downloading model.safetensors:  56%|█████▌    | 113M/201M [00:19<00:24, 3.82MB/s][A
+Downloading model.safetensors:  57%|█████▋    | 114M/201M [00:19<00:23, 3.86MB/s][A
+Downloading model.safetensors:  57%|█████▋    | 115M/201M [00:19<00:19, 4.62MB/s][A
+Downloading model.safetensors:  58%|█████▊    | 116M/201M [00:19<00:18, 4.81MB/s][A
+Downloading model.safetensors:  58%|█████▊    | 117M/201M [00:19<00:17, 5.07MB/s][A
+Downloading model.safetensors:  59%|█████▊    | 118M/201M [00:19<00:14, 5.87MB/s][A
+Downloading model.safetensors:  59%|█████▉    | 119M/201M [00:20<00:13, 6.20MB/s][A
+Downloading model.safetensors:  60%|█████▉    | 120M/201M [00:20<00:15, 5.67MB/s][A
+Downloading model.safetensors:  60%|██████    | 121M/201M [00:20<00:16, 5.20MB/s][A
+Downloading model.safetensors:  61%|██████    | 122M/201M [00:20<00:19, 4.23MB/s][A
+Downloading model.safetensors:  61%|██████    | 123M/201M [00:21<00:20, 4.08MB/s][A
+Downloading model.safetensors:  62%|██████▏   | 124M/201M [00:21<00:19, 4.19MB/s][A
+Downloading model.safetensors:  62%|██████▏   | 125M/201M [00:21<00:15, 5.07MB/s][A
+Downloading model.safetensors:  63%|██████▎   | 126M/201M [00:21<00:13, 5.77MB/s][A
+Downloading model.safetensors:  63%|██████▎   | 127M/201M [00:21<00:14, 5.31MB/s][A
+Downloading model.safetensors:  64%|██████▎   | 128M/201M [00:22<00:15, 4.87MB/s][A
+Downloading model.safetensors:  64%|██████▍   | 129M/201M [00:22<00:15, 4.93MB/s][A
+Downloading model.safetensors:  65%|██████▍   | 130M/201M [00:22<00:19, 3.78MB/s][A
+Downloading model.safetensors:  65%|██████▌   | 131M/201M [00:22<00:16, 4.39MB/s][A
+Downloading model.safetensors:  66%|██████▌   | 132M/201M [00:23<00:15, 4.68MB/s][A
+Downloading model.safetensors:  66%|██████▌   | 133M/201M [00:23<00:13, 5.32MB/s][A
+Downloading model.safetensors:  67%|██████▋   | 134M/201M [00:23<00:12, 5.55MB/s][A
+Downloading model.safetensors:  67%|██████▋   | 135M/201M [00:23<00:11, 5.82MB/s][A
+Downloading model.safetensors:  68%|██████▊   | 136M/201M [00:23<00:11, 6.09MB/s][A
+Downloading model.safetensors:  68%|██████▊   | 137M/201M [00:23<00:11, 6.09MB/s][A
+Downloading model.safetensors:  69%|██████▊   | 138M/201M [00:24<00:11, 6.01MB/s][A
+Downloading model.safetensors:  69%|██████▉   | 139M/201M [00:24<00:10, 6.46MB/s][A
+Downloading model.safetensors:  69%|██████▉   | 140M/201M [00:24<00:10, 6.12MB/s][A
+Downloading model.safetensors:  70%|██████▉   | 141M/201M [00:24<00:13, 4.77MB/s][A
+Downloading model.safetensors:  70%|███████   | 142M/201M [00:24<00:11, 5.39MB/s][A
+Downloading model.safetensors:  71%|███████   | 143M/201M [00:25<00:11, 5.36MB/s][A
+Downloading model.safetensors:  72%|███████▏  | 145M/201M [00:25<00:08, 6.82MB/s][A
+Downloading model.safetensors:  72%|███████▏  | 146M/201M [00:25<00:08, 7.00MB/s][A
+Downloading model.safetensors:  73%|███████▎  | 147M/201M [00:25<00:08, 7.12MB/s][A
+Downloading model.safetensors:  73%|███████▎  | 148M/201M [00:25<00:07, 7.03MB/s][A
+Downloading model.safetensors:  74%|███████▍  | 149M/201M [00:25<00:07, 7.48MB/s][A
+Downloading model.safetensors:  74%|███████▍  | 150M/201M [00:25<00:07, 6.95MB/s][A
+Downloading model.safetensors:  75%|███████▍  | 151M/201M [00:26<00:08, 6.24MB/s][A
+Downloading model.safetensors:  75%|███████▌  | 152M/201M [00:26<00:08, 6.17MB/s][A
+Downloading model.safetensors:  76%|███████▋  | 154M/201M [00:26<00:08, 6.21MB/s][A
+Downloading model.safetensors:  77%|███████▋  | 155M/201M [00:26<00:07, 6.88MB/s][A
+Downloading model.safetensors:  78%|███████▊  | 157M/201M [00:26<00:05, 8.02MB/s][A
+Downloading model.safetensors:  78%|███████▊  | 158M/201M [00:27<00:05, 8.31MB/s][A
+Downloading model.safetensors:  79%|███████▉  | 159M/201M [00:27<00:05, 8.53MB/s][A
+Downloading model.safetensors:  79%|███████▉  | 160M/201M [00:27<00:05, 8.63MB/s][A
+Downloading model.safetensors:  80%|███████▉  | 161M/201M [00:27<00:05, 8.30MB/s][A
+Downloading model.safetensors:  80%|████████  | 162M/201M [00:27<00:05, 7.05MB/s][A
+Downloading model.safetensors:  81%|████████  | 163M/201M [00:27<00:05, 7.59MB/s][A
+Downloading model.safetensors:  81%|████████▏ | 164M/201M [00:27<00:04, 8.06MB/s][A
+Downloading model.safetensors:  82%|████████▏ | 166M/201M [00:28<00:04, 8.23MB/s][A
+Downloading model.safetensors:  83%|████████▎ | 167M/201M [00:28<00:04, 8.05MB/s][A
+Downloading model.safetensors:  83%|████████▎ | 168M/201M [00:28<00:04, 7.93MB/s][A
+Downloading model.safetensors:  84%|████████▍ | 170M/201M [00:28<00:03, 8.87MB/s][A
+Downloading model.safetensors:  85%|████████▍ | 171M/201M [00:28<00:04, 7.63MB/s][A
+Downloading model.safetensors:  85%|████████▌ | 172M/201M [00:28<00:04, 7.62MB/s][A
+Downloading model.safetensors:  86%|████████▌ | 173M/201M [00:29<00:03, 8.06MB/s][A
+Downloading model.safetensors:  86%|████████▋ | 174M/201M [00:29<00:03, 7.83MB/s][A
+Downloading model.safetensors:  87%|████████▋ | 175M/201M [00:29<00:03, 7.99MB/s][A
+Downloading model.safetensors:  87%|████████▋ | 176M/201M [00:29<00:03, 7.81MB/s][A
+Downloading model.safetensors:  88%|████████▊ | 177M/201M [00:29<00:03, 7.51MB/s][A
+Downloading model.safetensors:  89%|████████▉ | 179M/201M [00:29<00:02, 9.12MB/s][A
+Downloading model.safetensors:  89%|████████▉ | 180M/201M [00:29<00:02, 8.87MB/s][A
+Downloading model.safetensors:  90%|████████▉ | 181M/201M [00:30<00:02, 7.83MB/s][A
+Downloading model.safetensors:  90%|█████████ | 182M/201M [00:30<00:02, 7.99MB/s][A
+Downloading model.safetensors:  91%|█████████ | 183M/201M [00:30<00:02, 7.97MB/s][A
+Downloading model.safetensors:  91%|█████████▏| 184M/201M [00:30<00:02, 7.80MB/s][A
+Downloading model.safetensors:  92%|█████████▏| 185M/201M [00:30<00:02, 7.19MB/s][A
+Downloading model.safetensors:  93%|█████████▎| 187M/201M [00:30<00:01, 8.73MB/s][A
+Downloading model.safetensors:  93%|█████████▎| 188M/201M [00:31<00:01, 8.01MB/s][A
+Downloading model.safetensors:  94%|█████████▍| 189M/201M [00:31<00:01, 7.84MB/s][A
+Downloading model.safetensors:  94%|█████████▍| 190M/201M [00:31<00:01, 7.92MB/s][A
+Downloading model.safetensors:  95%|█████████▍| 191M/201M [00:31<00:01, 6.16MB/s][A
+Downloading model.safetensors:  95%|█████████▌| 192M/201M [00:31<00:01, 6.47MB/s][A
+Downloading model.safetensors:  96%|█████████▋| 194M/201M [00:31<00:01, 7.75MB/s][A
+Downloading model.safetensors:  97%|█████████▋| 195M/201M [00:32<00:00, 7.66MB/s][A
+Downloading model.safetensors:  97%|█████████▋| 196M/201M [00:32<00:00, 7.25MB/s][A
+Downloading model.safetensors:  98%|█████████▊| 197M/201M [00:32<00:00, 7.55MB/s][A
+Downloading model.safetensors:  98%|█████████▊| 198M/201M [00:32<00:00, 7.28MB/s][A
+Downloading model.safetensors:  99%|█████████▉| 199M/201M [00:32<00:00, 7.40MB/s][A
+Downloading model.safetensors:  99%|█████████▉| 200M/201M [00:32<00:00, 6.56MB/s][A
+Downloading model.safetensors: 100%|█████████▉| 201M/201M [00:33<00:00, 5.97MB/s][A
+Downloading model.safetensors: 100%|██████████| 201M/201M [00:33<00:00, 5.64MB/s][ADownloading model.safetensors: 100%|██████████| 201M/201M [00:33<00:00, 6.37MB/s]
+Downloading table_recognition model to /home/rama/.cache/datalab/models/table_recognition/2025_02_18:  20%|██        | 1/5 [00:33<02:13, 33.34s/it]Downloading table_recognition model to /home/rama/.cache/datalab/models/table_recognition/2025_02_18: 100%|██████████| 5/5 [00:33<00:00,  6.67s/it]
+Downloading manifest.json:   0%|          | 0.00/127 [00:00<?, ?B/s]Downloading manifest.json: 100%|██████████| 127/127 [00:00<00:00, 259kB/s]
+Downloading text_detection model to /home/rama/.cache/datalab/models/text_detection/2025_05_07:   0%|          | 0/6 [00:00<?, ?it/s]
+Downloading .gitattributes:   0%|          | 0.00/1.48k [00:00<?, ?B/s][ADownloading .gitattributes: 100%|██████████| 1.48k/1.48k [00:00<00:00, 2.93MB/s]
+
+Downloading preprocessor_config.json:   0%|          | 0.00/373 [00:00<?, ?B/s][ADownloading preprocessor_config.json: 100%|██████████| 373/373 [00:00<00:00, 879kB/s]
+
+Downloading model.safetensors:   0%|          | 0.00/73.4M [00:00<?, ?B/s][A
+
+Downloading README.md:   0%|          | 0.00/393 [00:00<?, ?B/s][A[ADownloading README.md: 100%|██████████| 393/393 [00:00<00:00, 664kB/s]
+
+
+Downloading config.json:   0%|          | 0.00/858 [00:00<?, ?B/s][A[A
+
+
+Downloading training_args.bin:   0%|          | 0.00/5.49k [00:00<?, ?B/s][A[A[ADownloading config.json: 100%|██████████| 858/858 [00:00<00:00, 424kB/s]
+Downloading training_args.bin: 100%|██████████| 5.49k/5.49k [00:00<00:00, 1.79MB/s]
+
+Downloading model.safetensors:   1%|▏         | 1.00M/73.4M [00:00<00:28, 2.66MB/s][A
+Downloading model.safetensors:   3%|▎         | 2.00M/73.4M [00:00<00:18, 3.99MB/s][A
+Downloading model.safetensors:   4%|▍         | 3.00M/73.4M [00:00<00:13, 5.43MB/s][A
+Downloading model.safetensors:   5%|▌         | 4.00M/73.4M [00:00<00:11, 6.51MB/s][A
+Downloading model.safetensors:   7%|▋         | 5.00M/73.4M [00:00<00:11, 6.48MB/s][A
+Downloading model.safetensors:   8%|▊         | 6.00M/73.4M [00:01<00:10, 6.84MB/s][A
+Downloading model.safetensors:  10%|▉         | 7.00M/73.4M [00:01<00:10, 6.82MB/s][A
+Downloading model.safetensors:  11%|█         | 8.00M/73.4M [00:01<00:11, 6.03MB/s][A
+Downloading model.safetensors:  14%|█▎        | 10.0M/73.4M [00:01<00:08, 8.03MB/s][A
+Downloading model.safetensors:  15%|█▍        | 11.0M/73.4M [00:01<00:08, 7.65MB/s][A
+Downloading model.safetensors:  18%|█▊        | 13.0M/73.4M [00:01<00:06, 9.13MB/s][A
+Downloading model.safetensors:  19%|█▉        | 14.0M/73.4M [00:02<00:06, 9.28MB/s][A
+Downloading model.safetensors:  20%|██        | 15.0M/73.4M [00:02<00:06, 9.22MB/s][A
+Downloading model.safetensors:  23%|██▎       | 17.0M/73.4M [00:02<00:06, 9.39MB/s][A
+Downloading model.safetensors:  26%|██▌       | 19.0M/73.4M [00:02<00:05, 10.2MB/s][A
+Downloading model.safetensors:  29%|██▊       | 21.0M/73.4M [00:02<00:05, 9.64MB/s][A
+Downloading model.safetensors:  31%|███▏      | 23.0M/73.4M [00:02<00:05, 10.3MB/s][A
+Downloading model.safetensors:  34%|███▍      | 25.0M/73.4M [00:03<00:04, 10.4MB/s][A
+Downloading model.safetensors:  37%|███▋      | 27.0M/73.4M [00:03<00:04, 10.9MB/s][A
+Downloading model.safetensors:  38%|███▊      | 28.0M/73.4M [00:03<00:04, 10.8MB/s][A
+Downloading model.safetensors:  40%|███▉      | 29.0M/73.4M [00:03<00:04, 10.4MB/s][A
+Downloading model.safetensors:  42%|████▏     | 31.0M/73.4M [00:03<00:04, 10.6MB/s][A
+Downloading model.safetensors:  44%|████▎     | 32.0M/73.4M [00:03<00:04, 9.85MB/s][A
+Downloading model.safetensors:  45%|████▍     | 33.0M/73.4M [00:04<00:04, 8.72MB/s][A
+Downloading model.safetensors:  46%|████▋     | 34.0M/73.4M [00:04<00:05, 7.37MB/s][A
+Downloading model.safetensors:  48%|████▊     | 35.0M/73.4M [00:04<00:05, 7.62MB/s][A
+Downloading model.safetensors:  49%|████▉     | 36.0M/73.4M [00:04<00:05, 7.82MB/s][A
+Downloading model.safetensors:  50%|█████     | 37.0M/73.4M [00:04<00:05, 7.08MB/s][A
+Downloading model.safetensors:  52%|█████▏    | 38.0M/73.4M [00:04<00:05, 6.42MB/s][A
+Downloading model.safetensors:  53%|█████▎    | 39.0M/73.4M [00:05<00:05, 6.17MB/s][A
+Downloading model.safetensors:  55%|█████▍    | 40.0M/73.4M [00:05<00:05, 6.94MB/s][A
+Downloading model.safetensors:  56%|█████▌    | 41.0M/73.4M [00:05<00:04, 6.90MB/s][A
+Downloading model.safetensors:  59%|█████▊    | 43.0M/73.4M [00:05<00:03, 8.08MB/s][A
+Downloading model.safetensors:  60%|█████▉    | 44.0M/73.4M [00:05<00:03, 8.12MB/s][A
+Downloading model.safetensors:  63%|██████▎   | 46.0M/73.4M [00:05<00:03, 8.99MB/s][A
+Downloading model.safetensors:  64%|██████▍   | 47.0M/73.4M [00:05<00:03, 9.19MB/s][A
+Downloading model.safetensors:  67%|██████▋   | 49.0M/73.4M [00:06<00:02, 9.92MB/s][A
+Downloading model.safetensors:  68%|██████▊   | 50.0M/73.4M [00:06<00:02, 9.56MB/s][A
+Downloading model.safetensors:  70%|██████▉   | 51.0M/73.4M [00:06<00:02, 8.73MB/s][A
+Downloading model.safetensors:  71%|███████   | 52.0M/73.4M [00:06<00:02, 8.96MB/s][A
+Downloading model.safetensors:  74%|███████▎  | 54.0M/73.4M [00:06<00:02, 9.87MB/s][A
+Downloading model.safetensors:  75%|███████▍  | 55.0M/73.4M [00:06<00:02, 9.12MB/s][A
+Downloading model.safetensors:  76%|███████▋  | 56.0M/73.4M [00:07<00:02, 7.98MB/s][A
+Downloading model.safetensors:  78%|███████▊  | 57.0M/73.4M [00:07<00:02, 7.73MB/s][A
+Downloading model.safetensors:  79%|███████▉  | 58.0M/73.4M [00:07<00:02, 5.76MB/s][A
+Downloading model.safetensors:  80%|████████  | 59.0M/73.4M [00:07<00:02, 5.96MB/s][A
+Downloading model.safetensors:  82%|████████▏ | 60.0M/73.4M [00:07<00:02, 5.84MB/s][A
+Downloading model.safetensors:  83%|████████▎ | 61.0M/73.4M [00:08<00:02, 6.17MB/s][A
+Downloading model.safetensors:  85%|████████▍ | 62.0M/73.4M [00:08<00:01, 6.86MB/s][A
+Downloading model.safetensors:  86%|████████▌ | 63.0M/73.4M [00:08<00:01, 6.83MB/s][A
+Downloading model.safetensors:  87%|████████▋ | 64.0M/73.4M [00:08<00:01, 6.76MB/s][A
+Downloading model.safetensors:  89%|████████▊ | 65.0M/73.4M [00:08<00:01, 4.83MB/s][A
+Downloading model.safetensors:  90%|████████▉ | 66.0M/73.4M [00:09<00:01, 3.87MB/s][A
+Downloading model.safetensors:  91%|█████████▏| 67.0M/73.4M [00:09<00:02, 2.62MB/s][A
+Downloading model.safetensors:  93%|█████████▎| 68.0M/73.4M [00:10<00:02, 2.12MB/s][A
+Downloading model.safetensors:  94%|█████████▍| 69.0M/73.4M [00:10<00:01, 2.45MB/s][A
+Downloading model.safetensors:  95%|█████████▌| 70.0M/73.4M [00:11<00:01, 2.67MB/s][A
+Downloading model.safetensors:  97%|█████████▋| 71.0M/73.4M [00:11<00:00, 2.62MB/s][A
+Downloading model.safetensors:  98%|█████████▊| 72.0M/73.4M [00:11<00:00, 3.17MB/s][A
+Downloading model.safetensors:  99%|█████████▉| 73.0M/73.4M [00:12<00:00, 3.56MB/s][ADownloading model.safetensors: 100%|██████████| 73.4M/73.4M [00:12<00:00, 6.38MB/s]
+Downloading text_detection model to /home/rama/.cache/datalab/models/text_detection/2025_05_07:  17%|█▋        | 1/6 [00:12<01:01, 12.35s/it]Downloading text_detection model to /home/rama/.cache/datalab/models/text_detection/2025_05_07: 100%|██████████| 6/6 [00:12<00:00,  2.06s/it]
+Downloading manifest.json:   0%|          | 0.00/161 [00:00<?, ?B/s]Downloading manifest.json: 100%|██████████| 161/161 [00:00<00:00, 365kB/s]
+Downloading ocr_error_detection model to /home/rama/.cache/datalab/models/ocr_error_detection/2025_02_18:   0%|          | 0/8 [00:00<?, ?it/s]
+Downloading config.json:   0%|          | 0.00/647 [00:00<?, ?B/s][A
+
+Downloading tokenizer.json:   0%|          | 0.00/2.78M [00:00<?, ?B/s][A[ADownloading config.json: 100%|██████████| 647/647 [00:00<00:00, 298kB/s]
+
+Downloading tokenizer_config.json:   0%|          | 0.00/1.17k [00:00<?, ?B/s][A
+
+
+Downloading vocab.txt:   0%|          | 0.00/972k [00:00<?, ?B/s][A[A[ADownloading tokenizer_config.json: 100%|██████████| 1.17k/1.17k [00:00<00:00, 519kB/s]
+
+Downloading special_tokens_map.json:   0%|          | 0.00/695 [00:00<?, ?B/s][A
+
+
+
+Downloading .gitattributes:   0%|          | 0.00/1.48k [00:00<?, ?B/s][A[A[A[ADownloading special_tokens_map.json: 100%|██████████| 695/695 [00:00<00:00, 393kB/s]
+Downloading .gitattributes: 100%|██████████| 1.48k/1.48k [00:00<00:00, 443kB/s]
+
+Downloading README.md:   0%|          | 0.00/32.0 [00:00<?, ?B/s][A
+
+
+
+Downloading model.safetensors:   0%|          | 0.00/258M [00:00<?, ?B/s][A[A[A[ADownloading README.md: 100%|██████████| 32.0/32.0 [00:00<00:00, 12.2kB/s]
+
+
+
+Downloading vocab.txt: 100%|██████████| 972k/972k [00:00<00:00, 2.57MB/s][A[A[ADownloading vocab.txt: 100%|██████████| 972k/972k [00:00<00:00, 2.57MB/s]
+
+
+
+
+Downloading model.safetensors:   0%|          | 1.00M/258M [00:00<01:41, 2.65MB/s][A[A[A[A
+
+Downloading tokenizer.json:  36%|███▌      | 1.00M/2.78M [00:00<00:00, 2.31MB/s][A[A
+
+
+
+Downloading model.safetensors:   1%|          | 2.00M/258M [00:00<01:00, 4.42MB/s][A[A[A[A
+
+Downloading tokenizer.json:  72%|███████▏  | 2.00M/2.78M [00:00<00:00, 3.04MB/s][A[A
+
+
+
+Downloading model.safetensors:   1%|          | 3.00M/258M [00:00<00:52, 5.14MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:   2%|▏         | 4.00M/258M [00:00<00:43, 6.18MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:   2%|▏         | 5.00M/258M [00:00<00:39, 6.76MB/s][A[A[A[A
+
+Downloading tokenizer.json: 100%|██████████| 2.78M/2.78M [00:01<00:00, 2.96MB/s][A[ADownloading tokenizer.json: 100%|██████████| 2.78M/2.78M [00:01<00:00, 2.89MB/s]
+
+
+
+
+Downloading model.safetensors:   2%|▏         | 6.00M/258M [00:01<00:36, 7.33MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:   3%|▎         | 7.00M/258M [00:01<00:34, 7.69MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:   3%|▎         | 8.00M/258M [00:01<00:39, 6.69MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:   4%|▍         | 10.0M/258M [00:01<00:28, 8.99MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:   4%|▍         | 11.0M/258M [00:01<00:28, 9.22MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:   5%|▍         | 12.0M/258M [00:01<00:27, 9.23MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:   5%|▌         | 13.0M/258M [00:01<00:27, 9.18MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:   5%|▌         | 14.0M/258M [00:01<00:27, 9.31MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:   6%|▌         | 16.0M/258M [00:02<00:26, 9.70MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:   7%|▋         | 18.0M/258M [00:02<00:24, 10.2MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:   8%|▊         | 20.0M/258M [00:02<00:25, 9.72MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:   8%|▊         | 21.0M/258M [00:02<00:27, 9.11MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:   9%|▊         | 22.0M/258M [00:02<00:28, 8.64MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:   9%|▉         | 23.0M/258M [00:03<00:31, 7.84MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:   9%|▉         | 24.0M/258M [00:03<00:33, 7.23MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  10%|▉         | 25.0M/258M [00:03<00:34, 7.06MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  10%|█         | 26.0M/258M [00:03<00:34, 6.97MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  10%|█         | 27.0M/258M [00:03<00:34, 6.96MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  11%|█         | 28.0M/258M [00:03<00:36, 6.70MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  11%|█         | 29.0M/258M [00:04<00:36, 6.57MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  12%|█▏        | 30.0M/258M [00:04<00:38, 6.15MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  12%|█▏        | 31.0M/258M [00:04<00:36, 6.44MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  12%|█▏        | 32.0M/258M [00:04<00:40, 5.86MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  13%|█▎        | 33.0M/258M [00:04<00:48, 4.86MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  13%|█▎        | 34.0M/258M [00:05<00:46, 5.10MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  14%|█▎        | 35.0M/258M [00:05<00:43, 5.42MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  14%|█▍        | 36.0M/258M [00:05<00:42, 5.45MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  14%|█▍        | 37.0M/258M [00:05<00:45, 5.09MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  15%|█▍        | 38.0M/258M [00:05<00:49, 4.66MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  15%|█▌        | 39.0M/258M [00:06<00:48, 4.71MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  15%|█▌        | 40.0M/258M [00:06<00:44, 5.17MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  16%|█▌        | 41.0M/258M [00:06<00:41, 5.45MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  16%|█▋        | 42.0M/258M [00:06<00:41, 5.44MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  17%|█▋        | 43.0M/258M [00:06<00:40, 5.56MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  17%|█▋        | 44.0M/258M [00:07<00:39, 5.71MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  17%|█▋        | 45.0M/258M [00:07<00:39, 5.64MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  18%|█▊        | 46.0M/258M [00:07<00:38, 5.84MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  18%|█▊        | 47.0M/258M [00:07<00:38, 5.79MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  19%|█▊        | 48.0M/258M [00:07<00:35, 6.15MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  19%|█▉        | 49.0M/258M [00:07<00:35, 6.23MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  19%|█▉        | 50.0M/258M [00:08<00:35, 6.18MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  20%|█▉        | 51.0M/258M [00:08<00:33, 6.40MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  20%|██        | 52.0M/258M [00:08<00:31, 6.78MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  21%|██        | 53.0M/258M [00:08<00:31, 6.83MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  21%|██        | 54.0M/258M [00:08<00:32, 6.64MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  21%|██▏       | 55.0M/258M [00:08<00:31, 6.75MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  22%|██▏       | 56.0M/258M [00:09<00:38, 5.52MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  22%|██▏       | 57.0M/258M [00:09<00:38, 5.46MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  22%|██▏       | 58.0M/258M [00:09<00:35, 5.94MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  23%|██▎       | 59.0M/258M [00:09<00:32, 6.47MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  23%|██▎       | 60.0M/258M [00:09<00:29, 7.03MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  24%|██▎       | 61.0M/258M [00:09<00:32, 6.41MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  24%|██▍       | 62.0M/258M [00:10<00:36, 5.65MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  24%|██▍       | 63.0M/258M [00:10<00:37, 5.45MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  25%|██▍       | 64.0M/258M [00:10<00:35, 5.67MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  25%|██▌       | 65.0M/258M [00:10<00:31, 6.38MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  26%|██▌       | 66.0M/258M [00:10<00:29, 6.73MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  26%|██▌       | 67.0M/258M [00:10<00:27, 7.34MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  26%|██▋       | 68.0M/258M [00:10<00:26, 7.41MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  27%|██▋       | 69.0M/258M [00:11<00:27, 7.30MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  27%|██▋       | 70.0M/258M [00:11<00:31, 6.19MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  28%|██▊       | 71.0M/258M [00:11<00:41, 4.70MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  28%|██▊       | 72.0M/258M [00:11<00:39, 4.94MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  28%|██▊       | 73.0M/258M [00:12<00:39, 4.96MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  29%|██▊       | 74.0M/258M [00:12<00:37, 5.13MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  29%|██▉       | 75.0M/258M [00:12<00:32, 5.82MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  29%|██▉       | 76.0M/258M [00:12<00:29, 6.39MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  30%|██▉       | 77.0M/258M [00:12<00:27, 6.93MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  30%|███       | 78.0M/258M [00:12<00:25, 7.41MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  31%|███       | 79.0M/258M [00:12<00:23, 8.08MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  31%|███       | 80.0M/258M [00:12<00:22, 8.45MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  31%|███▏      | 81.0M/258M [00:13<00:35, 5.28MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  32%|███▏      | 82.0M/258M [00:13<00:31, 5.92MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  32%|███▏      | 83.0M/258M [00:13<00:29, 6.27MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  33%|███▎      | 85.0M/258M [00:13<00:24, 7.56MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  33%|███▎      | 86.0M/258M [00:14<00:26, 6.86MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  34%|███▎      | 87.0M/258M [00:14<00:25, 7.04MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  34%|███▍      | 88.0M/258M [00:14<00:30, 5.93MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  34%|███▍      | 89.0M/258M [00:14<00:27, 6.47MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  35%|███▍      | 90.0M/258M [00:14<00:25, 6.98MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  35%|███▌      | 91.0M/258M [00:14<00:22, 7.71MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  36%|███▌      | 92.0M/258M [00:14<00:22, 7.79MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  36%|███▌      | 93.0M/258M [00:15<00:22, 7.77MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  36%|███▋      | 94.0M/258M [00:15<00:22, 7.62MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  37%|███▋      | 95.0M/258M [00:15<00:22, 7.70MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  37%|███▋      | 96.0M/258M [00:15<00:21, 7.87MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  38%|███▊      | 97.0M/258M [00:15<00:20, 8.26MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  38%|███▊      | 98.0M/258M [00:15<00:20, 8.28MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  38%|███▊      | 99.0M/258M [00:15<00:19, 8.59MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  39%|███▊      | 100M/258M [00:15<00:19, 8.37MB/s] [A[A[A[A
+
+
+
+Downloading model.safetensors:  39%|███▉      | 101M/258M [00:16<00:21, 7.58MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  40%|███▉      | 102M/258M [00:16<00:29, 5.47MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  40%|███▉      | 103M/258M [00:16<00:38, 4.18MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  40%|████      | 104M/258M [00:16<00:35, 4.51MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  41%|████      | 105M/258M [00:17<00:39, 4.11MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  41%|████▏     | 107M/258M [00:17<00:26, 5.92MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  42%|████▏     | 108M/258M [00:17<00:24, 6.30MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  42%|████▏     | 109M/258M [00:17<00:22, 6.84MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  43%|████▎     | 110M/258M [00:17<00:20, 7.47MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  43%|████▎     | 111M/258M [00:17<00:19, 7.97MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  43%|████▎     | 112M/258M [00:18<00:20, 7.42MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  44%|████▍     | 113M/258M [00:18<00:18, 8.04MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  45%|████▍     | 115M/258M [00:18<00:19, 7.75MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  45%|████▍     | 116M/258M [00:18<00:18, 7.85MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  45%|████▌     | 117M/258M [00:18<00:19, 7.66MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  46%|████▌     | 118M/258M [00:18<00:20, 7.02MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  46%|████▌     | 119M/258M [00:19<00:23, 6.09MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  46%|████▋     | 120M/258M [00:19<00:23, 6.12MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  47%|████▋     | 121M/258M [00:19<00:21, 6.57MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  47%|████▋     | 122M/258M [00:19<00:22, 6.23MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  48%|████▊     | 123M/258M [00:19<00:22, 6.32MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  48%|████▊     | 124M/258M [00:19<00:21, 6.56MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  48%|████▊     | 125M/258M [00:20<00:22, 6.25MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  49%|████▉     | 126M/258M [00:20<00:20, 6.83MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  50%|████▉     | 128M/258M [00:20<00:17, 7.59MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  50%|████▉     | 129M/258M [00:20<00:18, 7.32MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  50%|█████     | 130M/258M [00:20<00:17, 7.66MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  51%|█████     | 131M/258M [00:20<00:17, 7.60MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  51%|█████     | 132M/258M [00:21<00:17, 7.71MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  52%|█████▏    | 133M/258M [00:21<00:17, 7.32MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  52%|█████▏    | 134M/258M [00:21<00:19, 6.82MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  52%|█████▏    | 135M/258M [00:21<00:20, 6.36MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  53%|█████▎    | 136M/258M [00:21<00:20, 6.12MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  53%|█████▎    | 137M/258M [00:21<00:20, 6.22MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  53%|█████▎    | 138M/258M [00:22<00:21, 5.89MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  54%|█████▍    | 139M/258M [00:22<00:21, 5.90MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  54%|█████▍    | 140M/258M [00:22<00:32, 3.79MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  55%|█████▍    | 141M/258M [00:23<00:29, 4.22MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  55%|█████▌    | 142M/258M [00:23<00:29, 4.17MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  55%|█████▌    | 143M/258M [00:23<00:26, 4.62MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  56%|█████▌    | 144M/258M [00:23<00:28, 4.22MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  56%|█████▌    | 145M/258M [00:24<00:29, 4.07MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  57%|█████▋    | 146M/258M [00:24<00:29, 3.98MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  57%|█████▋    | 147M/258M [00:24<00:27, 4.21MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  57%|█████▋    | 148M/258M [00:24<00:29, 3.90MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  58%|█████▊    | 149M/258M [00:25<00:29, 3.86MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  58%|█████▊    | 150M/258M [00:25<00:27, 4.07MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  58%|█████▊    | 151M/258M [00:25<00:25, 4.43MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  59%|█████▉    | 152M/258M [00:25<00:23, 4.68MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  59%|█████▉    | 153M/258M [00:25<00:21, 5.19MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  60%|█████▉    | 154M/258M [00:26<00:19, 5.49MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  60%|██████    | 155M/258M [00:26<00:18, 5.87MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  60%|██████    | 156M/258M [00:26<00:17, 5.99MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  61%|██████    | 157M/258M [00:26<00:16, 6.32MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  61%|██████    | 158M/258M [00:26<00:15, 6.68MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  62%|██████▏   | 159M/258M [00:26<00:14, 7.08MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  62%|██████▏   | 160M/258M [00:26<00:14, 7.08MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  62%|██████▏   | 161M/258M [00:27<00:23, 4.33MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  63%|██████▎   | 162M/258M [00:27<00:19, 5.12MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  63%|██████▎   | 163M/258M [00:27<00:17, 5.79MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  64%|██████▎   | 164M/258M [00:27<00:15, 6.34MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  64%|██████▍   | 165M/258M [00:27<00:14, 6.75MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  64%|██████▍   | 166M/258M [00:28<00:15, 6.40MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  65%|██████▍   | 167M/258M [00:28<00:16, 5.79MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  65%|██████▌   | 168M/258M [00:28<00:15, 6.23MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  65%|██████▌   | 169M/258M [00:28<00:16, 5.83MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  66%|██████▌   | 170M/258M [00:28<00:16, 5.55MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  67%|██████▋   | 172M/258M [00:28<00:12, 7.46MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  67%|██████▋   | 173M/258M [00:29<00:15, 5.62MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  67%|██████▋   | 174M/258M [00:29<00:15, 5.79MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  68%|██████▊   | 175M/258M [00:29<00:15, 5.69MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  68%|██████▊   | 176M/258M [00:29<00:14, 5.80MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  69%|██████▊   | 177M/258M [00:30<00:14, 5.85MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  69%|██████▉   | 178M/258M [00:30<00:15, 5.36MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  69%|██████▉   | 179M/258M [00:30<00:18, 4.60MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  70%|██████▉   | 180M/258M [00:30<00:16, 4.99MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  70%|███████   | 181M/258M [00:30<00:15, 5.36MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  71%|███████   | 182M/258M [00:31<00:14, 5.53MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  71%|███████   | 183M/258M [00:31<00:13, 5.97MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  71%|███████▏  | 184M/258M [00:31<00:12, 6.33MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  72%|███████▏  | 185M/258M [00:31<00:11, 6.52MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  72%|███████▏  | 186M/258M [00:31<00:12, 5.97MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  72%|███████▏  | 187M/258M [00:31<00:13, 5.73MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  73%|███████▎  | 188M/258M [00:32<00:13, 5.48MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  73%|███████▎  | 189M/258M [00:32<00:12, 5.95MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  74%|███████▎  | 190M/258M [00:32<00:12, 5.78MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  74%|███████▍  | 192M/258M [00:32<00:09, 6.97MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  75%|███████▍  | 193M/258M [00:32<00:09, 6.85MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  75%|███████▌  | 194M/258M [00:33<00:15, 4.36MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  76%|███████▌  | 195M/258M [00:33<00:14, 4.54MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  76%|███████▌  | 196M/258M [00:33<00:13, 4.81MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  76%|███████▋  | 197M/258M [00:33<00:12, 5.02MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  77%|███████▋  | 198M/258M [00:34<00:12, 5.07MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  77%|███████▋  | 199M/258M [00:34<00:11, 5.40MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  77%|███████▋  | 200M/258M [00:34<00:10, 5.74MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  78%|███████▊  | 201M/258M [00:34<00:09, 6.02MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  78%|███████▊  | 202M/258M [00:34<00:09, 6.29MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  79%|███████▊  | 203M/258M [00:34<00:08, 6.49MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  79%|███████▉  | 204M/258M [00:35<00:08, 6.71MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  79%|███████▉  | 205M/258M [00:35<00:07, 7.32MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  80%|███████▉  | 206M/258M [00:35<00:07, 7.07MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  80%|████████  | 207M/258M [00:35<00:07, 7.15MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  81%|████████  | 208M/258M [00:35<00:06, 7.59MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  81%|████████  | 209M/258M [00:35<00:06, 7.94MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  81%|████████▏ | 210M/258M [00:35<00:06, 7.89MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  82%|████████▏ | 211M/258M [00:35<00:06, 7.61MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  82%|████████▏ | 212M/258M [00:36<00:07, 6.86MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  83%|████████▎ | 213M/258M [00:36<00:08, 5.65MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  83%|████████▎ | 214M/258M [00:36<00:07, 5.98MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  83%|████████▎ | 215M/258M [00:36<00:07, 6.18MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  84%|████████▎ | 216M/258M [00:36<00:06, 6.87MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  84%|████████▍ | 217M/258M [00:36<00:05, 7.35MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  84%|████████▍ | 218M/258M [00:37<00:05, 7.69MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  85%|████████▍ | 219M/258M [00:37<00:04, 8.32MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  85%|████████▌ | 220M/258M [00:37<00:04, 8.60MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  86%|████████▌ | 221M/258M [00:37<00:04, 8.77MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  86%|████████▌ | 222M/258M [00:37<00:04, 7.60MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  86%|████████▋ | 223M/258M [00:37<00:04, 8.01MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  87%|████████▋ | 224M/258M [00:37<00:04, 7.48MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  87%|████████▋ | 225M/258M [00:37<00:04, 7.70MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  88%|████████▊ | 226M/258M [00:38<00:04, 7.43MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  88%|████████▊ | 227M/258M [00:38<00:04, 7.66MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  88%|████████▊ | 228M/258M [00:38<00:04, 7.13MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  89%|████████▊ | 229M/258M [00:38<00:04, 6.71MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  89%|████████▉ | 230M/258M [00:38<00:04, 5.99MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  89%|████████▉ | 231M/258M [00:38<00:04, 6.43MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  90%|████████▉ | 232M/258M [00:39<00:04, 6.05MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  90%|█████████ | 233M/258M [00:39<00:04, 6.21MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  91%|█████████ | 234M/258M [00:39<00:03, 6.42MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  91%|█████████ | 235M/258M [00:39<00:03, 6.14MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  91%|█████████▏| 236M/258M [00:39<00:03, 6.41MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  92%|█████████▏| 237M/258M [00:39<00:03, 6.81MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  92%|█████████▏| 238M/258M [00:40<00:03, 6.01MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  93%|█████████▎| 239M/258M [00:40<00:03, 6.62MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  93%|█████████▎| 240M/258M [00:40<00:02, 6.93MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  93%|█████████▎| 241M/258M [00:40<00:02, 7.32MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  94%|█████████▍| 242M/258M [00:40<00:02, 6.81MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  94%|█████████▍| 243M/258M [00:40<00:02, 6.63MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  95%|█████████▍| 244M/258M [00:41<00:02, 6.09MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  95%|█████████▍| 245M/258M [00:41<00:02, 6.86MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  95%|█████████▌| 246M/258M [00:41<00:01, 7.22MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  96%|█████████▌| 247M/258M [00:41<00:01, 7.36MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  96%|█████████▌| 248M/258M [00:41<00:01, 7.95MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  96%|█████████▋| 249M/258M [00:41<00:01, 8.06MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  97%|█████████▋| 250M/258M [00:41<00:01, 8.14MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  97%|█████████▋| 251M/258M [00:41<00:00, 7.58MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  98%|█████████▊| 252M/258M [00:42<00:00, 6.97MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  98%|█████████▊| 253M/258M [00:42<00:00, 7.25MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  98%|█████████▊| 254M/258M [00:42<00:00, 6.73MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  99%|█████████▉| 255M/258M [00:42<00:00, 7.14MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors:  99%|█████████▉| 256M/258M [00:42<00:00, 7.27MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors: 100%|█████████▉| 257M/258M [00:42<00:00, 7.44MB/s][A[A[A[A
+
+
+
+Downloading model.safetensors: 100%|█████████▉| 258M/258M [00:42<00:00, 8.03MB/s][A[A[A[ADownloading model.safetensors: 100%|██████████| 258M/258M [00:42<00:00, 6.29MB/s]
+Downloading ocr_error_detection model to /home/rama/.cache/datalab/models/ocr_error_detection/2025_02_18:  12%|█▎        | 1/8 [00:43<05:03, 43.36s/it]Downloading ocr_error_detection model to /home/rama/.cache/datalab/models/ocr_error_detection/2025_02_18: 100%|██████████| 8/8 [00:43<00:00,  5.42s/it]
+Recognizing Layout:   0%|          | 0/2 [00:00<?, ?it/s]Recognizing Layout:  50%|█████     | 1/2 [00:16<00:16, 16.45s/it]Recognizing Layout: 100%|██████████| 2/2 [00:16<00:00,  6.85s/it]Recognizing Layout: 100%|██████████| 2/2 [00:16<00:00,  8.29s/it]
+Running OCR Error Detection:   0%|          | 0/1 [00:00<?, ?it/s]Running OCR Error Detection: 100%|██████████| 1/1 [00:00<00:00,  4.69it/s]Running OCR Error Detection: 100%|██████████| 1/1 [00:00<00:00,  4.69it/s]
+Detecting bboxes: 0it [00:00, ?it/s]Detecting bboxes: 0it [00:00, ?it/s]
+Detecting bboxes: 0it [00:00, ?it/s]Detecting bboxes: 0it [00:00, ?it/s]
+2026-04-21 11:34:52,773 [INFO] marker: Saved markdown to /home/rama/Desktop/0sci/chapters_md/00a-preface-classics
+2026-04-21 11:34:52,773 [INFO] marker: Total time: 19.71974754333496
+[11:34:53] ok  00a-preface-classics  116s
+[11:34:53] --- 00b-preface ---
+Recognizing Layout:   0%|          | 0/4 [00:00<?, ?it/s]Recognizing Layout:  25%|██▌       | 1/4 [00:31<01:33, 31.16s/it]Recognizing Layout:  50%|█████     | 2/4 [00:31<00:26, 13.22s/it]Recognizing Layout: 100%|██████████| 4/4 [00:31<00:00,  7.96s/it]
+Running OCR Error Detection:   0%|          | 0/1 [00:00<?, ?it/s]Running OCR Error Detection: 100%|██████████| 1/1 [00:00<00:00,  1.74it/s]Running OCR Error Detection: 100%|██████████| 1/1 [00:00<00:00,  1.74it/s]
+Detecting bboxes: 0it [00:00, ?it/s]Detecting bboxes: 0it [00:00, ?it/s]
+Recognizing tables:   0%|          | 0/1 [00:00<?, ?it/s]Recognizing tables: 100%|██████████| 1/1 [00:01<00:00,  1.39s/it]Recognizing tables: 100%|██████████| 1/1 [00:01<00:00,  1.39s/it]
+Detecting bboxes: 0it [00:00, ?it/s]Detecting bboxes: 0it [00:00, ?it/s]
+2026-04-21 11:35:33,709 [INFO] marker: Saved markdown to /home/rama/Desktop/0sci/chapters_md/00b-preface
+2026-04-21 11:35:33,709 [INFO] marker: Total time: 34.43679666519165
+[11:35:34] ok  00b-preface  41s
+[11:35:34] --- 00c-notation ---
+Recognizing Layout:   0%|          | 0/2 [00:00<?, ?it/s]Recognizing Layout:  50%|█████     | 1/2 [00:15<00:15, 15.76s/it]Recognizing Layout: 100%|██████████| 2/2 [00:16<00:00,  7.21s/it]Recognizing Layout: 100%|██████████| 2/2 [00:16<00:00,  8.49s/it]
+Running OCR Error Detection:   0%|          | 0/1 [00:00<?, ?it/s]Running OCR Error Detection: 100%|██████████| 1/1 [00:00<00:00,  3.82it/s]Running OCR Error Detection: 100%|██████████| 1/1 [00:00<00:00,  3.82it/s]
+Detecting bboxes:   0%|          | 0/1 [00:00<?, ?it/s]Detecting bboxes: 100%|██████████| 1/1 [00:01<00:00,  1.96s/it]Detecting bboxes: 100%|██████████| 1/1 [00:01<00:00,  1.97s/it]
+Recognizing Text:   0%|          | 0/6 [00:00<?, ?it/s]Recognizing Text:  17%|█▋        | 1/6 [00:18<01:32, 18.55s/it]Recognizing Text:  33%|███▎      | 2/6 [00:20<00:34,  8.67s/it]Recognizing Text:  50%|█████     | 3/6 [03:00<03:52, 77.66s/it]Recognizing Text:  67%|██████▋   | 4/6 [03:02<01:36, 48.06s/it]Recognizing Text:  83%|████████▎ | 5/6 [05:16<01:18, 78.97s/it]Recognizing Text: 100%|██████████| 6/6 [09:00<00:00, 128.44s/it]Recognizing Text: 100%|██████████| 6/6 [09:00<00:00, 90.16s/it] 
+Recognizing Text:   0%|          | 0/6 [00:00<?, ?it/s]Recognizing Text:  17%|█▋        | 1/6 [00:07<00:35,  7.19s/it]Recognizing Text:  50%|█████     | 3/6 [00:07<00:05,  1.95s/it]Recognizing Text:  83%|████████▎ | 5/6 [00:09<00:01,  1.59s/it]Recognizing Text: 100%|██████████| 6/6 [00:16<00:00,  2.91s/it]Recognizing Text: 100%|██████████| 6/6 [00:16<00:00,  2.74s/it]
+Detecting bboxes: 0it [00:00, ?it/s]Detecting bboxes: 0it [00:00, ?it/s]
+2026-04-21 11:45:17,538 [INFO] marker: Saved markdown to /home/rama/Desktop/0sci/chapters_md/00c-notation
+2026-04-21 11:45:17,538 [INFO] marker: Total time: 577.367782831192
+[11:45:18] ok  00c-notation  584s
+[11:45:18] --- 01-scientific-computing ---
+Recognizing Layout:   0%|          | 0/47 [00:00<?, ?it/s]Recognizing Layout:   2%|▏         | 1/47 [00:48<37:20, 48.70s/it]Recognizing Layout:   4%|▍         | 2/47 [00:49<15:32, 20.73s/it]Recognizing Layout:   6%|▋         | 3/47 [01:05<13:39, 18.63s/it]Recognizing Layout:  11%|█         | 5/47 [01:27<09:51, 14.08s/it]Recognizing Layout:  13%|█▎        | 6/47 [01:27<06:58, 10.20s/it]Recognizing Layout:  15%|█▍        | 7/47 [01:43<07:52, 11.81s/it]Recognizing Layout:  21%|██▏       | 10/47 [02:04<05:41,  9.23s/it]Recognizing Layout:  23%|██▎       | 11/47 [02:05<04:24,  7.34s/it]Recognizing Layout:  26%|██▌       | 12/47 [02:20<05:24,  9.26s/it]Recognizing Layout:  28%|██▊       | 13/47 [02:21<03:58,  7.03s/it]Recognizing Layout:  30%|██▉       | 14/47 [02:37<05:11,  9.44s/it]Recognizing Layout:  32%|███▏      | 15/47 [02:37<03:42,  6.94s/it]Recognizing Layout:  34%|███▍      | 16/47 [02:57<05:31, 10.69s/it]Recognizing Layout:  38%|███▊      | 18/47 [03:13<04:31,  9.35s/it]Recognizing Layout:  40%|████      | 19/47 [03:13<03:21,  7.20s/it]Recognizing Layout:  43%|████▎     | 20/47 [03:27<04:01,  8.96s/it]Recognizing Layout:  47%|████▋     | 22/47 [03:42<03:25,  8.22s/it]Recognizing Layout:  49%|████▉     | 23/47 [03:42<02:35,  6.46s/it]Recognizing Layout:  51%|█████     | 24/47 [03:57<03:18,  8.62s/it]Recognizing Layout:  53%|█████▎    | 25/47 [03:59<02:26,  6.65s/it]Recognizing Layout:  55%|█████▌    | 26/47 [04:20<03:43, 10.63s/it]Recognizing Layout:  60%|█████▉    | 28/47 [04:36<02:59,  9.45s/it]Recognizing Layout:  64%|██████▍   | 30/47 [04:51<02:27,  8.69s/it]Recognizing Layout:  66%|██████▌   | 31/47 [04:51<01:50,  6.91s/it]Recognizing Layout:  68%|██████▊   | 32/47 [05:06<02:12,  8.84s/it]Recognizing Layout:  70%|███████   | 33/47 [05:07<01:34,  6.78s/it]Recognizing Layout:  77%|███████▋  | 36/47 [05:38<01:34,  8.63s/it]Recognizing Layout:  79%|███████▊  | 37/47 [05:39<01:10,  7.09s/it]Recognizing Layout:  83%|████████▎ | 39/47 [06:14<01:27, 10.90s/it]Recognizing Layout:  85%|████████▌ | 40/47 [06:14<01:00,  8.71s/it]Recognizing Layout:  87%|████████▋ | 41/47 [06:32<01:04, 10.82s/it]Recognizing Layout:  91%|█████████▏| 43/47 [06:40<00:32,  8.05s/it]Recognizing Layout:  94%|█████████▎| 44/47 [06:40<00:19,  6.39s/it]Recognizing Layout:  96%|█████████▌| 45/47 [06:44<00:11,  5.77s/it]Recognizing Layout:  98%|█████████▊| 46/47 [06:45<00:04,  4.48s/it]Recognizing Layout: 100%|██████████| 47/47 [06:45<00:00,  3.46s/it]Recognizing Layout: 100%|██████████| 47/47 [06:45<00:00,  8.64s/it]
+Running OCR Error Detection:   0%|          | 0/12 [00:00<?, ?it/s]Running OCR Error Detection:   8%|▊         | 1/12 [00:00<00:05,  1.89it/s]Running OCR Error Detection:  17%|█▋        | 2/12 [00:01<00:05,  1.83it/s]Running OCR Error Detection:  25%|██▌       | 3/12 [00:01<00:05,  1.57it/s]Running OCR Error Detection:  33%|███▎      | 4/12 [00:02<00:05,  1.47it/s]Running OCR Error Detection:  42%|████▏     | 5/12 [00:03<00:04,  1.40it/s]Running OCR Error Detection:  50%|█████     | 6/12 [00:04<00:04,  1.37it/s]Running OCR Error Detection:  58%|█████▊    | 7/12 [00:04<00:03,  1.46it/s]Running OCR Error Detection:  67%|██████▋   | 8/12 [00:05<00:02,  1.51it/s]Running OCR Error Detection:  75%|███████▌  | 9/12 [00:05<00:01,  1.55it/s]Running OCR Error Detection:  83%|████████▎ | 10/12 [00:06<00:01,  1.61it/s]Running OCR Error Detection:  92%|█████████▏| 11/12 [00:07<00:00,  1.64it/s]Running OCR Error Detection: 100%|██████████| 12/12 [00:07<00:00,  1.75it/s]Running OCR Error Detection: 100%|██████████| 12/12 [00:07<00:00,  1.59it/s]
+Detecting bboxes:   0%|          | 0/2 [00:00<?, ?it/s]Detecting bboxes:  50%|█████     | 1/2 [00:07<00:07,  7.27s/it]Detecting bboxes: 100%|██████████| 2/2 [00:10<00:00,  5.12s/it]Detecting bboxes: 100%|██████████| 2/2 [00:10<00:00,  5.44s/it]
+Recognizing Text:   0%|          | 0/61 [00:00<?, ?it/s]Recognizing Text:   2%|▏         | 1/61 [03:46<3:46:20, 226.34s/it]Recognizing Text:   3%|▎         | 2/61 [04:07<1:44:01, 105.78s/it]Recognizing Text:   5%|▍         | 3/61 [04:57<1:17:19, 80.00s/it] Recognizing Text:   7%|▋         | 4/61 [05:01<47:42, 50.23s/it]  Recognizing Text:   8%|▊         | 5/61 [05:19<36:02, 38.61s/it]Recognizing Text:  10%|▉         | 6/61 [06:27<44:28, 48.52s/it]Recognizing Text:  11%|█▏        | 7/61 [06:48<35:34, 39.53s/it]Recognizing Text:  13%|█▎        | 8/61 [07:04<28:15, 31.99s/it]Recognizing Text:  15%|█▍        | 9/61 [07:06<19:33, 22.56s/it]Recognizing Text:  16%|█▋        | 10/61 [07:15<15:41, 18.47s/it]Recognizing Text:  18%|█▊        | 11/61 [07:41<17:26, 20.93s/it]Recognizing Text:  20%|█▉        | 12/61 [07:49<13:44, 16.83s/it]Recognizing Text:  21%|██▏       | 13/61 [08:12<14:57, 18.71s/it]Recognizing Text:  23%|██▎       | 14/61 [08:22<12:38, 16.15s/it]Recognizing Text:  25%|██▍       | 15/61 [09:12<20:10, 26.32s/it]Recognizing Text:  26%|██▌       | 16/61 [09:15<14:31, 19.36s/it]Recognizing Text:  28%|██▊       | 17/61 [09:25<12:04, 16.48s/it]Recognizing Text:  30%|██▉       | 18/61 [09:27<08:36, 12.02s/it]Recognizing Text:  31%|███       | 19/61 [09:32<06:57,  9.94s/it]Recognizing Text:  33%|███▎      | 20/61 [09:33<05:06,  7.48s/it]Recognizing Text:  34%|███▍      | 21/61 [09:46<05:59,  8.98s/it]Recognizing Text:  36%|███▌      | 22/61 [09:52<05:10,  7.95s/it]Recognizing Text:  39%|███▉      | 24/61 [09:58<03:30,  5.70s/it]Recognizing Text:  41%|████      | 25/61 [09:59<02:47,  4.66s/it]Recognizing Text:  43%|████▎     | 26/61 [10:01<02:15,  3.86s/it]Recognizing Text:  44%|████▍     | 27/61 [10:10<03:00,  5.32s/it]Recognizing Text:  46%|████▌     | 28/61 [10:13<02:34,  4.69s/it]Recognizing Text:  48%|████▊     | 29/61 [10:20<02:49,  5.30s/it]Recognizing Text:  54%|█████▍    | 33/61 [10:25<01:16,  2.73s/it]Recognizing Text:  56%|█████▌    | 34/61 [10:26<01:07,  2.51s/it]Recognizing Text:  57%|█████▋    | 35/61 [10:29<01:08,  2.64s/it]Recognizing Text:  62%|██████▏   | 38/61 [10:33<00:44,  1.93s/it]Recognizing Text:  64%|██████▍   | 39/61 [10:34<00:40,  1.86s/it]Recognizing Text:  66%|██████▌   | 40/61 [10:42<01:05,  3.10s/it]Recognizing Text:  72%|███████▏  | 44/61 [10:45<00:31,  1.85s/it]Recognizing Text:  74%|███████▍  | 45/61 [10:57<00:54,  3.41s/it]Recognizing Text:  75%|███████▌  | 46/61 [10:58<00:46,  3.09s/it]Recognizing Text:  77%|███████▋  | 47/61 [11:30<02:07,  9.12s/it]Recognizing Text:  79%|███████▊  | 48/61 [11:32<01:36,  7.39s/it]Recognizing Text:  80%|████████  | 49/61 [12:01<02:35, 12.98s/it]Recognizing Text:  82%|████████▏ | 50/61 [12:06<01:58, 10.81s/it]Recognizing Text:  84%|████████▎ | 51/61 [13:56<06:17, 37.79s/it]Recognizing Text:  85%|████████▌ | 52/61 [14:24<05:16, 35.21s/it]Recognizing Text:  87%|████████▋ | 53/61 [15:41<06:15, 46.93s/it]Recognizing Text:  89%|████████▊ | 54/61 [17:25<07:25, 63.70s/it]Recognizing Text:  90%|█████████ | 55/61 [18:30<06:24, 64.02s/it]Recognizing Text:  92%|█████████▏| 56/61 [19:04<04:35, 55.07s/it]Recognizing Text:  93%|█████████▎| 57/61 [20:17<04:01, 60.38s/it]Recognizing Text:  95%|█████████▌| 58/61 [20:32<02:21, 47.07s/it]Recognizing Text:  97%|█████████▋| 59/61 [20:40<01:10, 35.32s/it]Recognizing Text:  98%|█████████▊| 60/61 [20:42<00:25, 25.36s/it]Recognizing Text: 100%|██████████| 61/61 [22:46<00:00, 54.98s/it]Recognizing Text: 100%|██████████| 61/61 [22:46<00:00, 22.41s/it]
+Recognizing Text:   0%|          | 0/119 [00:00<?, ?it/s]Recognizing Text:   1%|          | 1/119 [00:43<1:25:12, 43.33s/it]Recognizing Text:   2%|▏         | 2/119 [00:52<45:33, 23.36s/it]  Recognizing Text:   3%|▎         | 3/119 [01:05<35:50, 18.54s/it]Recognizing Text:   3%|▎         | 4/119 [01:16<29:55, 15.61s/it]Recognizing Text:   4%|▍         | 5/119 [01:23<23:39, 12.45s/it]Recognizing Text:   5%|▌         | 6/119 [01:31<20:36, 10.95s/it]Recognizing Text:   6%|▌         | 7/119 [01:39<18:53, 10.12s/it]Recognizing Text:   7%|▋         | 8/119 [01:40<12:57,  7.01s/it]Recognizing Text:   8%|▊         | 9/119 [01:46<12:31,  6.83s/it]Recognizing Text:   8%|▊         | 10/119 [02:00<16:01,  8.82s/it]Recognizing Text:   9%|▉         | 11/119 [02:01<11:43,  6.52s/it]Recognizing Text:  10%|█         | 12/119 [02:03<09:03,  5.08s/it]Recognizing Text:  11%|█         | 13/119 [02:05<07:32,  4.27s/it]Recognizing Text:  12%|█▏        | 14/119 [02:09<07:16,  4.16s/it]Recognizing Text:  13%|█▎        | 15/119 [02:25<13:16,  7.66s/it]Recognizing Text:  14%|█▍        | 17/119 [02:32<09:51,  5.80s/it]Recognizing Text:  15%|█▌        | 18/119 [02:32<07:28,  4.44s/it]Recognizing Text:  16%|█▌        | 19/119 [02:35<06:42,  4.03s/it]Recognizing Text:  17%|█▋        | 20/119 [02:38<06:11,  3.75s/it]Recognizing Text:  18%|█▊        | 21/119 [02:46<07:55,  4.85s/it]Recognizing Text:  18%|█▊        | 22/119 [02:48<06:35,  4.08s/it]Recognizing Text:  19%|█▉        | 23/119 [02:54<07:21,  4.60s/it]Recognizing Text:  20%|██        | 24/119 [02:54<05:25,  3.43s/it]Recognizing Text:  21%|██        | 25/119 [02:57<04:54,  3.13s/it]Recognizing Text:  22%|██▏       | 26/119 [03:03<06:23,  4.13s/it]Recognizing Text:  23%|██▎       | 27/119 [03:06<05:44,  3.74s/it]Recognizing Text:  24%|██▎       | 28/119 [03:07<04:15,  2.81s/it]Recognizing Text:  24%|██▍       | 29/119 [03:11<05:02,  3.36s/it]Recognizing Text:  25%|██▌       | 30/119 [03:14<04:35,  3.10s/it]Recognizing Text:  26%|██▌       | 31/119 [03:19<05:37,  3.83s/it]Recognizing Text:  27%|██▋       | 32/119 [03:22<04:50,  3.33s/it]Recognizing Text:  28%|██▊       | 33/119 [03:25<04:55,  3.44s/it]Recognizing Text:  29%|██▊       | 34/119 [03:29<05:09,  3.64s/it]Recognizing Text:  29%|██▉       | 35/119 [03:31<04:19,  3.09s/it]Recognizing Text:  31%|███       | 37/119 [03:36<03:40,  2.69s/it]Recognizing Text:  32%|███▏      | 38/119 [03:45<05:48,  4.30s/it]Recognizing Text:  33%|███▎      | 39/119 [03:47<04:53,  3.67s/it]Recognizing Text:  34%|███▎      | 40/119 [03:51<05:04,  3.86s/it]Recognizing Text:  35%|███▌      | 42/119 [03:54<03:29,  2.72s/it]Recognizing Text:  36%|███▌      | 43/119 [04:00<04:37,  3.65s/it]Recognizing Text:  37%|███▋      | 44/119 [04:04<04:32,  3.63s/it]Recognizing Text:  38%|███▊      | 45/119 [04:05<03:29,  2.84s/it]Recognizing Text:  39%|███▊      | 46/119 [04:09<04:00,  3.29s/it]Recognizing Text:  39%|███▉      | 47/119 [04:10<03:08,  2.62s/it]Recognizing Text:  40%|████      | 48/119 [04:13<03:11,  2.70s/it]Recognizing Text:  42%|████▏     | 50/119 [04:17<02:43,  2.38s/it]Recognizing Text:  43%|████▎     | 51/119 [04:20<02:56,  2.59s/it]Recognizing Text:  44%|████▎     | 52/119 [04:23<02:52,  2.58s/it]Recognizing Text:  45%|████▍     | 53/119 [04:28<03:41,  3.36s/it]Recognizing Text:  45%|████▌     | 54/119 [04:29<02:56,  2.71s/it]Recognizing Text:  46%|████▌     | 55/119 [04:30<02:21,  2.21s/it]Recognizing Text:  47%|████▋     | 56/119 [04:35<03:04,  2.93s/it]Recognizing Text:  49%|████▊     | 58/119 [04:41<02:59,  2.95s/it]Recognizing Text:  50%|████▉     | 59/119 [04:42<02:37,  2.62s/it]Recognizing Text:  50%|█████     | 60/119 [04:46<02:49,  2.87s/it]Recognizing Text:  52%|█████▏    | 62/119 [04:48<02:01,  2.14s/it]Recognizing Text:  53%|█████▎    | 63/119 [04:50<01:56,  2.08s/it]Recognizing Text:  54%|█████▍    | 64/119 [04:55<02:35,  2.83s/it]Recognizing Text:  55%|█████▍    | 65/119 [04:56<02:11,  2.43s/it]Recognizing Text:  55%|█████▌    | 66/119 [04:58<01:54,  2.16s/it]Recognizing Text:  56%|█████▋    | 67/119 [05:00<01:53,  2.19s/it]Recognizing Text:  57%|█████▋    | 68/119 [05:02<01:49,  2.16s/it]Recognizing Text:  58%|█████▊    | 69/119 [05:04<01:44,  2.10s/it]Recognizing Text:  59%|█████▉    | 70/119 [05:10<02:34,  3.15s/it]Recognizing Text:  60%|█████▉    | 71/119 [05:12<02:22,  2.97s/it]Recognizing Text:  61%|██████    | 72/119 [05:14<02:00,  2.56s/it]Recognizing Text:  61%|██████▏   | 73/119 [05:14<01:28,  1.91s/it]Recognizing Text:  62%|██████▏   | 74/119 [05:18<01:46,  2.36s/it]Recognizing Text:  63%|██████▎   | 75/119 [05:20<01:38,  2.24s/it]Recognizing Text:  64%|██████▍   | 76/119 [05:26<02:34,  3.58s/it]Recognizing Text:  65%|██████▍   | 77/119 [05:27<01:56,  2.78s/it]Recognizing Text:  66%|██████▌   | 78/119 [05:30<01:49,  2.67s/it]Recognizing Text:  66%|██████▋   | 79/119 [05:31<01:33,  2.35s/it]Recognizing Text:  67%|██████▋   | 80/119 [05:33<01:21,  2.08s/it]Recognizing Text:  68%|██████▊   | 81/119 [05:34<01:12,  1.91s/it]Recognizing Text:  69%|██████▉   | 82/119 [05:37<01:24,  2.27s/it]Recognizing Text:  70%|██████▉   | 83/119 [05:38<01:03,  1.77s/it]Recognizing Text:  71%|███████   | 84/119 [05:43<01:35,  2.74s/it]Recognizing Text:  71%|███████▏  | 85/119 [05:43<01:08,  2.01s/it]Recognizing Text:  72%|███████▏  | 86/119 [05:46<01:16,  2.32s/it]Recognizing Text:  73%|███████▎  | 87/119 [05:47<00:58,  1.82s/it]Recognizing Text:  74%|███████▍  | 88/119 [05:50<01:03,  2.04s/it]Recognizing Text:  76%|███████▌  | 90/119 [05:53<00:55,  1.91s/it]Recognizing Text:  76%|███████▋  | 91/119 [05:55<00:49,  1.78s/it]Recognizing Text:  77%|███████▋  | 92/119 [05:57<00:55,  2.06s/it]Recognizing Text:  78%|███████▊  | 93/119 [06:00<00:54,  2.09s/it]Recognizing Text:  79%|███████▉  | 94/119 [06:01<00:48,  1.93s/it]Recognizing Text:  80%|███████▉  | 95/119 [06:03<00:43,  1.82s/it]Recognizing Text:  81%|████████  | 96/119 [06:04<00:40,  1.77s/it]Recognizing Text:  82%|████████▏ | 97/119 [06:05<00:31,  1.45s/it]Recognizing Text:  82%|████████▏ | 98/119 [06:10<00:50,  2.39s/it]Recognizing Text:  83%|████████▎ | 99/119 [06:12<00:46,  2.33s/it]Recognizing Text:  84%|████████▍ | 100/119 [06:13<00:39,  2.10s/it]Recognizing Text:  85%|████████▍ | 101/119 [06:14<00:28,  1.57s/it]Recognizing Text:  87%|████████▋ | 103/119 [06:18<00:30,  1.89s/it]Recognizing Text:  87%|████████▋ | 104/119 [06:20<00:29,  1.97s/it]Recognizing Text:  88%|████████▊ | 105/119 [06:22<00:25,  1.80s/it]Recognizing Text:  89%|████████▉ | 106/119 [06:22<00:19,  1.49s/it]Recognizing Text:  90%|████████▉ | 107/119 [06:24<00:17,  1.44s/it]Recognizing Text:  91%|█████████ | 108/119 [06:24<00:12,  1.13s/it]Recognizing Text:  92%|█████████▏| 109/119 [06:28<00:20,  2.02s/it]Recognizing Text:  92%|█████████▏| 110/119 [06:30<00:17,  1.91s/it]Recognizing Text:  94%|█████████▍| 112/119 [06:32<00:10,  1.44s/it]Recognizing Text:  95%|█████████▍| 113/119 [06:33<00:09,  1.52s/it]Recognizing Text:  96%|█████████▌| 114/119 [06:35<00:07,  1.46s/it]Recognizing Text:  97%|█████████▋| 115/119 [06:37<00:07,  1.76s/it]Recognizing Text:  98%|█████████▊| 117/119 [06:39<00:02,  1.34s/it]Recognizing Text:  99%|█████████▉| 118/119 [06:40<00:01,  1.29s/it]Recognizing Text: 100%|██████████| 119/119 [06:41<00:00,  1.17s/it]Recognizing Text: 100%|██████████| 119/119 [06:41<00:00,  3.37s/it]
+Recognizing tables:   0%|          | 0/1 [00:00<?, ?it/s]Recognizing tables: 100%|██████████| 1/1 [00:06<00:00,  6.81s/it]Recognizing tables: 100%|██████████| 1/1 [00:06<00:00,  6.81s/it]
+Detecting bboxes:   0%|          | 0/1 [00:00<?, ?it/s]Detecting bboxes: 100%|██████████| 1/1 [00:01<00:00,  1.74s/it]Detecting bboxes: 100%|██████████| 1/1 [00:01<00:00,  1.74s/it]
+Recognizing Text:   0%|          | 0/30 [00:00<?, ?it/s]Recognizing Text:   3%|▎         | 1/30 [00:14<07:07, 14.73s/it]Recognizing Text:  43%|████▎     | 13/30 [00:15<00:15,  1.10it/s]Recognizing Text:  50%|█████     | 15/30 [00:17<00:12,  1.17it/s]Recognizing Text:  67%|██████▋   | 20/30 [00:18<00:06,  1.65it/s]Recognizing Text:  73%|███████▎  | 22/30 [00:19<00:04,  1.64it/s]Recognizing Text:  87%|████████▋ | 26/30 [00:21<00:02,  1.66it/s]Recognizing Text:  97%|█████████▋| 29/30 [00:31<00:01,  1.31s/it]Recognizing Text: 100%|██████████| 30/30 [00:31<00:00,  1.05s/it]
+2026-04-21 12:22:46,926 [INFO] marker: Saved markdown to /home/rama/Desktop/0sci/chapters_md/01-scientific-computing
+2026-04-21 12:22:46,926 [INFO] marker: Total time: 2242.965938091278
+[12:22:47] ok  01-scientific-computing  2249s
+[12:22:47] --- 02-linear-systems ---
+Recognizing Layout:   0%|          | 0/56 [00:00<?, ?it/s]Recognizing Layout:   2%|▏         | 1/56 [00:54<49:54, 54.45s/it]Recognizing Layout:   4%|▎         | 2/56 [00:55<20:28, 22.75s/it]Recognizing Layout:   7%|▋         | 4/56 [01:20<14:11, 16.38s/it]Recognizing Layout:  11%|█         | 6/56 [01:34<09:58, 11.97s/it]Recognizing Layout:  14%|█▍        | 8/56 [01:52<08:42, 10.89s/it]Recognizing Layout:  18%|█▊        | 10/56 [02:20<09:10, 11.97s/it]Recognizing Layout:  21%|██▏       | 12/56 [02:39<08:06, 11.07s/it]Recognizing Layout:  23%|██▎       | 13/56 [02:40<06:33,  9.15s/it]Recognizing Layout:  25%|██▌       | 14/56 [03:02<08:18, 11.86s/it]Recognizing Layout:  27%|██▋       | 15/56 [03:02<06:12,  9.08s/it]Recognizing Layout:  29%|██▊       | 16/56 [03:23<08:08, 12.21s/it]Recognizing Layout:  30%|███       | 17/56 [03:23<05:51,  9.02s/it]Recognizing Layout:  32%|███▏      | 18/56 [03:51<08:52, 14.02s/it]Recognizing Layout:  34%|███▍      | 19/56 [03:51<06:18, 10.24s/it]Recognizing Layout:  36%|███▌      | 20/56 [04:06<06:56, 11.56s/it]Recognizing Layout:  39%|███▉      | 22/56 [04:21<05:31,  9.74s/it]Recognizing Layout:  43%|████▎     | 24/56 [04:38<04:56,  9.27s/it]Recognizing Layout:  45%|████▍     | 25/56 [04:39<03:48,  7.38s/it]Recognizing Layout:  46%|████▋     | 26/56 [04:58<05:08, 10.29s/it]Recognizing Layout:  50%|█████     | 28/56 [05:20<04:56, 10.57s/it]Recognizing Layout:  52%|█████▏    | 29/56 [05:21<03:43,  8.29s/it]Recognizing Layout:  54%|█████▎    | 30/56 [05:36<04:20, 10.03s/it]Recognizing Layout:  55%|█████▌    | 31/56 [05:36<03:07,  7.50s/it]Recognizing Layout:  61%|██████    | 34/56 [06:08<03:19,  9.07s/it]Recognizing Layout:  62%|██████▎   | 35/56 [06:08<02:33,  7.30s/it]Recognizing Layout:  64%|██████▍   | 36/56 [06:25<03:10,  9.54s/it]Recognizing Layout:  66%|██████▌   | 37/56 [06:26<02:19,  7.35s/it]Recognizing Layout:  68%|██████▊   | 38/56 [06:48<03:21, 11.22s/it]Recognizing Layout:  70%|██████▉   | 39/56 [06:49<02:21,  8.35s/it]Recognizing Layout:  73%|███████▎  | 41/56 [07:12<02:24,  9.66s/it]Recognizing Layout:  75%|███████▌  | 42/56 [07:12<01:45,  7.56s/it]Recognizing Layout:  79%|███████▊  | 44/56 [07:41<02:03, 10.29s/it]Recognizing Layout:  80%|████████  | 45/56 [07:46<01:39,  9.09s/it]Recognizing Layout:  82%|████████▏ | 46/56 [08:14<02:16, 13.64s/it]Recognizing Layout:  84%|████████▍ | 47/56 [08:14<01:31, 10.19s/it]Recognizing Layout:  86%|████████▌ | 48/56 [08:34<01:41, 12.69s/it]Recognizing Layout:  88%|████████▊ | 49/56 [08:34<01:04,  9.24s/it]Recognizing Layout:  89%|████████▉ | 50/56 [08:55<01:16, 12.68s/it]Recognizing Layout:  91%|█████████ | 51/56 [08:55<00:45,  9.09s/it]Recognizing Layout:  93%|█████████▎| 52/56 [09:11<00:43, 10.98s/it]Recognizing Layout:  95%|█████████▍| 53/56 [09:12<00:24,  8.16s/it]Recognizing Layout:  98%|█████████▊| 55/56 [09:13<00:04,  4.52s/it]Recognizing Layout: 100%|██████████| 56/56 [09:13<00:00,  9.88s/it]
+Running OCR Error Detection:   0%|          | 0/14 [00:00<?, ?it/s]Running OCR Error Detection:   7%|▋         | 1/14 [00:01<00:16,  1.29s/it]Running OCR Error Detection:  14%|█▍        | 2/14 [00:02<00:13,  1.10s/it]Running OCR Error Detection:  21%|██▏       | 3/14 [00:02<00:09,  1.13it/s]Running OCR Error Detection:  29%|██▊       | 4/14 [00:03<00:07,  1.26it/s]Running OCR Error Detection:  36%|███▌      | 5/14 [00:04<00:06,  1.32it/s]Running OCR Error Detection:  43%|████▎     | 6/14 [00:04<00:05,  1.38it/s]Running OCR Error Detection:  50%|█████     | 7/14 [00:05<00:04,  1.47it/s]Running OCR Error Detection:  57%|█████▋    | 8/14 [00:06<00:04,  1.47it/s]Running OCR Error Detection:  64%|██████▍   | 9/14 [00:06<00:03,  1.42it/s]Running OCR Error Detection:  71%|███████▏  | 10/14 [00:07<00:02,  1.38it/s]Running OCR Error Detection:  79%|███████▊  | 11/14 [00:08<00:02,  1.35it/s]Running OCR Error Detection:  86%|████████▌ | 12/14 [00:09<00:01,  1.34it/s]Running OCR Error Detection:  93%|█████████▎| 13/14 [00:09<00:00,  1.36it/s]Running OCR Error Detection: 100%|██████████| 14/14 [00:10<00:00,  1.34it/s]Running OCR Error Detection: 100%|██████████| 14/14 [00:10<00:00,  1.31it/s]
+Detecting bboxes:   0%|          | 0/6 [00:00<?, ?it/s]Detecting bboxes:  17%|█▋        | 1/6 [00:08<00:43,  8.68s/it]Detecting bboxes:  33%|███▎      | 2/6 [00:17<00:35,  8.88s/it]Detecting bboxes:  50%|█████     | 3/6 [00:26<00:26,  8.98s/it]Detecting bboxes:  67%|██████▋   | 4/6 [00:35<00:18,  9.00s/it]Detecting bboxes:  83%|████████▎ | 5/6 [00:44<00:08,  8.74s/it]Detecting bboxes: 100%|██████████| 6/6 [00:53<00:00,  9.09s/it]Detecting bboxes: 100%|██████████| 6/6 [00:53<00:00,  8.98s/it]
+Recognizing Text:   0%|          | 0/391 [00:00<?, ?it/s]Recognizing Text:   0%|          | 1/391 [16:32<107:34:16, 992.97s/it]Recognizing Text:   1%|          | 2/391 [16:51<45:20:18, 419.59s/it] Recognizing Text:   1%|          | 3/391 [16:53<24:40:10, 228.89s/it]Recognizing Text:   1%|          | 4/391 [17:30<16:29:26, 153.40s/it]Recognizing Text:   1%|▏         | 5/391 [17:41<10:56:44, 102.08s/it]Recognizing Text:   2%|▏         | 6/391 [17:45<7:19:23, 68.48s/it]  Recognizing Text:   2%|▏         | 7/391 [17:51<5:08:13, 48.16s/it]Recognizing Text:   2%|▏         | 8/391 [18:14<4:16:31, 40.19s/it]Recognizing Text:   2%|▏         | 9/391 [18:39<3:45:21, 35.40s/it]Recognizing Text:   3%|▎         | 10/391 [18:53<3:03:09, 28.84s/it]Recognizing Text:   3%|▎         | 11/391 [18:56<2:13:02, 21.01s/it]Recognizing Text:   3%|▎         | 12/391 [19:00<1:38:20, 15.57s/it]Recognizing Text:   3%|▎         | 13/391 [19:07<1:23:11, 13.20s/it]Recognizing Text:   4%|▎         | 14/391 [20:28<3:30:13, 33.46s/it]Recognizing Text:   4%|▍         | 15/391 [20:42<2:53:45, 27.73s/it]Recognizing Text:   4%|▍         | 16/391 [21:23<3:17:53, 31.66s/it]Recognizing Text:   4%|▍         | 17/391 [21:29<2:29:35, 24.00s/it]Recognizing Text:   5%|▍         | 18/391 [21:30<1:47:14, 17.25s/it]Recognizing Text:   5%|▌         | 20/391 [21:54<1:30:37, 14.66s/it]Recognizing Text:   5%|▌         | 21/391 [22:14<1:39:28, 16.13s/it]Recognizing Text:   6%|▌         | 22/391 [23:16<2:51:49, 27.94s/it]Recognizing Text:   6%|▌         | 23/391 [23:35<2:36:16, 25.48s/it]Recognizing Text:   6%|▌         | 24/391 [23:54<2:25:16, 23.75s/it]Recognizing Text:   6%|▋         | 25/391 [24:21<2:31:37, 24.86s/it]Recognizing Text:   7%|▋         | 26/391 [24:34<2:09:10, 21.24s/it]Recognizing Text:   7%|▋         | 27/391 [25:05<2:27:21, 24.29s/it]Recognizing Text:   7%|▋         | 28/391 [25:30<2:26:50, 24.27s/it]Recognizing Text:   7%|▋         | 29/391 [26:10<2:55:20, 29.06s/it]Recognizing Text:   8%|▊         | 30/391 [26:28<2:34:33, 25.69s/it]Recognizing Text:   8%|▊         | 31/391 [27:16<3:14:19, 32.39s/it]Recognizing Text:   8%|▊         | 32/391 [28:04<3:41:42, 37.05s/it]Recognizing Text:   8%|▊         | 33/391 [30:48<7:27:33, 75.01s/it]Recognizing Text:   9%|▊         | 34/391 [30:50<5:15:27, 53.02s/it]Recognizing Text:   9%|▉         | 35/391 [31:15<4:25:36, 44.77s/it]Recognizing Text:   9%|▉         | 36/391 [31:45<3:59:12, 40.43s/it]Recognizing Text:   9%|▉         | 37/391 [31:53<3:01:27, 30.75s/it]Recognizing Text:  10%|▉         | 38/391 [32:04<2:26:10, 24.85s/it]Recognizing Text:  10%|▉         | 39/391 [32:14<1:58:40, 20.23s/it]Recognizing Text:  10%|█         | 40/391 [32:25<1:42:46, 17.57s/it]Recognizing Text:  10%|█         | 41/391 [32:31<1:20:55, 13.87s/it]Recognizing Text:  11%|█         | 42/391 [32:40<1:13:42, 12.67s/it]Recognizing Text:  11%|█         | 43/391 [32:56<1:18:22, 13.51s/it]Recognizing Text:  11%|█▏        | 44/391 [33:01<1:02:49, 10.86s/it]Recognizing Text:  12%|█▏        | 46/391 [33:06<40:15,  7.00s/it]  Recognizing Text:  12%|█▏        | 48/391 [33:13<32:32,  5.69s/it]Recognizing Text:  13%|█▎        | 49/391 [33:20<33:57,  5.96s/it]Recognizing Text:  13%|█▎        | 50/391 [33:44<59:07, 10.40s/it]Recognizing Text:  13%|█▎        | 51/391 [33:52<55:33,  9.80s/it]Recognizing Text:  13%|█▎        | 52/391 [33:54<43:09,  7.64s/it]Recognizing Text:  14%|█▍        | 54/391 [34:07<39:59,  7.12s/it]Recognizing Text:  14%|█▍        | 55/391 [34:22<50:03,  8.94s/it]Recognizing Text:  14%|█▍        | 56/391 [34:33<52:36,  9.42s/it]Recognizing Text:  15%|█▍        | 57/391 [34:40<49:19,  8.86s/it]Recognizing Text:  15%|█▍        | 58/391 [34:43<40:26,  7.29s/it]Recognizing Text:  15%|█▌        | 59/391 [35:07<1:06:22, 12.00s/it]Recognizing Text:  15%|█▌        | 60/391 [35:40<1:38:33, 17.86s/it]Recognizing Text:  16%|█▌        | 61/391 [36:55<3:09:35, 34.47s/it]Recognizing Text:  16%|█▌        | 62/391 [38:09<4:13:55, 46.31s/it]Recognizing Text:  16%|█▌        | 63/391 [38:24<3:22:37, 37.06s/it]Recognizing Text:  16%|█▋        | 64/391 [38:51<3:05:52, 34.11s/it]Recognizing Text:  17%|█▋        | 65/391 [38:55<2:15:43, 24.98s/it]Recognizing Text:  17%|█▋        | 66/391 [39:08<1:56:10, 21.45s/it]Recognizing Text:  17%|█▋        | 67/391 [39:11<1:26:41, 16.05s/it]Recognizing Text:  17%|█▋        | 68/391 [39:15<1:05:52, 12.24s/it]Recognizing Text:  18%|█▊        | 70/391 [39:16<37:19,  6.98s/it]  Recognizing Text:  18%|█▊        | 71/391 [39:39<57:42, 10.82s/it]Recognizing Text:  18%|█▊        | 72/391 [39:44<50:06,  9.43s/it]Recognizing Text:  19%|█▊        | 73/391 [39:55<51:16,  9.67s/it]Recognizing Text:  19%|█▉        | 74/391 [39:57<40:16,  7.62s/it]Recognizing Text:  19%|█▉        | 75/391 [39:59<32:04,  6.09s/it]Recognizing Text:  19%|█▉        | 76/391 [40:06<32:50,  6.26s/it]Recognizing Text:  20%|█▉        | 77/391 [40:18<41:22,  7.91s/it]Recognizing Text:  20%|█▉        | 78/391 [40:24<39:13,  7.52s/it]Recognizing Text:  20%|██        | 79/391 [40:43<56:02, 10.78s/it]Recognizing Text:  20%|██        | 80/391 [40:53<54:56, 10.60s/it]Recognizing Text:  21%|██        | 81/391 [40:55<40:58,  7.93s/it]Recognizing Text:  21%|██        | 83/391 [41:00<27:51,  5.43s/it]Recognizing Text:  21%|██▏       | 84/391 [41:01<22:59,  4.49s/it]Recognizing Text:  22%|██▏       | 85/391 [41:21<43:32,  8.54s/it]Recognizing Text:  22%|██▏       | 87/391 [41:25<28:56,  5.71s/it]Recognizing Text:  23%|██▎       | 88/391 [41:55<57:33, 11.40s/it]Recognizing Text:  23%|██▎       | 89/391 [42:37<1:35:32, 18.98s/it]Recognizing Text:  23%|██▎       | 90/391 [43:08<1:51:44, 22.27s/it]Recognizing Text:  23%|██▎       | 91/391 [43:29<1:48:55, 21.79s/it]Recognizing Text:  24%|██▎       | 92/391 [43:43<1:37:48, 19.63s/it]Recognizing Text:  24%|██▍       | 95/391 [43:45<45:32,  9.23s/it]  Recognizing Text:  25%|██▍       | 96/391 [44:11<1:02:29, 12.71s/it]Recognizing Text:  25%|██▍       | 97/391 [44:13<50:03, 10.22s/it]  Recognizing Text:  25%|██▌       | 98/391 [44:18<44:03,  9.02s/it]Recognizing Text:  25%|██▌       | 99/391 [44:25<40:45,  8.38s/it]Recognizing Text:  26%|██▌       | 100/391 [44:36<45:10,  9.32s/it]Recognizing Text:  26%|██▌       | 101/391 [44:47<46:07,  9.54s/it]Recognizing Text:  26%|██▌       | 102/391 [44:48<35:12,  7.31s/it]Recognizing Text:  26%|██▋       | 103/391 [44:52<29:34,  6.16s/it]Recognizing Text:  27%|██▋       | 104/391 [44:53<23:16,  4.87s/it]Recognizing Text:  27%|██▋       | 106/391 [45:01<20:49,  4.39s/it]Recognizing Text:  28%|██▊       | 108/391 [45:16<26:22,  5.59s/it]Recognizing Text:  28%|██▊       | 109/391 [45:21<25:41,  5.47s/it]Recognizing Text:  28%|██▊       | 110/391 [45:23<21:35,  4.61s/it]Recognizing Text:  29%|██▊       | 112/391 [45:34<23:16,  5.01s/it]Recognizing Text:  29%|██▉       | 113/391 [46:19<1:04:50, 14.00s/it]Recognizing Text:  29%|██▉       | 114/391 [46:24<54:55, 11.90s/it]  Recognizing Text:  30%|██▉       | 116/391 [46:49<55:45, 12.17s/it]Recognizing Text:  30%|██▉       | 117/391 [46:54<48:14, 10.56s/it]Recognizing Text:  30%|███       | 118/391 [47:04<46:24, 10.20s/it]Recognizing Text:  30%|███       | 119/391 [47:22<55:49, 12.31s/it]Recognizing Text:  31%|███       | 121/391 [47:29<38:28,  8.55s/it]Recognizing Text:  31%|███       | 122/391 [47:30<31:06,  6.94s/it]Recognizing Text:  31%|███▏      | 123/391 [47:36<29:06,  6.52s/it]Recognizing Text:  32%|███▏      | 124/391 [47:59<48:51, 10.98s/it]Recognizing Text:  32%|███▏      | 125/391 [48:03<39:23,  8.89s/it]Recognizing Text:  32%|███▏      | 126/391 [48:07<34:23,  7.79s/it]Recognizing Text:  32%|███▏      | 127/391 [48:13<31:06,  7.07s/it]Recognizing Text:  33%|███▎      | 128/391 [48:28<41:24,  9.45s/it]Recognizing Text:  33%|███▎      | 129/391 [48:37<40:43,  9.33s/it]Recognizing Text:  33%|███▎      | 130/391 [48:56<53:26, 12.28s/it]Recognizing Text:  34%|███▎      | 131/391 [49:01<43:54, 10.13s/it]Recognizing Text:  34%|███▍      | 132/391 [49:08<38:51,  9.00s/it]Recognizing Text:  34%|███▍      | 134/391 [49:19<31:49,  7.43s/it]Recognizing Text:  35%|███▍      | 135/391 [49:25<30:45,  7.21s/it]Recognizing Text:  35%|███▍      | 136/391 [49:30<27:54,  6.57s/it]Recognizing Text:  35%|███▌      | 137/391 [49:35<25:42,  6.07s/it]Recognizing Text:  35%|███▌      | 138/391 [49:40<23:56,  5.68s/it]Recognizing Text:  36%|███▌      | 139/391 [49:47<26:22,  6.28s/it]Recognizing Text:  36%|███▌      | 140/391 [49:49<20:34,  4.92s/it]Recognizing Text:  36%|███▌      | 141/391 [50:03<32:01,  7.69s/it]Recognizing Text:  36%|███▋      | 142/391 [50:12<33:32,  8.08s/it]Recognizing Text:  37%|███▋      | 143/391 [50:18<30:15,  7.32s/it]Recognizing Text:  37%|███▋      | 144/391 [50:26<31:38,  7.69s/it]Recognizing Text:  37%|███▋      | 145/391 [50:39<37:58,  9.26s/it]Recognizing Text:  37%|███▋      | 146/391 [50:46<34:05,  8.35s/it]Recognizing Text:  38%|███▊      | 147/391 [50:50<29:34,  7.27s/it]Recognizing Text:  38%|███▊      | 148/391 [50:54<24:24,  6.03s/it]Recognizing Text:  38%|███▊      | 149/391 [51:01<25:30,  6.32s/it]Recognizing Text:  39%|███▊      | 151/391 [51:04<16:30,  4.13s/it]Recognizing Text:  39%|███▉      | 152/391 [51:05<13:53,  3.49s/it]Recognizing Text:  39%|███▉      | 153/391 [51:10<15:04,  3.80s/it]Recognizing Text:  39%|███▉      | 154/391 [51:12<12:41,  3.21s/it]Recognizing Text:  40%|███▉      | 155/391 [51:15<12:31,  3.19s/it]Recognizing Text:  40%|███▉      | 156/391 [51:23<18:04,  4.62s/it]Recognizing Text:  40%|████      | 157/391 [51:24<14:33,  3.73s/it]Recognizing Text:  40%|████      | 158/391 [51:26<12:01,  3.10s/it]Recognizing Text:  41%|████      | 159/391 [51:43<28:10,  7.29s/it]Recognizing Text:  41%|████      | 160/391 [51:53<31:00,  8.05s/it]Recognizing Text:  41%|████      | 161/391 [51:55<23:47,  6.21s/it]Recognizing Text:  41%|████▏     | 162/391 [51:59<20:50,  5.46s/it]Recognizing Text:  42%|████▏     | 163/391 [52:15<32:59,  8.68s/it]Recognizing Text:  42%|████▏     | 164/391 [52:21<30:05,  7.95s/it]Recognizing Text:  42%|████▏     | 165/391 [52:26<26:11,  6.95s/it]Recognizing Text:  42%|████▏     | 166/391 [52:37<30:25,  8.11s/it]Recognizing Text:  43%|████▎     | 168/391 [52:38<17:35,  4.73s/it]Recognizing Text:  43%|████▎     | 169/391 [52:41<16:01,  4.33s/it]Recognizing Text:  44%|████▎     | 171/391 [52:55<20:06,  5.48s/it]Recognizing Text:  44%|████▍     | 172/391 [52:57<16:43,  4.58s/it]Recognizing Text:  44%|████▍     | 173/391 [53:02<16:42,  4.60s/it]Recognizing Text:  45%|████▌     | 176/391 [53:05<09:58,  2.78s/it]Recognizing Text:  46%|████▌     | 178/391 [53:14<11:54,  3.36s/it]Recognizing Text:  46%|████▌     | 179/391 [53:16<10:43,  3.03s/it]Recognizing Text:  46%|████▌     | 180/391 [53:17<09:37,  2.74s/it]Recognizing Text:  46%|████▋     | 181/391 [53:19<08:42,  2.49s/it]Recognizing Text:  47%|████▋     | 182/391 [53:30<16:33,  4.75s/it]Recognizing Text:  47%|████▋     | 183/391 [53:40<20:30,  5.91s/it]Recognizing Text:  47%|████▋     | 184/391 [53:43<17:47,  5.16s/it]Recognizing Text:  47%|████▋     | 185/391 [53:53<22:47,  6.64s/it]Recognizing Text:  48%|████▊     | 186/391 [54:00<22:31,  6.59s/it]Recognizing Text:  48%|████▊     | 187/391 [54:01<17:28,  5.14s/it]Recognizing Text:  49%|████▊     | 190/391 [54:03<08:40,  2.59s/it]Recognizing Text:  49%|████▉     | 191/391 [54:06<09:04,  2.72s/it]Recognizing Text:  49%|████▉     | 193/391 [54:11<08:29,  2.57s/it]Recognizing Text:  50%|████▉     | 194/391 [54:14<08:57,  2.73s/it]Recognizing Text:  50%|████▉     | 195/391 [54:26<15:48,  4.84s/it]Recognizing Text:  50%|█████     | 196/391 [54:33<17:25,  5.36s/it]Recognizing Text:  50%|█████     | 197/391 [54:38<17:12,  5.32s/it]Recognizing Text:  51%|█████     | 198/391 [54:51<23:43,  7.38s/it]Recognizing Text:  51%|█████     | 199/391 [55:15<39:00, 12.19s/it]Recognizing Text:  51%|█████     | 200/391 [55:22<33:39, 10.57s/it]Recognizing Text:  52%|█████▏    | 202/391 [55:24<19:31,  6.20s/it]Recognizing Text:  52%|█████▏    | 204/391 [55:25<12:45,  4.10s/it]Recognizing Text:  52%|█████▏    | 205/391 [55:30<13:21,  4.31s/it]Recognizing Text:  53%|█████▎    | 206/391 [55:34<12:25,  4.03s/it]Recognizing Text:  53%|█████▎    | 207/391 [55:39<13:50,  4.51s/it]Recognizing Text:  53%|█████▎    | 208/391 [55:41<11:22,  3.73s/it]Recognizing Text:  53%|█████▎    | 209/391 [55:48<13:35,  4.48s/it]Recognizing Text:  54%|█████▍    | 211/391 [55:49<08:33,  2.85s/it]Recognizing Text:  54%|█████▍    | 213/391 [55:52<07:04,  2.38s/it]Recognizing Text:  55%|█████▍    | 214/391 [56:07<14:54,  5.06s/it]Recognizing Text:  55%|█████▍    | 215/391 [56:11<13:50,  4.72s/it]Recognizing Text:  55%|█████▌    | 216/391 [56:14<12:57,  4.44s/it]Recognizing Text:  55%|█████▌    | 217/391 [56:18<12:24,  4.28s/it]Recognizing Text:  56%|█████▌    | 218/391 [56:20<10:22,  3.60s/it]Recognizing Text:  56%|█████▌    | 219/391 [56:24<10:26,  3.65s/it]Recognizing Text:  56%|█████▋    | 220/391 [56:28<10:51,  3.81s/it]Recognizing Text:  57%|█████▋    | 221/391 [56:37<14:56,  5.27s/it]Recognizing Text:  57%|█████▋    | 222/391 [56:38<11:51,  4.21s/it]Recognizing Text:  57%|█████▋    | 223/391 [56:48<16:25,  5.87s/it]Recognizing Text:  57%|█████▋    | 224/391 [56:52<14:10,  5.09s/it]Recognizing Text:  58%|█████▊    | 226/391 [56:53<08:38,  3.14s/it]Recognizing Text:  58%|█████▊    | 227/391 [57:01<11:55,  4.36s/it]Recognizing Text:  59%|█████▊    | 229/391 [57:15<14:44,  5.46s/it]Recognizing Text:  59%|█████▉    | 230/391 [57:22<15:08,  5.64s/it]Recognizing Text:  59%|█████▉    | 231/391 [57:23<12:26,  4.66s/it]Recognizing Text:  60%|█████▉    | 233/391 [57:28<09:43,  3.70s/it]Recognizing Text:  60%|█████▉    | 234/391 [57:31<09:18,  3.55s/it]Recognizing Text:  60%|██████    | 236/391 [57:37<08:45,  3.39s/it]Recognizing Text:  61%|██████▏   | 240/391 [57:40<05:05,  2.02s/it]Recognizing Text:  62%|██████▏   | 241/391 [57:44<05:38,  2.26s/it]Recognizing Text:  62%|██████▏   | 242/391 [57:46<05:21,  2.16s/it]Recognizing Text:  63%|██████▎   | 245/391 [57:52<05:13,  2.15s/it]Recognizing Text:  63%|██████▎   | 247/391 [58:00<06:23,  2.67s/it]Recognizing Text:  63%|██████▎   | 248/391 [58:02<06:07,  2.57s/it]Recognizing Text:  64%|██████▍   | 250/391 [58:04<04:50,  2.06s/it]Recognizing Text:  64%|██████▍   | 251/391 [58:13<07:43,  3.31s/it]Recognizing Text:  64%|██████▍   | 252/391 [58:22<10:31,  4.54s/it]Recognizing Text:  65%|██████▍   | 253/391 [58:23<08:49,  3.84s/it]Recognizing Text:  65%|██████▍   | 254/391 [58:31<10:58,  4.81s/it]Recognizing Text:  66%|██████▌   | 257/391 [58:34<06:23,  2.86s/it]Recognizing Text:  66%|██████▌   | 258/391 [58:37<06:27,  2.91s/it]Recognizing Text:  66%|██████▌   | 259/391 [58:42<07:11,  3.27s/it]Recognizing Text:  66%|██████▋   | 260/391 [58:43<06:14,  2.86s/it]Recognizing Text:  67%|██████▋   | 262/391 [58:51<07:02,  3.27s/it]Recognizing Text:  68%|██████▊   | 266/391 [59:10<08:20,  4.00s/it]Recognizing Text:  68%|██████▊   | 267/391 [59:11<07:27,  3.61s/it]Recognizing Text:  69%|██████▉   | 269/391 [59:14<06:00,  2.96s/it]Recognizing Text:  69%|██████▉   | 270/391 [59:17<06:03,  3.00s/it]Recognizing Text:  70%|██████▉   | 272/391 [59:19<04:27,  2.25s/it]Recognizing Text:  70%|██████▉   | 273/391 [59:29<07:36,  3.87s/it]Recognizing Text:  72%|███████▏  | 280/391 [59:37<03:47,  2.05s/it]Recognizing Text:  72%|███████▏  | 281/391 [59:39<03:42,  2.02s/it]Recognizing Text:  72%|███████▏  | 282/391 [59:50<05:53,  3.24s/it]Recognizing Text:  72%|███████▏  | 283/391 [1:00:00<07:56,  4.41s/it]Recognizing Text:  73%|███████▎  | 284/391 [1:00:01<06:54,  3.87s/it]Recognizing Text:  73%|███████▎  | 285/391 [1:00:08<07:54,  4.47s/it]Recognizing Text:  73%|███████▎  | 286/391 [1:00:15<08:42,  4.98s/it]Recognizing Text:  73%|███████▎  | 287/391 [1:00:19<08:23,  4.84s/it]Recognizing Text:  74%|███████▎  | 288/391 [1:00:21<06:48,  3.97s/it]Recognizing Text:  74%|███████▍  | 289/391 [1:00:24<06:21,  3.74s/it]Recognizing Text:  74%|███████▍  | 290/391 [1:00:25<05:15,  3.12s/it]Recognizing Text:  75%|███████▌  | 294/391 [1:00:29<02:57,  1.83s/it]Recognizing Text:  75%|███████▌  | 295/391 [1:00:32<03:18,  2.07s/it]Recognizing Text:  76%|███████▌  | 296/391 [1:00:36<03:36,  2.28s/it]Recognizing Text:  76%|███████▌  | 298/391 [1:00:37<02:40,  1.72s/it]Recognizing Text:  76%|███████▋  | 299/391 [1:00:42<03:36,  2.35s/it]Recognizing Text:  77%|███████▋  | 301/391 [1:00:46<03:24,  2.27s/it]Recognizing Text:  77%|███████▋  | 302/391 [1:00:55<05:21,  3.61s/it]Recognizing Text:  77%|███████▋  | 303/391 [1:01:01<06:07,  4.18s/it]Recognizing Text:  78%|███████▊  | 305/391 [1:01:04<04:37,  3.22s/it]Recognizing Text:  78%|███████▊  | 306/391 [1:01:06<04:02,  2.85s/it]Recognizing Text:  79%|███████▉  | 309/391 [1:01:10<02:56,  2.16s/it]Recognizing Text:  79%|███████▉  | 310/391 [1:01:12<02:45,  2.05s/it]Recognizing Text:  80%|███████▉  | 311/391 [1:01:15<03:02,  2.28s/it]Recognizing Text:  80%|███████▉  | 312/391 [1:01:17<02:47,  2.12s/it]Recognizing Text:  80%|████████  | 313/391 [1:01:21<03:35,  2.76s/it]Recognizing Text:  80%|████████  | 314/391 [1:01:28<04:49,  3.76s/it]Recognizing Text:  81%|████████  | 315/391 [1:01:29<04:00,  3.17s/it]Recognizing Text:  81%|████████▏ | 318/391 [1:01:36<03:09,  2.59s/it]Recognizing Text:  82%|████████▏ | 319/391 [1:01:40<03:38,  3.04s/it]Recognizing Text:  82%|████████▏ | 320/391 [1:01:44<03:38,  3.07s/it]Recognizing Text:  82%|████████▏ | 321/391 [1:01:45<03:09,  2.70s/it]Recognizing Text:  82%|████████▏ | 322/391 [1:01:48<03:14,  2.81s/it]Recognizing Text:  83%|████████▎ | 323/391 [1:01:50<02:49,  2.50s/it]Recognizing Text:  83%|████████▎ | 325/391 [1:01:54<02:31,  2.29s/it]Recognizing Text:  83%|████████▎ | 326/391 [1:01:56<02:18,  2.13s/it]Recognizing Text:  84%|████████▎ | 327/391 [1:01:57<02:07,  2.00s/it]Recognizing Text:  84%|████████▍ | 329/391 [1:01:59<01:32,  1.49s/it]Recognizing Text:  85%|████████▌ | 334/391 [1:02:04<01:07,  1.18s/it]Recognizing Text:  86%|████████▌ | 335/391 [1:02:05<01:10,  1.25s/it]Recognizing Text:  86%|████████▌ | 336/391 [1:02:09<01:28,  1.61s/it]Recognizing Text:  87%|████████▋ | 340/391 [1:02:10<00:52,  1.02s/it]Recognizing Text:  87%|████████▋ | 341/391 [1:02:17<01:31,  1.83s/it]Recognizing Text:  87%|████████▋ | 342/391 [1:02:19<01:30,  1.85s/it]Recognizing Text:  88%|████████▊ | 343/391 [1:02:21<01:31,  1.90s/it]Recognizing Text:  89%|████████▉ | 348/391 [1:02:26<01:02,  1.45s/it]Recognizing Text:  90%|████████▉ | 350/391 [1:02:28<00:53,  1.30s/it]Recognizing Text:  90%|█████████ | 352/391 [1:02:30<00:45,  1.16s/it]Recognizing Text:  92%|█████████▏| 360/391 [1:02:35<00:25,  1.21it/s]Recognizing Text:  92%|█████████▏| 361/391 [1:02:36<00:26,  1.11it/s]Recognizing Text:  93%|█████████▎| 362/391 [1:02:38<00:28,  1.02it/s]Recognizing Text:  97%|█████████▋| 378/391 [1:02:39<00:04,  3.04it/s]Recognizing Text:  98%|█████████▊| 382/391 [1:02:44<00:04,  2.00it/s]Recognizing Text:  98%|█████████▊| 383/391 [1:02:47<00:05,  1.47it/s]Recognizing Text:  99%|█████████▊| 386/391 [1:02:49<00:03,  1.55it/s]Recognizing Text:  99%|█████████▉| 387/391 [1:02:52<00:03,  1.12it/s]Recognizing Text:  99%|█████████▉| 389/391 [1:02:53<00:01,  1.15it/s]Recognizing Text: 100%|█████████▉| 390/391 [1:02:56<00:01,  1.18s/it]Recognizing Text: 100%|██████████| 391/391 [1:03:10<00:00,  3.26s/it]Recognizing Text: 100%|██████████| 391/391 [1:03:10<00:00,  9.70s/it]
+Recognizing Text:   0%|          | 0/179 [00:00<?, ?it/s]Recognizing Text:   1%|          | 1/179 [00:37<1:51:30, 37.59s/it]Recognizing Text:   1%|          | 2/179 [02:08<3:23:12, 68.89s/it]Recognizing Text:   2%|▏         | 3/179 [02:20<2:05:58, 42.95s/it]Recognizing Text:   2%|▏         | 4/179 [02:32<1:29:43, 30.76s/it]Recognizing Text:   3%|▎         | 5/179 [02:57<1:23:22, 28.75s/it]Recognizing Text:   3%|▎         | 6/179 [03:33<1:30:09, 31.27s/it]Recognizing Text:   4%|▍         | 7/179 [03:41<1:07:43, 23.62s/it]Recognizing Text:   4%|▍         | 8/179 [04:11<1:12:58, 25.61s/it]Recognizing Text:   5%|▌         | 9/179 [04:24<1:00:51, 21.48s/it]Recognizing Text:   6%|▌         | 10/179 [04:56<1:10:22, 24.99s/it]Recognizing Text:   6%|▌         | 11/179 [05:04<55:19, 19.76s/it]  Recognizing Text:   7%|▋         | 12/179 [05:31<1:01:06, 21.95s/it]Recognizing Text:   7%|▋         | 13/179 [05:36<46:11, 16.69s/it]  Recognizing Text:   8%|▊         | 14/179 [05:37<33:21, 12.13s/it]Recognizing Text:   8%|▊         | 15/179 [06:11<50:25, 18.45s/it]Recognizing Text:   9%|▉         | 16/179 [06:17<40:26, 14.89s/it]Recognizing Text:   9%|▉         | 17/179 [06:22<32:25, 12.01s/it]Recognizing Text:  10%|█         | 18/179 [06:34<31:31, 11.75s/it]Recognizing Text:  11%|█         | 19/179 [06:46<31:32, 11.83s/it]Recognizing Text:  11%|█         | 20/179 [06:53<27:37, 10.42s/it]Recognizing Text:  12%|█▏        | 21/179 [07:19<40:08, 15.24s/it]Recognizing Text:  12%|█▏        | 22/179 [07:27<34:17, 13.11s/it]Recognizing Text:  13%|█▎        | 23/179 [07:37<31:28, 12.10s/it]Recognizing Text:  13%|█▎        | 24/179 [07:41<24:47,  9.60s/it]Recognizing Text:  14%|█▍        | 25/179 [07:55<27:57, 10.89s/it]Recognizing Text:  15%|█▍        | 26/179 [08:03<25:48, 10.12s/it]Recognizing Text:  15%|█▌        | 27/179 [08:35<41:58, 16.57s/it]Recognizing Text:  16%|█▌        | 28/179 [08:44<36:22, 14.45s/it]Recognizing Text:  16%|█▌        | 29/179 [08:50<29:20, 11.73s/it]Recognizing Text:  17%|█▋        | 30/179 [08:53<22:48,  9.18s/it]Recognizing Text:  17%|█▋        | 31/179 [08:58<19:40,  7.97s/it]Recognizing Text:  18%|█▊        | 32/179 [09:05<18:46,  7.66s/it]Recognizing Text:  18%|█▊        | 33/179 [09:32<32:27, 13.34s/it]Recognizing Text:  19%|█▉        | 34/179 [09:35<25:11, 10.42s/it]Recognizing Text:  20%|██        | 36/179 [09:44<18:02,  7.57s/it]Recognizing Text:  21%|██        | 37/179 [09:58<22:01,  9.31s/it]Recognizing Text:  21%|██        | 38/179 [09:59<16:54,  7.19s/it]Recognizing Text:  22%|██▏       | 39/179 [10:05<16:00,  6.86s/it]Recognizing Text:  22%|██▏       | 40/179 [10:27<25:07, 10.84s/it]Recognizing Text:  23%|██▎       | 41/179 [10:29<19:42,  8.57s/it]Recognizing Text:  23%|██▎       | 42/179 [10:38<19:38,  8.60s/it]Recognizing Text:  24%|██▍       | 43/179 [10:41<15:37,  6.90s/it]Recognizing Text:  25%|██▍       | 44/179 [10:44<12:46,  5.68s/it]Recognizing Text:  25%|██▌       | 45/179 [10:47<11:00,  4.93s/it]Recognizing Text:  26%|██▌       | 46/179 [10:58<15:12,  6.86s/it]Recognizing Text:  26%|██▋       | 47/179 [11:07<16:34,  7.53s/it]Recognizing Text:  27%|██▋       | 48/179 [11:08<12:18,  5.64s/it]Recognizing Text:  27%|██▋       | 49/179 [11:13<11:38,  5.37s/it]Recognizing Text:  28%|██▊       | 50/179 [11:21<12:59,  6.04s/it]Recognizing Text:  28%|██▊       | 51/179 [11:24<11:08,  5.22s/it]Recognizing Text:  29%|██▉       | 52/179 [11:36<15:06,  7.14s/it]Recognizing Text:  30%|██▉       | 53/179 [11:45<16:27,  7.84s/it]Recognizing Text:  30%|███       | 54/179 [11:48<13:21,  6.41s/it]Recognizing Text:  31%|███       | 55/179 [11:53<11:57,  5.79s/it]Recognizing Text:  31%|███▏      | 56/179 [12:04<15:16,  7.45s/it]Recognizing Text:  32%|███▏      | 57/179 [12:11<14:59,  7.37s/it]Recognizing Text:  32%|███▏      | 58/179 [12:22<17:15,  8.56s/it]Recognizing Text:  34%|███▎      | 60/179 [12:26<10:49,  5.46s/it]Recognizing Text:  34%|███▍      | 61/179 [12:36<12:43,  6.47s/it]Recognizing Text:  35%|███▍      | 62/179 [12:46<14:18,  7.34s/it]Recognizing Text:  35%|███▌      | 63/179 [12:51<13:06,  6.78s/it]Recognizing Text:  36%|███▌      | 64/179 [12:57<12:35,  6.57s/it]Recognizing Text:  36%|███▋      | 65/179 [13:14<18:15,  9.61s/it]Recognizing Text:  37%|███▋      | 66/179 [13:16<13:50,  7.35s/it]Recognizing Text:  37%|███▋      | 67/179 [13:24<14:03,  7.53s/it]Recognizing Text:  38%|███▊      | 68/179 [13:37<17:06,  9.25s/it]Recognizing Text:  39%|███▊      | 69/179 [13:44<15:47,  8.62s/it]Recognizing Text:  39%|███▉      | 70/179 [13:48<12:49,  7.06s/it]Recognizing Text:  40%|███▉      | 71/179 [13:52<11:15,  6.26s/it]Recognizing Text:  40%|████      | 72/179 [13:55<09:14,  5.19s/it]Recognizing Text:  41%|████      | 73/179 [14:00<09:13,  5.22s/it]Recognizing Text:  41%|████▏     | 74/179 [14:04<08:39,  4.95s/it]Recognizing Text:  42%|████▏     | 75/179 [14:10<08:46,  5.06s/it]Recognizing Text:  42%|████▏     | 76/179 [14:18<10:34,  6.16s/it]Recognizing Text:  43%|████▎     | 77/179 [14:26<11:08,  6.55s/it]Recognizing Text:  44%|████▎     | 78/179 [14:30<09:40,  5.75s/it]Recognizing Text:  44%|████▍     | 79/179 [14:31<07:07,  4.27s/it]Recognizing Text:  45%|████▍     | 80/179 [14:32<05:50,  3.55s/it]Recognizing Text:  45%|████▌     | 81/179 [14:34<04:51,  2.98s/it]Recognizing Text:  46%|████▌     | 82/179 [14:54<12:58,  8.02s/it]Recognizing Text:  46%|████▋     | 83/179 [14:55<09:46,  6.11s/it]Recognizing Text:  47%|████▋     | 84/179 [14:57<07:38,  4.83s/it]Recognizing Text:  47%|████▋     | 85/179 [14:58<05:41,  3.63s/it]Recognizing Text:  48%|████▊     | 86/179 [15:06<07:40,  4.95s/it]Recognizing Text:  49%|████▊     | 87/179 [15:07<05:41,  3.72s/it]Recognizing Text:  49%|████▉     | 88/179 [15:22<10:49,  7.14s/it]Recognizing Text:  50%|████▉     | 89/179 [15:24<08:23,  5.59s/it]Recognizing Text:  50%|█████     | 90/179 [15:28<07:27,  5.02s/it]Recognizing Text:  51%|█████     | 91/179 [15:28<05:23,  3.68s/it]Recognizing Text:  51%|█████▏    | 92/179 [15:32<05:22,  3.70s/it]Recognizing Text:  52%|█████▏    | 93/179 [15:33<04:16,  2.98s/it]Recognizing Text:  53%|█████▎    | 94/179 [15:51<10:27,  7.38s/it]Recognizing Text:  53%|█████▎    | 95/179 [15:52<07:44,  5.52s/it]Recognizing Text:  54%|█████▎    | 96/179 [15:54<06:08,  4.44s/it]Recognizing Text:  54%|█████▍    | 97/179 [15:56<04:53,  3.57s/it]Recognizing Text:  55%|█████▍    | 98/179 [15:57<03:58,  2.94s/it]Recognizing Text:  55%|█████▌    | 99/179 [16:12<08:27,  6.35s/it]Recognizing Text:  56%|█████▌    | 100/179 [16:16<07:42,  5.86s/it]Recognizing Text:  56%|█████▋    | 101/179 [16:17<05:30,  4.23s/it]Recognizing Text:  57%|█████▋    | 102/179 [16:18<04:27,  3.47s/it]Recognizing Text:  58%|█████▊    | 103/179 [16:21<03:56,  3.11s/it]Recognizing Text:  58%|█████▊    | 104/179 [16:38<09:05,  7.28s/it]Recognizing Text:  59%|█████▊    | 105/179 [16:47<09:39,  7.83s/it]Recognizing Text:  59%|█████▉    | 106/179 [16:49<07:39,  6.30s/it]Recognizing Text:  60%|█████▉    | 107/179 [16:51<05:46,  4.81s/it]Recognizing Text:  61%|██████    | 109/179 [16:57<04:42,  4.03s/it]Recognizing Text:  61%|██████▏   | 110/179 [17:14<08:16,  7.19s/it]Recognizing Text:  63%|██████▎   | 112/179 [17:15<05:00,  4.48s/it]Recognizing Text:  63%|██████▎   | 113/179 [17:19<04:52,  4.43s/it]Recognizing Text:  64%|██████▎   | 114/179 [17:35<07:45,  7.16s/it]Recognizing Text:  64%|██████▍   | 115/179 [17:39<06:38,  6.23s/it]Recognizing Text:  65%|██████▍   | 116/179 [17:43<06:00,  5.72s/it]Recognizing Text:  65%|██████▌   | 117/179 [17:47<05:24,  5.23s/it]Recognizing Text:  66%|██████▌   | 118/179 [17:59<07:19,  7.21s/it]Recognizing Text:  66%|██████▋   | 119/179 [18:02<05:56,  5.94s/it]Recognizing Text:  67%|██████▋   | 120/179 [18:05<05:05,  5.18s/it]Recognizing Text:  68%|██████▊   | 121/179 [18:07<03:59,  4.13s/it]Recognizing Text:  68%|██████▊   | 122/179 [18:08<03:02,  3.21s/it]Recognizing Text:  69%|██████▊   | 123/179 [18:20<05:35,  6.00s/it]Recognizing Text:  69%|██████▉   | 124/179 [18:22<04:15,  4.64s/it]Recognizing Text:  70%|██████▉   | 125/179 [18:25<03:40,  4.09s/it]Recognizing Text:  70%|███████   | 126/179 [18:30<03:50,  4.35s/it]Recognizing Text:  72%|███████▏  | 128/179 [18:34<02:49,  3.33s/it]Recognizing Text:  72%|███████▏  | 129/179 [18:34<02:10,  2.60s/it]Recognizing Text:  73%|███████▎  | 130/179 [18:44<03:45,  4.59s/it]Recognizing Text:  73%|███████▎  | 131/179 [18:45<02:45,  3.46s/it]Recognizing Text:  74%|███████▎  | 132/179 [18:48<02:40,  3.42s/it]Recognizing Text:  74%|███████▍  | 133/179 [18:49<01:58,  2.57s/it]Recognizing Text:  75%|███████▍  | 134/179 [18:51<01:56,  2.59s/it]Recognizing Text:  75%|███████▌  | 135/179 [18:59<02:58,  4.05s/it]Recognizing Text:  76%|███████▌  | 136/179 [19:02<02:38,  3.68s/it]Recognizing Text:  77%|███████▋  | 137/179 [19:07<02:51,  4.07s/it]Recognizing Text:  77%|███████▋  | 138/179 [19:08<02:09,  3.16s/it]Recognizing Text:  78%|███████▊  | 139/179 [19:11<02:14,  3.36s/it]Recognizing Text:  78%|███████▊  | 140/179 [19:13<01:44,  2.68s/it]Recognizing Text:  79%|███████▉  | 141/179 [19:19<02:28,  3.90s/it]Recognizing Text:  79%|███████▉  | 142/179 [19:27<03:09,  5.12s/it]Recognizing Text:  80%|███████▉  | 143/179 [19:30<02:41,  4.47s/it]Recognizing Text:  80%|████████  | 144/179 [19:31<02:01,  3.48s/it]Recognizing Text:  81%|████████  | 145/179 [19:32<01:31,  2.68s/it]Recognizing Text:  82%|████████▏ | 146/179 [19:37<01:48,  3.27s/it]Recognizing Text:  82%|████████▏ | 147/179 [19:42<02:05,  3.93s/it]Recognizing Text:  83%|████████▎ | 148/179 [19:45<01:45,  3.41s/it]Recognizing Text:  83%|████████▎ | 149/179 [19:52<02:16,  4.54s/it]Recognizing Text:  84%|████████▍ | 150/179 [19:53<01:44,  3.60s/it]Recognizing Text:  84%|████████▍ | 151/179 [19:55<01:28,  3.15s/it]Recognizing Text:  85%|████████▌ | 153/179 [20:03<01:30,  3.50s/it]Recognizing Text:  86%|████████▌ | 154/179 [20:08<01:36,  3.85s/it]Recognizing Text:  87%|████████▋ | 155/179 [20:09<01:14,  3.12s/it]Recognizing Text:  87%|████████▋ | 156/179 [20:10<00:59,  2.59s/it]Recognizing Text:  88%|████████▊ | 157/179 [20:11<00:47,  2.15s/it]Recognizing Text:  88%|████████▊ | 158/179 [20:14<00:48,  2.32s/it]Recognizing Text:  89%|████████▉ | 159/179 [20:23<01:26,  4.32s/it]Recognizing Text:  89%|████████▉ | 160/179 [20:25<01:08,  3.63s/it]Recognizing Text:  90%|████████▉ | 161/179 [20:27<00:55,  3.08s/it]Recognizing Text:  91%|█████████ | 162/179 [20:29<00:46,  2.75s/it]Recognizing Text:  91%|█████████ | 163/179 [20:32<00:45,  2.87s/it]Recognizing Text:  92%|█████████▏| 164/179 [20:36<00:46,  3.09s/it]Recognizing Text:  92%|█████████▏| 165/179 [20:40<00:46,  3.34s/it]Recognizing Text:  93%|█████████▎| 166/179 [20:43<00:44,  3.41s/it]Recognizing Text:  93%|█████████▎| 167/179 [20:44<00:32,  2.69s/it]Recognizing Text:  94%|█████████▍| 168/179 [20:46<00:25,  2.35s/it]Recognizing Text:  95%|█████████▍| 170/179 [20:50<00:19,  2.17s/it]Recognizing Text:  96%|█████████▌| 171/179 [20:50<00:13,  1.74s/it]Recognizing Text:  96%|█████████▌| 172/179 [20:53<00:13,  1.94s/it]Recognizing Text:  97%|█████████▋| 173/179 [20:53<00:09,  1.63s/it]Recognizing Text:  97%|█████████▋| 174/179 [20:56<00:09,  1.96s/it]Recognizing Text:  98%|█████████▊| 175/179 [20:58<00:07,  1.87s/it]Recognizing Text:  98%|█████████▊| 176/179 [20:59<00:04,  1.57s/it]Recognizing Text:  99%|█████████▉| 177/179 [21:00<00:03,  1.61s/it]Recognizing Text: 100%|██████████| 179/179 [21:02<00:00,  1.16s/it]Recognizing Text: 100%|██████████| 179/179 [21:02<00:00,  7.05s/it]
+Recognizing tables:   0%|          | 0/1 [00:00<?, ?it/s]Recognizing tables: 100%|██████████| 1/1 [00:05<00:00,  5.07s/it]Recognizing tables: 100%|██████████| 1/1 [00:05<00:00,  5.07s/it]
+Detecting bboxes:   0%|          | 0/1 [00:00<?, ?it/s]Detecting bboxes: 100%|██████████| 1/1 [00:01<00:00,  1.80s/it]Detecting bboxes: 100%|██████████| 1/1 [00:01<00:00,  1.80s/it]
+Recognizing Text:   0%|          | 0/32 [00:00<?, ?it/s]Recognizing Text:   3%|▎         | 1/32 [00:10<05:19, 10.32s/it]Recognizing Text:   6%|▋         | 2/32 [00:13<03:02,  6.10s/it]Recognizing Text:  31%|███▏      | 10/32 [00:16<00:24,  1.13s/it]Recognizing Text:  78%|███████▊  | 25/32 [00:18<00:02,  2.43it/s]Recognizing Text:  84%|████████▍ | 27/32 [00:21<00:02,  1.83it/s]Recognizing Text:  94%|█████████▍| 30/32 [00:25<00:01,  1.40it/s]Recognizing Text: 100%|██████████| 32/32 [00:32<00:00,  1.13s/it]Recognizing Text: 100%|██████████| 32/32 [00:32<00:00,  1.00s/it]
+2026-04-21 13:58:21,001 [INFO] marker: Saved markdown to /home/rama/Desktop/0sci/chapters_md/02-linear-systems
+2026-04-21 13:58:21,001 [INFO] marker: Total time: 5727.427587270737
+[13:58:22] ok  02-linear-systems  5735s
+[13:58:22] --- 03-linear-least-squares ---
+Recognizing Layout:   0%|          | 0/52 [00:00<?, ?it/s]Recognizing Layout:   2%|▏         | 1/52 [00:48<41:32, 48.86s/it]Recognizing Layout:   4%|▍         | 2/52 [00:49<16:52, 20.25s/it]Recognizing Layout:   6%|▌         | 3/52 [01:04<14:45, 18.07s/it]Recognizing Layout:   8%|▊         | 4/52 [01:05<09:00, 11.25s/it]Recognizing Layout:  10%|▉         | 5/52 [01:23<10:41, 13.66s/it]Recognizing Layout:  13%|█▎        | 7/52 [01:38<07:59, 10.66s/it]Recognizing Layout:  15%|█▌        | 8/52 [01:38<05:46,  7.88s/it]Recognizing Layout:  17%|█▋        | 9/52 [01:53<06:54,  9.64s/it]Recognizing Layout:  19%|█▉        | 10/52 [01:54<04:59,  7.14s/it]Recognizing Layout:  21%|██        | 11/52 [02:08<06:18,  9.22s/it]Recognizing Layout:  23%|██▎       | 12/52 [02:08<04:23,  6.60s/it]Recognizing Layout:  25%|██▌       | 13/52 [02:25<06:18,  9.70s/it]Recognizing Layout:  29%|██▉       | 15/52 [02:45<06:04,  9.84s/it]Recognizing Layout:  33%|███▎      | 17/52 [03:05<05:47,  9.93s/it]Recognizing Layout:  35%|███▍      | 18/52 [03:06<04:25,  7.80s/it]Recognizing Layout:  37%|███▋      | 19/52 [03:23<05:28,  9.96s/it]Recognizing Layout:  38%|███▊      | 20/52 [03:23<03:59,  7.48s/it]Recognizing Layout:  40%|████      | 21/52 [03:40<05:11, 10.06s/it]Recognizing Layout:  42%|████▏     | 22/52 [03:40<03:40,  7.35s/it]Recognizing Layout:  44%|████▍     | 23/52 [04:01<05:25, 11.21s/it]Recognizing Layout:  46%|████▌     | 24/52 [04:01<03:45,  8.05s/it]Recognizing Layout:  50%|█████     | 26/52 [04:27<04:25, 10.20s/it]Recognizing Layout:  52%|█████▏    | 27/52 [04:28<03:18,  7.93s/it]Recognizing Layout:  54%|█████▍    | 28/52 [04:42<03:50,  9.60s/it]Recognizing Layout:  56%|█████▌    | 29/52 [04:43<02:47,  7.30s/it]Recognizing Layout:  60%|█████▉    | 31/52 [05:07<03:14,  9.25s/it]Recognizing Layout:  62%|██████▏   | 32/52 [05:08<02:24,  7.24s/it]Recognizing Layout:  65%|██████▌   | 34/52 [05:33<02:50,  9.47s/it]Recognizing Layout:  69%|██████▉   | 36/52 [05:50<02:25,  9.07s/it]Recognizing Layout:  77%|███████▋  | 40/52 [06:22<01:41,  8.48s/it]Recognizing Layout:  81%|████████  | 42/52 [06:38<01:23,  8.38s/it]Recognizing Layout:  83%|████████▎ | 43/52 [06:42<01:09,  7.74s/it]Recognizing Layout:  85%|████████▍ | 44/52 [06:59<01:15,  9.41s/it]Recognizing Layout:  87%|████████▋ | 45/52 [06:59<00:52,  7.48s/it]Recognizing Layout:  88%|████████▊ | 46/52 [07:16<00:57,  9.57s/it]Recognizing Layout:  90%|█████████ | 47/52 [07:16<00:36,  7.39s/it]Recognizing Layout:  92%|█████████▏| 48/52 [07:24<00:30,  7.52s/it]Recognizing Layout:  96%|█████████▌| 50/52 [07:25<00:08,  4.49s/it]Recognizing Layout:  98%|█████████▊| 51/52 [07:29<00:04,  4.32s/it]Recognizing Layout: 100%|██████████| 52/52 [07:29<00:00,  3.30s/it]Recognizing Layout: 100%|██████████| 52/52 [07:29<00:00,  8.65s/it]
+Running OCR Error Detection:   0%|          | 0/13 [00:00<?, ?it/s]Running OCR Error Detection:   8%|▊         | 1/13 [00:00<00:08,  1.36it/s]Running OCR Error Detection:  15%|█▌        | 2/13 [00:01<00:07,  1.45it/s]Running OCR Error Detection:  23%|██▎       | 3/13 [00:01<00:06,  1.60it/s]Running OCR Error Detection:  31%|███       | 4/13 [00:02<00:05,  1.69it/s]Running OCR Error Detection:  38%|███▊      | 5/13 [00:03<00:04,  1.75it/s]Running OCR Error Detection:  46%|████▌     | 6/13 [00:03<00:04,  1.74it/s]Running OCR Error Detection:  54%|█████▍    | 7/13 [00:04<00:03,  1.71it/s]Running OCR Error Detection:  62%|██████▏   | 8/13 [00:04<00:02,  1.71it/s]Running OCR Error Detection:  69%|██████▉   | 9/13 [00:05<00:02,  1.72it/s]Running OCR Error Detection:  77%|███████▋  | 10/13 [00:05<00:01,  1.73it/s]Running OCR Error Detection:  85%|████████▍ | 11/13 [00:06<00:01,  1.74it/s]Running OCR Error Detection:  92%|█████████▏| 12/13 [00:07<00:00,  1.74it/s]Running OCR Error Detection: 100%|██████████| 13/13 [00:07<00:00,  1.75it/s]Running OCR Error Detection: 100%|██████████| 13/13 [00:07<00:00,  1.70it/s]
+Detecting bboxes:   0%|          | 0/7 [00:00<?, ?it/s]Detecting bboxes:  14%|█▍        | 1/7 [00:06<00:40,  6.68s/it]Detecting bboxes:  29%|██▊       | 2/7 [00:13<00:34,  6.84s/it]Detecting bboxes:  43%|████▎     | 3/7 [00:20<00:28,  7.01s/it]Detecting bboxes:  57%|█████▋    | 4/7 [00:28<00:21,  7.12s/it]Detecting bboxes:  71%|███████▏  | 5/7 [00:35<00:14,  7.14s/it]Detecting bboxes:  86%|████████▌ | 6/7 [00:43<00:07,  7.62s/it]Detecting bboxes: 100%|██████████| 7/7 [00:45<00:00,  5.79s/it]Detecting bboxes: 100%|██████████| 7/7 [00:45<00:00,  6.56s/it]
+Recognizing Text:   0%|          | 0/381 [00:00<?, ?it/s]Recognizing Text:   0%|          | 1/381 [12:09<77:00:51, 729.61s/it]Recognizing Text:   1%|          | 2/381 [13:37<37:02:42, 351.88s/it]Recognizing Text:   1%|          | 3/381 [14:12<21:46:35, 207.40s/it]Recognizing Text:   1%|          | 4/381 [14:27<13:45:50, 131.43s/it]Recognizing Text:   1%|▏         | 5/381 [14:39<9:14:05, 88.42s/it]  Recognizing Text:   2%|▏         | 6/381 [14:49<6:26:30, 61.84s/it]Recognizing Text:   2%|▏         | 7/381 [15:08<4:57:23, 47.71s/it]Recognizing Text:   2%|▏         | 8/381 [15:48<4:40:42, 45.15s/it]Recognizing Text:   2%|▏         | 9/381 [15:52<3:21:35, 32.51s/it]Recognizing Text:   3%|▎         | 10/381 [16:34<3:39:01, 35.42s/it]Recognizing Text:   3%|▎         | 11/381 [17:09<3:37:23, 35.25s/it]Recognizing Text:   3%|▎         | 12/381 [17:36<3:20:13, 32.56s/it]Recognizing Text:   3%|▎         | 13/381 [17:56<2:57:18, 28.91s/it]Recognizing Text:   4%|▎         | 14/381 [18:07<2:23:58, 23.54s/it]Recognizing Text:   4%|▍         | 15/381 [19:09<3:34:42, 35.20s/it]Recognizing Text:   4%|▍         | 16/381 [19:12<2:33:23, 25.21s/it]Recognizing Text:   4%|▍         | 17/381 [19:30<2:21:05, 23.26s/it]Recognizing Text:   5%|▍         | 18/381 [20:47<3:57:56, 39.33s/it]Recognizing Text:   5%|▍         | 19/381 [23:42<8:03:11, 80.09s/it]Recognizing Text:   5%|▌         | 20/381 [23:48<5:48:49, 57.98s/it]Recognizing Text:   6%|▌         | 21/381 [23:55<4:14:50, 42.47s/it]Recognizing Text:   6%|▌         | 22/381 [24:07<3:20:39, 33.53s/it]Recognizing Text:   6%|▋         | 24/381 [24:14<1:56:07, 19.52s/it]Recognizing Text:   7%|▋         | 25/381 [25:00<2:35:25, 26.19s/it]Recognizing Text:   7%|▋         | 26/381 [25:35<2:48:10, 28.42s/it]Recognizing Text:   7%|▋         | 27/381 [25:43<2:15:07, 22.90s/it]Recognizing Text:   7%|▋         | 28/381 [25:47<1:42:38, 17.45s/it]Recognizing Text:   8%|▊         | 29/381 [26:04<1:41:46, 17.35s/it]Recognizing Text:   8%|▊         | 31/381 [26:27<1:26:54, 14.90s/it]Recognizing Text:   8%|▊         | 32/381 [26:44<1:28:32, 15.22s/it]Recognizing Text:   9%|▊         | 33/381 [27:14<1:50:21, 19.03s/it]Recognizing Text:   9%|▉         | 35/381 [27:35<1:28:51, 15.41s/it]Recognizing Text:   9%|▉         | 36/381 [27:45<1:22:03, 14.27s/it]Recognizing Text:  10%|▉         | 37/381 [28:07<1:32:56, 16.21s/it]Recognizing Text:  10%|▉         | 38/381 [28:09<1:10:42, 12.37s/it]Recognizing Text:  10%|█         | 39/381 [28:35<1:31:27, 16.05s/it]Recognizing Text:  10%|█         | 40/381 [28:44<1:20:55, 14.24s/it]Recognizing Text:  11%|█         | 41/381 [28:57<1:18:22, 13.83s/it]Recognizing Text:  11%|█         | 42/381 [29:03<1:05:52, 11.66s/it]Recognizing Text:  11%|█▏        | 43/381 [29:16<1:07:55, 12.06s/it]Recognizing Text:  12%|█▏        | 44/381 [30:10<2:16:59, 24.39s/it]Recognizing Text:  12%|█▏        | 45/381 [31:35<3:56:14, 42.18s/it]Recognizing Text:  12%|█▏        | 46/381 [31:39<2:53:18, 31.04s/it]Recognizing Text:  12%|█▏        | 47/381 [31:50<2:19:41, 25.10s/it]Recognizing Text:  13%|█▎        | 48/381 [31:52<1:40:16, 18.07s/it]Recognizing Text:  13%|█▎        | 49/381 [32:13<1:44:30, 18.89s/it]Recognizing Text:  13%|█▎        | 50/381 [32:22<1:28:02, 15.96s/it]Recognizing Text:  13%|█▎        | 51/381 [32:27<1:10:14, 12.77s/it]Recognizing Text:  14%|█▎        | 52/381 [32:47<1:20:38, 14.71s/it]Recognizing Text:  14%|█▍        | 53/381 [32:48<59:01, 10.80s/it]  Recognizing Text:  14%|█▍        | 54/381 [33:05<1:08:21, 12.54s/it]Recognizing Text:  14%|█▍        | 55/381 [33:13<1:00:50, 11.20s/it]Recognizing Text:  15%|█▍        | 56/381 [33:16<47:47,  8.82s/it]  Recognizing Text:  15%|█▍        | 57/381 [33:32<59:32, 11.03s/it]Recognizing Text:  15%|█▌        | 58/381 [33:37<49:31,  9.20s/it]Recognizing Text:  15%|█▌        | 59/381 [33:47<50:10,  9.35s/it]Recognizing Text:  16%|█▌        | 60/381 [33:49<37:36,  7.03s/it]Recognizing Text:  16%|█▌        | 61/381 [33:54<34:12,  6.41s/it]Recognizing Text:  16%|█▋        | 62/381 [33:55<26:33,  5.00s/it]Recognizing Text:  17%|█▋        | 63/381 [34:00<26:48,  5.06s/it]Recognizing Text:  17%|█▋        | 64/381 [34:20<50:28,  9.55s/it]Recognizing Text:  17%|█▋        | 65/381 [34:51<1:23:38, 15.88s/it]Recognizing Text:  18%|█▊        | 67/381 [35:05<1:01:00, 11.66s/it]Recognizing Text:  18%|█▊        | 68/381 [35:21<1:07:18, 12.90s/it]Recognizing Text:  18%|█▊        | 69/381 [35:37<1:11:10, 13.69s/it]Recognizing Text:  18%|█▊        | 70/381 [35:39<54:01, 10.42s/it]  Recognizing Text:  19%|█▊        | 71/381 [35:49<53:48, 10.41s/it]Recognizing Text:  19%|█▉        | 72/381 [35:53<43:44,  8.49s/it]Recognizing Text:  19%|█▉        | 73/381 [36:07<51:57, 10.12s/it]Recognizing Text:  19%|█▉        | 74/381 [36:48<1:38:13, 19.20s/it]Recognizing Text:  20%|█▉        | 75/381 [37:14<1:48:24, 21.26s/it]Recognizing Text:  20%|█▉        | 76/381 [37:18<1:21:08, 15.96s/it]Recognizing Text:  20%|██        | 77/381 [37:23<1:04:25, 12.71s/it]Recognizing Text:  20%|██        | 78/381 [37:33<1:01:08, 12.11s/it]Recognizing Text:  21%|██        | 79/381 [37:39<50:24, 10.01s/it]  Recognizing Text:  21%|██▏       | 81/381 [37:42<31:04,  6.21s/it]Recognizing Text:  22%|██▏       | 82/381 [38:11<59:34, 11.96s/it]Recognizing Text:  22%|██▏       | 84/381 [38:15<38:39,  7.81s/it]Recognizing Text:  22%|██▏       | 85/381 [38:26<41:08,  8.34s/it]Recognizing Text:  23%|██▎       | 86/381 [38:31<37:00,  7.53s/it]Recognizing Text:  23%|██▎       | 88/381 [38:41<31:39,  6.48s/it]Recognizing Text:  23%|██▎       | 89/381 [38:42<26:11,  5.38s/it]Recognizing Text:  24%|██▎       | 90/381 [38:49<27:35,  5.69s/it]Recognizing Text:  24%|██▍       | 91/381 [39:02<37:05,  7.68s/it]Recognizing Text:  24%|██▍       | 92/381 [39:08<34:18,  7.12s/it]Recognizing Text:  25%|██▍       | 94/381 [39:14<26:07,  5.46s/it]Recognizing Text:  25%|██▍       | 95/381 [39:19<25:32,  5.36s/it]Recognizing Text:  25%|██▌       | 96/381 [39:23<23:01,  4.85s/it]Recognizing Text:  25%|██▌       | 97/381 [39:35<31:41,  6.70s/it]Recognizing Text:  26%|██▌       | 98/381 [39:42<32:23,  6.87s/it]Recognizing Text:  26%|██▌       | 99/381 [39:47<30:26,  6.48s/it]Recognizing Text:  26%|██▌       | 100/381 [40:11<52:56, 11.31s/it]Recognizing Text:  27%|██▋       | 101/381 [40:31<1:05:35, 14.06s/it]Recognizing Text:  27%|██▋       | 102/381 [41:24<1:58:11, 25.42s/it]Recognizing Text:  27%|██▋       | 104/381 [41:32<1:12:18, 15.66s/it]Recognizing Text:  28%|██▊       | 105/381 [41:36<58:05, 12.63s/it]  Recognizing Text:  28%|██▊       | 106/381 [42:02<1:13:50, 16.11s/it]Recognizing Text:  28%|██▊       | 107/381 [42:03<55:44, 12.21s/it]  Recognizing Text:  29%|██▊       | 109/381 [42:07<34:41,  7.65s/it]Recognizing Text:  29%|██▉       | 110/381 [42:17<37:24,  8.28s/it]Recognizing Text:  29%|██▉       | 111/381 [42:36<49:36, 11.02s/it]Recognizing Text:  29%|██▉       | 112/381 [42:47<49:05, 10.95s/it]Recognizing Text:  30%|██▉       | 113/381 [43:03<54:49, 12.28s/it]Recognizing Text:  30%|██▉       | 114/381 [43:09<46:42, 10.50s/it]

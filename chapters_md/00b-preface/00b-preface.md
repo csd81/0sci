@@ -1,0 +1,53 @@
+## Preface
+
+This book presents a broad overview of numerical methods for students and professionals in computationally oriented disciplines who need to solve mathematical problems. It differs from traditional numerical analysis texts in that it focuses on the motivation and ideas behind the algorithms presented rather than on detailed analyses of them. I try to convey a general understanding of the techniques available for solving problems in each major category, including proper problem formulation and interpretation of results, but I advocate the use of professionally written mathematical software for obtaining solutions whenever possible. The book is aimed more at potential users of mathematical software than at potential creators of such software. I hope to make the reader aware of the relevant issues in selecting appropriate methods and software and using them wisely.
+
+At the University of Illinois, this book is used as the text for a comprehensive, one-semester course on numerical methods that serves several purposes:
+
+- As a terminal course for senior undergraduates, mainly computer science, mathematics, and engineering majors
+- As a foundational course for graduate students in computer science and mathematics who intend to specialize in scientific computing
+- As a breadth course for graduate students in computer science who do not intend to specialize in scientific computing
+- As a training course for graduate students in science and engineering who need to use numerical methods and software in their research. It is a core course for the interdisciplinary graduate program in Computational Science and Engineering sponsored by the College of Engineering.
+
+To accommodate this diverse student clientele, the prerequisites for the course and the book have been kept to a minimum: basic familiarity with linear algebra, multivariate calculus, and a smattering of differential equations. No prior familiarity with numerical methods is assumed. The book adopts a fairly sophisticated perxvi Preface
+
+spective, however, so a reasonable level of maturity on the part of the student (or reader) is advisable. Beyond the academic setting, I hope that the book will also be useful as a reference for practicing engineers and scientists who may need a quick overview of a given computational problem and the methods and software available for solving it.
+
+Although the book emphasizes the use of mathematical software, unlike some other software-oriented texts it does not provide any software, nor does it concentrate on any specific software packages, libraries, or environments. Instead, for each problem category pointers are provided to specific routines available from publicly accessible repositories and the major commercial libraries and packages. In many academic and industrial computing environments such software is already installed, and in any case pointers are also provided to public domain software that is freely accessible via the Internet. The computer exercises in the book are not dependent on any specific choice of software or programming language.
+
+The main elements in the organization of the book are as follows:
+
+Chapters: Each chapter of the book covers a major computational problem area. The first half of the book deals primarily with algebraic problems, whereas the second half treats analytic problems involving derivatives and integrals. The first two chapters are fundamental to the remainder of the book, but the subsequent chapters can be taken in various orders according to the instructor's preference. More specifically, the major dependences among chapters are roughly as follows:
+
+| Chapter | Depends on | Chapter | Depends on | Chapter | Depends on     |
+| ------- | ---------- | ------- | ---------- | ------- | -------------- |
+| 2       | 1          | 6       | 1, 2, 3, 5 | 10      | 1, 2, 5, 7, 9  |
+| 3       | 1, 2       | 7       | 1, 2       | 11      | 1, 2, 7, 9, 10 |
+| 4       | 1, 2, 3    | 8       | 1, 2, 7    | 12      | 1, 2, 7        |
+| 5       | 1, 2       | 9       | 1, 2, 5, 7 | 13      | 1              |
+
+Thus, Chapters 7, 8, 12, and 13 could be covered much earlier, and Chapters 3, 4 and 6 much later, than their appearance in the book. For example, Chapters 3, 7, and 12 all involve some type of data fitting, so it might be desirable to cover them as a unit. As another example, iterative methods for linear systems are contained in Chapter 11 on partial differential equations because that is where the most important motivating examples come from, but much of this material could be covered immediately following direct methods for linear systems in Chapter 2. Note that eigenvalues are used freely throughout the remainder of the book, so there is some incentive for covering Chapter 4 fairly early unless the students are already familiar with the basics of this topic.
+
+There is more than enough material in the book for a full semester course, so some judicious omissions may be required in a one-term course. For example, Chapter 13 on random numbers and stochastic simulation is only peripherally related to the remainder of the book and is an obvious candidate for omission (random number generators are used in a number of exercises throughout the book, however). The entire book can be covered in a two-quarter or two-semester course.
+
+Examples: Almost every concept and method introduced is illustrated by one or more examples. These examples are meant to supplement the relatively terse general discussion and should be read as an essential part of the text. The examples have been kept as simple as possible (sometimes at the risk of oversimplification) so that the reader can easily follow them. In my experience, a simple example that is thoroughly understood is usually more helpful than a more realistic example that is more difficult to follow.
+
+Software: The lists of available software for each problem category are meant to be reasonably comprehensive. I have not attempted to single out the "best" software available for a given problem, partly because usually no single package is superior in all respects and partly to allow for the varied software availability and choice of programming language that may apply for different readers. All of the software cited is at least competently written, and some of it is superb.
+
+Exercises: The book contains many exercises, which are divided into three categories:
+
+- Review questions, which are short-answer questions designed to test basic conceptual understanding
+- Exercises, which require somewhat more thought, longer answers, and possibly some hand computation
+- Computer problems, which require some programming and often involve the use of existing software.
+
+The review questions are meant for self-testing on the part of the reader. They include some deliberate repetition to drive home key points and to build confidence in the mastery of the material. The longer exercises are meant to be suitable for written homework assignments. Some of these require manual computations with simple examples, while others are designed to supply details of derivations and proofs omitted from the main text. The latter should be especially useful if the book is used for a more theoretical course. The computer problems provide an opportunity for hands-on experience in using the recommended software for solving typical problems in each category. Some of these problems are generic, but others are directly related to specific applications in various scientific and engineering disciplines.
+
+Changes for the Second Edition. Each chapter now begins with a motivational discussion and one or more illustrative examples, which are then followed by discussions of existence, uniqueness, and conditioning of solutions for the given type of problem. The intent is to enhance the student's understanding of why the problem is important and how to recognize a "good" or "bad" formulation of the problem before considering algorithms for solving it. The major algorithms are now stated formally and numbered for easy reference. The bibliography has been brought up to date and the historical notes slightly expanded. The discussion in Chapter 1 on forward and backward error and the relationship between them has been expanded and clarified. Most of the material on the singular value decomposition has been moved from Chapter 4 to Chapter 3, where its applications fit more comfortably. The coverage of eigenvalue algorithms in Chapter 4 has been expanded to include more motivation and details, especially on QR iteration, as well as some additional methods. The treatment of constrained optimization in Chapter 6 has been expanded substantially. The chapters on differential equations have been slightly reorganized and the coverage of spectral methods expanded. Chapter xviii Preface
+
+12 on the fast Fourier transform has been reorganized and streamlined by deleting some extraneous material.
+
+I would like to acknowledge the influence of the mentors who first introduced me to the unexpected charms of numerical computation, Alston Householder and Gene Golub. I am grateful for the bountiful feedback I have received from students and instructors who have used the first edition of this book. Prepublication reviewers for the first edition were Alan George, University of Waterloo; Dianne O'Leary, University of Maryland; James Ortega, University of Virginia; John Strikwerda, University of Wisconsin; and Lloyd N. Trefethen, Oxford University. Reviewers of the first edition in preparation for the second edition were Thomas Coleman, Cornell University; Robert Funderlic, North Carolina State University; Thomas Hagstrom, University of New Mexico; Ramon Moore, Ohio State University; Mark Pernarowski, Montana State University; Linda Petzold, University of California at Santa Barbara; and Brian Suchomel, University of Minnesota. I thank all of these reviewers for their invaluable suggestions. In addition, I particularly want to acknowledge my colleagues Joerg Liesen, Paul Saylor, and Eric de Sturler, all of the University of Illinois, each of whom read some or all of the revised manuscript and provided invaluable feedback. I would like to thank Melchior Franz and Justin Winkler for helpful advice on typesetting that was crucial in enabling me to prepare camera-ready copy. Finally, I deeply appreciate the patience and understanding of my wife, Mona, during the countless hours spent in writing and revising this book. With great pleasure and gratitude I dedicate the book to her.
+
+Michael T. Heath
+
+Book website: www.siam.org/books/cl80 Author website: heath.cs.illinois.edu
