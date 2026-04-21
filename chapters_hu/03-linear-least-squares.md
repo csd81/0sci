@@ -6,11 +6,11 @@ Tegyük fel, hogy szeretnénk tudni, mennyi a tipikus havi csapadékmennyiség S
 
 A csapadékpéldában egyetlen számot kerestünk, amely egy egész számsokaságot reprezentál, vagy valamilyen értelemben közelít. Általánosabban fogalmazva: különféle elméleti és gyakorlati okokból gyakran keresünk egy-egy magasabb dimenziós objektumhoz alacsonyabb dimenziós közelítést. Ennek célja lehet a hibák kisimítása vagy a lényegtelen részletek figyelmen kívül hagyása – például amikor zajos adatokból jelet vagy trendet nyerünk ki –, vagy az, hogy egy nagy adattömeget kezelhetőbb mennyiségre csökkentsünk, vagy hogy egy bonyolult függvényt egyszerű közelítéssel helyettesítsünk. Nem várjuk el, hogy egy ilyen közelítés egzakt legyen – a legtöbb célra nem is szeretnénk, hogy az legyen –, mindazonáltal azt akarjuk, hogy valamennyire emlékeztessen az eredeti adatokra. A lineáris algebra terminológiájával élve azt szeretnénk, hogy egy magasabb dimenziós térből vett vektort egy alacsonyabb dimenziós altérre vetítsünk. Ennek egyik legnépszerűbb és számítási szempontból legkényelmesebb módja a legkisebb négyzetek módszere, amelyet ebben a fejezetben tárgyalunk.
 
-Figyelmünket egyelőre a lineáris feladatokra szűkítjük, a nemlineáris legkisebb négyzeteket a 6.6. szakaszra halasztva. A 2.2. szakaszban láttuk, hogy egy négyzetes lineáris rendszer pontosan meghatározott: ugyanannyi egyenlettel és ismeretlennel mindig pontosan egy megoldás létezik, feltéve hogy a mátrix nemszinguláris. Az interpolációnál például a paraméterek és az adatpontok száma közötti egyezést kihasználva bázisfüggvények lineáris kombinációjával illesztjük pontosan az adott adatokat (lásd a 7. fejezetet). A jelen helyzetben ezzel szemben feltételezzük, hogy az adott adatok zajosak vagy lényegtelen részleteket tartalmaznak, ezért semmilyen különleges előnnyel nem jár, ha pontosan illesztjük őket. Sőt, az ilyen ingadozásokat éppen azzal simíthatjuk ki, hogy lemondunk a pontos illeszkedésről, és a szükségesnél több adatpontot vagy mérést használunk, ami egy túlhatározott rendszerhez vezet, amelyben több az egyenlet, mint az ismeretlen. A lineáris rendszert mátrix-vektor jelöléssel felírva a következőt kapjuk:
+Figyelmünket egyelőre a lineáris feladatokra szűkítjük, a nemlineáris legkisebb négyzeteket a 6.6. szakaszra halasztva. A 2.2. szakaszban láttuk, hogy egy négyzetes lineáris rendszer pontosan meghatározott: ugyanannyi egyenlettel és ismeretlennel mindig pontosan egy megoldás létezik, feltéve hogy a mátrix reguláris. Az interpolációnál például a paraméterek és az adatpontok száma közötti egyezést kihasználva bázisfüggvények lineáris kombinációjával illesztjük pontosan az adott adatokat (lásd a 7. fejezetet). A jelen helyzetben ezzel szemben feltételezzük, hogy az adott adatok zajosak vagy lényegtelen részleteket tartalmaznak, ezért semmilyen különleges előnnyel nem jár, ha pontosan illesztjük őket. Sőt, az ilyen ingadozásokat éppen azzal simíthatjuk ki, hogy lemondunk a pontos illeszkedésről, és a szükségesnél több adatpontot vagy mérést használunk, ami egy túlhatározott rendszerhez vezet, amelyben több az egyenlet, mint az ismeretlen. A lineáris rendszert mátrix-vektor jelöléssel felírva a következőt kapjuk:
 
 $$\boldsymbol{A}\boldsymbol{x} = \boldsymbol{b},$$
 
-ahol $\boldsymbol{A}$ egy $m \times n$-es mátrix, amelyre $m > n$, $\boldsymbol{b}$ egy $m$-dimenziós vektor, $\boldsymbol{x}$ pedig egy $n$-dimenziós vektor. Általában, mivel az $\boldsymbol{x}$ vektorban mindössze $n$ paraméter szerepel, nem várhatjuk el, hogy az $\boldsymbol{A}$ $n$ oszlopának lineáris kombinációjaként reprodukálni tudjuk az $m$-dimenziós $\boldsymbol{b}$ vektort. Más szóval egy túlhatározott rendszernek a szokásos értelemben általában nincs megoldása. Ehelyett a bal és a jobb oldal közötti távolságot minimalizáljuk, azaz az $\boldsymbol{r} = \boldsymbol{b} - \boldsymbol{A}\boldsymbol{x}$ maradékvektor valamely normáját minimalizáljuk az $\boldsymbol{x}$ függvényeként. Elvileg bármelyik norma használható, de – ahogyan látni fogjuk – erős érvek szólnak az euklideszi norma (2-norma) mellett, ideértve a belső szorzattal és az ortogonalitással való kapcsolatát, a simaságát és szigorú konvexitását, valamint a számítási kényelmét. A 2-norma használata adja a legkisebb négyzetek módszerének nevét: a megoldás az az $\boldsymbol{x}$ vektor, amely a lineáris rendszer bal és jobb oldala komponenseinek különbségei négyzetösszegét minimalizálja. A pontos egyenlőség hiányát tükrözendő egy lineáris legkisebb négyzetek feladatot a következő alakban írunk fel:
+ahol $\boldsymbol{A}$ egy $m \times n$-es mátrix, amelyre $m > n$, $\boldsymbol{b}$ egy $m$-dimenziós vektor, $\boldsymbol{x}$ pedig egy $n$-dimenziós vektor. Általában, mivel az $\boldsymbol{x}$ vektorban mindössze $n$ paraméter szerepel, nem várhatjuk el, hogy az $\boldsymbol{A}$ $n$ oszlopának lineáris kombinációjaként reprodukálni tudjuk az $m$-dimenziós $\boldsymbol{b}$ vektort. Más szóval egy túlhatározott rendszernek a szokásos értelemben általában nincs megoldása. Ehelyett a bal és a jobb oldal közötti távolságot minimalizáljuk, azaz az $\boldsymbol{r} = \boldsymbol{b} - \boldsymbol{A}\boldsymbol{x}$ reziduumvektor valamely normáját minimalizáljuk az $\boldsymbol{x}$ függvényeként. Elvileg bármelyik norma használható, de – ahogyan látni fogjuk – erős érvek szólnak az euklideszi norma (2-norma) mellett, ideértve a belső szorzattal és az ortogonalitással való kapcsolatát, a simaságát és szigorú konvexitását, valamint a számítási kényelmét. A 2-norma használata adja a legkisebb négyzetek módszerének nevét: a megoldás az az $\boldsymbol{x}$ vektor, amely a lineáris rendszer bal és jobb oldala komponenseinek különbségei négyzetösszegét minimalizálja. A pontos egyenlőség hiányát tükrözendő egy lineáris legkisebb négyzetek feladatot a következő alakban írunk fel:
 
 $$\boldsymbol{A}\boldsymbol{x} \cong \boldsymbol{b},$$
 
@@ -72,7 +72,7 @@ A legkisebb négyzetek módszere fontos eszköz a statisztikában, ahol regressz
 
 # 3.2 Létezés és egyértelműség
 
-A 2.1. szakaszból felidézhetjük, hogy egy $m \times n$-es $\boldsymbol{A}\boldsymbol{x} = \boldsymbol{b}$ lineáris egyenletrendszer azt kérdezi, kifejezhető-e $\boldsymbol{b}$ az $\boldsymbol{A}$ oszlopainak lineáris kombinációjaként. Négyzetes rendszerek ($m = n$) esetén a válasz nemszinguláris $\boldsymbol{A}$-ra mindig „igen”. Túlhatározott rendszerek ($m > n$) esetén ezzel szemben a válasz általában „nem”, hacsak $\boldsymbol{b}$ történetesen a $\operatorname{span}(\boldsymbol{A})$-ban fekszik, ami a legtöbb alkalmazásban igen valószínűtlen. A legkisebb négyzetek módszerénél azonban nem is várjuk el – és többnyire nem is kívánjuk –, hogy az egyenlet két oldala pontosan egyezzen, csupán a 2-norma szerinti lehető legjobb egyezést. A megoldás ezen másféle fogalmával a létezés és egyértelműség feltételei némileg eltérnek a négyzetes lineáris rendszerekéitől, ahogyan azt a továbbiakban látni fogjuk.
+A 2.1. szakaszból felidézhetjük, hogy egy $m \times n$-es $\boldsymbol{A}\boldsymbol{x} = \boldsymbol{b}$ lineáris egyenletrendszer azt kérdezi, kifejezhető-e $\boldsymbol{b}$ az $\boldsymbol{A}$ oszlopainak lineáris kombinációjaként. Négyzetes rendszerek ($m = n$) esetén a válasz reguláris $\boldsymbol{A}$-ra mindig „igen”. Túlhatározott rendszerek ($m > n$) esetén ezzel szemben a válasz általában „nem”, hacsak $\boldsymbol{b}$ történetesen a $\operatorname{span}(\boldsymbol{A})$-ban fekszik, ami a legtöbb alkalmazásban igen valószínűtlen. A legkisebb négyzetek módszerénél azonban nem is várjuk el – és többnyire nem is kívánjuk –, hogy az egyenlet két oldala pontosan egyezzen, csupán a 2-norma szerinti lehető legjobb egyezést. A megoldás ezen másféle fogalmával a létezés és egyértelműség feltételei némileg eltérnek a négyzetes lineáris rendszerekéitől, ahogyan azt a továbbiakban látni fogjuk.
 
 Először is megjegyezzük, hogy a legkisebb négyzetes megoldás létezése mindig biztosított: a $\phi(\boldsymbol{y}) = \|\boldsymbol{b} - \boldsymbol{y}\|_2$ függvény folytonos és koercív $\mathbb{R}^m$-en, így $\phi$-nek minimuma van a zárt, nem korlátos $\operatorname{span}(\boldsymbol{A})$ halmazon (lásd a 6.2. szakaszt), azaz létezik olyan $\boldsymbol{y} \in \operatorname{span}(\boldsymbol{A})$ $m$-dimenziós vektor, amely euklideszi normában a legközelebb van $\boldsymbol{b}$-hez. Emellett $\phi$ szigorúan konvex a $\operatorname{span}(\boldsymbol{A})$ konvex halmazon, így a $\boldsymbol{b}$-hez legközelebbi $\boldsymbol{y} \in \operatorname{span}(\boldsymbol{A})$ vektor egyértelmű (lásd a 6.2.1. szakaszt). Ez azonban nem jelenti azt, hogy a legkisebb négyzetes feladat $\boldsymbol{x}$ megoldása szükségképpen egyértelmű. Tegyük fel, hogy $\boldsymbol{x}_1$ és $\boldsymbol{x}_2$ ilyen megoldások, és legyen $\boldsymbol{z} = \boldsymbol{x}_2 - \boldsymbol{x}_1$. Ekkor, mivel $\boldsymbol{A}\boldsymbol{x}_1 = \boldsymbol{y} = \boldsymbol{A}\boldsymbol{x}_2$, azt kapjuk, hogy $\boldsymbol{A}\boldsymbol{z} = \boldsymbol{0}$. Márpedig ha $\boldsymbol{z} \neq \boldsymbol{0}$, azaz $\boldsymbol{x}_1 \neq \boldsymbol{x}_2$, akkor az $\boldsymbol{A}$ oszlopai lineárisan összefüggők kell, hogy legyenek (vö. négyzetes mátrix nemszingularitásának 4. feltételével a 2.2. szakaszban). Arra a következtetésre jutunk, hogy egy $m \times n$-es $\boldsymbol{A}\boldsymbol{x} \cong \boldsymbol{b}$ legkisebb négyzetes feladat megoldása akkor és csak akkor egyértelmű, ha $\boldsymbol{A}$ teljes oszloprangú, azaz $\operatorname{rank}(\boldsymbol{A}) = n$ (vö. négyzetes mátrix nemszingularitásának 3. feltételével a 2.2. szakaszban). Ha $\operatorname{rank}(\boldsymbol{A}) < n$, akkor az $\boldsymbol{A}$-t *ranghiányosnak* mondjuk, és bár a megfelelő legkisebb négyzetes feladatnak ekkor is kell hogy legyen megoldása, ebben az esetben az nem lehet egyértelmű. A ranghiány következményeit később vizsgáljuk; egyelőre feltételezzük, hogy $\boldsymbol{A}$ teljes oszloprangú.
 
@@ -80,7 +80,7 @@ Az imént idézett létezési bizonyítás nem konstruktív, és kevés betekint
 
 ### 3.2.1 Normálegyenletek
 
-Minimalizálási feladatként a legkisebb négyzetes feladat a többváltozós analízis eszközeivel kezelhető, hasonlóan ahhoz, ahogyan az egyváltozós analízisben a derivált nullával egyenlőségét írjuk elő. Az $\boldsymbol{r} = \boldsymbol{b} - \boldsymbol{A}\boldsymbol{x}$ maradékvektor euklideszi normájának négyzetét szeretnénk minimalizálni. Ezt a célfüggvényt $\phi: \mathbb{R}^n \to \mathbb{R}$-rel jelölve
+Minimalizálási feladatként a legkisebb négyzetes feladat a többváltozós analízis eszközeivel kezelhető, hasonlóan ahhoz, ahogyan az egyváltozós analízisben a derivált nullával egyenlőségét írjuk elő. Az $\boldsymbol{r} = \boldsymbol{b} - \boldsymbol{A}\boldsymbol{x}$ reziduumvektor euklideszi normájának négyzetét szeretnénk minimalizálni. Ezt a célfüggvényt $\phi: \mathbb{R}^n \to \mathbb{R}$-rel jelölve
 
 $$\phi(\boldsymbol{x}) = \|\boldsymbol{r}\|_2^2 = \boldsymbol{r}^T\boldsymbol{r} = (\boldsymbol{b} - \boldsymbol{A}\boldsymbol{x})^T(\boldsymbol{b} - \boldsymbol{A}\boldsymbol{x}) = \boldsymbol{b}^T\boldsymbol{b} - 2\boldsymbol{x}^T\boldsymbol{A}^T\boldsymbol{b} + \boldsymbol{x}^T\boldsymbol{A}^T\boldsymbol{A}\boldsymbol{x}.$$
 
@@ -110,7 +110,7 @@ $$\boldsymbol{v}_1^T\boldsymbol{v}_2 = \|\boldsymbol{v}_1\|_2 \cdot \|\boldsymbo
 
 ahol $\theta$ a $\boldsymbol{v}_1$ és a $\boldsymbol{v}_2$ által bezárt szög. Ennek megfelelően a $\boldsymbol{v}_1$ és a $\boldsymbol{v}_2$ *ortogonális* (vagy *merőleges*, illetve *normális*) egymásra, ha $\boldsymbol{v}_1^T\boldsymbol{v}_2 = 0$.
 
-Egy $\boldsymbol{A}\boldsymbol{x} \cong \boldsymbol{b}$ legkisebb négyzetes feladatnál, ahol $m > n$, az $m$-dimenziós $\boldsymbol{b}$ vektor általában nem fekszik a legfeljebb $n$ dimenziós $\operatorname{span}(\boldsymbol{A})$ altérben. Az az $\boldsymbol{y} = \boldsymbol{A}\boldsymbol{x} \in \operatorname{span}(\boldsymbol{A})$ vektor, amely euklideszi normában a legközelebb van $\boldsymbol{b}$-hez, ott adódik, ahol az $\boldsymbol{r} = \boldsymbol{b} - \boldsymbol{A}\boldsymbol{x}$ maradékvektor ortogonális a $\operatorname{span}(\boldsymbol{A})$-ra (lásd a 3.2. ábrát). Ezért az $\boldsymbol{x}$ legkisebb négyzetes megoldásra az $\boldsymbol{r} = \boldsymbol{b} - \boldsymbol{A}\boldsymbol{x}$ maradékvektornak az $\boldsymbol{A}$ minden oszlopára ortogonálisnak kell lennie, és így teljesülnie kell, hogy
+Egy $\boldsymbol{A}\boldsymbol{x} \cong \boldsymbol{b}$ legkisebb négyzetes feladatnál, ahol $m > n$, az $m$-dimenziós $\boldsymbol{b}$ vektor általában nem fekszik a legfeljebb $n$ dimenziós $\operatorname{span}(\boldsymbol{A})$ altérben. Az az $\boldsymbol{y} = \boldsymbol{A}\boldsymbol{x} \in \operatorname{span}(\boldsymbol{A})$ vektor, amely euklideszi normában a legközelebb van $\boldsymbol{b}$-hez, ott adódik, ahol az $\boldsymbol{r} = \boldsymbol{b} - \boldsymbol{A}\boldsymbol{x}$ reziduumvektor ortogonális a $\operatorname{span}(\boldsymbol{A})$-ra (lásd a 3.2. ábrát). Ezért az $\boldsymbol{x}$ legkisebb négyzetes megoldásra az $\boldsymbol{r} = \boldsymbol{b} - \boldsymbol{A}\boldsymbol{x}$ reziduumvektornak az $\boldsymbol{A}$ minden oszlopára ortogonálisnak kell lennie, és így teljesülnie kell, hogy
 
 $$\boldsymbol{0} = \boldsymbol{A}^T\boldsymbol{r} = \boldsymbol{A}^T(\boldsymbol{b} - \boldsymbol{A}\boldsymbol{x}),$$
 
@@ -140,7 +140,7 @@ $$\begin{aligned}
 &= \|\boldsymbol{P}\boldsymbol{b} - \boldsymbol{A}\boldsymbol{x}\|_2^2 + \|\boldsymbol{P}_{\perp}\boldsymbol{b}\|_2^2 \quad \text{(mivel } \boldsymbol{P}\boldsymbol{A} = \boldsymbol{A} \text{ és } \boldsymbol{P}_{\perp}\boldsymbol{A} = \boldsymbol{O}\text{)}.
 \end{aligned}$$
 
-A jobb oldal második tagja nem függ $\boldsymbol{x}$-től, így a maradéknorma akkor minimális, ha $\boldsymbol{x}$-et úgy választjuk, hogy az első tag nulla legyen. A legkisebb négyzetes megoldást tehát a
+A jobb oldal második tagja nem függ $\boldsymbol{x}$-től, így a reziduumnorma akkor minimális, ha $\boldsymbol{x}$-et úgy választjuk, hogy az első tag nulla legyen. A legkisebb négyzetes megoldást tehát a
 
 $$\boldsymbol{A}\boldsymbol{x} = \boldsymbol{P}\boldsymbol{b}$$
 
@@ -150,7 +150,7 @@ $$\boldsymbol{A}^T\boldsymbol{A}\boldsymbol{x} = \boldsymbol{A}^T\boldsymbol{b}$
 
 adódik, ami ismét a korábban levezetett normálegyenlet-rendszer.
 
-Az ortogonális projektort az alábbi módon kaphatjuk meg explicit alakban: ha $\boldsymbol{A}$ teljes oszloprangú, úgyhogy $\boldsymbol{A}^T\boldsymbol{A}$ nemszinguláris, akkor
+Az ortogonális projektort az alábbi módon kaphatjuk meg explicit alakban: ha $\boldsymbol{A}$ teljes oszloprangú, úgyhogy $\boldsymbol{A}^T\boldsymbol{A}$ reguláris, akkor
 
 $$\boldsymbol{P} = \boldsymbol{A}(\boldsymbol{A}^T\boldsymbol{A})^{-1}\boldsymbol{A}^T$$
 
@@ -170,7 +170,7 @@ $$\boldsymbol{Q}^T\boldsymbol{A}\boldsymbol{x} = \boldsymbol{Q}^T\boldsymbol{b}$
 
 négyzetes rendszer adódik. Később látni fogjuk, hogyan számítható ki a $\boldsymbol{Q}$ mátrix úgy, hogy ez a rendszer felső háromszögű legyen, és ezért könnyen megoldható. A szokásos normálegyenletek felírásának ily módon való elkerülése pontosság és stabilitás szempontjából is előnyökkel jár, amint azt hamarosan látni fogjuk.
 
-**3.4. Példa. Ortogonalitás és projekciók.** Ezeket a fogalmakat a 3.1. és 3.3. példabeli legkisebb négyzetes feladat folytatásaként szemléltetjük. Az $\boldsymbol{x} = [1236,\ 1943,\ 2416]^T$ megoldáshelyen a maradékvektor
+**3.4. Példa. Ortogonalitás és projekciók.** Ezeket a fogalmakat a 3.1. és 3.3. példabeli legkisebb négyzetes feladat folytatásaként szemléltetjük. Az $\boldsymbol{x} = [1236,\ 1943,\ 2416]^T$ megoldáshelyen a reziduumvektor
 
 $$\boldsymbol{r} = \boldsymbol{b} - \boldsymbol{A}\boldsymbol{x} = \boldsymbol{b} - \boldsymbol{y} = \begin{bmatrix} 1237 \\ 1941 \\ 2417 \\ 711 \\ 1177 \\ 475 \end{bmatrix} - \begin{bmatrix} 1236 \\ 1943 \\ 2416 \\ 707 \\ 1180 \\ 473 \end{bmatrix} = \begin{bmatrix} 1 \\ -2 \\ 1 \\ 4 \\ -3 \\ 2 \end{bmatrix}$$
 
@@ -186,7 +186,7 @@ $$\boldsymbol{P}_{\perp} = \boldsymbol{I} - \boldsymbol{P} = \frac{1}{4}\begin{b
 
 # 3.3 Érzékenység és kondicionáltság
 
-Most rátérünk a lineáris legkisebb négyzetek feladatának érzékenységére és kondicionáltságára. Először is ki kell terjesztenünk a mátrix kondíciószámának fogalmát a téglalap alakú mátrixokra is. A négyzetes mátrixok kondíciószámának 2.3.3. szakaszban adott definíciója a mátrix inverzét használja. Egy nem négyzetes $\boldsymbol{A}$ mátrixnak a hagyományos értelemben vett inverze nincs, de definiálható egy *pszeudoinverz*, amelyet $\boldsymbol{A}^+$ jelöl, és amely sok szempontból úgy viselkedik, mint egy inverz (lásd a 3.32. feladatot). Később egy általánosabb definíciót is látni fogunk, amely tetszőleges mátrixra érvényes, de egyelőre csak olyan $\boldsymbol{A}$ mátrixokat tekintünk, amelyek oszloprangja maximális. Ebben az esetben $\boldsymbol{A}^T \boldsymbol{A}$ nemszinguláris, és az $\boldsymbol{A}$ pszeudoinverzét a következőképpen definiáljuk:
+Most rátérünk a lineáris legkisebb négyzetek feladatának érzékenységére és kondicionáltságára. Először is ki kell terjesztenünk a mátrix kondíciószámának fogalmát a téglalap alakú mátrixokra is. A négyzetes mátrixok kondíciószámának 2.3.3. szakaszban adott definíciója a mátrix inverzét használja. Egy nem négyzetes $\boldsymbol{A}$ mátrixnak a hagyományos értelemben vett inverze nincs, de definiálható egy *pszeudoinverz*, amelyet $\boldsymbol{A}^+$ jelöl, és amely sok szempontból úgy viselkedik, mint egy inverz (lásd a 3.32. feladatot). Később egy általánosabb definíciót is látni fogunk, amely tetszőleges mátrixra érvényes, de egyelőre csak olyan $\boldsymbol{A}$ mátrixokat tekintünk, amelyek oszloprangja maximális. Ebben az esetben $\boldsymbol{A}^T \boldsymbol{A}$ reguláris, és az $\boldsymbol{A}$ pszeudoinverzét a következőképpen definiáljuk:
 
 $$\boldsymbol{A}^+ = (\boldsymbol{A}^T \boldsymbol{A})^{-1} \boldsymbol{A}^T.$$
 
@@ -200,7 +200,7 @@ $$\operatorname{cond}(\boldsymbol{A}) = \|\boldsymbol{A}\|_2 \cdot \|\boldsymbol
 
 Megállapodás szerint $\operatorname{cond}(\boldsymbol{A}) = \infty$, ha $\operatorname{rank}(\boldsymbol{A}) < n$. Ahogyan egy négyzetes mátrix kondíciószáma a szingularitáshoz való közelséget méri, úgy egy téglalap alakú mátrix kondíciószáma a ranghiányhoz való közelséget jellemzi.
 
-Míg egy négyzetes $\boldsymbol{A}\boldsymbol{x} = \boldsymbol{b}$ lineáris egyenletrendszer kondicionáltsága csak az $\boldsymbol{A}$ mátrixtól függ, addig az $\boldsymbol{A}\boldsymbol{x} \cong \boldsymbol{b}$ legkisebb négyzetek feladat kondicionáltsága az $\boldsymbol{A}$ mátrixon kívül a $\boldsymbol{b}$ jobb oldali vektortól is függ, ezért $\operatorname{cond}(\boldsymbol{A})$ önmagában nem elegendő az érzékenység jellemzésére. Nevezetesen, ha $\boldsymbol{b}$ közel van a $\operatorname{span}(\boldsymbol{A})$ altérhez, akkor $\boldsymbol{b}$ kis perturbációja viszonylag kevéssé változtatja meg az $\boldsymbol{y} = \boldsymbol{P}\boldsymbol{b}$ vetületet. Ha viszont $\boldsymbol{b}$ közel merőleges a $\operatorname{span}(\boldsymbol{A})$ altérre, akkor maga az $\boldsymbol{y} = \boldsymbol{P}\boldsymbol{b}$ is viszonylag kicsi lesz, így $\boldsymbol{b}$ kis változása viszonylag nagy változást okozhat $\boldsymbol{y}$-ban, és ennélfogva az $\boldsymbol{x}$ legkisebb négyzetes megoldásban is. Így adott $\boldsymbol{A}$ mellett azt várjuk, hogy egy olyan $\boldsymbol{b}$-vel felírt legkisebb négyzetek feladat, amely nagy maradékot eredményez (vagyis az adatokra rossz illeszkedést ad), érzékenyebb lesz, mint egy kis maradékot (azaz jó illeszkedést) adó feladat. Annak, hogy $\boldsymbol{b}$ mennyire van közel a $\operatorname{span}(\boldsymbol{A})$ altérhez, megfelelő mérőszáma a következő arány:
+Míg egy négyzetes $\boldsymbol{A}\boldsymbol{x} = \boldsymbol{b}$ lineáris egyenletrendszer kondicionáltsága csak az $\boldsymbol{A}$ mátrixtól függ, addig az $\boldsymbol{A}\boldsymbol{x} \cong \boldsymbol{b}$ legkisebb négyzetek feladat kondicionáltsága az $\boldsymbol{A}$ mátrixon kívül a $\boldsymbol{b}$ jobb oldali vektortól is függ, ezért $\operatorname{cond}(\boldsymbol{A})$ önmagában nem elegendő az érzékenység jellemzésére. Nevezetesen, ha $\boldsymbol{b}$ közel van a $\operatorname{span}(\boldsymbol{A})$ altérhez, akkor $\boldsymbol{b}$ kis perturbációja viszonylag kevéssé változtatja meg az $\boldsymbol{y} = \boldsymbol{P}\boldsymbol{b}$ vetületet. Ha viszont $\boldsymbol{b}$ közel merőleges a $\operatorname{span}(\boldsymbol{A})$ altérre, akkor maga az $\boldsymbol{y} = \boldsymbol{P}\boldsymbol{b}$ is viszonylag kicsi lesz, így $\boldsymbol{b}$ kis változása viszonylag nagy változást okozhat $\boldsymbol{y}$-ban, és ennélfogva az $\boldsymbol{x}$ legkisebb négyzetes megoldásban is. Így adott $\boldsymbol{A}$ mellett azt várjuk, hogy egy olyan $\boldsymbol{b}$-vel felírt legkisebb négyzetek feladat, amely nagy reziduumot eredményez (vagyis az adatokra rossz illeszkedést ad), érzékenyebb lesz, mint egy kis reziduumot (azaz jó illeszkedést) adó feladat. Annak, hogy $\boldsymbol{b}$ mennyire van közel a $\operatorname{span}(\boldsymbol{A})$ altérhez, megfelelő mérőszáma a következő arány:
 
 $$\frac{\|\boldsymbol{A}\boldsymbol{x}\|_2}{\|\boldsymbol{b}\|_2} = \frac{\|\boldsymbol{y}\|_2}{\|\boldsymbol{b}\|_2} = \cos(\theta),$$
 
@@ -226,7 +226,7 @@ Mindkét oldalt $\|\boldsymbol{x}\|_2$-vel elosztva a következő korlátot kapj
 
 $$\begin{aligned} \frac{\|\Delta \boldsymbol{x}\|_{2}}{\|\boldsymbol{x}\|_{2}} & \leq \|\boldsymbol{A}^{+}\|_{2} \frac{\|\Delta \boldsymbol{b}\|_{2}}{\|\boldsymbol{x}\|_{2}} \\ & = \operatorname{cond}(\boldsymbol{A}) \frac{\|\boldsymbol{b}\|_{2}}{\|\boldsymbol{A}\|_{2} \cdot \|\boldsymbol{x}\|_{2}} \frac{\|\Delta \boldsymbol{b}\|_{2}}{\|\boldsymbol{b}\|_{2}} \\ & \leq \operatorname{cond}(\boldsymbol{A}) \frac{\|\boldsymbol{b}\|_{2}}{\|\boldsymbol{A}\boldsymbol{x}\|_{2}} \frac{\|\Delta \boldsymbol{b}\|_{2}}{\|\boldsymbol{b}\|_{2}} \\ & = \operatorname{cond}(\boldsymbol{A}) \frac{1}{\cos(\theta)} \frac{\|\Delta \boldsymbol{b}\|_{2}}{\|\boldsymbol{b}\|_{2}}. \end{aligned}$$
 
-Tehát a legkisebb négyzetes $\boldsymbol{x}$ megoldásnak a $\boldsymbol{b}$-beli perturbációkra vonatkozó kondíciószáma függ $\operatorname{cond}(\boldsymbol{A})$-tól és a $\boldsymbol{b}$ és az $\boldsymbol{A}\boldsymbol{x}$ közötti $\theta$ szögtől is (lásd a 3.2. ábrát). Nevezetesen, a kondíciószám közelítőleg $\operatorname{cond}(\boldsymbol{A})$, amikor a maradék kicsi, azaz $\cos(\theta) \approx 1$, de a kondíciószám tetszőlegesen rosszabb is lehet $\operatorname{cond}(\boldsymbol{A})$-nál, amikor a maradék nagy, vagyis $\cos(\theta) \approx 0$.
+Tehát a legkisebb négyzetes $\boldsymbol{x}$ megoldásnak a $\boldsymbol{b}$-beli perturbációkra vonatkozó kondíciószáma függ $\operatorname{cond}(\boldsymbol{A})$-tól és a $\boldsymbol{b}$ és az $\boldsymbol{A}\boldsymbol{x}$ közötti $\theta$ szögtől is (lásd a 3.2. ábrát). Nevezetesen, a kondíciószám közelítőleg $\operatorname{cond}(\boldsymbol{A})$, amikor a reziduum kicsi, azaz $\cos(\theta) \approx 1$, de a kondíciószám tetszőlegesen rosszabb is lehet $\operatorname{cond}(\boldsymbol{A})$-nál, amikor a reziduum nagy, vagyis $\cos(\theta) \approx 0$.
 
 Az $\boldsymbol{A} + \boldsymbol{E}$ perturbált mátrix esetén a perturbált megoldást a normálegyenletek adják meg:
 
@@ -248,7 +248,7 @@ Mindkét oldalt $\|\boldsymbol{x}\|_2$-vel elosztva, és felhasználva, hogy $\|
 
 $$\begin{aligned} \frac{\|\Delta \boldsymbol{x}\|_{2}}{\|\boldsymbol{x}\|_{2}} & \lesssim \|(\boldsymbol{A}^{T}\boldsymbol{A})^{-1}\|_{2} \cdot \|\boldsymbol{E}\|_{2} \frac{\|\boldsymbol{r}\|_{2}}{\|\boldsymbol{x}\|_{2}} + \|\boldsymbol{A}^{+}\|_{2} \cdot \|\boldsymbol{E}\|_{2} \\ & = [\operatorname{cond}(\boldsymbol{A})]^{2} \frac{\|\boldsymbol{E}\|_{2}}{\|\boldsymbol{A}\|_{2}} \frac{\|\boldsymbol{r}\|_{2}}{\|\boldsymbol{A}\|_{2} \cdot \|\boldsymbol{x}\|_{2}} + \operatorname{cond}(\boldsymbol{A}) \frac{\|\boldsymbol{E}\|_{2}}{\|\boldsymbol{A}\|_{2}} \\ & \leq \left([\operatorname{cond}(\boldsymbol{A})]^{2} \frac{\|\boldsymbol{r}\|_{2}}{\|\boldsymbol{A}\boldsymbol{x}\|_{2}} + \operatorname{cond}(\boldsymbol{A})\right) \frac{\|\boldsymbol{E}\|_{2}}{\|\boldsymbol{A}\|_{2}} \\ & = \left([\operatorname{cond}(\boldsymbol{A})]^{2} \tan(\theta) + \operatorname{cond}(\boldsymbol{A})\right) \frac{\|\boldsymbol{E}\|_{2}}{\|\boldsymbol{A}\|_{2}}. \end{aligned}$$
 
-Tehát a legkisebb négyzetes $\boldsymbol{x}$ megoldás $\boldsymbol{A}$-beli perturbációkra vonatkozó kondíciószáma is függ $\operatorname{cond}(\boldsymbol{A})$-tól, valamint a $\boldsymbol{b}$ és az $\boldsymbol{A}\boldsymbol{x}$ közötti $\theta$ szögtől (lásd a 3.2. ábrát). Nevezetesen, a kondíciószám közelítőleg $\operatorname{cond}(\boldsymbol{A})$, amikor a maradék kicsi, azaz $\tan(\theta) \approx 0$, de a kondíciószám lényegében négyzetre emelődik közepes nagyságú maradék esetén, és tetszőlegesen naggyá válik, ha a maradék ennél is nagyobb. Ezek az érzékenységi eredmények nemcsak a legkisebb négyzetes megoldások minőségének értékelését teszik majd lehetővé számunkra, hanem fontos szerepet játszanak az ilyen megoldások numerikus előállítására szolgáló különféle algoritmusok viszonylagos előnyeinek megértésében is.
+Tehát a legkisebb négyzetes $\boldsymbol{x}$ megoldás $\boldsymbol{A}$-beli perturbációkra vonatkozó kondíciószáma is függ $\operatorname{cond}(\boldsymbol{A})$-tól, valamint a $\boldsymbol{b}$ és az $\boldsymbol{A}\boldsymbol{x}$ közötti $\theta$ szögtől (lásd a 3.2. ábrát). Nevezetesen, a kondíciószám közelítőleg $\operatorname{cond}(\boldsymbol{A})$, amikor a reziduum kicsi, azaz $\tan(\theta) \approx 0$, de a kondíciószám lényegében négyzetre emelődik közepes nagyságú reziduum esetén, és tetszőlegesen naggyá válik, ha a reziduum ennél is nagyobb. Ezek az érzékenységi eredmények nemcsak a legkisebb négyzetes megoldások minőségének értékelését teszik majd lehetővé számunkra, hanem fontos szerepet játszanak az ilyen megoldások numerikus előállítására szolgáló különféle algoritmusok viszonylagos előnyeinek megértésében is.
 
 **3.5. Példa. Érzékenység és kondicionáltság.** Ezeket a fogalmakat ismét a 3.1., a 3.3. és a 3.4. példák folytatásával szemléltetjük. A pszeudoinverz:
 
@@ -276,9 +276,9 @@ ahol $\epsilon \ll 1$, mondjuk $\epsilon$ körülbelül $\sqrt{\epsilon_{\text{m
 
 $$\operatorname{cond}(\boldsymbol{A}) = 1/\epsilon, \qquad \|\boldsymbol{E}\|_2 / \|\boldsymbol{A}\|_2 = \epsilon.$$
 
-A $\boldsymbol{b} = [1 \ 0 \ 0]^T$ jobb oldali vektor esetén $\|\Delta\boldsymbol{x}\|_2 / \|\boldsymbol{x}\|_2 = 0{,}5\epsilon$, tehát a megoldás relatív perturbációja körülbelül annyi, mint $\operatorname{cond}(\boldsymbol{A})$-szorosa az $\boldsymbol{A}$ relatív perturbációjának. Ennél a jobb oldalnál nem lép fel a kondíciószám négyzetre emelésének hatása, mert a maradék kicsi, és $\tan(\theta) \approx \epsilon$, így a perturbációs korlátban szereplő négyzetre emelt kondíciószámú tag lényegében elnyomódik.
+A $\boldsymbol{b} = [1 \ 0 \ 0]^T$ jobb oldali vektor esetén $\|\Delta\boldsymbol{x}\|_2 / \|\boldsymbol{x}\|_2 = 0{,}5\epsilon$, tehát a megoldás relatív perturbációja körülbelül annyi, mint $\operatorname{cond}(\boldsymbol{A})$-szorosa az $\boldsymbol{A}$ relatív perturbációjának. Ennél a jobb oldalnál nem lép fel a kondíciószám négyzetre emelésének hatása, mert a reziduum kicsi, és $\tan(\theta) \approx \epsilon$, így a perturbációs korlátban szereplő négyzetre emelt kondíciószámú tag lényegében elnyomódik.
 
-A $\boldsymbol{b} = [1 \ 0 \ 1]^T$ jobb oldali vektor esetén viszont $\|\Delta\boldsymbol{x}\|_2 / \|\boldsymbol{x}\|_2 = 0{,}5/\epsilon$, tehát a megoldás relatív perturbációja körülbelül annyi, mint $[\operatorname{cond}(\boldsymbol{A})]^2$-szerese az $\boldsymbol{A}$ relatív perturbációjának. Ennél a jobb oldalnál a maradék normája körülbelül $1$, és $\tan(\theta) \approx 1$, így a perturbációs korlátban szereplő négyzetre emelt kondíciószámú tag nem nyomódik el, és a megoldás rendkívül érzékeny. <!-- TODO: verify original "1, say around √mach" – OCR hiányos, valószínűleg "ε ≪ 1, say around √ε_mach" -->
+A $\boldsymbol{b} = [1 \ 0 \ 1]^T$ jobb oldali vektor esetén viszont $\|\Delta\boldsymbol{x}\|_2 / \|\boldsymbol{x}\|_2 = 0{,}5/\epsilon$, tehát a megoldás relatív perturbációja körülbelül annyi, mint $[\operatorname{cond}(\boldsymbol{A})]^2$-szerese az $\boldsymbol{A}$ relatív perturbációjának. Ennél a jobb oldalnál a reziduum normája körülbelül $1$, és $\tan(\theta) \approx 1$, így a perturbációs korlátban szereplő négyzetre emelt kondíciószámú tag nem nyomódik el, és a megoldás rendkívül érzékeny. <!-- TODO: verify original "1, say around √mach" – OCR hiányos, valószínűleg "ε ≪ 1, say around √ε_mach" -->
 
 # 3.4 Feladat-átalakítások
 
@@ -316,13 +316,13 @@ amely a munkapontosság erejéig szinguláris.
 
 $$\operatorname{cond}(\boldsymbol{A}^T \boldsymbol{A}) = [\operatorname{cond}(\boldsymbol{A})]^2.$$
 
-A 3.3. szakaszban láttuk, hogy a legkisebb négyzetes megoldások érzékenységében fellép a kondíciószám potenciális négyzetre emelésének hatása, ez azonban csak akkor lenne jelentős tényező, amikor a maradék nagy (vagyis az illeszkedés rossz). Sajnos a normálegyenletek akkor is elszenvedhetik a kondíciószám négyzetre emelésének hatását, amikor az illeszkedés jó és a maradék kicsi, így a számított megoldás érzékenyebbé válik, mint amennyit a mögöttes legkisebb négyzetek feladat önmagában indokolna. Ebben az értelemben a normálegyenletek módszere instabil.
+A 3.3. szakaszban láttuk, hogy a legkisebb négyzetes megoldások érzékenységében fellép a kondíciószám potenciális négyzetre emelésének hatása, ez azonban csak akkor lenne jelentős tényező, amikor a reziduum nagy (vagyis az illeszkedés rossz). Sajnos a normálegyenletek akkor is elszenvedhetik a kondíciószám négyzetre emelésének hatását, amikor az illeszkedés jó és a reziduum kicsi, így a számított megoldás érzékenyebbé válik, mint amennyit a mögöttes legkisebb négyzetek feladat önmagában indokolna. Ebben az értelemben a normálegyenletek módszere instabil.
 
 Ezek a hiányosságok nem teszik használhatatlanná a normálegyenletek módszerét, de aggodalomra adnak okot, és indokolttá teszik, hogy numerikusan robusztusabb módszereket keressünk a lineáris legkisebb négyzetek feladataira.
 
 ### 3.4.2 Kibővített rendszer
 
-Egy másik mód, ahogyan egy legkisebb négyzetek feladat négyzetes lineáris egyenletrendszerré alakítható, az, hogy beágyazzuk egy nagyobb rendszerbe. A $\boldsymbol{r}$ maradékvektor definíciója és az a követelmény, hogy a maradék merőleges legyen az $\boldsymbol{A}$ oszlopaira, együtt a következő két egyenletből álló rendszert adja:
+Egy másik mód, ahogyan egy legkisebb négyzetek feladat négyzetes lineáris egyenletrendszerré alakítható, az, hogy beágyazzuk egy nagyobb rendszerbe. A $\boldsymbol{r}$ reziduumvektor definíciója és az a követelmény, hogy a reziduum merőleges legyen az $\boldsymbol{A}$ oszlopaira, együtt a következő két egyenletből álló rendszert adja:
 
 $$\begin{array}{rcl} \boldsymbol{r} + \boldsymbol{A}\boldsymbol{x} &=& \boldsymbol{b}, \\ \boldsymbol{A}^T \boldsymbol{r} &=& \boldsymbol{0}, \end{array}$$
 
@@ -330,11 +330,11 @@ amely mátrixalakban $(m+n) \times (m+n)$-es kibővített rendszerként írható
 
 $$\begin{bmatrix} \boldsymbol{I} & \boldsymbol{A} \\ \boldsymbol{A}^T & \boldsymbol{O} \end{bmatrix} \begin{bmatrix} \boldsymbol{r} \\ \boldsymbol{x} \end{bmatrix} = \begin{bmatrix} \boldsymbol{b} \\ \boldsymbol{0} \end{bmatrix},$$
 
-amelynek megoldása a keresett $\boldsymbol{x}$ megoldást és az ahhoz tartozó $\boldsymbol{r}$ maradékot egyszerre szolgáltatja.
+amelynek megoldása a keresett $\boldsymbol{x}$ megoldást és az ahhoz tartozó $\boldsymbol{r}$ reziduumot egyszerre szolgáltatja.
 
 Első pillantásra ez a módszer nem tűnik ígéretesnek: a kibővített rendszer szimmetrikus, de nem pozitív definit, nagyobb az eredeti rendszernél, és megköveteli, hogy az $\boldsymbol{A}$ két példányát tároljuk. Ráadásul, ha pusztán a főátló mentén választunk főelemet (ami a $2 \times 2$-es blokkrendszer blokkonkénti eliminációjával egyenértékű), akkor a normálegyenleteket kapjuk vissza, amelyek potenciális numerikus gyengeségét már megfigyeltük. Az egyetlen elért előny az, hogy most más főelemkiválasztási stratégiák is rendelkezésünkre állnak, amelyek numerikus vagy más okokból hasznosak lehetnek.
 
-A kibővített rendszer mátrixának szimmetrikus indefinit (lásd a 2.5.2. szakaszt) vagy LU-felbontásában a főelemek megválasztása nyilvánvalóan a felső és az alsó blokksorokban szereplő elemek relatív nagyságától függ. A $\boldsymbol{r}$ és az $\boldsymbol{x}$ relatív skálái önkényesek, ezért egy $\alpha$ skálázási paramétert vezetünk be a maradékhoz, ami a következő új rendszert adja:
+A kibővített rendszer mátrixának szimmetrikus indefinit (lásd a 2.5.2. szakaszt) vagy LU-felbontásában a főelemek megválasztása nyilvánvalóan a felső és az alsó blokksorokban szereplő elemek relatív nagyságától függ. A $\boldsymbol{r}$ és az $\boldsymbol{x}$ relatív skálái önkényesek, ezért egy $\alpha$ skálázási paramétert vezetünk be a reziduumhoz, ami a következő új rendszert adja:
 
 $$\begin{bmatrix} \alpha \boldsymbol{I} & \boldsymbol{A} \\ \boldsymbol{A}^T & \boldsymbol{O} \end{bmatrix} \begin{bmatrix} \boldsymbol{r}/\alpha \\ \boldsymbol{x} \end{bmatrix} = \begin{bmatrix} \boldsymbol{b} \\ \boldsymbol{0} \end{bmatrix}.$$
 
@@ -364,7 +364,7 @@ Most, hogy a birtokunkban van egy olyan transzformációcsalád, amely megőrzi 
 
 $$\begin{bmatrix} \boldsymbol{R} \\ \boldsymbol{O} \end{bmatrix} \boldsymbol{x} \cong \begin{bmatrix} \boldsymbol{c}_1 \\ \boldsymbol{c}_2 \end{bmatrix},$$
 
-ahol $\boldsymbol{R}$ egy $n \times n$-es felső háromszögmátrix, és a $\boldsymbol{c}$ jobb oldali vektort is hasonlóan particionáltuk. A legkisebb négyzetek maradéka ekkor
+ahol $\boldsymbol{R}$ egy $n \times n$-es felső háromszögmátrix, és a $\boldsymbol{c}$ jobb oldali vektort is hasonlóan particionáltuk. A legkisebb négyzetek reziduuma ekkor
 
 $$\|\boldsymbol{r}\|_2^2 = \|\boldsymbol{c}_1 - \boldsymbol{R}\boldsymbol{x}\|_2^2 + \|\boldsymbol{c}_2\|_2^2.$$
 
@@ -390,13 +390,13 @@ ahol a transzformált jobb oldalt
 
 $$\boldsymbol{Q}^T \boldsymbol{b} = \begin{bmatrix} \boldsymbol{c}_1 \\ \boldsymbol{c}_2 \end{bmatrix}$$
 
-úgy particionáltuk, hogy $\boldsymbol{c}_1$ egy $n$-dimenziós vektor. Az $\boldsymbol{x}$ megoldás ekkor kielégíti az $n \times n$-es $\boldsymbol{R}\boldsymbol{x} = \boldsymbol{c}_1$ háromszögű lineáris egyenletrendszert, a minimális maradéknorma értéke pedig $\|\boldsymbol{r}\|_2 = \|\boldsymbol{c}_2\|_2$. A következő szakaszban fogjuk látni, hogyan számítható ki a QR-felbontás.
+úgy particionáltuk, hogy $\boldsymbol{c}_1$ egy $n$-dimenziós vektor. Az $\boldsymbol{x}$ megoldás ekkor kielégíti az $n \times n$-es $\boldsymbol{R}\boldsymbol{x} = \boldsymbol{c}_1$ háromszögű lineáris egyenletrendszert, a minimális reziduumnorma értéke pedig $\|\boldsymbol{r}\|_2 = \|\boldsymbol{c}_2\|_2$. A következő szakaszban fogjuk látni, hogyan számítható ki a QR-felbontás.
 
-A QR-felbontásnak a legkisebb négyzetek feladatok megoldásán kívül sok más alkalmazása is van. Ha a $\boldsymbol{Q}$-t $\boldsymbol{Q} = [\boldsymbol{Q}_1 \ \boldsymbol{Q}_2]$ alakban particionáljuk, ahol $\boldsymbol{Q}_1$ a $\boldsymbol{Q}$ első $n$ oszlopát, $\boldsymbol{Q}_2$ pedig a maradék $m - n$ oszlopot tartalmazza, akkor
+A QR-felbontásnak a legkisebb négyzetek feladatok megoldásán kívül sok más alkalmazása is van. Ha a $\boldsymbol{Q}$-t $\boldsymbol{Q} = [\boldsymbol{Q}_1 \ \boldsymbol{Q}_2]$ alakban particionáljuk, ahol $\boldsymbol{Q}_1$ a $\boldsymbol{Q}$ első $n$ oszlopát, $\boldsymbol{Q}_2$ pedig a reziduum $m - n$ oszlopot tartalmazza, akkor
 
 $$\boldsymbol{A} = \boldsymbol{Q} \begin{bmatrix} \boldsymbol{R} \\ \boldsymbol{O} \end{bmatrix} = \begin{bmatrix} \boldsymbol{Q}_1 & \boldsymbol{Q}_2 \end{bmatrix} \begin{bmatrix} \boldsymbol{R} \\ \boldsymbol{O} \end{bmatrix} = \boldsymbol{Q}_1 \boldsymbol{R}.$$
 
-Az olyan $\boldsymbol{A} = \boldsymbol{Q}_1 \boldsymbol{R}$ alakú felbontást, amelyben $\boldsymbol{Q}_1$ oszlopai ortonormáltak és $\boldsymbol{Q}_1$ mérete megegyezik $\boldsymbol{A}$-éval, $\boldsymbol{R}$ pedig négyzetes és felső háromszögű, olykor az $\boldsymbol{A}$ redukált, vagy „economy size" QR-felbontásának nevezik. Ha az $\boldsymbol{A}$ oszloprangja maximális, azaz $\boldsymbol{R}$ nemszinguláris, akkor a $\boldsymbol{Q}_1$ oszlopai a $\operatorname{span}(\boldsymbol{A})$ altér egy ortonormált bázisát alkotják, a $\boldsymbol{Q}_2$ oszlopai pedig a $\operatorname{span}(\boldsymbol{A})$ ortogonális komplementumának, azaz a $\operatorname{span}(\boldsymbol{A})^{\perp}$ altérnek – amely megegyezik az $\boldsymbol{A}^T$ nullterével, $\{\boldsymbol{z} \in \mathbb{R}^m : \boldsymbol{A}^T \boldsymbol{z} = \boldsymbol{0}\}$-val – egy ortonormált bázisát alkotják. Az ilyen ortonormált bázisok nemcsak a legkisebb négyzetek számításaiban hasznosak – amint azt a 3.2.2. szakasz végén láttuk –, hanem sajátérték-számításokban, optimalizálásban és számos további, a későbbiekben előkerülő feladatban is.
+Az olyan $\boldsymbol{A} = \boldsymbol{Q}_1 \boldsymbol{R}$ alakú felbontást, amelyben $\boldsymbol{Q}_1$ oszlopai ortonormáltak és $\boldsymbol{Q}_1$ mérete megegyezik $\boldsymbol{A}$-éval, $\boldsymbol{R}$ pedig négyzetes és felső háromszögű, olykor az $\boldsymbol{A}$ redukált, vagy „economy size" QR-felbontásának nevezik. Ha az $\boldsymbol{A}$ oszloprangja maximális, azaz $\boldsymbol{R}$ reguláris, akkor a $\boldsymbol{Q}_1$ oszlopai a $\operatorname{span}(\boldsymbol{A})$ altér egy ortonormált bázisát alkotják, a $\boldsymbol{Q}_2$ oszlopai pedig a $\operatorname{span}(\boldsymbol{A})$ ortogonális komplementumának, azaz a $\operatorname{span}(\boldsymbol{A})^{\perp}$ altérnek – amely megegyezik az $\boldsymbol{A}^T$ nullterével, $\{\boldsymbol{z} \in \mathbb{R}^m : \boldsymbol{A}^T \boldsymbol{z} = \boldsymbol{0}\}$-val – egy ortonormált bázisát alkotják. Az ilyen ortonormált bázisok nemcsak a legkisebb négyzetek számításaiban hasznosak – amint azt a 3.2.2. szakasz végén láttuk –, hanem sajátérték-számításokban, optimalizálásban és számos további, a későbbiekben előkerülő feladatban is.
 
 # 3.5 Ortogonalizációs módszerek
 
@@ -493,7 +493,7 @@ for k = 1 to min(n, m − 1)                                { ciklus az oszlopok
         continue with next k                                átugrása, ha az
                                                             már nulla }
     for j = k to n                                        { transzformáció
-        γj = vkᵀ aj                                         alkalmazása a maradék
+        γj = vkᵀ aj                                         alkalmazása a reziduum
         aj = aj − (2γj/βk) vk                               részmátrixra }
     end
 end
@@ -541,7 +541,7 @@ $$\boldsymbol{H}_3 \boldsymbol{H}_2 \boldsymbol{H}_1 \boldsymbol{A} = \begin{bma
 
 $$\boldsymbol{H}_3 \boldsymbol{H}_2 \boldsymbol{H}_1 \boldsymbol{b} = \begin{bmatrix} 376 \\ -1200 \\ -3417 \\ 5 \\ 3 \\ 1 \end{bmatrix} = \boldsymbol{Q}^T \boldsymbol{b} = \begin{bmatrix} \boldsymbol{c}_1 \\ \boldsymbol{c}_2 \end{bmatrix}.$$
 
-Az $\boldsymbol{R}\boldsymbol{x} = \boldsymbol{c}_1$ felső háromszögű rendszert mostantól visszahelyettesítéssel oldhatjuk meg, és az $\boldsymbol{x} = [1236, 1943, 2416]^T$ megoldást kapjuk. Mind a megoldás, mind a minimális maradék négyzetösszege – $\|\boldsymbol{r}\|_2^2 = \|\boldsymbol{c}_2\|_2^2 = 35$ – megegyezik a 3.3. példában kapott értékekkel.
+Az $\boldsymbol{R}\boldsymbol{x} = \boldsymbol{c}_1$ felső háromszögű rendszert mostantól visszahelyettesítéssel oldhatjuk meg, és az $\boldsymbol{x} = [1236, 1943, 2416]^T$ megoldást kapjuk. Mind a megoldás, mind a minimális reziduum négyzetösszege – $\|\boldsymbol{r}\|_2^2 = \|\boldsymbol{c}_2\|_2^2 = 35$ – megegyezik a 3.3. példában kapott értékekkel.
 
 #### 3.5.2 Givens-forgatások
 
@@ -647,7 +647,7 @@ amelynek megoldása a normálegyenleten keresztül
 
 $$\gamma = \left(\boldsymbol{q}_1^T \boldsymbol{q}_1\right)^{-1} \left(\boldsymbol{q}_1^T \boldsymbol{a}_2\right) = \boldsymbol{q}_1^T \boldsymbol{a}_2.$$
 
-A kívánt $\boldsymbol{q}_2$ vektort tehát úgy kapjuk meg, hogy normáljuk az $\boldsymbol{r} = \boldsymbol{a}_2 - (\boldsymbol{q}_1^T \boldsymbol{a}_2) \boldsymbol{q}_1$ maradékvektort ehhez az $m \times 1$ méretű legkisebb négyzetek feladathoz.
+A kívánt $\boldsymbol{q}_2$ vektort tehát úgy kapjuk meg, hogy normáljuk az $\boldsymbol{r} = \boldsymbol{a}_2 - (\boldsymbol{q}_1^T \boldsymbol{a}_2) \boldsymbol{q}_1$ reziduumvektort ehhez az $m \times 1$ méretű legkisebb négyzetek feladathoz.
 
 ![](_page_26_Figure_11.jpeg)
 
@@ -754,9 +754,9 @@ Az $\boldsymbol{R}\boldsymbol{x} = \boldsymbol{c}_1$ felső háromszögű rendsz
 
 ### 3.5.4 Ranghiány
 
-Eddig feltettük, hogy $\boldsymbol{A}$ teljes oszloprangú, azaz $\operatorname{rank}(\boldsymbol{A}) = n$. Ha ez nem teljesül, azaz ha $\boldsymbol{A}$-nak lineárisan összefüggő oszlopai vannak, akkor a QR-felbontás még mindig létezik, de a felső háromszögű $\boldsymbol{R}$ faktor szinguláris (akárcsak az $\boldsymbol{A}^T \boldsymbol{A}$ mátrix). Így sok $\boldsymbol{x}$ vektor adja ugyanazt a minimális maradéknormát, és a legkisebb négyzetek megoldás nem egyértelmű. Ez a helyzet rendszerint rosszul megtervezett kísérlet, hiányos adatok, vagy nem megfelelő, illetve redundáns modell következménye. Ezért a feladatot valószínűleg át kell fogalmazni vagy újra kell gondolni.
+Eddig feltettük, hogy $\boldsymbol{A}$ teljes oszloprangú, azaz $\operatorname{rank}(\boldsymbol{A}) = n$. Ha ez nem teljesül, azaz ha $\boldsymbol{A}$-nak lineárisan összefüggő oszlopai vannak, akkor a QR-felbontás még mindig létezik, de a felső háromszögű $\boldsymbol{R}$ faktor szinguláris (akárcsak az $\boldsymbol{A}^T \boldsymbol{A}$ mátrix). Így sok $\boldsymbol{x}$ vektor adja ugyanazt a minimális reziduumnormát, és a legkisebb négyzetek megoldás nem egyértelmű. Ez a helyzet rendszerint rosszul megtervezett kísérlet, hiányos adatok, vagy nem megfelelő, illetve redundáns modell következménye. Ezért a feladatot valószínűleg át kell fogalmazni vagy újra kell gondolni.
 
-Ha mégis ragaszkodunk a továbblépéshez, bevett eljárás a minimális maradékot adó megoldások közül a legkisebb euklideszi normájú $\boldsymbol{x}$ kiválasztása. Ez kiszámítható oszloponkénti főelemkiválasztással végzett QR-felbontással, amit alább tárgyalunk, vagy szingulárisérték-felbontással (SVD), amit a 3.6. szakaszban fogunk tárgyalni. Megjegyezzük, hogy a ranghiány ilyen kezelése lehetővé teszi az alulhatározott – $m < n$ – feladatok kezelését is, mert ebben az esetben $\boldsymbol{A}$ oszlopai szükségképpen lineárisan összefüggők.
+Ha mégis ragaszkodunk a továbblépéshez, bevett eljárás a minimális reziduumot adó megoldások közül a legkisebb euklideszi normájú $\boldsymbol{x}$ kiválasztása. Ez kiszámítható oszloponkénti főelemkiválasztással végzett QR-felbontással, amit alább tárgyalunk, vagy szingulárisérték-felbontással (SVD), amit a 3.6. szakaszban fogunk tárgyalni. Megjegyezzük, hogy a ranghiány ilyen kezelése lehetővé teszi az alulhatározott – $m < n$ – feladatok kezelését is, mert ebben az esetben $\boldsymbol{A}$ oszlopai szükségképpen lineárisan összefüggők.
 
 **3.12. Példa. Ranghiány.** Tegyük fel, hogy a 3.1. példában szereplő földmérő csak az egyes dombpárok egymáshoz viszonyított relatív magasságát mérte meg, de egyik domb magasságát sem mérte meg közvetlenül a referenciaponthoz képest, így a $3 \times 3$-as lineáris egyenletrendszerünk:
 
@@ -786,7 +786,7 @@ Ha $\operatorname{rank}(\boldsymbol{A}) = k < n$, akkor az oszloponkénti főele
 
 $$\boldsymbol{Q}^T \boldsymbol{A} \boldsymbol{P} = \begin{bmatrix} \boldsymbol{R} & \boldsymbol{S} \\ \boldsymbol{O} & \boldsymbol{O} \end{bmatrix},$$
 
-ahol $\boldsymbol{R}$ $k \times k$-as felső háromszögű és nemszinguláris, $\boldsymbol{P}$ pedig az oszlopcseréket végrehajtó permutációs mátrix. Ezen a ponton az $\boldsymbol{A}\boldsymbol{x} \cong \boldsymbol{b}$ legkisebb négyzetek feladat egy bázismegoldása (azaz egy legfeljebb $k$ darab nem nulla komponenssel rendelkező megoldás) kiszámítható úgy, hogy megoldjuk az $\boldsymbol{R}\boldsymbol{z} = \boldsymbol{c}_1$ háromszögű rendszert, ahol $\boldsymbol{c}_1$ a $\boldsymbol{Q}^T \boldsymbol{b}$ vektor első $k$ komponenséből álló vektor, majd vesszük
+ahol $\boldsymbol{R}$ $k \times k$-as felső háromszögű és reguláris, $\boldsymbol{P}$ pedig az oszlopcseréket végrehajtó permutációs mátrix. Ezen a ponton az $\boldsymbol{A}\boldsymbol{x} \cong \boldsymbol{b}$ legkisebb négyzetek feladat egy bázismegoldása (azaz egy legfeljebb $k$ darab nem nulla komponenssel rendelkező megoldás) kiszámítható úgy, hogy megoldjuk az $\boldsymbol{R}\boldsymbol{z} = \boldsymbol{c}_1$ háromszögű rendszert, ahol $\boldsymbol{c}_1$ a $\boldsymbol{Q}^T \boldsymbol{b}$ vektor első $k$ komponenséből álló vektor, majd vesszük
 
 $$\boldsymbol{x} = \boldsymbol{P} \begin{bmatrix} \boldsymbol{z} \\ \boldsymbol{0} \end{bmatrix}.$$
 
@@ -824,7 +824,7 @@ Az SVD különösen rugalmas módszert nyújt tetszőleges alakú és rangú lin
 
 $$\boldsymbol{A} = \boldsymbol{U} \boldsymbol{\Sigma} \boldsymbol{V}^T = \begin{bmatrix} \boldsymbol{U}_1 & \boldsymbol{U}_2 \end{bmatrix} \begin{bmatrix} \boldsymbol{\Sigma}_1 \\ \boldsymbol{O} \end{bmatrix} \boldsymbol{V}^T = \boldsymbol{U}_1 \boldsymbol{\Sigma}_1 \boldsymbol{V}^T,$$
 
-ahol az $\boldsymbol{U}_1$ egy $m \times n$-es, a $\boldsymbol{\Sigma}_1$ pedig egy $n \times n$-es, nemszinguláris mátrix; ez az $\boldsymbol{A}$ redukált, „takarékos méretű” SVD-je. Az $\boldsymbol{A}\boldsymbol{x} \cong \boldsymbol{b}$ legkisebb négyzetek feladat megoldását ekkor a
+ahol az $\boldsymbol{U}_1$ egy $m \times n$-es, a $\boldsymbol{\Sigma}_1$ pedig egy $n \times n$-es, reguláris mátrix; ez az $\boldsymbol{A}$ redukált, „takarékos méretű” SVD-je. Az $\boldsymbol{A}\boldsymbol{x} \cong \boldsymbol{b}$ legkisebb négyzetek feladat megoldását ekkor a
 
 $$\boldsymbol{x} = \boldsymbol{V} \boldsymbol{\Sigma}_1^{-1} \boldsymbol{U}_1^T \boldsymbol{b}$$
 
@@ -878,7 +878,7 @@ Tehát körülbelül $10^{-4}$ vagy nagyobb küszöb mellett a rangot egynek nyi
 
 $$\boldsymbol{A}^+ = \boldsymbol{V} \boldsymbol{\Sigma}^+ \boldsymbol{U}^T$$
 
-összefüggés adja. Figyeljük meg, hogy a pszeudoinverz mindig létezik, függetlenül attól, hogy a mátrix négyzetes-e, vagy teljes rangú-e. Ha $\boldsymbol{A}$ négyzetes és nemszinguláris, akkor a pszeudoinverz megegyezik a szokásos $\boldsymbol{A}^{-1}$ mátrixinverzzel. Ha $\boldsymbol{A}$ teljes oszloprangú, akkor ez a definíció egybeesik a 3.3. szakaszban adottal (lásd a 3.33. feladatot). Minden esetben az $\boldsymbol{A}\boldsymbol{x} \cong \boldsymbol{b}$ legkisebb négyzetek feladat minimális euklideszi normájú megoldását $\boldsymbol{A}^+\boldsymbol{b}$ adja.
+összefüggés adja. Figyeljük meg, hogy a pszeudoinverz mindig létezik, függetlenül attól, hogy a mátrix négyzetes-e, vagy teljes rangú-e. Ha $\boldsymbol{A}$ négyzetes és reguláris, akkor a pszeudoinverz megegyezik a szokásos $\boldsymbol{A}^{-1}$ mátrixinverzzel. Ha $\boldsymbol{A}$ teljes oszloprangú, akkor ez a definíció egybeesik a 3.3. szakaszban adottal (lásd a 3.33. feladatot). Minden esetben az $\boldsymbol{A}\boldsymbol{x} \cong \boldsymbol{b}$ legkisebb négyzetek feladat minimális euklideszi normájú megoldását $\boldsymbol{A}^+\boldsymbol{b}$ adja.
 
 **3.19. Példa. Pszeudoinverz.** A 3.16. példában látott SVD-ből azt látjuk, hogy a 3.12. példában szereplő $\boldsymbol{A}$ mátrix pszeudoinverze:
 
@@ -992,10 +992,10 @@ A szingulárisérték-felbontást egymástól függetlenül Beltrami fogalmazta 
 
 - **3.1.** Igaz vagy hamis: Egy lineáris legkisebb négyzetes feladatnak mindig van megoldása.
 - **3.2.** Igaz vagy hamis: Egyenes illesztése adatpontok halmazához lineáris legkisebb négyzetes feladat, míg másodfokú polinom illesztése ugyanezen adatokhoz nemlineáris legkisebb négyzetes feladat.
-- **3.3.** Igaz vagy hamis: Az $\boldsymbol{A}\boldsymbol{x} \cong \boldsymbol{b}$ lineáris legkisebb négyzetes feladat megoldásában az $\boldsymbol{r} = \boldsymbol{b} - \boldsymbol{A}\boldsymbol{x}$ maradékvektor ortogonális a $\operatorname{span}(\boldsymbol{A})$ altérre.
-- **3.4.** Igaz vagy hamis: Egy túlhatározott $\boldsymbol{A}\boldsymbol{x} \cong \boldsymbol{b}$ lineáris legkisebb négyzetes feladatnak mindig van olyan egyértelmű $\boldsymbol{x}$ megoldása, amely minimalizálja az $\boldsymbol{r} = \boldsymbol{b} - \boldsymbol{A}\boldsymbol{x}$ maradékvektor euklideszi normáját.
-- **3.5.** Igaz vagy hamis: Egy $\boldsymbol{A}\boldsymbol{x} \cong \boldsymbol{b}$ lineáris legkisebb négyzetes feladat megoldásakor, ha a $\boldsymbol{b}$ vektor a $\operatorname{span}(\boldsymbol{A})$-ban fekszik, akkor a maradék $\boldsymbol{0}$.
-- **3.6.** Igaz vagy hamis: Egy $\boldsymbol{A}\boldsymbol{x} \cong \boldsymbol{b}$ lineáris legkisebb négyzetes feladat megoldásakor, ha a maradék $\boldsymbol{0}$, akkor az $\boldsymbol{x}$ megoldás szükségképpen egyértelmű.
+- **3.3.** Igaz vagy hamis: Az $\boldsymbol{A}\boldsymbol{x} \cong \boldsymbol{b}$ lineáris legkisebb négyzetes feladat megoldásában az $\boldsymbol{r} = \boldsymbol{b} - \boldsymbol{A}\boldsymbol{x}$ reziduumvektor ortogonális a $\operatorname{span}(\boldsymbol{A})$ altérre.
+- **3.4.** Igaz vagy hamis: Egy túlhatározott $\boldsymbol{A}\boldsymbol{x} \cong \boldsymbol{b}$ lineáris legkisebb négyzetes feladatnak mindig van olyan egyértelmű $\boldsymbol{x}$ megoldása, amely minimalizálja az $\boldsymbol{r} = \boldsymbol{b} - \boldsymbol{A}\boldsymbol{x}$ reziduumvektor euklideszi normáját.
+- **3.5.** Igaz vagy hamis: Egy $\boldsymbol{A}\boldsymbol{x} \cong \boldsymbol{b}$ lineáris legkisebb négyzetes feladat megoldásakor, ha a $\boldsymbol{b}$ vektor a $\operatorname{span}(\boldsymbol{A})$-ban fekszik, akkor a reziduum $\boldsymbol{0}$.
+- **3.6.** Igaz vagy hamis: Egy $\boldsymbol{A}\boldsymbol{x} \cong \boldsymbol{b}$ lineáris legkisebb négyzetes feladat megoldásakor, ha a reziduum $\boldsymbol{0}$, akkor az $\boldsymbol{x}$ megoldás szükségképpen egyértelmű.
 - **3.7.** Igaz vagy hamis: Egy Householder-transzformáció és egy Givens-forgatás szorzata mindig ortogonális mátrix.
 - **3.8.** Igaz vagy hamis: Ha az $n \times n$-es $\boldsymbol{Q}$ mátrix egy Householder-transzformáció, és $\boldsymbol{x}$ egy tetszőleges $n$-dimenziós vektor, akkor a $\boldsymbol{Q}\boldsymbol{x}$ vektor utolsó $k$ komponense nulla valamely $k < n$-re.
 - **3.9.** Igaz vagy hamis: Az ortogonális felbontáson alapuló módszerek általában számítási szempontból költségesebbek, mint a normálegyenleteken alapuló módszerek a lineáris legkisebb négyzetes feladatok megoldására.
@@ -1005,8 +1005,8 @@ A szingulárisérték-felbontást egymástól függetlenül Beltrami fogalmazta 
 - **3.13.** Egy túlhatározott lineáris legkisebb négyzetes feladatban, ahol a modellfüggvény $f(t, \boldsymbol{x}) = x_1 \varphi_1(t) + x_2 \varphi_2(t) + x_3 \varphi_3(t)$, mi lesz a kapott legkisebb négyzetes $\boldsymbol{A}$ mátrix rangja, ha $\varphi_1(t) = 1$, $\varphi_2(t) = t$ és $\varphi_3(t) = 1 - t$?
 - **3.14.** Mi az $\boldsymbol{A}\boldsymbol{x} \cong \boldsymbol{b}$ lineáris legkisebb négyzetes feladat normálegyenleteinek rendszere?
 - **3.15.** Sorolj fel két módot, amelyeken a normálegyenletek használata a lineáris legkisebb négyzetes feladatok megoldására a numerikus pontosság elvesztésétől szenvedhet.
-- **3.16.** Legyen $\boldsymbol{A}$ egy $m \times n$-es mátrix. Milyen feltételek mellett lesz az $\boldsymbol{A}^T \boldsymbol{A}$ mátrix (a) szimmetrikus? (b) nemszinguláris? (c) pozitív definit?
-- **3.17.** Egy $m \times n$-es $\boldsymbol{A}$ mátrix ($m > n$) alábbi tulajdonságai közül melyek jelzik, hogy az $\boldsymbol{A}\boldsymbol{x} \cong \boldsymbol{b}$ legkisebb négyzetes feladat minimális maradékú megoldása nem egyértelmű? (a) $\boldsymbol{A}$ oszlopai lineárisan összefüggők. (b) $\boldsymbol{A}$ sorai lineárisan összefüggők. (c) Az $\boldsymbol{A}^T \boldsymbol{A}$ mátrix szinguláris.
+- **3.16.** Legyen $\boldsymbol{A}$ egy $m \times n$-es mátrix. Milyen feltételek mellett lesz az $\boldsymbol{A}^T \boldsymbol{A}$ mátrix (a) szimmetrikus? (b) reguláris? (c) pozitív definit?
+- **3.17.** Egy $m \times n$-es $\boldsymbol{A}$ mátrix ($m > n$) alábbi tulajdonságai közül melyek jelzik, hogy az $\boldsymbol{A}\boldsymbol{x} \cong \boldsymbol{b}$ legkisebb négyzetes feladat minimális reziduumú megoldása nem egyértelmű? (a) $\boldsymbol{A}$ oszlopai lineárisan összefüggők. (b) $\boldsymbol{A}$ sorai lineárisan összefüggők. (c) Az $\boldsymbol{A}^T \boldsymbol{A}$ mátrix szinguláris.
 - **3.18.** (a) Használható-e a főelemkiválasztással végzett Gauss-elimináció arra, hogy egy téglalap alakú $m \times n$-es $\boldsymbol{A}$ mátrix $\boldsymbol{L}\boldsymbol{U}$-felbontását kiszámítsuk, ahol $\boldsymbol{L}$ egy $m \times k$-s mátrix, amelynek a főátló feletti összes eleme nulla, $\boldsymbol{U}$ egy $k \times n$-es mátrix, amelynek a főátló alatti összes eleme nulla, és $k = \min\{m, n\}$? (b) Ha ez lehetséges volna, megoldási módot adna-e egy $\boldsymbol{A}\boldsymbol{x} \cong \boldsymbol{b}$ túlhatározott legkisebb négyzetes feladatra, ahol $m > n$? Miért?
 - **3.19.** (a) Mit jelent az, hogy két $\boldsymbol{x}$ és $\boldsymbol{y}$ vektor ortogonális egymásra? (b) Bizonyítsd be, hogy ha két nem nulla vektor ortogonális egymásra, akkor szükségképpen lineárisan függetlenek is. (c) Adj példát $\mathbb{R}^2$-ben két olyan nem nulla vektorra, amelyek ortogonálisak egymásra. (d) Adj példát $\mathbb{R}^2$-ben két olyan nem nulla vektorra, amelyek nem ortogonálisak egymásra. (e) Sorolj fel két módot, ahogyan az ortogonalitás fontos a lineáris legkisebb négyzetes feladatok kontextusában.
 - **3.20.** Az euklideszi $n$-dimenziós térben tranzitív reláció-e az ortogonalitás? Azaz ha $\boldsymbol{x}$ ortogonális $\boldsymbol{y}$-ra, és $\boldsymbol{y}$ ortogonális $\boldsymbol{z}$-re, akkor $\boldsymbol{x}$ szükségképpen ortogonális-e $\boldsymbol{z}$-re?
@@ -1069,11 +1069,11 @@ $$\begin{array}{c|ccc} t & 10 & 15 & 20 \\ \hline y & 11{,}60 & 11{,}85 & 12{,}2
 
 $$\boldsymbol{A} = \begin{bmatrix} 1 & 0 \\ 1 & 1 \\ 1 & 2 \\ 1 & 3 \end{bmatrix}.$$
 
-Legyen $\boldsymbol{r} = \boldsymbol{b} - \boldsymbol{A}\boldsymbol{x}$ a hozzá tartozó maradékvektor. Az alábbi három vektor közül melyik lehet $\boldsymbol{r}$ lehetséges értéke? Miért?
+Legyen $\boldsymbol{r} = \boldsymbol{b} - \boldsymbol{A}\boldsymbol{x}$ a hozzá tartozó reziduumvektor. Az alábbi három vektor közül melyik lehet $\boldsymbol{r}$ lehetséges értéke? Miért?
 
 $$(a)\ \begin{bmatrix} 1 \\ 1 \\ 1 \\ 1 \end{bmatrix} \qquad (b)\ \begin{bmatrix} -1 \\ -1 \\ 1 \\ 1 \end{bmatrix} \qquad (c)\ \begin{bmatrix} -1 \\ 1 \\ 1 \\ -1 \end{bmatrix}$$
 
-- **3.6.** (a) Mi a minimális maradékvektor euklideszi normája az alábbi lineáris legkisebb négyzetes feladat esetén?
+- **3.6.** (a) Mi a minimális reziduumvektor euklideszi normája az alábbi lineáris legkisebb négyzetes feladat esetén?
 
 $$\begin{bmatrix} 1 & 1 \\ 0 & 1 \\ 0 & 0 \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \end{bmatrix} \cong \begin{bmatrix} 2 \\ 1 \\ 1 \end{bmatrix}$$
 
@@ -1088,7 +1088,7 @@ $$\begin{bmatrix} 1 & 1 \\ 0 & 1 \\ 0 & 0 \end{bmatrix} \begin{bmatrix} x_1 \\ x
 - **3.10.** Legyen $\boldsymbol{B}$ egy $n \times n$-es mátrix, és tegyük fel, hogy $\boldsymbol{B}$ egyszerre ortogonális és háromszögmátrix.
 - (a) Bizonyítsd be, hogy $\boldsymbol{B}$-nek diagonálisnak kell lennie!
 - (b) Melyek $\boldsymbol{B}$ főátlóbeli elemei?
-- (c) Legyen $\boldsymbol{A}$ egy $n \times n$-es nemszinguláris mátrix. Az (a) és (b) részek felhasználásával bizonyítsd be, hogy $\boldsymbol{A}$ QR-felbontása egyértelmű az $\boldsymbol{R}$ főátlóbeli elemeinek előjelétől eltekintve! Konkrétabban, léteznek olyan egyértelmű $\boldsymbol{Q}$ és $\boldsymbol{R}$ mátrixok, amelyekre $\boldsymbol{Q}$ ortogonális, $\boldsymbol{R}$ felső háromszögmátrix pozitív elemekkel a főátlóban, és $\boldsymbol{A} = \boldsymbol{Q}\boldsymbol{R}$.
+- (c) Legyen $\boldsymbol{A}$ egy $n \times n$-es reguláris mátrix. Az (a) és (b) részek felhasználásával bizonyítsd be, hogy $\boldsymbol{A}$ QR-felbontása egyértelmű az $\boldsymbol{R}$ főátlóbeli elemeinek előjelétől eltekintve! Konkrétabban, léteznek olyan egyértelmű $\boldsymbol{Q}$ és $\boldsymbol{R}$ mátrixok, amelyekre $\boldsymbol{Q}$ ortogonális, $\boldsymbol{R}$ felső háromszögmátrix pozitív elemekkel a főátlóban, és $\boldsymbol{A} = \boldsymbol{Q}\boldsymbol{R}$.
 
 - **3.11.** Tegyük fel, hogy a
 
@@ -1239,7 +1239,7 @@ képlet adja, ahol a $\sigma_i$, $\boldsymbol{u}_i$ és $\boldsymbol{v}_i$ az $\
 - (d) $(\boldsymbol{A}^{+}\boldsymbol{A})^T = \boldsymbol{A}^{+}\boldsymbol{A}$.
 
 - **3.33.** Bizonyítsd be, hogy egy $m \times n$-es $\boldsymbol{A}$ mátrix $\boldsymbol{A}^{+}$ pszeudoinverze – ahogyan azt a 3.6.1. szakaszban az SVD segítségével definiáltuk – az alábbi speciális esetek mindegyikében a megadott értéket veszi fel.
-- (a) Ha $m = n$ és $\boldsymbol{A}$ nemszinguláris, akkor $\boldsymbol{A}^{+} = \boldsymbol{A}^{-1}$.
+- (a) Ha $m = n$ és $\boldsymbol{A}$ reguláris, akkor $\boldsymbol{A}^{+} = \boldsymbol{A}^{-1}$.
 - (b) Ha $m > n$ és $\boldsymbol{A}$ rangja $n$, akkor $\boldsymbol{A}^{+} = (\boldsymbol{A}^T \boldsymbol{A})^{-1} \boldsymbol{A}^T$.
 - (c) Ha $m < n$ és $\boldsymbol{A}$ rangja $m$, akkor $\boldsymbol{A}^{+} = \boldsymbol{A}^T (\boldsymbol{A}\boldsymbol{A}^T)^{-1}$.
 
@@ -1311,11 +1311,11 @@ A pályaparaméterek értékeinek kinyomtatása mellett ábrázold a kapott pál
 - (f) Perturbáld az input adatokat enyhén úgy, hogy minden adatpont minden koordinátájához adsz egy $[-0{,}005, 0{,}005]$ intervallumon egyenletes eloszlású véletlen számot (lásd a 13.5. szakaszt)! Számítsd ki az új legkisebb négyzetes mátrix szingulárisérték-felbontását, és oldd meg a legkisebb négyzetes feladatot a perturbált adatokkal az (e) résznek megfelelően! Hasonlítsd össze a paraméterek új értékeit a korábban kiszámítottakkal minden $k$-ra! Milyen hatással van ez a különbség a pályák ábrájára? Meg tudod-e magyarázni ezt a viselkedést? Melyik megoldást tartanád jobbnak: azt, amelyik szorosabban illeszkedik az adatokra, vagy azt, amelyik kevésbé érzékeny az adatok kis perturbációira? Miért?
 - (g) Az egyszerűség kedvéért közönséges legkisebb négyzeteket használtunk ebben a feladatban, valójában azonban minden adat ugyanúgy ki van téve a megfigyelési hibáknak (valóban, $x$ az egyenlet mindkét oldalán megjelenik), ami kérdésessé teszi a közönséges legkisebb négyzetek alkalmazhatóságát. Fogalmazd át ezt a feladatot teljes legkisebb négyzetes feladattá, és oldd meg az utóbbit a szingulárisérték-felbontással, ahogy a 3.6.1. szakaszban leírtuk!
 
-- **3.6.** Írj rutint egy tetszőleges $m \times n$-es mátrix pszeudoinverzének kiszámítására! Hívhatsz könyvtári rutint a szingulárisérték-felbontás kiszámítására, majd a kimenete alapján számítsd ki a pszeudoinverzet (lásd a 3.6.1. szakaszt)! Vedd figyelembe a viszonylag kis szinguláris értékek nullának nyilvánításához használt tolerancia alkalmazását. Teszteld a rutinodat szinguláris és nemszinguláris mátrixokon egyaránt! Az utóbbi esetben természetesen az eredményeidnek egyezniük kell a standard mátrixinvertálás eredményeivel. Mi történik, ha a mátrix nemszinguláris, de súlyosan rosszul kondicionált (pl. egy Hilbert-mátrix)?
+- **3.6.** Írj rutint egy tetszőleges $m \times n$-es mátrix pszeudoinverzének kiszámítására! Hívhatsz könyvtári rutint a szingulárisérték-felbontás kiszámítására, majd a kimenete alapján számítsd ki a pszeudoinverzet (lásd a 3.6.1. szakaszt)! Vedd figyelembe a viszonylag kis szinguláris értékek nullának nyilvánításához használt tolerancia alkalmazását. Teszteld a rutinodat szinguláris és reguláris mátrixokon egyaránt! Az utóbbi esetben természetesen az eredményeidnek egyezniük kell a standard mátrixinvertálás eredményeivel. Mi történik, ha a mátrix reguláris, de súlyosan rosszul kondicionált (pl. egy Hilbert-mátrix)?
 
 - **3.7.** Írj rutint egy tetszőleges, esetlegesen ranghiányos $\boldsymbol{A}\boldsymbol{x} \cong \boldsymbol{b}$ lineáris legkisebb négyzetes feladat megoldására a szingulárisérték-felbontás segítségével! Hívhatsz könyvtári rutint az SVD kiszámítására, majd a kimenete alapján számítsd ki a legkisebb négyzetes megoldást (lásd a 3.6. szakaszt)! A rutinod bemenetének tartalmaznia kell az $\boldsymbol{A}$ mátrixot, a $\boldsymbol{b}$ jobb oldali vektort és egy toleranciát az $\boldsymbol{A}$ numerikus rangjának meghatározásához. Teszteld a rutinodat a fejezet egyéb számítógépes feladataiban szereplő lineáris legkisebb négyzetes feladatok némelyikén!
 
-- **3.8.** Annak bemutatására, hogy a normálegyenletek módszere és a QR-felbontás eredményei numerikusan hogyan térhetnek el, olyan legkisebb négyzetes feladatra van szükségünk, amely rosszul kondicionált és emellett kis maradékkal rendelkezik. Ilyen feladatot a következőképpen generálhatunk. $n-1$-edfokú polinomot,
+- **3.8.** Annak bemutatására, hogy a normálegyenletek módszere és a QR-felbontás eredményei numerikusan hogyan térhetnek el, olyan legkisebb négyzetes feladatra van szükségünk, amely rosszul kondicionált és emellett kis reziduummal rendelkezik. Ilyen feladatot a következőképpen generálhatunk. $n-1$-edfokú polinomot,
 
 $$p_{n-1}(t) = x_1 + x_2 t + x_3 t^2 + \cdots + x_n t^{n-1},$$
 
