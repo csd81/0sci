@@ -83,11 +83,11 @@ megoldás bármely $\gamma$ valós számra.
 
 ## 2.3 Érzékenység és kondicionáltság
 
-Miután megfogalmaztuk az $Ax = b$ lineáris egyenletrendszer megoldásának létezésére és egyértelműségére vonatkozó feltételeket, most az $x$ megoldás érzékenységét vizsgáljuk a bemeneti adatok perturbációival szemben, amelyek ebben a feladatban az $A$ mátrix és a $b$ jobb oldali vektor. Az ilyen perturbációk méréséhez szükségünk van a vektorok és mátrixok „méretének" valamilyen fogalmára. A nagyság, abszolút érték vagy modulus skaláris fogalma általánosítható a vektorok és mátrixok normáinak fogalmára.
+Miután megfogalmaztuk az $\boldsymbol{A}\boldsymbol{x} = \boldsymbol{b}$ lineáris egyenletrendszer megoldásának létezésére és egyértelműségére vonatkozó feltételeket, most az $\boldsymbol{x}$ megoldás érzékenységét vizsgáljuk a bemeneti adatok perturbációival szemben, amelyek ebben a feladatban az $\boldsymbol{A}$ mátrix és a $\boldsymbol{b}$ jobb oldali vektor. Az ilyen perturbációk méréséhez szükségünk van a vektorok és mátrixok „méretének" valamilyen fogalmára. A nagyság, abszolút érték vagy modulus skaláris fogalma általánosítható a vektorok és mátrixok normáinak fogalmára.
 
 ### 2.3.1 Vektornormák
 
-Bár általánosabb definíció is lehetséges, a továbbiakban használt vektornormák mind a $p$-normák speciális esetei, amelyeket egy $p > 0$ egész szám és egy $n$-dimenziós $x$ vektor esetén a következőképpen definiálunk:
+Bár általánosabb definíció is lehetséges, a továbbiakban használt vektornormák mind a $p$-normák speciális esetei, amelyeket egy $p \ge 1$ szám és egy $n$-dimenziós $\boldsymbol{x}$ vektor esetén a következőképpen definiálunk:
 
 $$\|\boldsymbol{x}\|_p = \left(\sum_{i=1}^n |x_i|^p\right)^{1/p}.$$
 
@@ -95,7 +95,7 @@ Fontos speciális esetek:
 
 - 1-norma:
 
-$$\|x\|_1 = \sum_{i=1}^n |x_i|,$$
+$$\|\boldsymbol{x}\|_1 = \sum_{i=1}^n |x_i|,$$
 
 amelyet néha Manhattan-normának is neveznek, mivel két dimenzióban ez két pont „háztömbökben" mért távolságának felel meg.
 
@@ -105,15 +105,15 @@ $$\|\boldsymbol{x}\|_2 = \left(\sum_{i=1}^n |x_i|^2\right)^{1/2},$$
 
 amely az euklideszi térben megszokott távolságfogalomnak felel meg, ezért euklideszi normának is nevezzük.
 
-- $\infty$-norma:
+- $\infty$-norma (maximum norma):
 
 $$\|\boldsymbol{x}\|_{\infty} = \max_{1 \le i \le n} |x_i|,$$
 
 amely $p \to \infty$ határesetként értelmezhető.
 
-Ezek a normák kvalitatívan mind hasonló eredményeket adnak, de bizonyos körülmények között egy adott norma a legkönnyebben kezelhető analitikusan vagy számítástechnikailag. A lineáris egyenletrendszerek megoldásainak érzékenységi vizsgálatához általában az 1-normát vagy az $\infty$-normát használjuk. A 2-normát később más kontextusokban fogjuk kiterjedten alkalmazni. E normák közötti különbségeket $\mathbb{R}^2$-ben a 2.2. ábra szemlélteti, amely az egységgömböt, azaz az $\{x : \|x\|_p = 1\}$ halmazt mutatja $p = 1, 2, \infty$ esetén. (Megjegyzendő, hogy az egységgömb – amelyet két dimenzióban pontosabb egységkörnek nevezni – csak a 2-normában valóban „kerek", innen kapta a nevét.) Egy vektor normája egyszerűen az a tényező, amellyel a megfelelő egységgömböt ki kell tágítani vagy össze kell zsugorítani ahhoz, hogy az a vektort magában foglalja.
+Ezek a normák kvalitatívan mind hasonló eredményeket adnak, de bizonyos körülmények között egy adott norma kezelhető a legkönnyebben analitikusan vagy számítási szempontból. A lineáris egyenletrendszerek megoldásainak érzékenységi vizsgálatához általában az 1-normát vagy az $\infty$-normát használjuk. A 2-normát később, más kontextusokban fogjuk kiterjedten alkalmazni. E normák közötti különbségeket $\mathbb{R}^2$-ben a 2.2. ábra szemlélteti, amely az egységgömböt, azaz az $\{\boldsymbol{x} : \|\boldsymbol{x}\|_p = 1\}$ halmazt mutatja $p = 1, 2, \infty$ esetén. (Megjegyzendő, hogy az egységgömböt – amelyet két dimenzióban pontosabb lenne egységkörnek nevezni – csak a 2-normában valóban „kerek", innen kapta a nevét.) Egy vektor normája egyszerűen az a tényező, amellyel a megfelelő egységgömböt ki kell tágítani vagy össze kell zsugorítani ahhoz, hogy az a vektort éppen magában foglalja.
 
-**2.3. Példa. Vektornormák.** A 2.2. ábrán látható $x = [-1{,}6, 1{,}2]^T$ vektor esetén
+**2.3. Példa. Vektornormák.** A 2.2. ábrán látható $\boldsymbol{x} = [-1{,}6, 1{,}2]^T$ vektor esetén
 
 $$\|\boldsymbol{x}\|_1 = 2{,}8, \quad \|\boldsymbol{x}\|_2 = 2{,}0, \quad \|\boldsymbol{x}\|_{\infty} = 1{,}6.$$
 
@@ -121,67 +121,65 @@ $$\|\boldsymbol{x}\|_1 = 2{,}8, \quad \|\boldsymbol{x}\|_2 = 2{,}0, \quad \|\bol
 
 2.2. ábra: Egységgömbök különböző vektornormákban.
 
-Általában tetszőleges $n$-dimenziós $\boldsymbol{x}$ vektor esetén
+Általában tetszőleges $n$-dimenziós $\boldsymbol{x}$ vektor esetén:
 
-$$\|x\|_1 \ge \|x\|_2 \ge \|x\|_{\infty}.$$
+$$\|\boldsymbol{x}\|_1 \ge \|\boldsymbol{x}\|_2 \ge \|\boldsymbol{x}\|_{\infty}.$$
 
-Másrészt fennáll, hogy
+Másrészt az is fennáll, hogy
 
-$$\|x\|_1 \le \sqrt{n} \|x\|_2$$
-, $\|x\|_2 \le \sqrt{n} \|x\|_{\infty}$ és $\|x\|_1 \le n \|x\|_{\infty}$.
+$$\|\boldsymbol{x}\|_1 \le \sqrt{n} \|\boldsymbol{x}\|_2, \quad \|\boldsymbol{x}\|_2 \le \sqrt{n} \|\boldsymbol{x}\|_{\infty}, \quad \text{és} \quad \|\boldsymbol{x}\|_1 \le n \|\boldsymbol{x}\|_{\infty}.$$
 
-Így adott $n$ esetén e normák közül bármely kettő legfeljebb egy konstansban tér el egymástól, tehát abban az értelemben mind ekvivalensek, hogy ha az egyik kicsi, akkor valamennyinek arányosan kicsinek kell lennie (valójában minden $p$-norma ekvivalens ebben az értelemben). Ezért mindig azt a normát választhatjuk, amelyik az adott kontextusban a legkényelmesebb. A könyv hátralévő részében megfelelő alsó index jelöli majd a konkrét normát, amikor ez szükséges, de az alsó indexet elhagyjuk, ha közömbös, hogy melyik normát használjuk.
+Így adott $n$ esetén e normák közül bármely kettő legfeljebb egy konstans szorzóban tér el egymástól, tehát abban az értelemben mind ekvivalensek, hogy ha az egyik kicsi, akkor valamennyinek arányosan kicsinek kell lennie (valójában minden $p$-norma ekvivalens ebben az értelemben). Ezért mindig azt a normát választhatjuk, amelyik az adott kontextusban a legkényelmesebb. A könyv hátralévő részében megfelelő alsó index jelöli majd a konkrét normát, amikor ez szükséges, de az alsó indexet elhagyjuk, ha mindegy, hogy éppen melyik normát használjuk.
 
 Minden vektor $p$-norma rendelkezik a következő fontos tulajdonságokkal, ahol $\boldsymbol{x}$ és $\boldsymbol{y}$ tetszőleges vektorok:
 
-- 1. $\|\mathbf{x}\| > 0$, ha $\mathbf{x} \neq \mathbf{0}$.
-- 2. $\|\gamma \boldsymbol{x}\| = |\gamma| \cdot \|\boldsymbol{x}\|$ tetszőleges $\gamma$ skalár esetén.
-- 3. $\|\boldsymbol{x} + \boldsymbol{y}\| \le \|\boldsymbol{x}\| + \|\boldsymbol{y}\|$ (háromszög-egyenlőtlenség).
+1. $\|\boldsymbol{x}\| > 0$, ha $\boldsymbol{x} \neq \boldsymbol{0}$.
+2. $\|\gamma \boldsymbol{x}\| = |\gamma| \cdot \|\boldsymbol{x}\|$ tetszőleges $\gamma$ skalár esetén.
+3. $\|\boldsymbol{x} + \boldsymbol{y}\| \le \|\boldsymbol{x}\| + \|\boldsymbol{y}\|$ (háromszög-egyenlőtlenség).
 
-Az általánosabb megközelítésben egy vektornorma *definíciójaként* bármely olyan valós értékű függvényt tekinthetünk egy vektoron, amely e három tulajdonságot teljesíti. Megjegyzendő, hogy az első két tulajdonság együtt magában foglalja, hogy $\|\boldsymbol{x}\| = 0$ akkor és csak akkor, ha $\boldsymbol{x} = \boldsymbol{0}$. A háromszög-egyenlőtlenség hasznos változata
+Általánosabb megközelítésben egy vektornorma *definíciójaként* bármely olyan valós értékű függvényt tekinthetünk egy vektoron, amely e három tulajdonságot teljesíti. Megjegyzendő, hogy az első két tulajdonság együtt magában foglalja, hogy $\|\boldsymbol{x}\| = 0$ akkor és csak akkor, ha $\boldsymbol{x} = \boldsymbol{0}$. A háromszög-egyenlőtlenség hasznos változata:
 
-$$|\|x\| - \|y\|| \le \|x - y\|,$$
+$$|\|\boldsymbol{x}\| - \|\boldsymbol{y}\|| \le \|\boldsymbol{x} - \boldsymbol{y}\|,$$
 
-amely egyúttal azt is mutatja, hogy a vektornorma folytonos függvény.
+amely egyúttal azt is megmutatja, hogy a vektornorma folytonos függvény.
 
 ### 2.3.2 Mátrixnormák
 
-A mátrixok méretének vagy nagyságának mérésére is szükségünk van valamilyen módszerre. Itt is lehetséges általánosabb definíció, de a továbbiakban használt mátrixnormákat mind egy alapul szolgáló vektornorma segítségével definiáljuk. Pontosabban: adott vektornorma mellett egy $m \times n$ méretű $A$ mátrixhoz tartozó mátrixnormát a következőképpen értelmezzük:
+A mátrixok méretének vagy nagyságának mérésére is szükségünk van valamilyen módszerre. Itt is lehetséges általánosabb definíció, de a továbbiakban használt mátrixnormákat mind egy alapul szolgáló vektornorma segítségével definiáljuk. Pontosabban: egy adott vektornorma mellett egy $m \times n$ méretű $\boldsymbol{A}$ mátrixhoz tartozó mátrixnormát a következőképpen értelmezzük:
 
 $$\|\boldsymbol{A}\| = \max_{\boldsymbol{x} \neq \boldsymbol{0}} \frac{\|\boldsymbol{A}\boldsymbol{x}\|}{\|\boldsymbol{x}\|}.$$
 
-Az ilyen mátrixnormáról azt mondjuk, hogy a vektornorma által indukált vagy annak szubordinált normája. Szemléletesen: a mátrix normája azt a maximális nyújtást méri, amelyet a mátrix az adott vektornormában mérve bármely vektoron végrehajt.
+Az ilyen mátrixnormáról azt mondjuk, hogy a vektornorma által *indukált* (vagy annak szubordinált) normája. Szemléletesen: a mátrix normája azt a maximális nyújtást méri, amelyet a mátrix az adott vektornormában mérve bármely vektoron végrehajthat.
 
-Egyes mátrixnormák sokkal könnyebben számíthatók ki, mint mások. Például a vektor 1-normához tartozó mátrixnorma egyszerűen a mátrix maximális abszolút oszlopösszege,
+Egyes mátrixnormák sokkal könnyebben számíthatók ki, mint mások. Például az 1-es vektornorma által indukált mátrixnorma egyszerűen a mátrix maximális abszolút oszlopösszege:
 
-$$\|A\|_1 = \max_j \sum_{i=1}^m |a_{ij}|,$$
+$$\|\boldsymbol{A}\|_1 = \max_j \sum_{i=1}^m |a_{ij}|,$$
 
-a vektor $\infty$-normához tartozó mátrixnorma pedig egyszerűen a mátrix maximális abszolút sorösszege,
+a maximum-norma ($\infty$-norma) által indukált mátrixnorma pedig egyszerűen a mátrix maximális abszolút sorösszege:
 
-$$\|\mathbf{A}\|_{\infty} = \max_{i} \sum_{j=1}^{n} |a_{ij}|.$$
+$$\|\boldsymbol{A}\|_{\infty} = \max_{i} \sum_{j=1}^{n} |a_{ij}|.$$
 
-Ezek megjegyzésének kényelmes módja, hogy ezek a mátrixnormák $n \times 1$ méretű mátrix esetén megegyeznek a megfelelő vektornormákkal. Sajnos a vektor 2-normához tartozó mátrixnormát nem olyan könnyű kiszámítani (lásd 3.6.1. szakasz).
+Könnyű megjegyezni őket úgy, hogy ezek a mátrixnormák egy $n \times 1$ méretű mátrix (oszlopvektor) esetén megegyeznek a megfelelő vektornormákkal. Sajnos a 2-es vektornorma által indukált mátrixnormát nem olyan könnyű kiszámítani (lásd a 3.6.1. szakaszt).
 
 **2.4. Példa. Mátrixnormák.** Az
 
-$$\mathbf{A} = \begin{bmatrix} 2 & -1 & 1 \\ 1 & 0 & 1 \\ 3 & -1 & 4 \end{bmatrix}$$
+$$\boldsymbol{A} = \begin{bmatrix} 2 & -1 & 1 \\ 1 & 0 & 1 \\ 3 & -1 & 4 \end{bmatrix}$$
 
 mátrix esetén a maximális abszolút oszlop- és sorösszegekből rendre
 
-$$\|A\|_1 = 6$$
-és $\|A\|_{\infty} = 8$ adódik.
+$$\|\boldsymbol{A}\|_1 = 6 \quad \text{és} \quad \|\boldsymbol{A}\|_{\infty} = 8$$
 
-E mátrix 2-normáját lásd a 3.17. példában.
+adódik. (E mátrix 2-normájához lásd a 3.17. példát.)
 
-A definiált mátrixnormák a következő fontos tulajdonságokkal rendelkeznek, ahol $A$ és $B$ tetszőleges mátrixok:
+Az így definiált mátrixnormák a következő fontos tulajdonságokkal rendelkeznek, ahol $\boldsymbol{A}$ és $\boldsymbol{B}$ tetszőleges mátrixok:
 
-- 1. $\|A\| > 0$, ha $A \neq O$.
-- 2. $\|\gamma A\| = |\gamma| \cdot \|A\|$ tetszőleges $\gamma$ skalár esetén.
-- 3. $\|A + B\| \le \|A\| + \|B\|$.
-- 4. $\|AB\| \le \|A\| \cdot \|B\|$.
-- 5. $\|Ax\| \le \|A\| \cdot \|x\|$ tetszőleges $x$ vektor esetén.
+1. $\|\boldsymbol{A}\| > 0$, ha $\boldsymbol{A} \neq \boldsymbol{O}$.
+2. $\|\gamma \boldsymbol{A}\| = |\gamma| \cdot \|\boldsymbol{A}\|$ tetszőleges $\gamma$ skalár esetén.
+3. $\|\boldsymbol{A} + \boldsymbol{B}\| \le \|\boldsymbol{A}\| + \|\boldsymbol{B}\|$.
+4. $\|\boldsymbol{A}\boldsymbol{B}\| \le \|\boldsymbol{A}\| \cdot \|\boldsymbol{B}\|$.
+5. $\|\boldsymbol{A}\boldsymbol{x}\| \le \|\boldsymbol{A}\| \cdot \|\boldsymbol{x}\|$ tetszőleges $\boldsymbol{x}$ vektor esetén.
 
-Az általánosabb megközelítésben egy mátrixnorma definíciójaként bármely olyan valós értékű mátrixfüggvényt tekinthetünk, amely az első három tulajdonságot teljesíti. A fennmaradó két tulajdonság, amelyeket szubmultiplikatív vagy konzisztenciafeltételeknek neveznek, az ilyen általánosabb mátrixnormákra nem feltétlenül teljesül, de a vektor $p$-normák által indukált mátrixnormákra mindig érvényesek. Ismét megjegyezzük, hogy az első két tulajdonság együtt azt adja, hogy $\|A\| = 0$ akkor és csak akkor, ha $A = O$.
+Általánosabb megközelítésben egy mátrixnorma definíciójaként bármely olyan valós értékű mátrixfüggvényt tekinthetünk, amely az első három tulajdonságot teljesíti. A fennmaradó két tulajdonság, amelyeket *szubmultiplikatív* vagy konzisztenciafeltételeknek neveznek, az ilyen általánosabb mátrixnormákra nem feltétlenül teljesül, de a vektor $p$-normák által indukált mátrixnormákra mindig érvényes. Ismét megjegyezzük, hogy az első két tulajdonság együtt azt eredményezi, hogy $\|\boldsymbol{A}\| = 0$ akkor és csak akkor, ha $\boldsymbol{A} = \boldsymbol{O}$ (ahol $\boldsymbol{O}$ a zérusmátrix).
 
 ### 2.3.3 Mátrix kondíciószáma
 
