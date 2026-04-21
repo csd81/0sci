@@ -1016,42 +1016,40 @@ $$\boldsymbol{L} = \begin{bmatrix} 1{,}7321 \\ -0{,}5774 & 1{,}6330 \\ -0{,}5774
 
 ### 2.5.2 Szimmetrikus indefinit rendszerek
 
-Ha az $\boldsymbol{A}$ mátrix szimmetrikus, de indefinit (azaz $x^T A x$ $\boldsymbol{x}$-től függően pozitív és negatív értékeket is felvehet), akkor a Cholesky-felbontás nem alkalmazható, és a numerikus stabilitáshoz általában valamilyen főelemkiválasztásra van szükség. Nyilvánvaló, hogy ha meg akarjuk őrizni a mátrix szimmetriáját, a főelemkiválasztásnak szimmetrikusnak kell lennie, azaz $P A P^T$ alakúnak, ahol $\boldsymbol{P}$ permutációs mátrix.
+Ha az $\boldsymbol{A}$ mátrix szimmetrikus, de indefinit (azaz az $\boldsymbol{x}^T \boldsymbol{A} \boldsymbol{x}$ kifejezés $\boldsymbol{x}$-től függően pozitív és negatív értékeket is felvehet), akkor a Cholesky-felbontás nem alkalmazható, és a numerikus stabilitáshoz általában valamilyen főelemkiválasztásra van szükség. Nyilvánvaló, hogy ha meg akarjuk őrizni a mátrix szimmetriáját, a főelemkiválasztásnak is szimmetrikusnak kell lennie, azaz $\boldsymbol{P} \boldsymbol{A} \boldsymbol{P}^T$ alakúnak, ahol $\boldsymbol{P}$ egy permutációs mátrix.
 
-Szeretnénk olyan $P A P^T = L D L^T$ alakú felbontást kapni, ahol $\boldsymbol{L}$ egységdiagonálisú alsó háromszögmátrix és $D$ diagonális. Sajnos diagonális $D$-vel ilyen felbontás nem feltétlenül létezik, és létezése esetén is általában nem számítható ki stabilan pusztán szimmetrikus főelemkiválasztással. A legjobb, amit tehetünk, hogy $D$-t vagy tridiagonálisnak, vagy $1 \times 1$-es és $2 \times 2$-es diagonális blokkokkal rendelkező blokkdiagonálisnak választjuk. (Blokkmátrixnak nevezünk egy olyan mátrixot, amelynek bejegyzéseit kompatibilis méretű részmátrixokra, azaz „blokkokra” osztjuk. Egy blokkdiagonális mátrixban ezek közül a részmátrixok közül mindegyik nulla, kivéve a fő blokkdiagonálisban lévőket.)
+Szeretnénk olyan $\boldsymbol{P} \boldsymbol{A} \boldsymbol{P}^T = \boldsymbol{L} \boldsymbol{D} \boldsymbol{L}^T$ alakú felbontást kapni, ahol $\boldsymbol{L}$ egység-főátlójú alsó háromszögmátrix, $\boldsymbol{D}$ pedig diagonális. Sajnos tisztán diagonális $\boldsymbol{D}$ mátrixszal ilyen felbontás nem feltétlenül létezik, és létezése esetén sem számítható ki mindig stabilan pusztán szimmetrikus főelemkiválasztással. A legjobb megoldás, ha $\boldsymbol{D}$-t vagy tridiagonálisnak, vagy $1 \times 1$-es és $2 \times 2$-es blokkokból álló **blokkdiagonális** mátrixnak választjuk. (Blokkmátrixnak nevezzük azt a mátrixot, amelynek elemeit kompatibilis méretű részmátrixokra, azaz „blokkokra” osztjuk. Egy blokkdiagonális mátrixban ezen részmátrixok mindegyike zérusmátrix, kivéve a főátló mentén elhelyezkedő blokkokat.)
 
-Hatékony algoritmusokat dolgozott ki Aasen a tridiagonális felbontásra, valamint Bunch és Parlett (Bunch és Kaufman, illetve mások későbbi továbbfejlesztéseivel a főelemkiválasztási eljárásban) a blokkdiagonális felbontásra (lásd [198]). Mindkét esetben a főelemkiválasztási eljárás olyan stabil felbontást ad, amely csak körülbelül $n^3/6$ szorzást és hozzávetőleg ugyanennyi összeadást igényel. Mindkét esetben a rákövetkező megoldási szakasznak is csak $\mathcal{O}(n^2)$ munkára van szüksége. Így a szimmetrikus indefinit rendszerek megoldásának költsége hasonló a pozitív definit rendszerek Cholesky-felbontással való megoldásának költségéhez, és csak körülbelül a fele a nemszimmetrikus rendszerek Gauss-kiküszöböléssel való megoldásának költségének.
+Hatékony algoritmusokat dolgozott ki Aasen a tridiagonális felbontásra, valamint Bunch és Parlett (Bunch és Kaufman, illetve mások későbbi továbbfejlesztéseivel) a blokkdiagonális felbontásra. Mindkét esetben a főelemkiválasztási eljárás olyan stabil felbontást ad, amely csak körülbelül $n^3/6$ szorzást és hasonló számú összeadást igényel. Mivel a rákövetkező megoldási szakasz műveletigénye is csupán $\mathcal{O}(n^2)$, a szimmetrikus indefinit rendszerek megoldásának költsége hasonló a pozitív definit rendszerekéhez, és csupán fele a nem szimmetrikus rendszerek Gauss-kiküszöböléssel történő megoldásának.
 
 ### 2.5.3 Sávos rendszerek
 
-A Gauss-kiküszöbölés sávmátrixokra alig különbözik az általános esettől: az egyedüli algoritmikus változtatások a ciklusok tartományaiban vannak. Természetesen olyan adatszerkezetet érdemes használni a sávmátrixhoz, amely elkerüli a sávon kívüli nulla bejegyzések tárolását. Gyakori választás, amikor a sáv sűrű, hogy a mátrixot kétdimenziós tömbben, diagonálisonként tároljuk. Ha numerikus stabilitáshoz szükség van főelemkiválasztásra, akkor az algoritmus kissé bonyolultabbá válik annyiban, hogy a sávszélesség növekedhet (de legfeljebb a kétszeresére). Így egy tetszőleges sávszélességű sávos rendszereket kezelő általános célú megoldó igen hasonló egy általános mátrixokra szolgáló Gauss-kiküszöbölési kódhoz.
+A Gauss-kiküszöbölés sávmátrixok esetén alig különbözik az általános esettől: az egyetlen algoritmikus változtatás a ciklusok határainak módosítása. Természetesen olyan adatszerkezetet érdemes használni, amely elkerüli a sávon kívüli nulla elemek tárolását. Ha a sáv sűrű, gyakori megoldás, hogy a mátrixot egy kétdimenziós tömbben, diagonálisonként tároljuk. Amennyiben a stabilitáshoz főelemkiválasztásra van szükség, az algoritmus bonyolultabbá válik, mert a sávszélesség megnövekedhet (legfeljebb a kétszeresére).
 
-Rögzített kis sávszélesség esetén azonban egy sávos rendszermegoldó rendkívül egyszerű lehet, különösen ha a stabilitáshoz nincs szükség főelemkiválasztásra. Tekintsük például a tridiagonális
+Rögzített, kis sávszélesség esetén azonban a sávos rendszermegoldó rendkívül egyszerűvé válik, különösen, ha nincs szükség főelemkiválasztásra. Tekintsük például a **tridiagonális** $\boldsymbol{A}$ mátrixot:
 
-$$\mathbf{A} = \begin{bmatrix} b_1 & c_1 & 0 & \cdots & 0 \\ a_2 & b_2 & c_2 & \ddots & \vdots \\ 0 & \ddots & \ddots & \ddots & 0 \\ \vdots & \ddots & a_{n-1} & b_{n-1} & c_{n-1} \\ 0 & \cdots & 0 & a_n & b_n \end{bmatrix}$$
+$$\boldsymbol{A} = \begin{bmatrix} b_1 & c_1 & 0 & \cdots & 0 \\ a_2 & b_2 & c_2 & \ddots & \vdots \\ 0 & \ddots & \ddots & \ddots & 0 \\ \vdots & \ddots & a_{n-1} & b_{n-1} & c_{n-1} \\ 0 & \cdots & 0 & a_n & b_n \end{bmatrix}.$$
 
-mátrixot. Ha a stabilitáshoz nincs szükség főelemkiválasztásra – ami a gyakorlatban előforduló tridiagonális rendszerek esetén gyakran teljesül (például ha a mátrix diagonálisan domináns vagy pozitív definit) –, akkor a Gauss-kiküszöbölés a 2.8. algoritmusra redukálódik, és az $\boldsymbol{A}$ mátrix keletkező háromszögű faktorait a következő képletek adják:
+Ha nincs szükség főelemkiválasztásra — ami gyakori például diagonálisan domináns vagy pozitív definit rendszereknél —, akkor a Gauss-kiküszöbölés a 2.8. algoritmusra redukálódik. Az $\boldsymbol{A}$ mátrix háromszögű faktorai ekkor az alábbi alakúak:
 
 $$\boldsymbol{L} = \begin{bmatrix} 1 & 0 & \cdots & \cdots & 0 \\ m_2 & 1 & \ddots & \ddots & \vdots \\ 0 & \ddots & \ddots & \ddots & \vdots \\ \vdots & \ddots & m_{n-1} & 1 & 0 \\ 0 & \cdots & 0 & m_n & 1 \end{bmatrix}, \quad \boldsymbol{U} = \begin{bmatrix} d_1 & c_1 & 0 & \cdots & 0 \\ 0 & d_2 & c_2 & \ddots & \vdots \\ \vdots & \ddots & \ddots & \ddots & 0 \\ \vdots & \ddots & \ddots & \ddots & 0 \\ \vdots & \ddots & \ddots & d_{n-1} & c_{n-1} \\ 0 & \cdots & \cdots & 0 & d_n \end{bmatrix}.$$
 
-Általában egy $\beta$ sávszélességű sávos rendszer csak $\mathcal{O}(\beta n)$ tárhelyet igényel, a felbontás pedig csak $\mathcal{O}(\beta^2 n)$ munkát; mindkettő jelentős megtakarítást jelent a telt rendszerekhez képest, ha $\beta \ll n$.
+Általánosságban egy $\beta$ sávszélességű rendszer csak $\mathcal{O}(\beta n)$ tárhelyet és $\mathcal{O}(\beta^2 n)$ műveletet igényel, ami jelentős megtakarítás a sűrű (telt) rendszerekhez képest, ha $\beta \ll n$.
 
-**2.8. Algoritmus. Tridiagonális LU-felbontás főelemkiválasztás nélkül.**
-
+**2.8. Algoritmus. Tridiagonális LU-felbontás főelemkiválasztás nélkül**
 ```
 d1 = b1
 for i = 2 to n
-    mi = ai/di−1
-    di = bi − mici−1
+    mi = ai / d_{i-1}                  { szorzó kiszámítása }
+    di = bi - mi * c_{i-1}             { transzformáció alkalmazása }
 end
-                                 { ciklus az oszlopokon }
-                                 { szorzó kiszámítása }
-                                 { transzformáció alkalmazása }
 ```
 
 ## 2.6 Iterációs módszerek lineáris egyenletrendszerekhez
 
-A Gauss-kiküszöbölés egy példa a lineáris rendszerek megoldására szolgáló direkt módszerre, azaz olyan módszerre, amely (pontos aritmetikát feltételezve) egy lineáris rendszer pontos megoldását véges számú lépésben állítja elő. Az iterációs módszerek ezzel szemben a megoldás egy kezdeti becsléséből indulnak ki, és azt egymást követően javítják, amíg a megoldás olyan pontos nem lesz, amilyet kívánunk. Elméletben végtelen sok iterációra lehet szükség ahhoz, hogy a pontos megoldáshoz konvergáljon, a gyakorlatban azonban az iterációkat akkor állítjuk le, amikor a $\|b - Ax\|$ maradék – vagy a hiba valamilyen más mérőszáma – olyan kicsi, amilyet kívánunk. Egyes feladattípusok esetén az iterációs módszereknek jelentős előnyeik lehetnek a direkt módszerekkel szemben. A lineáris egyenletrendszerek iterációs módszereinek tárgyalását a 11. fejezetre halasztjuk, ahol a parciális differenciálegyenletek numerikus megoldását tekintjük, ami olyan ritka lineáris rendszerekre vezet, amelyeket gyakran iterációs módszerekkel lehet a legjobban megoldani.
+A Gauss-kiküszöbölés a **direkt módszerek** közé tartozik, amelyek (pontos aritmetikát feltételezve) véges számú lépésben állítják elő a pontos megoldást. Ezzel szemben az **iterációs módszerek** egy kezdeti becslésből indulnak ki, és azt lépésenként javítják, amíg a megoldás el nem éri a kívánt pontosságot. Elméletileg a konvergenciához végtelen sok lépésre lehet szükség, de a gyakorlatban az eljárást leállítjuk, ha a maradék (reziduum), $\| \boldsymbol{b} - \boldsymbol{A}\boldsymbol{x} \|$ — vagy más hibamérőszám — megfelelően kicsi lesz.
+
+Egyes feladattípusoknál az iterációs módszereknek jelentős előnyei vannak a direkt módszerekkel szemben. E módszerek részletes tárgyalását a 11. fejezetben végezzük el, ahol a parciális differenciálegyenletek numerikus megoldásakor fellépő nagyméretű, ritka rendszerekkel foglalkozunk.
 
 ## 2.7 Szoftverek lineáris egyenletrendszerekhez
 
