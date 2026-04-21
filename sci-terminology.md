@@ -644,11 +644,11 @@ Gauss-Hermite – Gauss–Hermite
 
 Gaussian – Gauss-féle
 
-Gaussian elimination – Gauss-kiküszöbölés
+Gaussian elimination – Gauss-elimináció
 
 Gaussian quadrature – Gauss-kvadratúra
 
-Gauss-Jordan elimination – Gauss–Jordan-kiküszöbölés
+Gauss-Jordan elimination – Gauss–Jordan-elimináció
 
 Gauss-Kronrod – Gauss–Kronrod
 

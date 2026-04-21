@@ -29,10 +29,8 @@ Example 2.1 Electrical Circuit. Consider the electrical circuit shown in Fig. 2.
 Applying these laws to each loop in the circuit, we obtain the system of three linear equations
 
 $$i_1R_1 + (i_1 - i_2)R_2 + (i_1 - i_3)R_3 + V_1 = 0,$$
-  
 
 $$(i_2 - i_1)R_2 + (i_2 - i_3)R_5 - V_2 = 0,$$
-  
 
 $$(i_3 - i_1)R_3 + i_3R_4 + (i_3 - i_2)R_5 = 0,$$
 
@@ -50,9 +48,9 @@ Figure 2.1: Electrical circuit with resistors and voltage sources.
 
 An  $n \times n$  matrix  $\boldsymbol{A}$  is said to be *nonsingular* if it satisfies any one of the following equivalent conditions:
 
-- 1.  $\boldsymbol{A}$  has an inverse (i.e., there is an  $n \times n$  matrix, denoted by  $\boldsymbol{A}^{-1}$ , such that  $\boldsymbol{A}\boldsymbol{A}^{-1} = \boldsymbol{A}^{-1}\boldsymbol{A} = \boldsymbol{I}$ , the identity matrix).
-- 2.  $\det(\mathbf{A}) \neq 0$  (i.e., the determinant of  $\mathbf{A}$  is nonzero).
-- 3.  $rank(\mathbf{A}) = n$  (the rank of a matrix is the maximum number of linearly independent rows or columns it contains).
+- 1. $\boldsymbol{A}$  has an inverse (i.e., there is an  $n \times n$  matrix, denoted by  $\boldsymbol{A}^{-1}$ , such that  $\boldsymbol{A}\boldsymbol{A}^{-1} = \boldsymbol{A}^{-1}\boldsymbol{A} = \boldsymbol{I}$ , the identity matrix).
+- 2. $\det(\mathbf{A}) \neq 0$  (i.e., the determinant of  $\mathbf{A}$  is nonzero).
+- 3. $rank(\mathbf{A}) = n$  (the rank of a matrix is the maximum number of linearly independent rows or columns it contains).
 - 4. For any vector  $z \neq 0$ ,  $Az \neq 0$  (i.e., A annihilates no nontrivial vector).
 
 Otherwise, the matrix is singular. The existence and uniqueness of a solution to a system of linear equations Ax = b depend on whether the matrix A is singular or nonsingular. If the matrix A is nonsingular, then its inverse,  $A^{-1}$ , exists, and the system Ax = b always has the unique solution  $x = A^{-1}b$  regardless of the value for b. If, on the other hand, the matrix A is singular, then the number of solutions is determined by the right-hand-side vector b: for a given value of b there may be no solution, but if there is a solution x, so that Ax = b, then we also have  $A(x + \gamma z) = b$  for any scalar  $\gamma$ , where  $z \neq 0$  is a vector such that Az = 0 (such a z must exist, since otherwise Condition 4 in the definition implies that the matrix is nonsingular). Thus, a solution of a square, consistent, singular, linear system
@@ -68,7 +66,7 @@ In two dimensions, each linear equation in the system determines a straight line
 #### Example 2.2 Singularity and Nonsingularity. The $2 \times 2$ system
 
 $$2x_1 + 3x_2 = b_1,$$
-  
+
  $5x_1 + 4x_2 = b_2,$ 
 
 or in matrix-vector notation
@@ -140,9 +138,9 @@ Thus, for a given n, any two of these norms differ by at most a constant, so the
 
 For any vector p-norm, the following important properties hold, where  $\boldsymbol{x}$  and  $\boldsymbol{y}$  are any vectors:
 
-- 1.  $\|\mathbf{x}\| > 0 \text{ if } \mathbf{x} \neq \mathbf{0}.$
-- 2.  $\|\gamma \boldsymbol{x}\| = |\gamma| \cdot \|\boldsymbol{x}\|$  for any scalar  $\gamma$ .
-- 3.  $\|\boldsymbol{x} + \boldsymbol{y}\| \le \|\boldsymbol{x}\| + \|\boldsymbol{y}\|$  (triangle inequality).
+- 1. $\|\mathbf{x}\| > 0 \text{ if } \mathbf{x} \neq \mathbf{0}.$
+- 2. $\|\gamma \boldsymbol{x}\| = |\gamma| \cdot \|\boldsymbol{x}\|$  for any scalar  $\gamma$ .
+- 3. $\|\boldsymbol{x} + \boldsymbol{y}\| \le \|\boldsymbol{x}\| + \|\boldsymbol{y}\|$  (triangle inequality).
 
 In a more general treatment, the *definition* of a vector norm can be taken to be any real-valued function of a vector that satisfies these three properties. Note that the first two properties together imply that  $\|\boldsymbol{x}\| = 0$  if, and only if,  $\boldsymbol{x} = \boldsymbol{0}$ . A useful variation of the triangle inequality is
 
@@ -520,9 +518,9 @@ $$\bm{M}_{k}\,\bm{a} = \begin{bmatrix} 1 & \cdots & 0 & 0 & \cdots & 0 \ \vdots 
 
 where  $m_i = a_i/a_k$ , i = k+1,...,n. The divisor  $a_k$  is called the *pivot*. A matrix of this form is sometimes called an *elementary elimination matrix* or *Gauss transformation*, and its effect on a vector is to add a multiple of row k to each subsequent row, with the multipliers  $m_i$  chosen so that the result in each case is zero. Note the following facts about these elementary elimination matrices:
 
-- 1.  $M_k$  is a lower triangular matrix with unit main diagonal, and hence it must be nonsingular.
-- 2.  $\mathbf{M}_k = \mathbf{I} \mathbf{m}_k \mathbf{e}_k^T$ , where  $\mathbf{m}_k = [0, \dots, 0, m_{k+1}, \dots, m_n]^T$  and  $\mathbf{e}_k$  is the kth column of the identity matrix.
-- 3.  $M_k^{-1} = I + m_k e_k^T$ , which means that  $M_k^{-1}$ , which we will denote by  $L_k$ , is the same as  $M_k$  except that the signs of the multipliers are reversed.
+- 1. $M_k$  is a lower triangular matrix with unit main diagonal, and hence it must be nonsingular.
+- 2. $\mathbf{M}_k = \mathbf{I} \mathbf{m}_k \mathbf{e}_k^T$ , where  $\mathbf{m}_k = [0, \dots, 0, m_{k+1}, \dots, m_n]^T$  and  $\mathbf{e}_k$  is the kth column of the identity matrix.
+- 3. $M_k^{-1} = I + m_k e_k^T$ , which means that  $M_k^{-1}$ , which we will denote by  $L_k$ , is the same as  $M_k$  except that the signs of the multipliers are reversed.
 - 4. If  $M_j$ , j > k, is another elementary elimination matrix, with vector of multipliers  $m_j$ , then
 
 $$\boldsymbol{M}_k \boldsymbol{M}_j = \boldsymbol{I} - \boldsymbol{m}_k \boldsymbol{e}_j^T - \boldsymbol{m}_j \boldsymbol{e}_j^T + \boldsymbol{m}_k \boldsymbol{e}_k^T \boldsymbol{m}_j \boldsymbol{e}_j^T - \boldsymbol{m}_j \boldsymbol{e}_j^T,$$
@@ -588,7 +586,7 @@ end
 Example 2.13 Gaussian Elimination. We illustrate Gaussian elimination by solving the linear system
 
 $$x_1 + 2x_2 + 2x_3 = 3,$$
-  
+
  $4x_1 + 4x_2 + 2x_3 = 6,$   
  $4x_1 + 6x_2 + 4x_3 = 10,$ 
 
@@ -1114,7 +1112,7 @@ Almost any software library for scientific computing contains routines for solvi
 Conventional software for solving linear systems Ax = b is sometimes implemented as a single routine, or it may be split into two routines, one for computing a factorization and another for solving the resulting triangular system. In either case, repeating the factorization should not be necessary if additional solutions are needed with the same matrix but different right-hand sides. The input typically required includes a two-dimensional array containing the matrix A, a one-dimensional array containing the right-hand-side vector b (or a two-dimensional array for multiple right-hand-side vectors), the integer order n of the system, the leading dimension of the array containing A (so that the subroutine can interpret subscripts properly
 
 | Source           | Factor        | Solve         | Condition estimate |
-|------------------|---------------|---------------|--------------------|
+| ---------------- | ------------- | ------------- | ------------------ |
 | [152]<br>FMM     | decomp        | solve         |                    |
 | GSL              | gsl<br>linalg | gsl<br>linalg |                    |
 |                  | LU<br>decomp  | LU<br>solve   |                    |
@@ -1143,7 +1141,7 @@ Solving linear systems using an interactive environment such as MATLAB is simple
 LINPACK is a comprehensive software package for solving a wide variety of systems of linear equations, both general dense systems and those having various special properties, such as symmetric or banded. Solving linear systems is of such fundamental importance in scientific computing that LINPACK has become a standard benchmark for comparing the performance of computers. The LINPACK manual [116] is a useful source of practical advice on solving systems of linear equations.
 
 |                  | Symmetric          | Symmetric           | General         |
-|------------------|--------------------|---------------------|-----------------|
+| ---------------- | ------------------ | ------------------- | --------------- |
 | Source           | positive definite  | indefinite          | banded          |
 | GSL              | gsl<br>linalg      | gsl<br>linalg       |                 |
 |                  | cholesky<br>decomp | mcholesky<br>decomp |                 |
@@ -1169,17 +1167,17 @@ The high-level routines in LINPACK and LAPACK are based on lower-level Basic Lin
 
 The key to good performance is data reuse, that is, performing as many arithmetic operations as possible involving a given data item while it is held in the portion of the memory hierarchy with the most rapid access. The level-3 BLAS have greater opportunity for data reuse because they perform O(n 3 ) operations on O(n 2 ) data items, whereas in the lower-level BLAS the number of operations is proportional to the number of data items. Generic versions of the BLAS are avail-
 
-| Level | TOMS<br># | Work          | Examples | Function                        |  |
-|-------|-----------|---------------|----------|---------------------------------|--|
-| 1     | 539       | O(n)          | saxpy    | Scalar times vector plus vector |  |
-|       |           |               | sdot     | Inner product of two vectors    |  |
-|       |           |               | snrm2    | Euclidean norm of vector        |  |
-| 2     | 656       | 2<br>O(n<br>) | sgemv    | Matrix-vector multiplication    |  |
-|       |           |               | strsv    | Triangular solution             |  |
-|       |           |               | sger     | Rank-one update                 |  |
-| 3     | 679       | 3<br>O(n<br>) | sgemm    | Matrix-matrix multiplication    |  |
-|       |           |               | strsm    | Multiple triangular solutions   |  |
-|       |           |               | ssyrk    | Rank-k<br>update                |  |
+| Level | TOMS<br># | Work          | Examples | Function                        |     |
+| ----- | --------- | ------------- | -------- | ------------------------------- | --- |
+| 1     | 539       | O(n)          | saxpy    | Scalar times vector plus vector |     |
+|       |           |               | sdot     | Inner product of two vectors    |     |
+|       |           |               | snrm2    | Euclidean norm of vector        |     |
+| 2     | 656       | 2<br>O(n<br>) | sgemv    | Matrix-vector multiplication    |     |
+|       |           |               | strsv    | Triangular solution             |     |
+|       |           |               | sger     | Rank-one update                 |     |
+| 3     | 679       | 3<br>O(n<br>) | sgemm    | Matrix-matrix multiplication    |     |
+|       |           |               | strsm    | Multiple triangular solutions   |     |
+|       |           |               | ssyrk    | Rank-k<br>update                |     |
 
 Table 2.3: Examples of basic linear algebra subprograms (BLAS)
 
@@ -1198,55 +1196,97 @@ For a comprehensive treatment of error analysis and perturbation theory for line
 ## Review Questions
 
 - 2.1. True or false: If a matrix A is nonsingular, then the number of solutions to the linear system Ax = b depends on the particular choice of righthand-side vector b.
+
 - 2.2. True or false: If a matrix has a very small determinant, then the matrix is nearly singular.
+
 - 2.3. For a symmetric matrix A, it is always the case that kAk<sup>1</sup> = kAk∞.
+
 - 2.4. True or false: If a triangular matrix has a zero entry on its main diagonal, then the matrix is necessarily singular.
+
 - 2.5. True or false: If any matrix has a zero entry on its main diagonal, then the matrix is necessarily singular.
+
 - 2.6. True or false: An underdetermined system of linear equations Ax = b, where A is an m × n matrix with m < n, always has a solution.
+
 - 2.7. True or false: The product of two upper triangular matrices is upper triangular.
+
 - 2.8. True or false: The product of two symmetric matrices is symmetric.
+
 - 2.9. True or false: The inverse of a nonsingular upper triangular matrix is upper triangular.
+
 - 2.10. True or false: If the rows of an n×n matrix A are linearly dependent, then the columns of the matrix are also linearly dependent.
+
 - 2.11. True or false: A system of linear equations Ax = b has a solution if, and only if, the m × n matrix A and the augmented m × (n + 1) matrix [ A b ] have the same rank.
 
 - 2.12. True or false: If A is any n × n matrix and P is any n × n permutation matrix, then P A = AP .
+
 - 2.13. True or false: Provided row interchanges are allowed, the LU factorization always exists, even for a singular matrix A.
+
 - 2.14. True or false: If a linear system is wellconditioned, then pivoting is unnecessary in Gaussian elimination.
+
 - 2.15. True or false: If a matrix is singular then it cannot have an LU factorization.
+
 - 2.16. True or false: If a nonsingular symmetric matrix is not positive definite, then it cannot have a Cholesky factorization.
+
 - 2.17. True or false: A symmetric positive definite matrix is always well-conditioned.
+
 - 2.18. True or false: Gaussian elimination without pivoting fails only when the matrix is illconditioned or singular.
+
 - 2.19. True or false: Once the LU factorization of a matrix has been computed to solve a linear system, then subsequent linear systems with the same matrix but different right-hand-side vectors can be solved without refactoring the matrix.
+
 - 2.20. True or false: In explicit matrix inversion by LU factorization and triangular solution, the majority of the work is due to the factorization.
+
 - 2.21. True or false: If x is any n-vector, then kxk<sup>1</sup> ≥ kxk∞.
+
 - 2.22. True or false: The norm of a singular matrix is zero.
 
 Review Questions 93
 
 - **2.23.** True or false: If ||A|| = 0, then A = 0.
+
 - **2.24.** True or false:  $\|A\|_1 = \|A^T\|_{\infty}$ .
+
 - **2.25.** True or false: If A is any  $n \times n$  nonsingular matrix, then  $\text{cond}(A) = \text{cond}(A^{-1})$ .
+
 - **2.26.** True or false: In solving a nonsingular system of linear equations, Gaussian elimination with partial pivoting usually yields a small residual even if the matrix is ill-conditioned.
+
 - **2.27.** True or false: The multipliers in Gaussian elimination with partial pivoting are bounded by 1 in magnitude, so the entries of the successive reduced matrices cannot grow in magnitude.
+
 - **2.28.** Can a system of linear equations Ax = b have exactly two distinct solutions?
+
 - **2.29.** Can the number of solutions to a linear system Ax = b ever be determined solely from the matrix A without knowing the right-hand-side vector b?
+
 - **2.30.** In solving a square system of linear equations Ax = b, which would be a more serious difficulty: that the rows of A are linearly dependent, or that the columns of A are linearly dependent? Explain.
+
 - **2.31.** (a) State one defining property of a singular matrix A.
+
 - (b) Suppose that the linear system Ax = b has two distinct solutions x and y. Use the property you gave in part a to prove that A must be singular.
+
 - **2.32.** Given a nonsingular system of linear equations Ax = b, what effect on the solution vector x results from each of the following actions?
+
 - (a) Permuting the rows of  $[\mathbf{A} \quad \mathbf{b}]$
+
 - (b) Permuting the columns of A
+
 - (c) Multiplying both sides of the equation from the left by a nonsingular matrix M
+
 - **2.33.** Suppose that both sides of a system of linear equations  $\mathbf{A}\mathbf{x} = \mathbf{b}$  are multiplied by a nonzero scalar  $\alpha$ .
+
 - (a) Does this change the true solution  $\boldsymbol{x}$ ?
+
 - (b) Does this change the residual vector r = b
+
 - $\boldsymbol{b} \boldsymbol{A}\boldsymbol{x}$  for a given  $\boldsymbol{x}$ ?
+
 - (c) What conclusion can be drawn about assessing the quality of a computed solution?
 
 - **2.34.** Suppose that both sides of a system of linear equations Ax = b are premultiplied by a non-singular diagonal matrix.
+
 - (a) Does this change the true solution x?
+
 - (b) Can this affect the conditioning of the system?
+
 - (c) Can this affect the choice of pivots in Gaussian elimination?
+
 - **2.35.** Specify an elementary elimination matrix that zeros the last two components of the vector
 
 $$\begin{bmatrix} 3 \\ 2 \\ -1 \\ 4 \end{bmatrix}.$$
@@ -1265,38 +1305,63 @@ $$\mathbf{A} = \begin{bmatrix} 4 & -8 & 1 \\ 6 & 5 & 7 \\ 0 & -10 & -3 \end{bmat
 What will the initial pivot element be if
 
 - (a) No pivoting is used?
+
 - (b) Partial pivoting is used?
+
 - (c) Complete pivoting is used?
+
 - **2.40.** Give two reasons why pivoting is essential for a numerically stable implementation of Gaussian elimination.
 
 - **2.41.** If A is an ill-conditioned matrix, and its LU factorization is computed by Gaussian elimination with partial pivoting, would you expect the ill-conditioning to be reflected in L, in U, or both? Why?
+
 - **2.42.** (a) What is the inverse of the following matrix?
 
 $$\begin{bmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & m_1 & 1 & 0 \\ 0 & m_2 & 0 & 1 \end{bmatrix}$$
 
 - (b) How might such a matrix arise in computational practice?
+
 - **2.43.** (a) Can every nonsingular  $n \times n$  matrix  $\boldsymbol{A}$  be written as a product,  $\boldsymbol{A} = \boldsymbol{L}\boldsymbol{U}$ , where  $\boldsymbol{L}$  is a lower triangular matrix and  $\boldsymbol{U}$  is an upper triangular matrix?
+
 - (b) If so, what is an algorithm for accomplishing this? If not, give a counterexample to illustrate.
+
 - **2.44.** Given an  $n \times n$  nonsingular matrix  $\boldsymbol{A}$  and a second  $n \times n$  matrix  $\boldsymbol{B}$ , what is the best way to compute the  $n \times n$  matrix  $\boldsymbol{A}^{-1}\boldsymbol{B}$ ?
+
 - **2.45.** If A and B are  $n \times n$  matrices, with A nonsingular, and c is an n-vector, how would you efficiently compute the product  $A^{-1}Bc$ ?
+
 - **2.46.** If A is an  $n \times n$  matrix and x is an n-vector, which of the following computations requires less work? Explain.
+
 - $(a) \ \boldsymbol{y} = (\boldsymbol{x} \, \boldsymbol{x}^T) \, \boldsymbol{A}$
+
 - $(b) \ \boldsymbol{y} = \boldsymbol{x} \left( \boldsymbol{x}^T \, \boldsymbol{A} \right)$
+
 - **2.47.** How does the computational work in solving an  $n \times n$  triangular system of linear equations compare with that for solving a general  $n \times n$  system of linear equations?
+
 - **2.48.** Assume that you have already computed the LU factorization, A = LU, of the nonsingular matrix A. How would you use it to solve the linear system  $A^T x = b$ ?
+
 - **2.49.** If L is a nonsingular lower triangular matrix, P is a permutation matrix, and b is a given vector, how would you solve each of the following linear systems?
+
 - (a)  $\mathbf{LPx} = \mathbf{b}$
+
 - (b) PLx = b
+
 - **2.50.** In the plane  $\mathbb{R}^2$ , is it possible to have a vector  $\boldsymbol{x} \neq \boldsymbol{0}$  such that  $\|\boldsymbol{x}\|_1 = \|\boldsymbol{x}\|_{\infty}$ ? If so, give an example.
 
 - **2.51.** In the plane  $\mathbb{R}^2$ , is it possible to have two vectors  $\boldsymbol{x}$  and  $\boldsymbol{y}$  such that  $\|\boldsymbol{x}\|_1 > \|\boldsymbol{y}\|_1$ , but  $\|\boldsymbol{x}\|_{\infty} < \|\boldsymbol{y}\|_{\infty}$ ? If so, give an example.
+
 - **2.52.** In general, which matrix norm is easier to compute,  $\|\mathbf{A}\|_1$  or  $\|\mathbf{A}\|_2$ ? Why?
+
 - **2.53.** (a) Is the magnitude of the determinant of a matrix a good indicator of whether the matrix is nearly singular?
+
 - (b) If so, why? If not, what is a better indicator of near singularity?
+
 - **2.54.** (a) How is the condition number of a matrix A defined for a given matrix norm?
+
 - (b) How is the condition number used in estimating the accuracy of a computed solution to a linear system Ax = b?
+
 - **2.55.** Why is computing the condition number of a general matrix a nontrivial problem?
+
 - **2.56.** Give an example of a  $3 \times 3$  matrix A, other than the identity matrix, such that cond(A) = 1.
+
 - **2.57.** (a) What is the condition number of the following matrix using the 1-norm?
 
 $$\begin{bmatrix} 4 & 0 & 0 \\ 0 & -6 & 0 \\ 0 & 0 & 2 \end{bmatrix}$$
@@ -1327,42 +1392,77 @@ $$\begin{array}{lll}
 \end{array}$$
 
 - 2.62. Which of the following are good indicators that a matrix is nearly singular?
+
 - (a) Its determinant is small.
+
 - (b) Its norm is small.
+
 - (c) Its norm is large.
+
 - (d) Its condition number is large.
+
 - 2.63. (a) In solving a linear system Ax = b, what is meant by the residual of an approximate solution xˆ?
+
 - (b) Does a small relative residual always imply that the solution is accurate? Why?
+
 - (c) Does a large relative residual always imply that the solution is inaccurate? Why?
+
 - 2.64. In a floating-point system having 10 decimal digits of precision, if Gaussian elimination with partial pivoting is used to solve a linear system whose matrix has a condition number of 10<sup>3</sup> , and whose input data are accurate to full machine precision, about how many digits of accuracy would you expect in the solution?
+
 - 2.65. Assume that you are solving a system of linear equations Ax = b on a computer whose floating-point number system has 12 decimal digits of precision, and that the problem data are correct to full machine precision. About how large can the condition number of the matrix A be before the computed solution x will contain no significant digits?
+
 - 2.66. Under what circumstances does a small residual vector r = b − Ax imply that x is an accurate solution to the linear system Ax = b?
+
 - 2.67. Let A be an arbitrary square matrix and c an arbitrary scalar. Which of the following statements must necessarily hold?
+
 - (a) kcAk = |c| · kAk.
+
 - (b) cond(cA) = |c| · cond(A).
 
 - 2.68. (a) What is the main difference between Gaussian elimination and Gauss-Jordan elimination?
+
 - (b) State one advantage of each type of elimination relative to the other.
+
 - 2.69. Rank the following methods according to the amount of work required for solving a general system of linear equations of order n:
+
 - (a) Gauss-Jordan elimination
+
 - (b) Gaussian elimination with partial pivoting
+
 - (c) Cramer's rule
+
 - (d) Explicit matrix inversion followed by matrixvector multiplication
+
 - 2.70. (a) How much storage is required to store an n × n matrix of rank one efficiently?
+
 - (b) How many arithmetic operations are required to multiply an n-vector by an n×n matrix of rank one efficiently?
+
 - 2.71. In a comparison of ordinary Gaussian elimination with Gauss-Jordan elimination for solving a linear system Ax = b,
+
 - (a) Which has a more expensive factorization?
+
 - (b) Which has a more expensive back-substitution?
+
 - (c) Which has a higher overall cost?
+
 - 2.72. For each of the following elimination algorithms for solving linear systems, is there any pivoting strategy that can guarantee that all of the multipliers will be at most 1 in absolute value?
+
 - (a) Gaussian elimination
+
 - (b) Gauss-Jordan elimination
+
 - 2.73. What two properties of a matrix A together imply that A has a Cholesky factorization?
+
 - 2.74. List three advantages of Cholesky factorization compared with LU factorization.
+
 - 2.75. How many square roots are required to compute the Cholesky factorization of an n × n symmetric positive definite matrix?
+
 - 2.76. Let A = {aij} be an n × n symmetric positive definite matrix.
+
 - (a) What is the (1, 1) entry of its Cholesky factor?
+
 - (b) What is the (n, 1) entry of its Cholesky factor?
+
 - 2.77. What is the Cholesky factorization of the following matrix?
 
 $$\begin{bmatrix} 4 & 2 \\ 2 & 2 \end{bmatrix}$$
@@ -1395,19 +1495,31 @@ $$\mathbf{A} = \begin{bmatrix} 1 & 0 & 0 \\ 1 & -1 & 0 \\ 1 & -2 & 1 \end{bmatri
 $$\boldsymbol{A} = \begin{bmatrix} 1 & 1+\epsilon \\ 1-\epsilon & 1 \end{bmatrix}.$$
 
 - (a) What is the determinant of A?
+
 - (b) In floating-point arithmetic, for what range of values of will the computed value of the determinant be zero?
+
 - (c) What is the LU factorization of A?
 
 - (d) In floating-point arithmetic, for what range of values of will the computed value of U be singular?
+
 - 2.8. Let A and B be any two n × n matrices.
+
 - (a) Prove that (AB) <sup>T</sup> = B<sup>T</sup> A<sup>T</sup> .
+
 - (b) If A and B are both nonsingular, prove that (AB) <sup>−</sup><sup>1</sup> = B<sup>−</sup><sup>1</sup>A<sup>−</sup><sup>1</sup> .
+
 - 2.9. If A is any nonsingular real matrix, show that (A<sup>−</sup><sup>1</sup> ) <sup>T</sup> = (A<sup>T</sup> ) −1 . Consequently, the notation A<sup>−</sup><sup>T</sup> can be used unambiguously to denote this matrix. Similarly, if A is any nonsingular complex matrix, then (A<sup>−</sup><sup>1</sup> ) <sup>H</sup> = (A<sup>H</sup>) −1 , and the notation A<sup>−</sup><sup>H</sup> can be used unambiguously to denote this matrix.
+
 - 2.10. Let P be any permutation matrix.
+
 - (a) Prove that P <sup>−</sup><sup>1</sup> = P T .
+
 - (b) Prove that P can be expressed as a product of pairwise interchanges.
+
 - 2.11. Write out a detailed algorithm for solving a lower triangular linear system Lx = b by forwardsubstitution.
+
 - 2.12. Verify that the dominant term in the operation count (number of multiplications or number of additions) for solving a lower triangular system of order n by forward substitution is n 2 /2.
+
 - 2.13. How would you solve a partitioned linear system of the form
 
 $$\begin{bmatrix} \boldsymbol{L}_1 & \boldsymbol{O} \ \boldsymbol{B} & \boldsymbol{L}_2 \end{bmatrix} \begin{bmatrix} \boldsymbol{x} \ \boldsymbol{y} \end{bmatrix} = \begin{bmatrix} \boldsymbol{b} \ \boldsymbol{c} \end{bmatrix},$$
@@ -1417,13 +1529,17 @@ where L<sup>1</sup> and L<sup>2</sup> are nonsingular lower triangular matrices,
 Exercises 97
 
 - 2.14. Prove each of the four properties of elementary elimination matrices enumerated in Section 2.4.3.
-- 2.15. (a) Prove that the product of two lower triangular matrices is lower triangular.
-- (b) Prove that the inverse of a nonsingular lower triangular matrix is lower triangular.
-- 2.16. (a) What is the LU factorization of the following matrix?
 
- 1 a c b
+- 2.15. (a) Prove that the product of two lower triangular matrices is lower triangular.
+
+- (b) Prove that the inverse of a nonsingular lower triangular matrix is lower triangular.
+
+- 2.16. (a) What is the LU factorization of the following matrix?
+  
+  1 a c b
 
 - (b) Under what condition is this matrix singular?
+
 - 2.17. Write out the LU factorization of the following matrix (show both the L and U matrices explicitly):
 
 $$\begin{bmatrix} 1 & -1 & 0 \\ -1 & 2 & -1 \\ 0 & -1 & 1 \end{bmatrix}.$$
@@ -1659,12 +1775,12 @@ the *n*-vector  $\boldsymbol{b}$  is the known load on the bar (including its ow
 - (a) Letting n=100, solve this linear system using both a standard library routine for dense linear systems and a library routine designed for banded (or more general sparse) systems. How do the two routines compare in the time required to compute the solution? How well do the answers obtained agree with each other?
 - (b) Verify that the matrix A has the UL factorization  $A = RR^T$ , where R is an upper triangular matrix of the form
 
-| $\lceil 2 \rceil$ | -2            | 1  | 0  |    | 0 ]                                     |
-|-------------------|---------------|----|----|----|-----------------------------------------|
-| 0                 | -2<br>1<br>∴. | -2 | 1  | ٠. | :                                       |
-| :                 | ٠.            | ٠  | ٠. | ٠  | 0                                       |
-| :                 |               | ٠. |    | -2 |                                         |
-| :                 |               |    | ٠. | 1  | $\begin{bmatrix} -2 \\ 1 \end{bmatrix}$ |
-|                   |               |    |    | 0  | 1                                       |
+| $\lceil 2 \rceil$ | -2            | 1   | 0   |     | 0 ]                                     |
+| ----------------- | ------------- | --- | --- | --- | --------------------------------------- |
+| 0                 | -2<br>1<br>∴. | -2  | 1   | ٠.  | :                                       |
+| :                 | ٠.            | ٠   | ٠.  | ٠   | 0                                       |
+| :                 |               | ٠.  |     | -2  |                                         |
+| :                 |               |     | ٠.  | 1   | $\begin{bmatrix} -2 \\ 1 \end{bmatrix}$ |
+|                   |               |     |     | 0   | 1                                       |
 
 Letting n=1000, solve the linear system using this factorization (two triangular solves will be required). Also solve the system in its original form using a banded (or general sparse) system solver as in part a. How well do the answers obtained agree with each other? Which approach seems more accurate? What is the condition number of  $\boldsymbol{A}$ , and what accuracy does it suggest that you should expect? Try iterative refinement to see if the accuracy or residual improves for the less accurate method.
