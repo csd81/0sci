@@ -941,8 +941,8 @@ Ezen okok miatt az iteratív finomítás gyakran nem praktikus rutinszerű haszn
 
 Eddig azt feltételeztük, hogy a lineáris rendszer mátrixa általános és *sűrű*, azaz a mátrix bejegyzéseinek lényegében mindegyike nemnulla. Ha a mátrix rendelkezik valamilyen speciális tulajdonsággal, akkor a lineáris rendszer megoldásakor gyakran műveletet és tárhelyet lehet megtakarítani. A kihasználható speciális tulajdonságokra néhány példa a következő:
 
-- Szimmetrikus: $\mathbf{A} = \mathbf{A}^T$, azaz $a_{ij} = a_{ji}$ minden $i, j$ esetén.
-- Pozitív definit: $\mathbf{x}^T \mathbf{A} \mathbf{x} > 0$ minden $\mathbf{x} \neq \mathbf{0}$ vektorra.
+- Szimmetrikus: $\boldsymbol{A} = \boldsymbol{A}^T$, azaz $a_{ij} = a_{ji}$ minden $i, j$ esetén.
+- Pozitív definit: $\boldsymbol{x}^T \boldsymbol{A} \boldsymbol{x} > 0$ minden $\boldsymbol{x} \neq \mathbf{0}$ vektorra.
 - Sávos: $a_{ij} = 0$ minden $|i - j| > \beta$ esetén, ahol $\beta$ az $\boldsymbol{A}$ mátrix sávszélessége. Fontos speciális eset a tridiagonális mátrix, amelyre $\beta = 1$.
 - Ritka: az $\boldsymbol{A}$ bejegyzéseinek többsége nulla.
 
@@ -952,7 +952,7 @@ A valós mátrixokra az imént definiált tulajdonságoknak komplex mátrixok es
 
 ### 2.5.1 Szimmetrikus pozitív definit rendszerek
 
-Ha az $\boldsymbol{A}$ mátrix szimmetrikus és pozitív definit, akkor az LU-felbontás úgy is elrendezhető, hogy $\boldsymbol{U} = \boldsymbol{L}^T$ legyen, azaz $\boldsymbol{A} = \boldsymbol{L}\boldsymbol{L}^T$, ahol $\boldsymbol{L}$ alsó háromszögmátrix pozitív diagonális bejegyzésekkel (de általában nem egységdiagonálissal). Ezt nevezik az $\boldsymbol{A}$ Cholesky-felbontásának, és egy algoritmus a kiszámítására abból kapható, ha az $\boldsymbol{A}$ és a $\boldsymbol{L}\boldsymbol{L}^T$ megfelelő bejegyzéseit egyenlővé tesszük, majd az $\boldsymbol{L}$ bejegyzéseit a helyes sorrendben állítjuk elő. Például a $2 \times 2$-es esetben
+Ha az $\boldsymbol{A}$ mátrix szimmetrikus és pozitív definit, akkor az LU-felbontás úgy is elrendezhető, hogy $\boldsymbol{U} = \boldsymbol{L}^T$ legyen, azaz $\boldsymbol{A} = \boldsymbol{L}\boldsymbol{L}^T$, ahol $\boldsymbol{L}$ alsó háromszögmátrix pozitív diagonális bejegyzésekkel (de általában nem egység-főátlóval). Ezt nevezik az $\boldsymbol{A}$ Cholesky-felbontásának, és egy algoritmus a kiszámítására abból kapható, ha az $\boldsymbol{A}$ és a $\boldsymbol{L}\boldsymbol{L}^T$ megfelelő bejegyzéseit egyenlővé tesszük, majd az $\boldsymbol{L}$ bejegyzéseit a helyes sorrendben állítjuk elő. Például a $2 \times 2$-es esetben
 
 $$\begin{bmatrix} a_{11} & a_{21} \\ a_{21} & a_{22} \end{bmatrix} = \begin{bmatrix} \ell_{11} & 0 \\ \ell_{21} & \ell_{22} \end{bmatrix} \begin{bmatrix} \ell_{11} & \ell_{21} \\ 0 & \ell_{22} \end{bmatrix},$$
 
@@ -970,24 +970,17 @@ A Cholesky-felbontási algoritmusnak számos olyan tulajdonsága van, amely nagy
 **2.7. Algoritmus. Cholesky-felbontás.**
 
 ```
-for k = 1 to n
-    akk =
-          √
-            akk
-    for i = k + 1 to n
-        aik = aik/akk
+for k = 1 to n                            { ciklus az oszlopokon }
+    akk = sqrt(akk)
+    for i = k + 1 to n                    { az aktuális oszlop skálázása }
+        aik = aik / akk
     end
-    for j = k + 1 to n
+    for j = k + 1 to n                    { maradék részmátrix frissítése }
         for i = j to n
             aij = aij − aik · ajk
         end
     end
 end
-                                        { ciklus az oszlopokon }
-                                        { az aktuális oszlop skálázása }
-                                        { minden hátralévő oszlopból
-                                             kivonjuk az aktuális oszlop
-                                             egy megfelelő többszörösét }
 ```
 
 - Csak az $\boldsymbol{A}$ alsó háromszöge kerül elérésre, ezért a szigorú felső háromszög-részét nem kell tárolni.
@@ -995,11 +988,11 @@ end
 
 Így a Cholesky-felbontás csak körülbelül feleannyi műveletet és feleannyi tárhelyet igényel, mint egy általános mátrix Gauss-kiküszöböléssel való LU-felbontása. Sajnos ahhoz, hogy a tárhelynek ezt a megtakarítását ki is használjuk, rendszerint szükség van arra, hogy a szimmetrikus mátrix egyik háromszögét egy egydimenziós tömbbe csomagoljuk, ami kényelmetlenebb, mint a mátrixok szokásos kétdimenziós tárolása. Ezért a lineáris algebrai szoftvercsomagok szimmetrikus mátrixokra általában mind a csomagolt tárolású, mind a szabványos kétdimenziós tömbtárolású változatot felkínálják, hogy a felhasználó a kényelem és a tárhelytakarékosság között választhasson.
 
-Bizonyos körülmények között előnyös lehet a Cholesky-felbontást $\boldsymbol{A} = \boldsymbol{L}\boldsymbol{D}\boldsymbol{L}^T$ alakban felírni, ahol $\boldsymbol{L}$ egységdiagonálisú alsó háromszögmátrix, $\boldsymbol{D}$ pedig pozitív diagonális bejegyzésű diagonális mátrix. Egy ilyen felbontás a szabványos Cholesky-algoritmus egy egyszerű változatával számítható ki, és megvan az az előnye, hogy nem igényel négyzetgyökvonást. A $\boldsymbol{L}\boldsymbol{D}\boldsymbol{L}^T$-felbontásban a $\boldsymbol{D}$ diagonális bejegyzései egyszerűen a $\boldsymbol{L}\boldsymbol{L}^T$-felbontásban szereplő $\boldsymbol{L}$ diagonális bejegyzéseinek négyzetei.
+Bizonyos körülmények között előnyös lehet a Cholesky-felbontást $\boldsymbol{A} = \boldsymbol{L}\boldsymbol{D}\boldsymbol{L}^T$ alakban felírni, ahol $\boldsymbol{L}$ egység-főátlójú alsó háromszögmátrix, $\boldsymbol{D}$ pedig pozitív diagonális bejegyzésű diagonális mátrix. Egy ilyen felbontás a szabványos Cholesky-algoritmus egy egyszerű változatával számítható ki, és megvan az az előnye, hogy nem igényel négyzetgyökvonást. A $\boldsymbol{L}\boldsymbol{D}\boldsymbol{L}^T$-felbontásban a $\boldsymbol{D}$ diagonális bejegyzései egyszerűen a $\boldsymbol{L}\boldsymbol{L}^T$-felbontásban szereplő $\boldsymbol{L}$ diagonális bejegyzéseinek négyzetei.
 
 **2.21. Példa. Cholesky-felbontás.** Az algoritmus szemléltetésére kiszámítjuk a szimmetrikus pozitív definit
 
-$$\mathbf{A} = \begin{bmatrix} 3 & -1 & -1 \\ -1 & 3 & -1 \\ -1 & -1 & 3 \end{bmatrix}$$
+$$\boldsymbol{A} = \begin{bmatrix} 3 & -1 & -1 \\ -1 & 3 & -1 \\ -1 & -1 & 3 \end{bmatrix}$$
 
 mátrix Cholesky-felbontását. Mivel az algoritmus csak a mátrix alsó háromszögét érinti, a mátrix alsó háromszögének egymást követő transzformációit mutatjuk be. Az első oszlopot a diagonális bejegyzésének négyzetgyökével, $\sqrt{3} \approx 1{,}7321$-gyel elosztva
 
@@ -1019,7 +1012,7 @@ $$\begin{bmatrix} 1{,}7321 \\ -0{,}5774 & 1{,}6330 \\ -0{,}5774 & -0{,}8165 & 2{
 
 eredményre vezet. A harmadik diagonális bejegyzés négyzetgyökét véve a végeredmény
 
-$$\mathbf{L} = \begin{bmatrix} 1{,}7321 \\ -0{,}5774 & 1{,}6330 \\ -0{,}5774 & -0{,}8165 & 1{,}4142 \end{bmatrix}.$$
+$$\boldsymbol{L} = \begin{bmatrix} 1{,}7321 \\ -0{,}5774 & 1{,}6330 \\ -0{,}5774 & -0{,}8165 & 1{,}4142 \end{bmatrix}.$$
 
 ### 2.5.2 Szimmetrikus indefinit rendszerek
 
