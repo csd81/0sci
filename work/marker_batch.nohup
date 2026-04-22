@@ -1,0 +1,7 @@
+[2026-04-22 00:52:03] waiting for existing marker process to finish…
+[2026-04-22 02:42:06] ch4 marker done, starting batch 05-13
+[2026-04-22 02:42:06] starting ch05: chapter_pdfs/05-nonlinear-equations.pdf
+[2026-04-22 03:36:10] finished ch05 (rc=0)
+[2026-04-22 03:36:10] starting ch06: chapter_pdfs/06-optimization.pdf
+[2026-04-22 05:01:22] finished ch06 (rc=0)
+[2026-04-22 05:01:22] starting ch07: chapter_pdfs/07-interpolation.pdf
